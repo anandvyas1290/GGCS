@@ -3,71 +3,44 @@
 @tailwind utilities;
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-}
-
-a {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-}
-a:hover {
-    color: #535bf2;
-}
-
-body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
-}
-
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-}
-
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s;
-}
-button:hover {
-    border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: #f9f9f9;
-    }
+    --tp-ff-body: "Urbanist", sans-serif;
+    --tp-ff-heading: "Urbanist", sans-serif;
+    --tp-ff-p: "Urbanist", sans-serif;
+    --tp-ff-fontawesome: "Font Awesome 6 Pro";
+    --tp-ff-jakarta: "Plus Jakarta Sans", sans-serif;
+    --tp-ff-dmsans: "DM Sans", sans-serif;
+    --tp-common-white: #ffffff;
+    --tp-common-black: #000;
+    --tp-common-1: #3eb9ff;
+    --tp-common-2: #abbf78;
+    --tp-common-3: #ffb876;
+    --tp-common-4: #ffa0c9;
+    --tp-common-5: #e4f7ff;
+    --tp-common-6: #fff2d6;
+    --tp-common-7: #e3e8ff;
+    --tp-common-8: #ffe4e4;
+    --tp-common-9: #d2f8ec;
+    --tp-common-10: #ffe4f3;
+    --tp-common-11: #010f1c;
+    --tp-heading-primary: #0c1338;
+    --tp-heading-secondary: #0f1123;
+    --tp-grey-1: #6c6e76;
+    --tp-grey-2: #93959f;
+    --tp-grey-3: #565764;
+    --tp-grey-4: #666666;
+    --tp-grey-5: #8a8a8d;
+    --tp-grey-6: #c3c4cd;
+    --tp-grey-7: #414250;
+    --tp-grey-8: #55585b;
+    --tp-text-body: #565764;
+    --tp-text-1: #271d3a;
+    --tp-theme-primary: #4260ff;
+    --tp-theme-secondary: #131683;
+    --tp-theme-3: #05003b;
+    --tp-theme-green: #59ba41;
+    --tp-theme-apple: #f5f1eb;
+    --tp-theme-dark-blue: #1e2b8a;
+    --tp-theme-blue: #775afc;
+    --tp-border-1: #f0f1f4;
+    --tp-border-5: #000;
 }
