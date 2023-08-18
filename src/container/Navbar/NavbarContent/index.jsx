@@ -1,7 +1,9 @@
 import React from "react";
-import logo from "../../../assets/Navbar/logo.svg";
 
-import { DownOutlined } from "@ant-design/icons";
+import logo from "../../../assets/Navbar/logo.svg";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
+
+import PrimaryBtn from "../../../components/Button";
 
 const navMenu = [
     { id: 0, label: "Home", child: [{ id: "c" }] },
@@ -13,32 +15,33 @@ const navMenu = [
 ];
 export default function NavbarContent() {
     return (
-        <div className="max-w-screen-xl mx-auto p-3 border rounded-full border-white">
+        <div className="px-4 py-3 mt-1 border rounded-full border-white bg-transparent backdrop-blur shadow-[0px_10px_30px_rgba(1,15,28,0.1)]">
             <div className="max-w-full flex justify-between">
-                <div>
+                <div className="flex items-center">
                     <img src={logo} alt="ggcs" />
                 </div>
-                <div className="flex align-middle">
+                <div className="flex items-center">
                     {navMenu?.map((item) => (
                         <div
-                            className="flex align-middle gap-2 mx-3"
+                            className="flex items-center gap-2 mr-9 cursor-pointer text-lg font-normal text-black1 hover:text-primary transition-all duration-200"
                             key={item?.id}
                         >
                             <p>{item?.label}</p>
                             {item?.child ? (
-                                <DownOutlined
-                                    style={{
-                                        fontSize: "11px",
-                                        display: "flex",
-                                        alignItems: "center",
-                                    }}
-                                />
+                                <ChevronDownIcon className="h-4 w-4 font-bold flex items-center" />
                             ) : null}
                         </div>
                     ))}
                 </div>
                 <div>
-                    <button>Contact Us</button>
+                    <PrimaryBtn
+                        size="px-10 py-2"
+                        font="text-base font-semibold text-white1"
+                        bgColor="primaryBtn"
+                        className="border-2 rounded-full"
+                    >
+                        Contact Us
+                    </PrimaryBtn>
                 </div>
             </div>
         </div>
