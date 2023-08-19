@@ -37,8 +37,8 @@ export default function NavbarContent() {
                     <PrimaryBtn
                         size="px-10 py-2"
                         font="text-base font-semibold text-white1"
-                        bgColor="primaryBtn"
-                        className="border-2 rounded-full"
+                        bgColor="bg-primaryBtn"
+                        className="border-2 rounded-full border-primaryBtn"
                     >
                         Contact Us
                     </PrimaryBtn>
