@@ -1,8 +1,16 @@
-import React, { useState } from "react";
-import Navbar from "./container/Navbar";
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
-const MainApp = () => {
-    return <Navbar />;
+import Navbar from "./container/Navbar";
+import Routes from "./routes";
+
+const MainApp = (props) => {
+    return (
+        <Router>
+            <Navbar />
+            <Routes {...props} />
+        </Router>
+    );
 };
 
 export default MainApp;
