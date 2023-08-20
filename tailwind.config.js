@@ -7,17 +7,13 @@ export default {
                 primary: "#775AFC",
                 white1: "#ffffff",
                 black1: "#271D3A",
-                black2:'#010F1C',
+                black2: "#010F1C",
                 primaryBtn: "#775AFC",
-                light1:"rgba(119, 90, 252, 0.1)",
-                grey1:'#55585B',
-                grey2:'#9A9B9C',
-
-                
+                light1: "rgba(119, 90, 252, 0.1)",
                 grey1: "#55585B",
+                grey2: "#9A9B9C",
+                grey3: "#F9F9F9",
                 primaryBtn: "#775AFC",
-                homeGradient:
-                    "bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]",
                 // heroHeading: 'linear-gradient(90deg, #501E9C 0%, #A44CEE 43.75%, #FF847F 100%)',
             },
             fontFamily: {
@@ -28,6 +24,7 @@ export default {
                 shape2: "shape2 6s infinite linear",
                 shape3: "shape2 8s infinite linear",
                 shape4: "shape2 7s infinite linear",
+                services: "all 0.3s ease-in-out 0s",
             },
             keyframes: {
                 upslide: {
