@@ -35,8 +35,7 @@ export default function NavbarContent() {
                 </div>
                 <div>
                     <PrimaryBtn
-                        size="px-10 py-2"
-                        font="text-base font-semibold text-white1"
+                        size="px-11 py-2.5"
                         bgColor="bg-primaryBtn"
                         className="border-2 rounded-full border-primaryBtn"
                     >

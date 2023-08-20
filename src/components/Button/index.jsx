@@ -9,7 +9,7 @@ export default function PrimaryBtn({
 }) {
     return (
         <button
-            className={`flex align-middle justify-center ${size} ${font} ${bgColor} hover:bg-opacity-95 transition-all duration-300 ${className}`}
+            className={`flex align-middle justify-center text-base font-semibold text-white1 font-jakarta ${size} ${bgColor} hover:bg-opacity-95 transition-all duration-300 ${className}`}
         >
             {children}
         </button>
