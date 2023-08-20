@@ -44,7 +44,7 @@ const SocialIcons = ({ Icon, name, children, className }) => {
 export default function Footer() {
     return (
         <div className='bg-gray-100'>
-            <div className='max-w-screen-xl mx-auto pt-20 pb-20 px-6'>
+            <div className='max-w-screen-md lg:max-w-screen-xl mx-auto pt-20 pb-20 px-6'>
                 <div className='flex  flex-wrap justify-between '>
                     <div className='mb-3 lg:mb-0 lg:w-1/4 md:w-1/2'>
                         <div className='mb-6'>

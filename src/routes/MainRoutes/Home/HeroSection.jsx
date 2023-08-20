@@ -1,12 +1,12 @@
 import React from "react";
-import hero1 from "../../../assets/home/hero1.webp";
-import banner1 from "../../../assets/home/banner1.webp";
-import banner2 from "../../../assets/home/banner2.webp";
-import banner3 from "../../../assets/home/banner3.webp";
-import shape1 from "../../../assets/home/shape1.webp";
-import shape2 from "../../../assets/home/shape2.webp";
-import shape3 from "../../../assets/home/shape3.webp";
-import shape4 from "../../../assets/home/shape4.webp";
+import hero1 from "../../../assets/home/heroSection/hero1.webp";
+import banner1 from "../../../assets/home/heroSection/banner1.webp";
+import banner2 from "../../../assets/home/heroSection/banner2.webp";
+import banner3 from "../../../assets/home/heroSection/banner3.webp";
+import shape1 from "../../../assets/home/heroSection/shape1.webp";
+import shape2 from "../../../assets/home/heroSection/shape2.webp";
+import shape3 from "../../../assets/home/heroSection/shape3.webp";
+import shape4 from "../../../assets/home/heroSection/shape4.webp";
 
 import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
 
