@@ -5,7 +5,7 @@ import Ig from "../../assets/Footer/instagram.svg"
 import Xt from "../../assets/Footer/x-twitter.svg"
 import In from "../../assets/Footer/linkedin.svg"
 import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
-
+import PrimaryBtn from '../../components/Button';
 
 const Input = ({ text, placeholder, className }) => {
     return (
@@ -27,13 +27,13 @@ const H5 = ({ children, className }) => {
         </h5>
     )
 }
-const PrimaryBtn = ({ children, className }) => {
-    return (
-        <button className={`border-2 rounded-full py-2 px-10  text-white  bg-blue-600 hover:text-blue-600 hover:bg-white  hover:border-blue-600  ${className}`}>
-            {children}
-        </button>
-    )
-}
+// const PrimaryBtn = ({ children, className }) => {
+//     return (
+//         <button className={`border-2 rounded-full py-2 px-10  text-white  bg-blue-600 hover:text-blue-600 hover:bg-white  hover:border-blue-600  ${className}`}>
+//             {children}
+//         </button>
+//     )
+// }
 const SocialIcons = ({ Icon, name, children, className }) => {
     return (
         <div className={`rounded-full w-10 h-10 mr-4 bg-white text-gray-500 flex items-center justify-center  hover:bg-blue-500 cursor-pointer ${className}`}>
@@ -58,7 +58,13 @@ export default function Footer() {
                             </p>
                         </div>
                         <div className=''>
-                            <PrimaryBtn>Grow Traffic</PrimaryBtn>
+                            <PrimaryBtn
+                                size="px-8 py-2"
+                                bgColor="bg-primaryBtn"
+                                className="border-2 rounded-full border-primaryBtn"
+                            >
+                                Grow Traffic
+                            </PrimaryBtn>
                         </div>
                     </div>
                     <div className='lg:w-1/4 md:w-1/2'>

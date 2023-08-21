@@ -15,6 +15,7 @@ export default {
                 grey3: "#F9F9F9",
                 primaryBtn: "#775AFC",
                 // heroHeading: 'linear-gradient(90deg, #501E9C 0%, #A44CEE 43.75%, #FF847F 100%)',
+                
             },
             fontFamily: {
                 jakarta: " Plus Jakarta Sans, sans-serif",
