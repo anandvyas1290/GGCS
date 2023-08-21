@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 import logo from "../../../assets/Navbar/logo.svg";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
@@ -15,9 +15,20 @@ const navMenu = [
 ];
 export default function NavbarContent(props) {
     let scrollRef = useRef();
+
+    useEffect(() => {
+        window.addEventListener("scroll", onScroll);
+    });
+
+    const onScroll = () => {
+        // console.log(scrollRef.current);
+        let ele = document.querySelector(".header");
+        // console.log(ele.attributes);
+    };
+    // fixed top-5 animate-fadeInDown
     return (
         <div
-            className="px-4 py-3 mt-1 border rounded-full border-white bg-transparent backdrop-blur shadow-header fixed top-5 animate-fadeInDown"
+            className="header px-4 py-3 mt-1 border rounded-full border-white bg-transparent backdrop-blur shadow-header"
             ref={scrollRef}
         >
             <div className="max-w-full flex justify-between">
