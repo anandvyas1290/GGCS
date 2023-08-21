@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import logo from "../../../assets/Navbar/logo.svg";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
@@ -13,9 +13,13 @@ const navMenu = [
     { id: 4, label: "Blog", child: [{ id: "c" }] },
     { id: 5, label: "Contact" },
 ];
-export default function NavbarContent() {
+export default function NavbarContent(props) {
+    let scrollRef = useRef();
     return (
-        <div className="px-4 py-3 mt-1 border rounded-full border-white bg-transparent backdrop-blur shadow-[0px_10px_30px_rgba(1,15,28,0.1)]">
+        <div
+            className="px-4 py-3 mt-1 border rounded-full border-white bg-transparent backdrop-blur shadow-header fixed top-5 animate-fadeInDown"
+            ref={scrollRef}
+        >
             <div className="max-w-full flex justify-between">
                 <div className="flex items-center">
                     <img src={logo} alt="ggcs" />

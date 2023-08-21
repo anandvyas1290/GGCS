@@ -2,6 +2,7 @@ import React from "react";
 
 import HeroSection from "./HeroSection";
 import Services from "./Services";
+import Featured from "./Featured";
 import Contact from "./Contact";
 import CompanyBlog from "./CompanyBlog";
 import Awards from "./Awards";
@@ -13,6 +14,7 @@ export default function Home(props) {
         <div className="font-jakarta">
             <HeroSection {...props} />
             <Services {...props} />
+            <Featured {...props} />
             <Testimonial {...props} />
             <Review {...props} />
             <Contact {...props} />
