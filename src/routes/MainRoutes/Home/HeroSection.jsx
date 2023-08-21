@@ -14,7 +14,7 @@ import PrimaryBtn from "../../../components/Button";
 
 export default function HeroSection() {
     return (
-        <div className="max-w-screen-xl mx-auto px-12 pt-[150px] pb-[200px]">
+        <div className="max-w-screen-xl mx-auto px-12 pt-[150px] pb-[150px]">
             <div className="container">
                 <div className="w-4/6">
                     <div className="">

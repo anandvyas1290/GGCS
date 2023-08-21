@@ -84,7 +84,7 @@ export default function Services(props) {
                 </div>
 
                 <div className="flex justify-center">
-                    <div className="w-1/2 rounded-full shadow-[10px_2px_10px_rgba(110, 56, 255, 0.3)] bg-grey3 p-3 text-center">
+                    <div className="w-1/2 rounded-full shadow-services   bg-grey3 p-3 text-center">
                         <div className="flex justify-center gap-2">
                             <span>
                                 <img
@@ -94,7 +94,7 @@ export default function Services(props) {
                             </span>
                             <p className="flex">
                                 You can also find our
-                                <Link className="mx-2 relative text-primary bg-red-200">
+                                <Link className="mx-2 relative text-primary ">
                                     Services
                                     <img
                                         src={services}

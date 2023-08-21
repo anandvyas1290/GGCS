@@ -19,6 +19,9 @@ export default {
             fontFamily: {
                 jakarta: " Plus Jakarta Sans, sans-serif",
             },
+            boxShadow: {
+                services: "0 -1px 0 rgba(110, 56, 255, 0.3)",
+            },
             animation: {
                 upslide: "upslide 4s forwards infinite alternate",
                 shape2: "shape2 6s infinite linear",
