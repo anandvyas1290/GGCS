@@ -5,14 +5,18 @@ import Services from "./Services";
 import Contact from "./Contact";
 import CompanyBlog from "./CompanyBlog";
 import Awards from "./Awards";
+import Testimonial from "./Testimonial";
+import Review from "./Review";
 
 export default function Home(props) {
     return (
-        <div className="container w-full font-jakarta">
+        <div className="font-jakarta">
             <HeroSection {...props} />
             <Services {...props} />
-            <CompanyBlog {...props} />
+            <Testimonial {...props} />
+            <Review {...props} />
             <Contact {...props} />
+            <CompanyBlog {...props} />
             <Awards {...props} />
         </div>
     );

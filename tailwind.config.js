@@ -19,6 +19,7 @@ export default {
                 homeGradient:
                     "bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]",
                 // heroHeading: 'linear-gradient(90deg, #501E9C 0%, #A44CEE 43.75%, #FF847F 100%)',
+                
             },
             fontFamily: {
                 jakarta: " Plus Jakarta Sans, sans-serif",
