@@ -8,6 +8,7 @@ import CompanyBlog from "./CompanyBlog";
 import Awards from "./Awards";
 import Testimonial from "./Testimonial";
 import Review from "./Review";
+import Pricing from "./Pricing";
 
 export default function Home(props) {
     return (
@@ -15,6 +16,7 @@ export default function Home(props) {
             <HeroSection {...props} />
             <Services {...props} />
             <Featured {...props} />
+            <Pricing {...props} />
             <Testimonial {...props} />
             <Review {...props} />
             <Contact {...props} />

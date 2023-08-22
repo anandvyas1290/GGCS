@@ -1,6 +1,6 @@
 import React from "react";
 import blog from "../../../assets/home/companyBlog/blog1.webp";
-import PrimaryBtn from "../../../components/Button";
+import { PrimaryBtn } from "../../../components/Button";
 // const PrimaryBtn = ({ children, className }) => {
 //     return (
 //         <button
@@ -27,7 +27,6 @@ export default function CompanyBlog() {
                         <PrimaryBtn
                             size="px-8 py-2"
                             bgColor="bg-primaryBtn"
-                            className="border-2 rounded-full border-primaryBtn"
                         >
                             More Articles
                         </PrimaryBtn>
