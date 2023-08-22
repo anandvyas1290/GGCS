@@ -3,6 +3,7 @@ import React from "react";
 import HeroSection from "./HeroSection";
 import Services from "./Services";
 import Featured from "./Featured";
+import CaseStudies from "./CaseStudies";
 import Contact from "./Contact";
 import CompanyBlog from "./CompanyBlog";
 import Awards from "./Awards";
@@ -17,6 +18,7 @@ export default function Home(props) {
             <Services {...props} />
             <Featured {...props} />
             <Pricing {...props} />
+            <CaseStudies {...props} />
             <Testimonial {...props} />
             <Review {...props} />
             <Contact {...props} />

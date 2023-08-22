@@ -37,7 +37,7 @@ export default function Services(props) {
     ];
 
     return (
-        <div className="max-w-screen-xl mx-auto px-12 pb-[100px]">
+        <div className="max-w-screen-xl mx-auto px-12 pb-36">
             <div>
                 <div className="flex flex-col items-center justify-center">
                     <p className="text-lg font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
@@ -48,7 +48,10 @@ export default function Services(props) {
 
                 <div className="grid grid-cols-3 gap-8 my-12">
                     {servicesData?.map((item) => (
-                        <div className="group animate-services p-2">
+                        <div
+                            className="group animate-services p-2"
+                            key={item.id}
+                        >
                             <div className="flex justify-center">
                                 <div className="relative">
                                     <img
