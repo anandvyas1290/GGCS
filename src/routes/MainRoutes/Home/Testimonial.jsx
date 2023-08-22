@@ -1,5 +1,7 @@
 import React from 'react'
 import Img1 from "./../../../assets/Review&Testimonial/testimonial-4-shape-5.webp"
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
+import GradientText from '../../../components/Button/GradientText';
 function Testimonial() {
     return (
         <div>
@@ -7,13 +9,20 @@ function Testimonial() {
                 <div className="block md:flex flex-wrap ">
                     <div className='w-1/2'>
                         <div className='relative'>
-                            <div>
-
+                            <div className='relative'>
+                                <div className='absolute top-56 left-20 right-0 transform-'>
+                                    <div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
                             </div>
                             {/* top right */}
                             <div className='absolute left-1/2'>
                                 <img src={Img1} alt="img" className='h-32' />
                             </div>
+                            {/* bottom left */}
                             <div className='absolute top-64 left-4'>
                                 <img src={Img1} alt="img" className='h-16' />
                             </div>
@@ -31,22 +40,36 @@ function Testimonial() {
                             <div className='absolute top-32 left-48'>
                                 <img src={Img1} alt="img" />
                             </div>
+
+
                         </div>
                     </div>
                     <div className="w-1/2">
                         <div className="my-10">
-                            <p className="text-transparent text-lg bg-clip-text bg-gradient-to-r from-purple-700 to-pink-800">Testimonials</p>
-                            <h2 className='text-4xl sm:text-5xl font-semibold mt-5 mb-4'>What Client Say</h2>
+                            <span>
+                                <p className="flex text-lg font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
+                                    Testimonials
+                                </p>
+                            </span>
+                            <h2 className='text-4xl sm:text-5xl font-semibold mt-1 mb-4'>What Client Say</h2>
                             <div>
                                 <h5 className="text-3xl text-red-500 mb-1">GGCS </h5>
                                 <h6 className="text-grey2">info@company.com</h6>
                             </div>
-                            <div>
-                                <p>
+                            <div className="my-5">
+                                <p className="text-grey2 text-lg tracking-wide mb-5">
                                     Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
                                 </p>
-                                <h6>Global Garner</h6>
-                                <h6>CEO Of Advisor Fuel</h6>
+                                <h6 className="text-grey1 font-bold text-lg" >Global Garner</h6>
+                                <h6 className="text-grey2 ">CEO Of Advisor Fuel</h6>
+                            </div>
+                            <div className='flex'>
+                                <button>
+                                    <ArrowRightIcon className="w-12 h-6 text-grey1" />
+                                </button>
+                                <button>
+                                    <ArrowLeftIcon className="w-12 h-6 text-grey1" />
+                                </button>
                             </div>
                         </div>
                     </div>

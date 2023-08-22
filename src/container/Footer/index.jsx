@@ -5,7 +5,7 @@ import Ig from "../../assets/Footer/instagram.svg"
 import Xt from "../../assets/Footer/x-twitter.svg"
 import In from "../../assets/Footer/linkedin.svg"
 import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
-import PrimaryBtn from '../../components/Button';
+import { PrimaryBtn } from '../../components/Button';
 
 const Input = ({ text, placeholder, className }) => {
     return (
@@ -87,7 +87,7 @@ export default function Footer() {
                             <H5 className="mb-5">
                                 Services
                             </H5>
-                            <div div className='pl-4'>
+                            <div className='pl-4'>
                                 <ul className="list-disc">
                                     <li className='text-base font-normal text-gray-500 mb-2'>SEO Audit</li>
                                     <li className='text-base font-normal text-gray-500 mb-2'>SEO Services</li>

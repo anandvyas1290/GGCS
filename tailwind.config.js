@@ -24,6 +24,7 @@ export default {
             boxShadow: {
                 header: "0px 10px 30px rgba(1,15,28,0.1)",
                 services: "0 -1px 0 rgba(110, 56, 255, 0.3)",
+                contact:'linear-gradient(69.83deg, #501E9C -8.16%, #A44CEE 49.19%, #FF847F 102.99%);'
             },
             animation: {
                 fadeInDown:

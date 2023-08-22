@@ -10,7 +10,7 @@ import shape4 from "../../../assets/home/heroSection/shape4.webp";
 
 import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-import PrimaryBtn from "../../../components/Button";
+import { PrimaryBtn } from "../../../components/Button";
 
 export default function HeroSection() {
     return (

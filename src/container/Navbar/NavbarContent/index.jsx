@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import logo from "../../../assets/Navbar/logo.svg";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
-import PrimaryBtn from "../../../components/Button";
+import { PrimaryBtn } from "../../../components/Button";
 
 const navMenu = [
     { id: 0, label: "Home", child: [{ id: "c" }] },

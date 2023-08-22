@@ -87,7 +87,7 @@ export default function Services(props) {
                 </div>
 
                 <div className="flex justify-center">
-                    <div className="w-1/2 rounded-full shadow-services   bg-grey3 p-3 text-center">
+                    <div className="w-1/2 rounded-full shadow-contact   bg-grey3 p-3 text-center">
                         <div className="flex justify-center gap-2">
                             <span>
                                 <img
