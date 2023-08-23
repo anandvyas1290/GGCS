@@ -7,14 +7,46 @@ import csbg from "../../../assets/home/caseStudies/csbg.webp";
 import Slider from "react-slick";
 
 export default function CaseStudies(props) {
-    const [state, setState] = useState({ currentCategory: "" });
+    const [state, setState] = useState({ currentCategory: "marketing" });
     const categoryData = [
-        { id: 0, label: "All Work", value: "all" },
-        { id: 1, label: "Marketing", value: "marketing" },
-        { id: 2, label: "Web Design", value: "webDesign" },
-        { id: 3, label: "Branding", value: "branding" },
+        {
+            id: 0,
+            label: "All Work",
+            value: "all",
+        },
+        {
+            id: 1,
+            label: "Marketing",
+            value: "marketing",
+        },
+        {
+            id: 2,
+            label: "Web Design",
+            value: "webDesign",
+        },
+        {
+            id: 3,
+            label: "Branding",
+            value: "branding",
+        },
     ];
-    const csData = [{ image: cs1 }, { image: cs2 }, { image: cs3 }];
+    const csData = [
+        {
+            image: cs1,
+            heading: "Online Media Management",
+            category: "WEB DESIGN",
+        },
+        {
+            image: cs2,
+            heading: "Online Media Management",
+            category: "WEB DESIGN",
+        },
+        {
+            image: cs3,
+            heading: "Online Media Management",
+            category: "WEB DESIGN",
+        },
+    ];
     const settings = {
         dots: true,
         infinite: true,
@@ -65,12 +97,23 @@ export default function CaseStudies(props) {
                 <div className="w-8/12">
                     <Slider {...settings}>
                         {csData?.map((item, i) => (
-                            <div key={i} className="!flex justify-center pb-10">
+                            <div
+                                key={i}
+                                className="!flex justify-center pb-10 relative"
+                            >
                                 <img
                                     src={item?.image}
                                     alt="cs"
-                                    className="rounded-3xl cursor-pointer"
+                                    className="rounded-3xl cursor-pointer relative"
                                 />
+                                <div className="absolute top-16 left-20">
+                                    <p className="text-grey1 text-sm font-medium tracking-wide">
+                                        {item?.category}
+                                    </p>
+                                    <h4 className="text-black2 text-[26px] font-medium">
+                                        {item?.heading}
+                                    </h4>
+                                </div>
                             </div>
                         ))}
                     </Slider>

@@ -13,12 +13,14 @@ export default {
                 grey1: "#55585B",
                 grey2: "#9A9B9C",
                 grey3: "#F9F9F9",
+                grey4: "#6F7276",
                 primaryBtn: "#775AFC",
                 // heroHeading: 'linear-gradient(90deg, #501E9C 0%, #A44CEE 43.75%, #FF847F 100%)',
             },
             fontFamily: {
                 jakarta: " Plus Jakarta Sans, sans-serif",
             },
+            borderRadius: { processImg: "51% 49% 77% 23%/65% 50% 50% 35%" },
             boxShadow: {
                 header: "0px 10px 30px rgba(1,15,28,0.1)",
                 services: "0 -1px 0 rgba(110, 56, 255, 0.3)",
@@ -35,6 +37,8 @@ export default {
                 shape3: "shape2 8s infinite linear",
                 shape4: "shape2 7s infinite linear",
                 services: "all 0.3s ease-in-out 0s",
+                imgBorder: "imgBorder 5s linear infinite alternate",
+                dashShape: "dashShape 30s linear forwards infinite",
             },
             keyframes: {
                 fadeInDown: {
@@ -66,7 +70,6 @@ export default {
                     "0%": {
                         transform: "translate(0px, 0px)",
                     },
-
                     "20%": {
                         transform: "translate(20px, -5px)",
                     },
@@ -81,6 +84,25 @@ export default {
                     },
                     "100%": {
                         transform: "translate(0px, 0px)",
+                    },
+                },
+                imgBorder: {
+                    "0%": {
+                        "-webkit-border-radius":
+                            "51% 49% 77% 23%/65% 50% 50% 35%",
+                        "-moz-border-radius": "51% 49% 77% 23%/65% 50% 50% 35%",
+                        "border-radius": "51% 49% 77% 23%/65% 50% 50% 35%",
+                    },
+                    "100%": {
+                        "-webkit-border-radius":
+                            "30% 70% 28% 72%/53% 69% 31% 47%",
+                        "-moz-border-radius": "30% 70% 28% 72%/53% 69% 31% 47%",
+                        "border-radius": "30% 70% 28% 72%/53% 69% 31% 47%",
+                    },
+                },
+                dashShape: {
+                    "100%": {
+                        "stroke-dashoffset": 0,
                     },
                 },
             },
