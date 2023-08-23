@@ -19,9 +19,8 @@ export default function Home(props) {
             <HeroSection {...props} />
             <Services {...props} />
             <Featured {...props} />
-            <SEO {...props} />
             <Process {...props} />
-            <Pricing {...props} />
+            <SEO {...props} />
             <CaseStudies {...props} />
             <Pricing {...props} />
             <Testimonial {...props} />
