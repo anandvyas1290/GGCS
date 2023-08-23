@@ -8,7 +8,7 @@ import Footer from "./container/Footer";
 const MainApp = (props) => {
     return (
         <Router>
-            <Navbar />
+            {/* <Navbar /> */}
             <Routes {...props} />
             <Footer />
         </Router>

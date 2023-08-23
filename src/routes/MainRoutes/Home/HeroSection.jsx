@@ -10,11 +10,11 @@ import shape4 from "../../../assets/home/heroSection/shape4.webp";
 
 import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-import PrimaryBtn from "../../../components/Button";
+import { PrimaryBtn } from "../../../components/Button";
 
 export default function HeroSection() {
     return (
-        <div className="max-w-screen-xl mx-auto px-12 pt-[150px] pb-[200px]">
+        <div className="max-w-screen-xl mx-auto px-12 pt-[150px] pb-[150px]">
             <div className="container">
                 <div className="w-4/6">
                     <div className="">
