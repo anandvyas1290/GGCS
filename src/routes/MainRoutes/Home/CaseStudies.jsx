@@ -75,11 +75,10 @@ export default function CaseStudies(props) {
                         {categoryData?.map((item) => (
                             <h5
                                 key={item?.id}
-                                className={`${
-                                    state.currentCategory === item?.value
+                                className={`${state.currentCategory === item?.value
                                         ? "text-primary border-l-4  border-primary bg-gradient-to-r from-[#775afc1a] to-[#775afc00]"
                                         : "text-grey2 border-l-4 border-white1"
-                                } font-medium ps-5 py-2 max-w-fit cursor-pointer`}
+                                    } font-medium ps-5 py-2 max-w-fit cursor-pointer`}
                                 onClick={() =>
                                     setState((prev) => {
                                         return {
