@@ -10,6 +10,7 @@ import Awards from "./Awards";
 import Testimonial from "./Testimonial";
 import Review from "./Review";
 import Pricing from "./Pricing";
+import SEO from "./SEO";
 
 export default function Home(props) {
     return (
@@ -17,8 +18,9 @@ export default function Home(props) {
             <HeroSection {...props} />
             <Services {...props} />
             <Featured {...props} />
-            <Pricing {...props} />
+            <SEO {...props} />
             <CaseStudies {...props} />
+            <Pricing {...props} />
             <Testimonial {...props} />
             <Review {...props} />
             <Contact {...props} />
