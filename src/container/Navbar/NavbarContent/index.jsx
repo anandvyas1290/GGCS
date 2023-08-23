@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 import logo from "../../../assets/Navbar/logo.svg";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
@@ -6,15 +7,16 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { PrimaryBtn } from "../../../components/Button";
 
 const navMenu = [
-    { id: 0, label: "Home", child: [{ id: "c" }] },
-    { id: 1, label: "About" },
-    { id: 2, label: "Services", child: [{ id: "c" }] },
-    { id: 3, label: "Pages", child: [{ id: "c" }] },
-    { id: 4, label: "Blog", child: [{ id: "c" }] },
-    { id: 5, label: "Contact" },
+    { id: 0, label: "Home", slug: "/", child: [{ id: "c" }] },
+    { id: 1, label: "About", slug: "/about" },
+    { id: 2, label: "Services", slug: "/services", child: [{ id: "c" }] },
+    { id: 3, label: "Pages", slug: "/", child: [{ id: "c" }] },
+    { id: 4, label: "Blog", slug: "/blog", child: [{ id: "c" }] },
+    { id: 5, label: "Contact", slug: "/contact" },
 ];
 export default function NavbarContent(props) {
     let scrollRef = useRef();
+    let navigate = useNavigate();
 
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
@@ -24,8 +26,9 @@ export default function NavbarContent(props) {
         // console.log(scrollRef.current);
         let ele = document.querySelector(".header");
         // console.log(ele.attributes);
+        // fixed top-5 animate-fadeInDown
     };
-    // fixed top-5 animate-fadeInDown
+
     return (
         <div
             className="header px-4 py-3 mt-1 border rounded-full border-white bg-transparent backdrop-blur shadow-header"
@@ -40,6 +43,7 @@ export default function NavbarContent(props) {
                         <div
                             className="flex items-center gap-2 mr-9 cursor-pointer text-lg font-normal text-black1 hover:text-primary transition-all duration-200"
                             key={item?.id}
+                            onClick={() => navigate(item?.slug)}
                         >
                             <p>{item?.label}</p>
                             {item?.child ? (

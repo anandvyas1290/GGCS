@@ -7,8 +7,6 @@ import shape3 from "../../../assets/home/process/shape3.webp";
 import list1 from "../../../assets/home/process/list1.svg";
 import list2 from "../../../assets/home/process/list2.svg";
 import list3 from "../../../assets/home/process/list3.svg";
-// import line1 from "../../../assets/home/process/line1.svg";
-// import line2 from "../../../assets/home/process/line2.svg";
 
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
 
