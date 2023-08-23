@@ -20,7 +20,7 @@ export const Line1 = (props) => (
 
 export const Line2 = (props) => (
     <svg
-        className="line-dash-path"
+        className="line-dash-path !animate-dashShape"
         width={42}
         height={122}
         viewBox="0 0 42 122"
