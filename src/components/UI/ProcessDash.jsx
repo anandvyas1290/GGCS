@@ -35,3 +35,16 @@ export const Line2 = (props) => (
         />
     </svg>
 );
+
+
+// hos
+export const DashedLine = (props) => (
+    <svg className="line-dash-path !animate-dashShape"
+        width="112" height="15"
+        viewBox="0 0 112 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        {...props}>
+        <path d="M1 8.56464C18.4695 1.84561 64.9267 -6.52437 111 13.7479" stroke="#A6A8B0" stroke-dasharray="4 5"></path>
+    </svg>
+)
