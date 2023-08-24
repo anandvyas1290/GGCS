@@ -20,8 +20,20 @@ import linkedin from "../../../assets/services/linkedin.webp";
 import business1 from "../../../assets/services/business1.webp";
 import business2 from "../../../assets/services/business2.webp";
 import business3 from "../../../assets/services/business3.webp";
+import videoBanner from "../../../assets/services/videoBanner.webp";
+import play from "../../../assets/services/play.svg";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+
+import GradientBgImg from "../../../assets/SEO/optimize-bg.webp";
+import ClientImg from "../../../assets/SEO/optimize-bg-2.webp";
+import InputImg from "../../../assets/SEO/optimize-shape-2.webp";
+import StatImg from "../../../assets/SEO/optimize-shape-1.webp";
+import { PrimaryBtn } from "../../../components/Button";
 
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
+import { servicesData, serviceSocial } from "../../../db/dummy";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Services(props) {
     const processData = [
@@ -48,17 +60,17 @@ export default function Services(props) {
     const businessData = [
         {
             heading: "Growing your business",
-            desc: "With SEOMY, you get everything you need for a fast website",
+            desc: "With GGCS, you get everything you need for a fast website",
             image: business1,
         },
         {
             heading: "Speed Optimization",
-            desc: "With SEOMY, you get everything you need for a fast website",
+            desc: "With GGCS, you get everything you need for a fast website",
             image: business2,
         },
         {
             heading: "Testing Capabilities",
-            desc: "With SEOMY, you get everything you need for a fast website",
+            desc: "With GGCS, you get everything you need for a fast website",
             image: business3,
         },
     ];
@@ -131,7 +143,7 @@ export default function Services(props) {
                     <div className="pl-16">
                         <ul>
                             {processData?.map((item) => (
-                                <li className="mb-8">
+                                <li className="mb-8" key={item?.id}>
                                     <div
                                         className={`flex relative ${
                                             [
@@ -234,6 +246,156 @@ export default function Services(props) {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            <section className="max-w-screen-xl mx-auto pb-28 mt-10">
+                <div className="md:flex py-10">
+                    <div className="w-full md:w-1/2 mx-3 px-10 py-10">
+                        <div className="relative">
+                            <div>
+                                <img
+                                    src={GradientBgImg}
+                                    alt="GradientBgImg"
+                                    className="-scale-x-[1]"
+                                />
+                            </div>
+                            <div>
+                                <img
+                                    src={ClientImg}
+                                    alt=""
+                                    className="absolute bottom-0 right-0 -scale-x-[1]"
+                                />
+                                <img
+                                    src={InputImg}
+                                    alt=""
+                                    className="absolute top-32 -left-10"
+                                />
+                                <img
+                                    src={StatImg}
+                                    alt=""
+                                    className="absolute top-20 -right-10 shadow-2xl "
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-full md:w-1/2 ms-20 mx-3">
+                        <div className="my-10">
+                            <p className="text-blue1 text-lg font-semibold mb-5">
+                                Get the best
+                            </p>
+                            <h2 className="text-4xl sm:text-5xl font-semibold mb-4">
+                                Social Media is the
+                                <br />
+                                Fastest growing trend
+                            </h2>
+
+                            <div className="my-10">
+                                <div>
+                                    <h5 className="text-base mb-1">
+                                        Market Research
+                                    </h5>
+                                    <div className="w-full md:w-2/3 border-2 border-gray-100 py-0.5 px-1 flex items-center rounded-full mb-4">
+                                        <div
+                                            className="bg-green-600 h-3 rounded-full dark:bg-green-500"
+                                            style={{ width: "74%" }}
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 className="text-base  mb-1">
+                                        SEO Consultancy
+                                    </h5>
+                                    <div className="w-full md:w-2/3 border-2 border-gray-100 py-0.5 px-1 flex items-center rounded-full mb-4">
+                                        <div
+                                            className="bg-yellow-600 h-3 rounded-full dark:bg-yellow-500"
+                                            style={{ width: "92%" }}
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 className="text-base  mb-1">
+                                        SEO Consultancy
+                                    </h5>
+                                    <div className="w-full md:w-2/3 border-2 border-gray-100 py-0.5 px-1 flex items-center rounded-full mb-4">
+                                        <div
+                                            className="bg-[#9666FE] h-3 rounded-full dark:bg-[#9666FE]"
+                                            style={{ width: "54%" }}
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="max-w-screen-xl mx-auto px-12">
+                <div className="border-4 border-black2 relative shadow-serviceVideo">
+                    <img
+                        src={videoBanner}
+                        alt="social-marketing"
+                        className="w-full"
+                    />
+                    <div className="absolute left-14 bottom-10">
+                        <h4 className="text-3xl font-bold text-white1">
+                            Social <br />
+                            Media Marketing
+                        </h4>
+                    </div>
+                    <div className="absolute right-14 bottom-14 border-2 rounded-full p-2 ps-2.5 cursor-pointer">
+                        <img src={play} alt="seo video" />
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-3 gap-10 mt-14">
+                    {servicesData?.map((item) => (
+                        <div
+                            className="group transition-all duration-300"
+                            key={item?.id}
+                        >
+                            <div className="text-center">
+                                <h4 className="text-2xl text-black2 font-semibold my-5">
+                                    {item?.heading}
+                                </h4>
+                                <p className="text-grey1">{item?.desc}</p>
+                            </div>
+                            <div className=" flex justify-center my-5">
+                                <span className="flex text-black2 cursor-pointer border-b-2 group-hover:border-b-blue1 group-hover:text-blue1 group-hover:animate-services">
+                                    <p className="mr-3">Learn More</p>
+                                    <span>
+                                        <ArrowRightIcon className="w-4 h-4 font-extrabold " />
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section className="max-w-screen-xl mx-auto px-12 my-28">
+                <div className="grid grid-cols-2 gap-10">
+                    {serviceSocial?.map((item) => (
+                        <div
+                            key={item?.id}
+                            className={`flex items-center justify-between group border p-7 rounded-xl cursor-pointer transition-all duration-[400ms] ${item?.class} hover:text-white1 hover:scale-110`}
+                        >
+                            <div className="flex items-center gap-3">
+                                <span>
+                                    <FontAwesomeIcon
+                                        icon={item?.icon}
+                                        size="2xl"
+                                        color={item?.iconColor}
+                                        className="group-hover:text-white1"
+                                    />
+                                </span>
+                                <h4>{item?.label}</h4>
+                            </div>
+                            <div className="invisible group-hover:visible">
+                                <ArrowRightIcon className="w-4 h-4 text-white" />
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </section>
         </div>

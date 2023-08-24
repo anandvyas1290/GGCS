@@ -16,13 +16,16 @@ export default {
                 grey3: "#F9F9F9",
                 grey4: "#6F7276",
                 grey5: "#F5F5F5",
+                grey6: "#565764",
                 blue1: "#4260FF",
                 primaryBtn: "#775AFC",
-                blue1:"#4260FF",
                 // heroHeading: 'linear-gradient(90deg, #501E9C 0%, #A44CEE 43.75%, #FF847F 100%)',
             },
             fontFamily: {
                 jakarta: " Plus Jakarta Sans, sans-serif",
+            },
+            backgroundImage: {
+                blogBanner: "url('assets/blog/banner.webp')",
             },
             borderRadius: { processImg: "51% 49% 77% 23%/65% 50% 50% 35%" },
             boxShadow: {
@@ -33,6 +36,8 @@ export default {
                 shadow1: "rgba(1, 15, 28, 0.14)",
                 business1: "0px 1px 1px rgba(1, 15, 28, 0.2)",
                 business2: "0px 20px 30px rgba(1, 15, 28, 0.1)",
+                serviceVideo: "30px 30px 40px rgba(1, 15, 28, 0.2)",
+                blogCard: "0px 1px 1px rgba(12, 19, 56, 0.06)",
             },
             animation: {
                 fadeInDown:
@@ -54,6 +59,7 @@ export default {
                     "blinkTransform 4s ease-in-out forwards infinite alternate",
                 blinkTransform2:
                     "blinkTransform 5s ease-in-out forwards infinite alternate",
+                blogShape: "blogShape 2.5s linear 0s infinite alternate",
             },
             keyframes: {
                 fadeInDown: {
@@ -144,6 +150,14 @@ export default {
                     "50%": {
                         transform: "scale(1)",
                         opacity: 1,
+                    },
+                },
+                blogShape: {
+                    "0%": {
+                        transform: "translateY(-20px)",
+                    },
+                    "100%": {
+                        transform: "translateY(0px)",
                     },
                 },
             },

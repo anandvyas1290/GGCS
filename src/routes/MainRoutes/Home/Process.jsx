@@ -64,7 +64,7 @@ export default function Process(props) {
 
                     <ul>
                         {processData?.map((item) => (
-                            <li className="mb-8">
+                            <li className="mb-8" key={item?.id}>
                                 <div
                                     className={`flex relative ${
                                         item?.id % 2 === 0
