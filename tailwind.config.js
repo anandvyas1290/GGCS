@@ -18,6 +18,7 @@ export default {
                 grey5: "#F5F5F5",
                 blue1: "#4260FF",
                 primaryBtn: "#775AFC",
+                blue1:"#4260FF",
                 // heroHeading: 'linear-gradient(90deg, #501E9C 0%, #A44CEE 43.75%, #FF847F 100%)',
             },
             fontFamily: {
