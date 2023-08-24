@@ -6,6 +6,7 @@ export default {
             colors: {
                 primary: "#775AFC",
                 white1: "#ffffff",
+                white2: "#DDE2FF",
                 black1: "#271D3A",
                 black2: "#010F1C",
                 primaryBtn: "#775AFC",
@@ -14,7 +15,8 @@ export default {
                 grey2: "#9A9B9C",
                 grey3: "#F9F9F9",
                 grey4: "#6F7276",
-                grey5:'#565764',
+                grey5: "#F5F5F5",
+                blue1: "#4260FF",
                 primaryBtn: "#775AFC",
                 blue1:"#4260FF",
                 // heroHeading: 'linear-gradient(90deg, #501E9C 0%, #A44CEE 43.75%, #FF847F 100%)',
@@ -26,10 +28,11 @@ export default {
             boxShadow: {
                 header: "0px 10px 30px rgba(1,15,28,0.1)",
                 services: "0 -1px 0 rgba(110, 56, 255, 0.3)",
-                contact:'linear-gradient(69.83deg, #501E9C -8.16%, #A44CEE 49.19%, #FF847F 102.99%);',
-                shadow1:"rgba(1, 15, 28, 0.14)",
-    
-                
+                contact:
+                    "linear-gradient(69.83deg, #501E9C -8.16%, #A44CEE 49.19%, #FF847F 102.99%);",
+                shadow1: "rgba(1, 15, 28, 0.14)",
+                business1: "0px 1px 1px rgba(1, 15, 28, 0.2)",
+                business2: "0px 20px 30px rgba(1, 15, 28, 0.1)",
             },
             animation: {
                 fadeInDown:
@@ -41,6 +44,16 @@ export default {
                 services: "all 0.3s ease-in-out 0s",
                 imgBorder: "imgBorder 5s linear infinite alternate",
                 dashShape: "dashShape 30s linear forwards infinite",
+                servicesSwing:
+                    "servicesSwing 3s ease-in-out 0.1s forwards infinite alternate",
+                servicesStar1: "servicesStar 1.5s forwards infinite alternate",
+                servicesStar2: "servicesStar 2s forwards infinite alternate",
+                servicesStar3: "servicesStar 2.2s forwards infinite alternate",
+                servicesStar4: "servicesStar 1s forwards infinite alternate",
+                blinkTransform1:
+                    "blinkTransform 4s ease-in-out forwards infinite alternate",
+                blinkTransform2:
+                    "blinkTransform 5s ease-in-out forwards infinite alternate",
             },
             keyframes: {
                 fadeInDown: {
@@ -105,6 +118,32 @@ export default {
                 dashShape: {
                     "100%": {
                         "stroke-dashoffset": 0,
+                    },
+                },
+                servicesSwing: {
+                    "0%": {
+                        transform: "rotate(3deg)",
+                    },
+                    "100%": {
+                        transform: "rotate(-3deg)",
+                    },
+                },
+                servicesStar: {
+                    "0%": {
+                        transform: "scale(0.5)",
+                    },
+                    "100%": {
+                        transform: "scale(1)",
+                    },
+                },
+                blinkTransform: {
+                    "0%": {
+                        transform: "scale(0.7)",
+                        opacity: 0.8,
+                    },
+                    "50%": {
+                        transform: "scale(1)",
+                        opacity: 1,
                     },
                 },
             },
