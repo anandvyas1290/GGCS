@@ -19,6 +19,7 @@ export default {
                 blue1: "#4260FF",
                 primaryBtn: "#775AFC",
                 blue1:"#4260FF",
+                darkBlue:"#1E2B8A"
                 // heroHeading: 'linear-gradient(90deg, #501E9C 0%, #A44CEE 43.75%, #FF847F 100%)',
             },
             fontFamily: {
@@ -33,6 +34,7 @@ export default {
                 shadow1: "rgba(1, 15, 28, 0.14)",
                 business1: "0px 1px 1px rgba(1, 15, 28, 0.2)",
                 business2: "0px 20px 30px rgba(1, 15, 28, 0.1)",
+                shadow2:"0px 25px 70px rgba(8, 10, 55, 0.1);"
             },
             animation: {
                 fadeInDown:
@@ -147,6 +149,9 @@ export default {
                     },
                 },
             },
+            backgroundImage:{
+                "darkBg":'url("/funfact1.webp")'
+            }
         },
     },
     plugins: [],

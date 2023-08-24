@@ -6,19 +6,19 @@ import { DashedLine } from '../../../components/UI/ProcessDash'
 const hosData = [
     {
         id: 0,
-        label: <h6 className='text-grey5 text-lg'>Brainstorming and Creative <br />ideas & Research</h6>
+        label: <h6 className=' text-lg'>Brainstorming and Creative <br />ideas & Research</h6>
     },
     {
         id: 1,
-        label: <h6 className='text-grey5 text-lg'>Fully-Automated Keyword <br />Grouping</h6>
+        label: <h6 className=' text-lg'>Fully-Automated Keyword <br />Grouping</h6>
     },
     {
         id: 2,
-        label: <h6 className='text-grey5 text-lg'>Building the strategy to <br /> boost Your Sales</h6>
+        label: <h6 className=' text-lg'>Building the strategy to <br /> boost Your Sales</h6>
     },
     {
         id: 3,
-        label: <h6 className='text-grey5 text-lg'>
+        label: <h6 className=' text-lg'>
             Helping to achieve <br />more People </h6>
     }
 ]
