@@ -13,7 +13,7 @@ import { PrimaryBtn } from "../../../components/Button";
 export default function CompanyBlog() {
     return (
         <div className="bg-gray-100">
-            <div className="max-w-screen-md lg:max-w-screen-xl mx-auto px-6 py-12">
+            <div className="max-w-screen-md lg:max-w-screen-xl mx-auto px-6 py-28">
                 <div className="sm:flex justify-between items-center mb-12">
                     <div>
                         <h6 className="text-transparent text-lg bg-clip-text bg-gradient-to-r from-purple-700 to-pink-800">

@@ -18,13 +18,13 @@ function Contact(props) {
     return (
         <div className="relative  z-[1]">
             <div className="absolute -z-[1] b-0 l-0 r-0 mt-40">
-                <img src={bg} alt="icon" />
+                <img src={bg} alt="icon" className="w-full" />
             </div>
             <div className="max-w-screen-lg lg:max-w-screen-xl mx-auto flex py-10">
                 <div className="w-1/2 mx-3">
                     <div className="my-10">
-                        <p className="text-transparent text-lg bg-clip-text bg-gradient-to-r from-purple-700 to-pink-800">Get In Touch</p>
-                        <h2 className='text-4xl sm:text-5xl font-semibold mt-1 mb-4'>Lets Work <br />Together</h2>
+                        <p className="text-transparent text-base bg-clip-text bg-gradient-to-r from-purple-700 to-pink-800">Get In Touch</p>
+                        <h2 className='text-4xl sm:text-5xl font-semibold mt-1 mb-4 !leading-[3.5rem]'>Lets Work <br />Together</h2>
                         <h6 className="text-lg mb-4 text-grey2">
                             Just tell us your requirements and we will help you!
                         </h6>
