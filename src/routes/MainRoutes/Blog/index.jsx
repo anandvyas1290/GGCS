@@ -9,7 +9,11 @@ import blog6 from "../../../assets/blog/blog6.webp";
 import blog7 from "../../../assets/blog/blog7.webp";
 import shape1 from "../../../assets/blog/shape1.webp";
 
-import { ClockIcon, UserIcon } from "@heroicons/react/24/outline";
+import {
+    ClockIcon,
+    UserIcon,
+    MagnifyingGlassIcon,
+} from "@heroicons/react/24/outline";
 
 import { useNavigate } from "react-router-dom";
 
@@ -80,6 +84,14 @@ const blogData = [
     },
 ];
 
+const categories = [
+    { id: 1, name: "Events", count: 2 },
+    { id: 2, name: "Marketing", count: 4 },
+    { id: 3, name: "Digital Product", count: 8 },
+    { id: 4, name: "GGCS SEO", count: 1 },
+    { id: 5, name: "SEO", count: 5 },
+];
+
 export default function Blog(props) {
     let navigate = useNavigate();
     return (
@@ -110,7 +122,7 @@ export default function Blog(props) {
                 </div>
             </section>
             <section className="pt-32 pb-24 bg-white">
-                <div className="max-w-screen-xl mx-auto px-12 flex gap-20">
+                <div className="max-w-screen-xl mx-auto px-12 flex gap-16">
                     <div className="w-8/12 grid grid-cols-2 gap-10">
                         {blogData?.map((item) => (
                             <div
@@ -150,8 +162,69 @@ export default function Blog(props) {
                             </div>
                         ))}
                     </div>
-                    <div className="w-4/12 bg-red-50">
-                        Keywords , Search and Filters Section
+                    <div className="w-4/12">
+                        <div className="bg-grey7 mb-5 p-8 rounded-md">
+                            <div className="flex gap-3">
+                                <input
+                                    type=""
+                                    placeholder="Type Something..."
+                                    className="w-9/12 p-3 rounded-md text-sm  text-ellipsis"
+                                />
+                                <div className="w-2/12 bg-blue1 rounded-md p-4">
+                                    <MagnifyingGlassIcon className="w-5 h-5 text-white1" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bg-grey7 mb-5 p-8 rounded-md">
+                            <h4 className="text-lg font-semibold mb-5">
+                                Recent Post
+                            </h4>
+                            <div className="">
+                                {blogData?.slice(0, 3)?.map((item) => (
+                                    <div
+                                        key={item?.id}
+                                        className="flex gap-4 mb-3"
+                                    >
+                                        <div className="w-3/12">
+                                            <img
+                                                src={item?.image}
+                                                alt={item?.category}
+                                                className="w-20 h-24 object-fill rounded-md"
+                                            />
+                                        </div>
+                                        <div className="w-9/12 flex flex-col justify-center gap-3">
+                                            <h5 className="!font-medium">
+                                                {item?.label}
+                                            </h5>
+                                            <p className="text-sm text-light2">
+                                                {item?.date}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="bg-grey7 mb-5 p-8 rounded-md">
+                            <h4 className="text-xl font-semibold mb-5">
+                                Categories
+                            </h4>
+                            <div className="text-grey6 text-sm">
+                                {categories?.map((item) => (
+                                    <div
+                                        key={item?.id}
+                                        className="flex justify-between mb-2"
+                                    >
+                                        <div>{item?.name}</div>
+                                        <div className="bg-white border rounded-2xl py-1 px-3">
+                                            <p>
+                                                {item?.count < 10 ? 0 : null}
+                                                {item?.count}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

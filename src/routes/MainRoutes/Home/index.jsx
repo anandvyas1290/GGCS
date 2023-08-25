@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css";
 
 import HeroSection from "./HeroSection";
 import Services from "./Services";

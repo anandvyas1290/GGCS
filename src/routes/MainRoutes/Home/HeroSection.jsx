@@ -18,13 +18,24 @@ export default function HeroSection() {
             <div className="container">
                 <div className="w-4/6">
                     <div className="">
-                        <h4 className="text-8xl font-bold">
+                        <div className="text-8xl font-bold">
                             SEO
                             <br />
                             marketing
                             <br />
-                            <span> value</span> in India
-                        </h4>
+                            <div class="animation">
+                                <div class="first">
+                                    <h4>agency</h4>
+                                </div>
+                                <div class="second">
+                                    <h4>analysis</h4>
+                                </div>
+                                <div class="third">
+                                    <h4>value</h4>
+                                </div>
+                            </div>
+                            in India
+                        </div>
                         <p className="text-xl text-grey1 mt-5 mb-10">
                             All in one SEO for your business to give real impact
                             <br />
