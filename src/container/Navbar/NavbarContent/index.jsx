@@ -1,17 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-import logo from "../../../assets/Navbar/logo.svg";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+// import logo from "../../../assets/Navbar/logo.svg";
+import logo from "../../../assets/Navbar/logo.png";
 
 import { PrimaryBtn } from "../../../components/Button";
 
 const navMenu = [
-    { id: 0, label: "Home", slug: "/", child: [{ id: "c" }] },
+    { id: 0, label: "Home", slug: "/" },
     { id: 1, label: "About", slug: "/about" },
-    { id: 2, label: "Services", slug: "/services", child: [{ id: "c" }] },
-    { id: 3, label: "Pages", slug: "/", child: [{ id: "c" }] },
-    { id: 4, label: "Blog", slug: "/blog", child: [{ id: "c" }] },
+    { id: 2, label: "Services", slug: "/services" },
+    // { id: 3, label: "Pages", slug: "/" },
+    { id: 4, label: "Blog", slug: "/blog" },
     { id: 5, label: "Contact", slug: "/contact" },
 ];
 export default function NavbarContent(props) {
@@ -36,19 +36,21 @@ export default function NavbarContent(props) {
         >
             <div className="max-w-full flex justify-between">
                 <div className="flex items-center">
-                    <img src={logo} alt="ggcs" />
+                    <img
+                        src={logo}
+                        alt="ggcs"
+                        className="h-[50px] w-[110px] cursor-pointer"
+                        onClick={() => navigate("/")}
+                    />
                 </div>
                 <div className="flex items-center">
                     {navMenu?.map((item) => (
                         <div
-                            className="flex items-center gap-2 mr-9 cursor-pointer text-lg font-normal text-black1 hover:text-primary transition-all duration-200"
+                            className="flex items-center !mr-12 cursor-pointer text-lg !font-medium text-black1 hover:text-primary transition-all duration-200"
                             key={item?.id}
                             onClick={() => navigate(item?.slug)}
                         >
                             <p>{item?.label}</p>
-                            {item?.child ? (
-                                <ChevronDownIcon className="h-4 w-4 font-bold flex items-center" />
-                            ) : null}
                         </div>
                     ))}
                 </div>

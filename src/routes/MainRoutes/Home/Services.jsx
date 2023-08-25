@@ -1,41 +1,13 @@
 import React from "react";
 
-import digiShape from "../../../assets/home/services/digiShape.webp";
-import seoShape from "../../../assets/home/services/seoShape.webp";
-import socialShape from "../../../assets/home/services/socialShape.webp";
-import digiMarketing from "../../../assets/home/services/digiMarketing.svg";
-import seo from "../../../assets/home/services/seo.svg";
-import socialMarketing from "../../../assets/home/services/socialMarketing.svg";
 import rocket from "../../../assets/Navbar/rocket.webp";
 import services from "../../../assets/home/services/services.svg";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+
 import { Link } from "react-router-dom";
+import { servicesData } from "../../../db/dummy";
 
 export default function Services(props) {
-    const servicesData = [
-        {
-            id: 0,
-            shape: digiShape,
-            icon: digiMarketing,
-            heading: "Digital Marketing",
-            desc: "We develop digital strategies, products and services appreciated by clients.",
-        },
-        {
-            id: 1,
-            shape: seoShape,
-            icon: seo,
-            heading: "SEO Analytics",
-            desc: "We develop digital strategies, products and services appreciated by clients.",
-        },
-        {
-            id: 2,
-            shape: socialShape,
-            icon: socialMarketing,
-            heading: "Social Marketing",
-            desc: "We develop digital strategies, products and services appreciated by clients.",
-        },
-    ];
-
     return (
         <div className="max-w-screen-xl mx-auto px-12 pb-36">
             <div>
@@ -90,7 +62,7 @@ export default function Services(props) {
                 </div>
 
                 <div className="flex justify-center">
-                    <div className="w-1/2 rounded-full shadow-contact   bg-grey3 p-3 text-center">
+                    <div className="w-1/2 rounded-full shadow-contact bg-grey3 p-3 text-center">
                         <div className="flex justify-center gap-2">
                             <span>
                                 <img
