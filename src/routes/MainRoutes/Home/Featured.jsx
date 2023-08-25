@@ -6,9 +6,7 @@ import brand4 from "../../../assets/home/featured/brand4.webp";
 import brand5 from "../../../assets/home/featured/brand5.webp";
 
 import Slider from "react-slick";
-// import Waves from "../../../components/waves";
-// import NewWaves from "../../../components/waves/waves";
-import Waves2 from "../../../components/waves/waves2";
+import Waves from "../../../components/Waves";
 
 export default function Featured(props) {
     const featuredData = [
@@ -49,11 +47,9 @@ export default function Featured(props) {
                     </Slider>
                 </div>
             </div>
-            <div className="relative">
-                <div className="left-0 h-30 ">
-                    {/* <Waves /> */}
-                    {/* <NewWaves /> */}
-                    <Waves2 />
+            <div className="relative h-32">
+                <div className="left-0 h-30 bottom-10">
+                    <Waves />
                 </div>
             </div>
         </div>

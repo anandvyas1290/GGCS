@@ -23,18 +23,20 @@ export default function HeroSection() {
                             <br />
                             marketing
                             <br />
-                            <div class="animation">
-                                <div class="first">
-                                    <h4>agency</h4>
+                            <div className="">
+                                <div class="text-animate">
+                                    <div class="first">
+                                        <h4>agency</h4>
+                                    </div>
+                                    <div class="second">
+                                        <h4>analysis</h4>
+                                    </div>
+                                    <div class="third">
+                                        <h4>value</h4>
+                                    </div>
                                 </div>
-                                <div class="second">
-                                    <h4>analysis</h4>
-                                </div>
-                                <div class="third">
-                                    <h4>value</h4>
-                                </div>
+                                <h5>in India</h5>
                             </div>
-                            in India
                         </div>
                         <p className="text-xl text-grey1 mt-5 mb-10">
                             All in one SEO for your business to give real impact

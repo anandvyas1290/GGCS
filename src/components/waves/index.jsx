@@ -1,56 +1,18 @@
 import React from "react";
+import "./index.css";
 
-const Waves = (props) => (
-    <svg
-        className="waves"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28"
-        preserveAspectRatio="none"
-        shapeRendering="auto"
-        {...props}
-    >
-        <defs>
-            <path
-                id="gentle-wave"
-                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-            />
-        </defs>
-        <g className="parallax">
-            <use
-                xlinkHref="#gentle-wave"
-                x={48}
-                y={0}
-                fill="rgba(255,255,255,0.7"
-            />
-            <use
-                xlinkHref="#gentle-wave"
-                x={48}
-                y={3}
-                fill="rgba(255,255,255,0.5)"
-            />
-            <use
-                xlinkHref="#gentle-wave"
-                x={48}
-                y={5}
-                fill="rgba(255,255,255,0.3)"
-            />
-            <use xlinkHref="#gentle-wave" x={48} y={7} fill="#fff" />
-        </g>
-    </svg>
-    // <svg
-    //     xmlns="http://www.w3.org/2000/svg"
-    //     width="100%"
-    //     height="100%"
-    //     class="wave wave-1"
-    // >
-    //     <title>Wave</title>
-    //     <defs></defs>
-    //     <path
-    //         id="feel-the-wave"
-    //         d="M 0 188.0728657879864 C 108.51429094587053 137.7042222435428 108.51429094587053 137.7042222435428 217.02858189174106 162.88854401576455 C 325.5428728376116 188.0728657879864 325.5428728376116 188.0728657879864 434.0571637834821 152.4099844226067 C 542.5714547293526 116.74710305722706 542.5714547293526 116.74710305722706 651.0857456752232 163.60620820123714 C 759.6000366210938 210.4653133452471 759.6000366210938 210.4653133452471 868.1143275669642 189.03089411846756 C 976.6286185128347 167.59647489168805 976.6286185128347 167.59647489168805 1085.1429094587054 211.77473575672175 C 1193.657200404576 255.9529966217556 1193.657200404576 255.9529966217556 1302.1714913504463 216.7113874602041 C 1410.6857822963166 177.46977829865276 1410.6857822963166 177.46977829865276 1519.2000732421875 175.49221991761473 L 1519.2000732421875 8458.0380859375 L 0 8458.0380859375 Z"
-    //         fill="rgba(255, 255, 255, 1)"
-    //     ></path>
-    // </svg>
-);
-export default Waves;
+export default function Waves() {
+    return (
+        <div className="waveWrapper waveAnimation">
+            <div className="waveWrapperInner bgTop">
+                <div className="wave waveTop" />
+            </div>
+            <div className="waveWrapperInner bgMiddle">
+                <div className="wave waveMiddle" />
+            </div>
+            <div className="waveWrapperInner bgBottom">
+                <div className="wave waveBottom" />
+            </div>
+        </div>
+    );
+}

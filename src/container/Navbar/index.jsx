@@ -10,7 +10,11 @@ const Navbar = (props) => {
 
     console.log(fullNav);
     return (
-        <div className="max-w-screen-xl relative mx-auto px-8 z-50">
+        <div
+            className={`${
+                fullNav ? "" : "max-w-screen-xl mx-auto px-8 z-50"
+            } relative`}
+        >
             {fullNav ? null : <StatusBar {...props} />}
             <NavbarContent {...props} fullNav={fullNav} />
         </div>
