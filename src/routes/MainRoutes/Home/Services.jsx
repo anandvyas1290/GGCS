@@ -19,43 +19,46 @@ export default function Services(props) {
                 </div>
 
                 <div className="grid grid-cols-3 gap-8 my-12">
-                    {servicesData?.map((item) => (
-                        <div
-                            className="group animate-services p-2"
-                            key={item.id}
-                        >
-                            <div className="flex justify-center">
-                                <div className="relative">
-                                    <img
-                                        src={item?.shape}
-                                        alt={item?.heading}
-                                        className="relative"
-                                    />
-                                    <img
-                                        src={item?.icon}
-                                        alt={item?.heading}
-                                        className="absolute left-0 right-0 top-1/2 text-center -translate-y-1/2"
-                                    />
+                    {servicesData?.map((item) => {
+                        console.log(item.id, servicesData[servicesData?.length - 1], item?.id === servicesData[servicesData?.length - 1])
+                        return (
+                            <div
+                                className="group animate-services p-2"
+                                key={item.id}
+                            >
+                                <div className="flex justify-center">
+                                    <div className="relative flex justify-center">
+                                        <img
+                                            src={item?.shape}
+                                            alt={item?.heading}
+                                            className="relative"
+                                        />
+                                        <img
+                                            src={item?.icon}
+                                            alt={item?.heading}
+                                            className={`absolute   top-1/2 text-center -translate-y-1/2 `}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="text-center">
+                                    <h4 className="text-2xl text-black2 font-semibold my-5">
+                                        {item?.heading}
+                                    </h4>
+                                    <p className="text-grey1">{item?.desc}</p>
+                                </div>
+                                <div className=" flex justify-center my-5">
+                                    <span className="flex cursor-pointer">
+                                        <p className="invisible group-hover:visible group-hover:animate-services">
+                                            Read More
+                                        </p>
+                                        <span>
+                                            <ArrowRightIcon className="w-7 h-6" />
+                                        </span>
+                                    </span>
                                 </div>
                             </div>
-                            <div className="text-center">
-                                <h4 className="text-2xl text-black2 font-semibold my-5">
-                                    {item?.heading}
-                                </h4>
-                                <p className="text-grey1">{item?.desc}</p>
-                            </div>
-                            <div className=" flex justify-center my-5">
-                                <span className="flex cursor-pointer">
-                                    <p className="invisible group-hover:visible group-hover:animate-services">
-                                        Read More
-                                    </p>
-                                    <span>
-                                        <ArrowRightIcon className="w-7 h-6" />
-                                    </span>
-                                </span>
-                            </div>
-                        </div>
-                    ))}
+                        )
+                    })}
                 </div>
 
                 <div className="flex justify-center">

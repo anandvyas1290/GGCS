@@ -17,14 +17,9 @@ function SEO() {
                 <div className="md:flex py-10">
                     <div className="w-full md:w-1/2 mx-3">
                         <div className="my-10">
-                            <p className="text-transparent text-lg bg-clip-text bg-gradient-to-r from-purple-700 to-pink-800">
-                                Looking for best SEO results?
-                            </p>
-                            <h2 className="text-4xl sm:text-5xl font-semibold mb-4 sm:!leading-[4rem] !leading-[3rem]">
-                                Organic Search
-                                <br />
-                                Engine Optimisation
-                            </h2>
+                            <p className="text-lg font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">Looking for best SEO results?</p>
+                            <h2 className='text-4xl sm:text-5xl font-semibold mb-4 sm:!leading-[4rem] !leading-[3rem]'>Organic Search<br />
+                                Engine Optimisation</h2>
                             <h6 className="text-base mb-4 text-grey2">
                                 So I said down the you owt to do with me
                                 absolutely bladdered, amongst what a plonker
@@ -92,7 +87,7 @@ function SEO() {
                 </div>
 
                 {/* Counter UI */}
-                <div className="bg-gradient-to-r from-sky-500 to-indigo-500 my-20 py-12 px-64 rounded-2xl">
+                <div className='bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F] my-20 py-12 px-64 rounded-2xl'>
                     <div>
                         <div>
                             <img src="" alt="" />
