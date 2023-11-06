@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../assets/Footer/logo.svg";
+import logo from "../../assets/Navbar/GGCS-Logo.svg";
 import Fb from "../../assets/Footer/facebook-f.svg"
 import Ig from "../../assets/Footer/instagram.svg"
 import Xt from "../../assets/Footer/x-twitter.svg"
@@ -36,19 +36,36 @@ const H5 = ({ children, className }) => {
 // }
 const SocialIcons = ({ Icon, name, children, className }) => {
     return (
-        <div className={`rounded-full w-10 h-10 mr-4 bg-white text-gray-500 flex items-center justify-center  hover:bg-blue-500 cursor-pointer ${className}`}>
-            <img src={Icon} alt={name} className={`w-3 hover:text-white ${children}`} />
+        <div className={`rounded-full w-10 h-10 mr-4 bg-white text-gray-500 flex items-center justify-center  hover:bg-blue-400  cursor-pointer ${className}`}>
+            <img src={Icon} alt={name} className={`w-4 hover:!text-white ${children}`} />
         </div>
     )
 }
+const services = [
+    {
+        label: "SEO (Search Engine Optimization)"
+    },
+    {
+        label: "Social Media Marketing"
+    },
+    {
+        label: "Search Engine Marketing"
+    },
+    {
+        label: "Inbound and Outbound Marketing"
+    },
+    {
+        label: 'Add-On Services'
+    }
+]
 export default function Footer() {
     return (
         <div className='bg-gray-100'>
             <div className='max-w-screen-md lg:max-w-screen-xl mx-auto pt-20 pb-20 px-6'>
-                <div className='flex  flex-wrap justify-between '>
-                    <div className='mb-3 lg:mb-0 lg:w-1/4 md:w-1/2'>
+                <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5'>
+                    <div className='mb-3 lg:mb-0 '>
                         <div className='mb-6'>
-                            <img src={logo} alt="logo" />
+                            <img src={logo} alt="logo" className="h-full w-full cursor-pointer" />
                         </div>
                         <div className='mb-6'>
                             <p className='text-lg font-normal text-gray-500'>
@@ -67,7 +84,7 @@ export default function Footer() {
                             </PrimaryBtn>
                         </div>
                     </div>
-                    <div className='lg:w-1/4 md:w-1/2'>
+                    <div className=''>
                         <div className='lg:pl-10'>
                             <H5 className="mb-5">Information</H5>
                             <div className='pl-4'>
@@ -82,24 +99,23 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className='lg:w-1/4 md:w-1/2'>
+                    <div className=''>
                         <div className='lg:pl-10'>
                             <H5 className="mb-5">
                                 Services
                             </H5>
                             <div className='pl-4'>
                                 <ul className="list-disc">
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Audit</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Services</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Marketing</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Analysis</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Optimization</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Social Media</li>
+                                    {
+                                        services?.map((item, i) => (
+                                            <li className='text-base font-normal text-gray-500 mb-2' key={i}>{item?.label}</li>
+                                        ))
+                                    }
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div className='lg:w-1/4 md:w-1/2'>
+                    <div className=''>
                         <H5 className="mb-2">Subscribe</H5>
                         <p className='text-lg font-normal text-gray-500'>Only valuable resource no bullshit</p>
                         <div className='my-8'>
@@ -116,7 +132,7 @@ export default function Footer() {
                 <div className='pt-10'>
                     <div className='bg-white rounded-full py-4 sm:px-2 md:px-5 flex justify-center'>
                         <p className='text-gray-400'>
-                            © 2023 <a className="text-blue-600">GGCS</a> All Rights Reserved.
+                            <b>© 2023</b> <a className="font-semibold text-transparent w-fit bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">GGCS</a> All Rights Reserved.
                         </p>
                     </div>
                 </div>

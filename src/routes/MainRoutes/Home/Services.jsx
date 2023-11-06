@@ -1,21 +1,22 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import rocket from "../../../assets/Navbar/rocket.webp";
 import services from "../../../assets/home/services/services.svg";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
-import { Link } from "react-router-dom";
 import { servicesData } from "../../../db/dummy";
 
 export default function Services(props) {
+    const navigate = useNavigate()
     return (
         <div className="max-w-screen-xl mx-auto px-12 pb-36">
             <div>
                 <div className="flex flex-col items-center justify-center">
                     <p className="text-lg font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
-                        Why services Us
+                        Why services Us We are Digital Marketers.
                     </p>
-                    <h5 className="text-6xl font-semibold">Our à services</h5>
+                    <h5 className="text-6xl font-semibold">Our services</h5>
                 </div>
 
                 <div className="grid grid-cols-3 gap-8 my-12">
@@ -40,15 +41,17 @@ export default function Services(props) {
                                         />
                                     </div>
                                 </div>
-                                <div className="text-center">
+                                <div className="grid text-center">
                                     <h4 className="text-2xl text-black2 font-semibold my-5">
                                         {item?.heading}
                                     </h4>
                                     <p className="text-grey1">{item?.desc}</p>
                                 </div>
                                 <div className=" flex justify-center my-5">
-                                    <span className="flex cursor-pointer">
-                                        <p className="invisible group-hover:visible group-hover:animate-services">
+                                    <span className="flex cursor-pointer" onClick={() => {
+                                        navigate("services");
+                                    }}>
+                                        <p className="invisible group-hover:ease-in group-hover:duration-1000  group-hover:visible group-hover:animate-services">
                                             Read More
                                         </p>
                                         <span>

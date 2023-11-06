@@ -47,7 +47,7 @@ function Testimonial() {
                     <div className="w-1/2">
                         <div className="my-10">
                             <span>
-                                <p className="flex text-lg font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
+                                <p className="flex text-lg font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
                                     Testimonials
                                 </p>
                             </span>

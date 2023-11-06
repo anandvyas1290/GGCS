@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 // import logo from "../../../assets/Navbar/logo.svg";
-import logo from "../../../assets/Navbar/logo.png";
+// import logo from "../../../assets/Navbar/logo.png";
+import logo from "../../../assets/Navbar/GGCS-Logo.svg"
 
 import { PrimaryBtn } from "../../../components/Button";
 
@@ -10,7 +11,7 @@ const navMenu = [
     { id: 0, label: "Home", slug: "/" },
     { id: 1, label: "About", slug: "/about" },
     { id: 2, label: "Services", slug: "/services" },
-    // { id: 3, label: "Pages", slug: "/" },
+    { id: 3, label: "Why GGCS", slug: "/why-ggcs" },
     { id: 4, label: "Blog", slug: "/blog" },
     { id: 5, label: "Contact", slug: "/contact" },
 ];
@@ -31,15 +32,15 @@ export default function NavbarContent(props) {
 
     return (
         <div
-            className="header px-4 py-3 mt-1 border rounded-full border-white bg-transparent backdrop-blur shadow-header"
+            className="header px-4 mt-1 border rounded-full border-white bg-transparent backdrop-blur shadow-header"
             ref={scrollRef}
         >
-            <div className="max-w-full flex justify-between">
-                <div className="flex items-center">
+            <div className="max-w-full flex justify-between items-center">
+                <div className="flex items-center h-[80px]">
                     <img
                         src={logo}
                         alt="ggcs"
-                        className="h-[50px] w-[110px] cursor-pointer"
+                        className="h-full w-full cursor-pointer"
                         onClick={() => navigate("/")}
                     />
                 </div>

@@ -8,7 +8,7 @@
     color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    height: 105px;
+    height: 100px;
     max-width: max-content;
     overflow: hidden;
 }
@@ -31,7 +31,7 @@
         margin-top: -2rem;
     }
     20% {
-        margin-top: -8.62rem;
+        margin-top: -1.62rem;
     }
     30% {
         margin-top: -8.62rem;

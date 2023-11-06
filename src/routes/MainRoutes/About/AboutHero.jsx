@@ -59,9 +59,12 @@ function AboutHero() {
                                 <span className={`text-blue1 ${dotStyle}  `}>
                                     Welcome
                                 </span>
-                                <h4 className='text-5xl font-bold mb-3'>Working Hard to Make <br />SEO Easy. Together</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur
-                                    <br />adipiscing elit.</p>
+                                <h4 className='text-5xl font-bold mb-3'>Working Hard to Make <br />Digital Marketing Easy. Together</h4>
+                                {/* <p>Lorem ipsum dolor sit amet, consectetur
+                                    <br />adipiscing elit.</p> */}
+                                <p>Welcome to GGCS, where digital meets intelligence to achieve market excellence.
+                                    <br />We are digital marketers.</p>
+
                             </div>
                         </div>
                     </div>

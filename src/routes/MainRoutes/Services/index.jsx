@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import bgMain from "../../../assets/services/bgMain.webp";
 import design1 from "../../../assets/services/design1.webp";
@@ -75,6 +75,9 @@ export default function Services(props) {
         },
     ];
 
+    useEffect(() => {
+    }, [])
+
     return (
         <div className="font-jakarta">
             <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
@@ -145,13 +148,12 @@ export default function Services(props) {
                             {processData?.map((item) => (
                                 <li className="mb-8" key={item?.id}>
                                     <div
-                                        className={`flex relative ${
-                                            [
-                                                "justify-start",
-                                                "justify-center",
-                                                "justify-end",
-                                            ][item?.id - 1]
-                                        }`}
+                                        className={`flex relative ${[
+                                            "justify-start",
+                                            "justify-center",
+                                            "justify-end",
+                                        ][item?.id - 1]
+                                            }`}
                                     >
                                         <div className="mr-7">
                                             <div className="relative">

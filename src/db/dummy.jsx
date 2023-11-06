@@ -15,22 +15,22 @@ export const servicesData = [
         id: 0,
         shape: digiShape,
         icon: digiMarketing,
-        heading: "Digital Marketing",
-        desc: "We develop digital strategies, products and services appreciated by clients.",
+        heading: "Search Engine Optimization",
+        desc: "Unlock Your Brand's Full Potential        ",
     },
     {
         id: 1,
         shape: seoShape,
         icon: seo,
-        heading: "SEO Analytics",
-        desc: "We develop digital strategies, products and services appreciated by clients.",
+        heading: "Content Strategy and Creation",
+        desc: "Weaving Your Brand's Story        ",
     },
     {
         id: 2,
         shape: socialShape,
         icon: socialMarketing,
-        heading: "Social Marketing",
-        desc: "We develop digital strategies, products and services appreciated by clients.",
+        heading: "Social Media Management",
+        desc: "Where Conversations Flourish ",
     },
 ];
 

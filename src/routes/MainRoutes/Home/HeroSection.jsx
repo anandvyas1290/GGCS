@@ -19,31 +19,32 @@ export default function HeroSection() {
                 <div className="w-4/6">
                     <div className="">
                         <div className="text-8xl font-bold">
-                            SEO
-                            <br />
-                            marketing
+                            {/* SEO
+                            <br /> */}
+                            Digital Marketing
                             <br />
                             <div className="">
-                                <div class="text-animate">
-                                    <div class="first">
+                                <div className="text-animate">
+                                    <div >
                                         <h4>agency</h4>
                                     </div>
-                                    <div class="second">
+                                    <div >
                                         <h4>analysis</h4>
                                     </div>
-                                    <div class="third">
+                                    <div>
                                         <h4>value</h4>
                                     </div>
+                                    <div >
+                                        <h4>Services</h4>
+                                    </div>
                                 </div>
-                                <h5>in India</h5>
+                                <h5>from India</h5>
                             </div>
                         </div>
-                        <p className="text-xl text-grey1 mt-5 mb-10">
-                            All in one SEO for your business to give real impact
-                            <br />
-                            consultancy and analysis.!
+                        <p className="text-base mb-4 text-grey2 tracking-[1.2px] ">
+                            Igniting Digital Growth
                         </p>
-                        <div className="mb-7">
+                        <div className="mb-7 mt-3">
                             <PrimaryBtn
                                 size="px-8 py-3"
                                 bgColor="bg-primaryBtn"
@@ -57,11 +58,11 @@ export default function HeroSection() {
                                 <PhoneArrowUpRightIcon className="w-7 h-7 text-primary" />
                             </div>
                             <div>
-                                <p className="text-base text-grey1">
-                                    Got Questions?
+                                <p className="text-base text-grey1 font-semibold">
+                                    Contact Us Today!
                                 </p>
                                 <h4 className="text-xl font-semibold">
-                                    +91 7888478435
+                                    +91 6354917511
                                 </h4>
                             </div>
                         </div>
