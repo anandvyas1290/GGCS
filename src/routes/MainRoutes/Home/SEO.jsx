@@ -99,7 +99,7 @@ function SEO() {
                                 </div>
                                 <div>
                                     <h3 className="text-4xl text-white">
-                                        180+
+                                        8+
                                     </h3>
                                     <p className="text-white">
                                         Successful Projects
@@ -112,7 +112,7 @@ function SEO() {
                                 </div>
                                 <div>
                                     <h3 className="text-4xl text-white">
-                                        180+
+                                        10+
                                     </h3>
                                     <p className="text-white">
                                         Happy Customers
@@ -124,7 +124,7 @@ function SEO() {
                                     <img src={TeamIcon} alt="teams" />
                                 </div>
                                 <div>
-                                    <h3 className="text-4xl text-white">64+</h3>
+                                    <h3 className="text-4xl text-white">6+</h3>
                                     <p className="text-white">Team Members</p>
                                 </div>
                             </div>

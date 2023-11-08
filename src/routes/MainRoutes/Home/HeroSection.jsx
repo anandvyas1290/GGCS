@@ -11,8 +11,10 @@ import shape4 from "../../../assets/home/heroSection/shape4.webp";
 import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 import { PrimaryBtn } from "../../../components/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+    const navigate = useNavigate()
     return (
         <div className="max-w-screen-xl mx-auto px-12 pt-[150px] pb-[150px]">
             <div className="container">
@@ -49,6 +51,9 @@ export default function HeroSection() {
                                 size="px-8 py-3"
                                 bgColor="bg-primaryBtn"
                                 className="border-2 rounded-full border-primaryBtn"
+                                onClick={() => {
+                                    navigate("/services")
+                                }}
                             >
                                 Get Started Now
                             </PrimaryBtn>

@@ -10,12 +10,13 @@ import Waves from "../../../components/Waves";
 
 export default function Featured(props) {
     const featuredData = [
-        { image: brand1 },
-        { image: brand4 },
         { image: brand3 },
-        { image: brand4 },
         { image: brand2 },
+        // { image: brand4 },
         { image: brand3 },
+        // { image: brand4 },
+        { image: brand1 },
+        { image: brand2 },
         // { image: brand5 },
         // { image: brand1 },
     ];

@@ -10,7 +10,7 @@ import { servicesData } from "../../../db/dummy";
 export default function Services(props) {
     const navigate = useNavigate()
     return (
-        <div className="max-w-screen-xl mx-auto px-12 pb-36">
+        <div className="max-w-screen-xl mx-auto px-12 pb-10">
             <div>
                 <div className="flex flex-col items-center justify-center">
                     <p className="text-lg font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
@@ -75,7 +75,7 @@ export default function Services(props) {
                             </span>
                             <p className="flex">
                                 You can also find our
-                                <Link className="mx-2 relative text-primary ">
+                                <Link to={"services"} className="mx-2 relative text-primary ">
                                     Services
                                     <img
                                         src={services}

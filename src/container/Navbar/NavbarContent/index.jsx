@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
+import ppt from "../../../assets/PDF/GGCS-PPT.pdf"
 // import logo from "../../../assets/Navbar/logo.svg";
 // import logo from "../../../assets/Navbar/logo.png";
 import logo from "../../../assets/Navbar/GGCS-Logo.svg"
+// import logo from "../../../assets/Navbar/GGCS-ICON.jpg"
 
 import { PrimaryBtn } from "../../../components/Button";
 
@@ -12,8 +14,11 @@ const navMenu = [
     { id: 1, label: "About", slug: "/about" },
     { id: 2, label: "Services", slug: "/services" },
     { id: 3, label: "Why GGCS", slug: "/why-ggcs" },
-    { id: 4, label: "Blog", slug: "/blog" },
-    { id: 5, label: "Contact", slug: "/contact" },
+    // { id: 4, label: "Blog", slug: "/blog" },
+    // { id: 5, label: "Contact", slug: "/contact" },
+    {
+        id: 4, label: "Download PPT", slug: "", label2: "download"
+    }
 ];
 export default function NavbarContent(props) {
     let scrollRef = useRef();
@@ -47,11 +52,23 @@ export default function NavbarContent(props) {
                 <div className="flex items-center">
                     {navMenu?.map((item) => (
                         <div
-                            className="flex items-center !mr-12 cursor-pointer text-lg !font-medium text-black1 hover:text-primary transition-all duration-200"
+                            className={`flex items-center !mr-12 cursor-pointer text-lg !font-medium text-black1 hover:text-primary transition-all duration-200  ${item?.label2 === "download" ? "text-blue-500" : ""}`}
                             key={item?.id}
-                            onClick={() => navigate(item?.slug)}
+                            onClick={() => {
+                                if (item?.label2 === "download") {
+                                    return
+                                } else {
+                                    navigate(item?.slug)
+                                }
+                            }
+                            }
                         >
-                            <p>{item?.label}</p>
+                            {
+                                item.label2 === "download" ?
+                                    <a download onClick={() => { window.open(ppt, '_blank', 'fullscreen=yes') }}>{item?.label}</a> :
+                                    <a >{item?.label}</a>
+                            }
+
                         </div>
                     ))}
                 </div>
@@ -59,12 +76,15 @@ export default function NavbarContent(props) {
                     <PrimaryBtn
                         bgColor="bg-primaryBtn"
                         className="border-primaryBtn"
+                        onClick={() =>
+                            navigate("/contact")
+                        }
                     >
                         Contact Us
                     </PrimaryBtn>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

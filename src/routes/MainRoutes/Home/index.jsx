@@ -19,16 +19,16 @@ export default function Home(props) {
         <div className="font-jakarta">
             <HeroSection {...props} />
             <Services {...props} />
+            <Pricing {...props} />
             <Featured {...props} />
             <Process {...props} />
             <SEO {...props} />
             <CaseStudies {...props} />
-            <Pricing {...props} />
-            <Testimonial {...props} />
-            <Review {...props} />
+            {/* <Testimonial {...props} /> */}
+            {/* <Review {...props} /> */}
             <Contact {...props} />
-            <CompanyBlog {...props} />
-            <Awards {...props} />
+            {/* <CompanyBlog {...props} /> */}
+            {/* <Awards {...props} /> */}
         </div>
     );
 }

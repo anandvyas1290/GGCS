@@ -4,11 +4,9 @@ import innerShape1 from "../../../assets/about/home/about-inner-shape-1.webp"
 import innerShape2 from "../../../assets/about/home/about-inner-shape-2.webp"
 import aboutInner from "../../../assets/about/home/about-inner-1.webp"
 import switchIcon from "../../../assets/about/home/switch.svg"
-import brand1 from "../../../assets/about/home/brand7.webp";
-import brand2 from "../../../assets/about/home/brand2.webp";
-import brand3 from "../../../assets/about/home/brand3.webp";
-import brand4 from "../../../assets/about/home/brand4.webp";
-import brand5 from "../../../assets/about/home/brand5.webp";
+import brand1 from "../../../assets/about/home/gg-log.svg";
+import brand2 from "../../../assets/about/home/ibn.png"
+import brand3 from "../../../assets/about/home/samachar.png"
 import { Link } from 'react-router-dom'
 import Slider from "react-slick";
 
@@ -17,9 +15,10 @@ const brandWrapper = [
     { image: brand1 },
     { image: brand2 },
     { image: brand3 },
-    { image: brand4 },
-    { image: brand5 },
     { image: brand1 },
+    { image: brand2 },
+    { image: brand1 },
+    { image: brand2 },
 ];
 
 function AboutHero() {
@@ -94,7 +93,7 @@ function AboutHero() {
                                         <img
                                             src={item?.image}
                                             alt="brand"
-                                            className="ml-10 mr-12 opacity-60 transition-all duration-300 hover:opacity-100"
+                                            className="object-contain object-center w-full max-h-12 transition-all duration-300 hover:opacity-100 !text-300 ml-5"
                                         />
                                     </div>
                                 ))}

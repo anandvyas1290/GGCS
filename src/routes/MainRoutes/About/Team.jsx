@@ -59,10 +59,9 @@ function Team() {
     return (
         <div>
             <Container>
-                <div className="block md:flex flex-wrap mt-28">
+                {/* <div className="block md:flex flex-wrap mt-28">
                     {[1, 1, 1]?.map((d, i) => {
                         return (
-                            // lg:[&:nth-child(2)]:after:border lg:[&:nth-child(2)]:before:border
                             <div
                                 key={i}
                                 className="md:w-1/3 h-full mb-12 md:mb-0flex justify-center   "
@@ -85,7 +84,7 @@ function Team() {
                             </div>
                         );
                     })}
-                </div>
+                </div> */}
                 <div className='my-28 '>
                     <div>
                         <div className='relative bg-darkBg bg-darkBlue pt-20 pb-60 w-full overflow-hidden -z-10 rounded-3xl'>
@@ -114,7 +113,7 @@ function Team() {
                                 {
                                     cards?.map((item, i) => {
                                         return (
-                                            <div className='w-2/5 mx-10'>
+                                            <div className='w-2/5 mx-10' key={i}>
                                                 <div className='bg-white px-10 py-12 rounded-xl shadow-shadow2 text-center'>
                                                     <p>Keywords</p>
                                                     <h4 className='text-darkBlue text-6xl font-bold mb-5'>
@@ -145,7 +144,7 @@ function Team() {
                     </div>
                 </div>
                 {/* Teams  */}
-                <div className='mt-20 mb-20'>
+                {/* <div className='mt-20 mb-20'>
                     <div className='text-center '>
                         <div className='mb-5'>
                             <h4 className='text-5xl font-bold mb-5'>
@@ -186,7 +185,7 @@ function Team() {
                         })}
 
                     </div>
-                </div>
+                </div> */}
             </Container >
         </div >
     )

@@ -1,11 +1,8 @@
 import React from 'react'
 import logo from "../../assets/Navbar/GGCS-Logo.svg";
-import Fb from "../../assets/Footer/facebook-f.svg"
-import Ig from "../../assets/Footer/instagram.svg"
-import Xt from "../../assets/Footer/x-twitter.svg"
-import In from "../../assets/Footer/linkedin.svg"
 import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { PrimaryBtn } from '../../components/Button';
+import { socialMedias } from '../../db/dummy';
 
 const Input = ({ text, placeholder, className }) => {
     return (
@@ -34,13 +31,13 @@ const H5 = ({ children, className }) => {
 //         </button>
 //     )
 // }
-const SocialIcons = ({ Icon, name, children, className }) => {
-    return (
-        <div className={`rounded-full w-10 h-10 mr-4 bg-white text-gray-500 flex items-center justify-center  hover:bg-blue-400  cursor-pointer ${className}`}>
-            <img src={Icon} alt={name} className={`w-4 hover:!text-white ${children}`} />
-        </div>
-    )
-}
+// const SocialIcons = ({ Icon, name, children, className }) => {
+//     return (
+//         <div className={`rounded-full w-10 h-10 mr-4 bg-white text-gray-500 flex items-center justify-center  hover:bg-blue-400  cursor-pointer ${className}`}>
+//             <img src={Icon} alt={name} className={`w-4 hover:!text-white ${children}`} />
+//         </div>
+//     )
+// }
 const services = [
     {
         label: "SEO (Search Engine Optimization)"
@@ -89,12 +86,12 @@ export default function Footer() {
                             <H5 className="mb-5">Information</H5>
                             <div className='pl-4'>
                                 <ul className="list-disc">
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Home</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>About Us </li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Project</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Plan & Pricing</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Blog</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Contact Us</li>
+                                    <li className='text-base font-normal text-gray-500 mb-2'><a href="#">Home</a></li>
+                                    <li className='text-base font-normal text-gray-500 mb-2'><a href="/about">About Us </a></li>
+                                    <li className='text-base font-normal text-gray-500 mb-2'><a href="/services">Services</a></li>
+                                    <li className='text-base font-normal text-gray-500 mb-2'><a href="/why-ggcs">Why GGCS</a></li>
+                                    {/* <li className='text-base font-normal text-gray-500 mb-2'>Blog</li> */}
+                                    <li className='text-base font-normal text-gray-500 mb-2'><a href="/contact">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -121,11 +118,18 @@ export default function Footer() {
                         <div className='my-8'>
                             <Input placeholder={"Your Email"} type={"mail"} />
                         </div>
-                        <div className='flex '>
-                            <SocialIcons name="facebook" Icon={Fb} className={"text-blue-500"} />
-                            <SocialIcons name="instagram" Icon={Ig} />
-                            <SocialIcons name="x-twitter" Icon={Xt} />
-                            <SocialIcons name="linkedin" Icon={In} />
+                        <div className="flex gap-8">
+                            {socialMedias?.map((item, i) => (
+                                <div className="" key={i}
+                                    onClick={() => window.open(item?.link, "_blank",
+                                        "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes")}>
+                                    <img
+                                        src={item?.icon}
+                                        alt={item?.name}
+                                        className={`w-6 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

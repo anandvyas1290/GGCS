@@ -13,7 +13,7 @@ import Container from "../../../components/Layout/Layout";
 const counterData = [
     {
         Icon: counter1,
-        num: "25 +",
+        num: "1 +",
         label: (
             <p className=" text-base pl-3">
                 Years <br />
@@ -24,7 +24,7 @@ const counterData = [
 
     {
         Icon: counter2,
-        num: "340 +",
+        num: "10 +",
         label: (
             <p className=" text-base pl-3">
                 Project <br />
@@ -35,11 +35,11 @@ const counterData = [
 
     {
         Icon: counter3,
-        num: "25 +",
+        num: "1 +",
         label: (
             <p className=" text-base pl-3">
                 Satisfied Clients On <br />
-                24 Countries
+                India
             </p>
         ),
     },

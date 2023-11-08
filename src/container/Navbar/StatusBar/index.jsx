@@ -1,17 +1,9 @@
 import React from "react";
 
 import rocket from "../../../assets/Navbar/rocket.webp";
-import facebook from "../../../assets/socialMedia/facebook.svg";
-import linkedin from "../../../assets/socialMedia/linkedin.svg";
-import instagram from "../../../assets/socialMedia/instagram.svg";
-import twitter from "../../../assets/socialMedia/x-twitter.svg";
+import { socialMedias } from "../../../db/dummy";
 
-const socialMedias = [
-    { icon: facebook, name: "facebook", link: "" },
-    { icon: twitter, name: "twitter", link: "" },
-    { icon: linkedin, name: "linkedin", link: "" },
-    { icon: instagram, name: "instagram", link: "" },
-];
+
 
 export default function StatusBar() {
     return (
@@ -32,7 +24,8 @@ export default function StatusBar() {
                 </div>
                 <div className="flex gap-3">
                     {socialMedias?.map((item, i) => (
-                        <div className="" key={i}>
+                        <div className="" key={i} onClick={() => window.open(item?.link, "_blank",
+                            "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes")}>
                             <img
                                 src={item?.icon}
                                 alt={item?.name}

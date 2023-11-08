@@ -31,11 +31,14 @@ import StatImg from "../../../assets/SEO/optimize-shape-1.webp";
 import { PrimaryBtn } from "../../../components/Button";
 
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
-import { servicesData, serviceSocial } from "../../../db/dummy";
+import { Price, servicesData, serviceSocial } from "../../../db/dummy";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Slider from "react-slick";
+import { useNavigate } from 'react-router-dom';
 
 export default function Services(props) {
+    const navigate = useNavigate()
     const processData = [
         {
             id: 1,
@@ -76,8 +79,15 @@ export default function Services(props) {
     ];
 
     useEffect(() => {
+        window.scrollTo(0, 0)
     }, [])
-
+    const settings = {
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+    };
     return (
         <div className="font-jakarta">
             <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
@@ -199,16 +209,23 @@ export default function Services(props) {
                     <div className="relative">
                         <img src={socialTree} alt="services" className="" />
                         <div className="">
-                            <div className="absolute -top-5 -left-6 z-[1] animate-blinkTransform1">
+                            <div className="absolute -top-5 -left-6 z-[1] animate-blinkTransform1"
+                                onClick={() => window.open("https://www.facebook.com/people/Global-Garner-Consultancy-Services/61552984453919/",)}>
                                 <img src={pinterest} alt="shape1" />
                             </div>
-                            <div className="absolute top-[5%] left-[45%] z-[1] animate-blinkTransform2">
+                            <div className="absolute top-[5%] left-[45%] z-[1] animate-blinkTransform2"
+                                onClick={() => window.open("#", "_blank",
+                                    "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes")}>
                                 <img src={facebook} alt="shape2" />
                             </div>
-                            <div className="absolute -top-[15%] right-[13%] z-[1] animate-blinkTransform1">
+                            <div className="absolute -top-[15%] right-[13%] z-[1] animate-blinkTransform1"
+                                onClick={() => window.open("#", "_blank",
+                                    "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes")}>
                                 <img src={instagram} alt="shape3" />
                             </div>
-                            <div className="absolute top-[19%] right-[1%] z-[1] animate-blinkTransform2">
+                            <div className="absolute top-[19%] right-[1%] z-[1] animate-blinkTransform2"
+                                onClick={() => window.open("#", "_blank",
+                                    "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes")}>
                                 <img src={linkedin} alt="shape3" />
                             </div>
                         </div>
@@ -227,8 +244,8 @@ export default function Services(props) {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-7">
-                        {businessData?.map((item, i) => (
+                    {/* <div className="grid grid-cols-3 gap-7"> */}
+                    {/* {businessData?.map((item, i) => (
                             <div
                                 className="group px-8 pt-10 shadow-business1 rounded-xl hover:shadow-business2 bg-white1 transition-all duration-500"
                                 key={i}
@@ -246,8 +263,43 @@ export default function Services(props) {
                                     />
                                 </div>
                             </div>
-                        ))}
+                        ))} */}
+                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
+                        <Slider {...settings}>
+                            {Price?.map((item, index) => (
+                                <div key={index} className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-700 dark:text-white cursor-pointer">
+                                    <div>
+                                        <h3 className="mb-4 text-2xl font-semibold">{item?.title}</h3>
+                                        <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">{item?.desc}</p>
+                                        <div className="flex justify-center items-baseline my-8">
+                                            <span className="mr-1 text-4xl font-extrabold">{item?.price}</span>
+                                            <span className="text-gray-500 dark:text-gray-400">/month</span>
+                                        </div>
+                                        {/* List  */}
+                                        <ul role="list" className="mb-8 space-y-3 text-left">
+                                            {
+                                                item?.description?.map((desc, i) => (
+                                                    <li key={i} className="flex items-center space-x-3">
+                                                        {/* Icon  */}
+                                                        <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                                        <span>{desc?.label} <span className="font-semibold">{desc?.time}</span></span>
+                                                    </li>
+                                                ))
+                                            }
+                                        </ul>
+                                    </div>
+                                    <div
+                                        onClick={() => {
+                                            navigate("/contact")
+                                        }}
+                                        className="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-semibold rounded-lg text-lg px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900 cursor-pointer hover:bg-white hover:text-blue-500">
+                                        Join this Plan
+                                    </div>
+                                </div>
+                            ))}
+                        </Slider>
                     </div>
+                    {/* </div> */}
                 </div>
             </section>
 

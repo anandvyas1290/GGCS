@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bg from "../../../assets/home/contact/contact-4-bg.webp";
 import { PrimaryBtn } from "../../../components/Button";
 const Input = ({ text, placeholder, className }) => {
@@ -15,8 +15,11 @@ const Input = ({ text, placeholder, className }) => {
     )
 }
 function Contact(props) {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
-        <section className="relative  z-[1]">
+        <section className="relative  z-[1] py-10">
             <div className="">
                 <img src={bg} alt="icon" className="absolute -z-[1] bottom-0 left-0 right-0 w-full" />
             </div>

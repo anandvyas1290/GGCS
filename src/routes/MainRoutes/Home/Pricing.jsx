@@ -1,158 +1,11 @@
 import React from 'react'
 import { SecondaryBtn, SecondaryBtn2 } from "../../../components/Button"
 import Slider from "react-slick";
-const Price = [
-    {
-        title: "Silver",
-        price: "Rs. 45,000",
-        desc: "Social Media Handles (Plan, Create, Manage)",
-        description: [
-            {
-                label: "20 Creatives per month"
-            },
-            {
-                label: "2 Dedicated Videos"
-            },
-            {
-                label: "4 Generic Videos",
-                time: "(30-60 Sec)"
-            }, {
-                label: "Reach 50,000"
-            },
-            {
-                label: "1 Motion Graphics"
-            }, {
-                label: "Analytics-Based Report",
-                time: "(Weekly & Monthly)"
-            }, {
-                label: "Data Behavioural Report"
-            },
-            {
-                label: "Monthly status Meetings"
-            }
-        ]
+import { useNavigate } from 'react-router-dom';
+import { Price } from '../../../db/dummy';
 
-    },
-    {
-        title: "Gold",
-        price: "Rs. 71,000",
-        desc: "Social Media Handles (Plan, Create, Manage)",
-        description: [
-            {
-                label: "30 Creatives per month"
-            },
-            {
-                label: "4 Dedicated Videos"
-            },
-            {
-                label: "6 Generic Videos",
-                time: "(30-60 Sec)"
-            }, {
-                label: "Reach 1,00,000"
-            },
-            {
-                label: "2 Motion Graphics"
-            },
-            {
-                label: "1 Promotional Ad"
-            },
-            { label: "1 App Store Optimization Services" },
-            {
-                label: "1 Flipkart and Amazon Promotions"
-            },
-            {
-                label: "Analytics-Based Report",
-                time: "(Weekly & Monthly)"
-            }, {
-                label: "Data Behavioural Report"
-            },
-            {
-                label: "Monthly status Meetings"
-            }
-        ]
-
-    },
-    {
-        title: "Platinum",
-        price: "Rs. 1,05,000",
-        desc: "Social Media Handles (Plan, Create & Manage)",
-        description: [
-            {
-                label: "40 Creatives per month"
-            },
-            {
-                label: "6 Dedicated Videos",
-                time: "(30-60 Sec)"
-            },
-            {
-                label: "8 Generic Videos",
-                time: "(30-60 Sec)"
-            }, {
-                label: "Reach 2,00,000"
-            },
-            {
-                label: "3 Motion Graphics"
-            },
-            {
-                label: "2 Promotional Ad"
-            },
-            { label: "2 App Store Optimization Services" },
-            {
-                label: "2 Flipkart and Amazon Promotions"
-            }, {
-                label: "Analytics-Based Report",
-                time: "(Weekly & Monthly)"
-            }, {
-                label: "Data Behavioural Report"
-            },
-            {
-                label: "Fortnightly Status and Inputs Online Meetings "
-            }
-        ]
-
-    },
-    {
-        title: "Platinum Premium",
-        price: "Rs. 1,16,000",
-        desc: "Social Media Handles (Plan, Create & Manage)",
-        description: [
-            {
-                label: "50 Creatives per month"
-            },
-            {
-                label: "8 Dedicated Videos",
-                time: "(30-60 Sec)"
-            },
-            {
-                label: "10 Generic Videos",
-                time: "(30-60 Sec)"
-            }, {
-                label: "Reach 3,00,000"
-            },
-            {
-                label: "4 Motion Graphics"
-            },
-            {
-                label: "3 Promotional Ad"
-            },
-            { label: "3 App Store Optimization Services" },
-            {
-                label: "3Flipkart and Amazon Promotions"
-            }, {
-                label: "Analytics-Based Report",
-                time: "(Weekly & Monthly)"
-            }, {
-                label: "1 Data Behavioural Report"
-            },
-            {
-                label: "Fortnightly Status and Inputs Online Meetings "
-            }
-        ]
-
-    },
-
-]
 export default function Pricing() {
+    const navigate = useNavigate()
     const settings = {
         dots: true,
         infinite: true,
@@ -161,7 +14,7 @@ export default function Pricing() {
         arrows: false,
     };
     return (
-        <div className='mxa-w-screen-lg max-w-screen-xl mx-auto'>
+        <div className='mxa-w-screen-lg max-w-screen-xl mx-auto pb-5'>
             {/* <div className='text-center'>
                         <h6 className="text-lg mx-auto font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">Pricing Plans</h6>
                         <h2 className='text-4xl sm:text-6xl font-semibold mt-1 mb-4'>Packages for everyone</h2>
@@ -206,7 +59,6 @@ export default function Pricing() {
                                     </div>
                                     {/* List  */}
                                     <ul role="list" className="mb-8 space-y-3 text-left">
-
                                         {
                                             item?.description?.map((desc, i) => (
                                                 <li key={i} className="flex items-center space-x-3">
@@ -218,8 +70,12 @@ export default function Pricing() {
                                         }
                                     </ul>
                                 </div>
-                                <div className="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-semibold rounded-lg text-lg px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900 cursor-pointer hover:bg-white hover:text-blue-500">
-                                    <a href="#" >Join this Plan</a>
+                                <div
+                                    onClick={() => {
+                                        navigate("/contact")
+                                    }}
+                                    className="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-semibold rounded-lg text-lg px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900 cursor-pointer hover:bg-white hover:text-blue-500">
+                                    Join this Plan
                                 </div>
                             </div>
                         ))}
