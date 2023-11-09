@@ -58,8 +58,8 @@ const services = [
 export default function Footer() {
     return (
         <div className='bg-gray-100'>
-            <div className='max-w-screen-md lg:max-w-screen-xl mx-auto pt-20 pb-20 px-6'>
-                <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5'>
+            <div className='max-w-screen-md lg:max-w-screen-xl mx-auto pt-14 sm:pt-20 pb-20 px-6'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5'>
                     <div className='mb-3 lg:mb-0 '>
                         <div className='mb-6'>
                             <img src={logo} alt="logo" className="h-full w-full cursor-pointer" />

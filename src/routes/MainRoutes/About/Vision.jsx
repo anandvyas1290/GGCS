@@ -49,14 +49,14 @@ function Vision() {
         <div>
             <Container>
                 <div className="pt-10 pb-48">
-                    <div className="flex">
-                        <div className="w-1/2">
-                            <div className="bg-red-100 px-14 py-14 rounded-lg">
-                                <span>
+                    <div className="sm:flex">
+                        <div className="w-full md:w-1/2 mb-5 lg:mb-0 ">
+                            <div className="bg-red-100 px-3 sm:px-6 md:px-14 py-8 md:py-14 rounded-lg">
+                                <span className="hidden md:block">
                                     <img
                                         src={mission}
                                         alt="mission"
-                                        className="mb-5"
+                                        className="mb-5 w-full"
                                     />
                                 </span>
                                 <p className="text-lg text-gray-700">
@@ -67,16 +67,12 @@ function Vision() {
                                 </p>
                             </div>
                         </div>
-                        <div>
-                            <div>
-                                <div>
-                                    <img src={floatImg} alt="floatIcon" />
-                                </div>
-                            </div>
+                        <div className="hidden md:block">
+                            <img src={floatImg} alt="floatIcon" />
                         </div>
                     </div>
-                    <div className="flex">
-                        <div className="w-2/5">
+                    <div className="md:flex">
+                        <div className="md:w-2/5 hidden md:block">
                             <div className="flex relative">
                                 <div>
                                     <img src={treeIcon} alt="floatIcon" />
@@ -86,8 +82,8 @@ function Vision() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-3/5 relative">
-                            <div className="bg-green-100 px-14 py-14 rounded-lg absolute -top-10 left-10">
+                        <div className="md:w-3/5 relative">
+                            <div className="bg-green-100 px-3 sm:px-6 md:px-14 py-8 md:py-14 rounded-lg ">
                                 <span>
                                     <img
                                         src={purpose}
@@ -105,7 +101,7 @@ function Vision() {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex flex-wrap justify-center sm:justify-between mb-8 sm:mb-14">
                     {counterData?.map((item, i) => {
                         return (
                             <div

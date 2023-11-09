@@ -10,7 +10,7 @@ function About(props) {
             <AboutHero {...props} />
             <HOS {...props} />
             <Vision {...props} />
-            <Team {...props} />
+            {/* <Team {...props} /> */}
 
         </div>
     )

@@ -27,7 +27,7 @@ function HOS() {
         <div>
             <Container>
                 <div className='flex items-center justify-center'>
-                    <div className='mb-20'>
+                    <div className='mb-10 md:mb-20'>
                         <div className='relative flex justify-center mb-2'>
                             <p className='text-blue-500 absolute top-2'>
                                 How we do it
@@ -41,13 +41,13 @@ function HOS() {
                         </div>
                     </div>
                 </div>
-                <div className='mb-12'>
+                <div className='sm:mb-12'>
                     <div className='relative pb-12 border-b-2 border-gray-100'>
-                        <div className='flex flex-wrap'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
                             {hosData?.map((d, i) => {
                                 return (
-                                    <div key={i} className='w-1/4 relative '>
-                                        <div className={` ${i === 0 ? "text-left" : i === 1 ? "text-center" : i === 2 ? "text-right" : i === 3 ? "text-right" : " text-center"}`}>
+                                    <div key={i} className='w-full relative '>
+                                        <div className={` ${i === 0 ? "text-center lg:text-left" : i === 1 ? "text-center" : i === 2 ? "text-center lg:text-right" : i === 3 ? "text-center lg:text-right" : " text-center"}`}>
                                             <div div className="inline-block text-center">
 
                                                 <span className={` text-white relative text-xl  rounded-full h-12 w-12 leading-[3rem] mb-6 inline-block text-center before:border before:rounded-full before:h-16 before:w-16 before:absolute before:-top-4 before:-left-2 before:border-blue-1 ${i === 0 ? " bg-blue-300" : i === 1 ? " bg-yellow-200" : i === 2 ? " bg-orange-300" : i === 3 ? "  bg-pink-300" : ''}`} >
@@ -61,13 +61,13 @@ function HOS() {
                                 )
                             })}
                         </div>
-                        <div className='absolute -top-4 left-56 rotate-0'>
+                        <div className='hidden lg:block absolute -top-4 left-56 rotate-0'>
                             <DashedLine />
                         </div>
-                        <div className='absolute -top-4  left-[48%]	rotate-180'>
+                        <div className='hidden lg:block absolute -top-4  left-[48%]	rotate-180'>
                             <DashedLine />
                         </div>
-                        <div className='absolute -top-4  right-48 rotate-0'>
+                        <div className='hidden lg:block absolute -top-4  right-48 rotate-0'>
                             <DashedLine />
                         </div>
 

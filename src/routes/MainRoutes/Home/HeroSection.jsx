@@ -16,11 +16,11 @@ import { useNavigate } from "react-router-dom";
 export default function HeroSection() {
     const navigate = useNavigate()
     return (
-        <div className="max-w-screen-xl mx-auto px-12 pt-[150px] pb-[150px]">
+        <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[150px] pb-[60px]  md:pb-[100px] lg:pb-[150px]">
             <div className="container">
-                <div className="w-4/6">
+                <div className="sm:w-4/6">
                     <div className="">
-                        <div className="text-8xl font-bold">
+                        <div className="text-6xl md:text-8xl font-bold">
                             {/* SEO
                             <br /> */}
                             Digital Marketing
@@ -46,7 +46,7 @@ export default function HeroSection() {
                         <p className="text-base mb-4 text-grey2 tracking-[1.2px] ">
                             Igniting Digital Growth
                         </p>
-                        <div className="mb-7 mt-3">
+                        <div className="mb-5 sm:mb-7 mt-2 sm:mt-3">
                             <PrimaryBtn
                                 size="px-8 py-3"
                                 bgColor="bg-primaryBtn"
@@ -89,13 +89,13 @@ export default function HeroSection() {
                     <div className="absolute left-40 bottom-9 -z-[1] animate-upslide">
                         <img src={shape1} alt="" />
                     </div>
-                    <div className="absolute left-[660px] top-[345px] -z-[1] animate-shape2">
+                    <div className="absolute md:left-[660px] top-[345px] -z-[1] animate-shape2">
                         <img src={shape2} alt="" />
                     </div>
-                    <div className="absolute left-[750px] bottom-[280px] -z-[1] animate-shape3">
+                    <div className="absolute md:left-[750px] bottom-[280px] -z-[1] animate-shape3">
                         <img src={shape3} alt="" />
                     </div>
-                    <div className="absolute right-[610px] bottom-[90px] animate-shape4">
+                    <div className="absolute md:right-[610px] bottom-[90px] animate-shape4">
                         <img src={shape4} alt="" />
                     </div>
                 </div>

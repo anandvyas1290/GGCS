@@ -21,15 +21,45 @@ export default function Featured(props) {
         // { image: brand1 },
     ];
     const settings = {
+        // slidesToShow: 5,
+        // slidesToScroll: 1,
+
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
         infinite: true,
-        speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
+        initialSlide: 0,
+        speed: 500,
         arrows: false,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 625,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
     return (
-        <div className="bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F] relative mb-36">
+        <div className="bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F] relative md:mb-36">
             <div className="max-w-screen-xl mx-auto px-12">
                 <div className="text-center">
                     <h4 className="text-2xl font-bold text-white1 pt-20 pb-12">

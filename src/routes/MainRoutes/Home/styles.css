@@ -12,6 +12,11 @@
     max-width: max-content;
     overflow: hidden;
 }
+@media (max-width: 640px){
+    .text-animate {
+        height: 70px;
+    }
+}
 
 .text-animate > div > h4 {
     padding: 2rem 0.4rem;

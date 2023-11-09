@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import ppt from "../../../assets/PDF/GGCS-PPT.pdf"
 // import logo from "../../../assets/Navbar/logo.svg";
 // import logo from "../../../assets/Navbar/logo.png";
 import logo from "../../../assets/Navbar/GGCS-Logo.svg"
+import Menu from "../../../assets/Navbar/menu.svg"
 // import logo from "../../../assets/Navbar/GGCS-ICON.jpg"
 
 import { PrimaryBtn } from "../../../components/Button";
@@ -21,27 +22,51 @@ const navMenu = [
     }
 ];
 export default function NavbarContent(props) {
-    let scrollRef = useRef();
+
+    // const [nav, setNav] = useState(false)
+    const [state, setState] = useState({
+        showMenu: false
+    })
     let navigate = useNavigate();
+    let scrollRef = useRef();
+    const menuInfoBlockRef = useRef();
 
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
-    });
-
+        document.addEventListener("mousedown", handleClickOutside);
+        return (() => {
+            document.addEventListener("mousedown", handleClickOutside);
+        })
+    }, []);
+    const handleClickOutside = (event) => {
+        if (!menuInfoBlockRef.current?.contains(event.target)) {
+            setState((prev) => {
+                return { ...prev, showMenu: false };
+            });
+        }
+    }
     const onScroll = () => {
         // console.log(scrollRef.current);
         let ele = document.querySelector(".header");
         // console.log(ele.attributes);
         // fixed top-5 animate-fadeInDown
     };
-
+    const handleOpenMenu = (data) => {
+        setState((prev) => {
+            return {
+                ...prev,
+                showMenu: data,
+            };
+        })
+    }
+    const { showMenu } = state
     return (
         <div
             className="header px-4 mt-1 border rounded-full border-white bg-transparent backdrop-blur shadow-header"
             ref={scrollRef}
         >
-            <div className="max-w-full flex justify-between items-center">
-                <div className="flex items-center h-[80px]">
+            <div className="relative max-w-full flex justify-between items-center">
+                <div className="flex items-center h-[50px] md:h-[80px]">
                     <img
                         src={logo}
                         alt="ggcs"
@@ -49,7 +74,7 @@ export default function NavbarContent(props) {
                         onClick={() => navigate("/")}
                     />
                 </div>
-                <div className="flex items-center">
+                <div className="hidden lg:flex items-center">
                     {navMenu?.map((item) => (
                         <div
                             className={`flex items-center !mr-12 cursor-pointer text-lg !font-medium text-black1 hover:text-primary transition-all duration-200  ${item?.label2 === "download" ? "text-blue-500" : ""}`}
@@ -72,7 +97,7 @@ export default function NavbarContent(props) {
                         </div>
                     ))}
                 </div>
-                <div>
+                <div className="flex items-center justify-between">
                     <PrimaryBtn
                         bgColor="bg-primaryBtn"
                         className="border-primaryBtn"
@@ -82,6 +107,39 @@ export default function NavbarContent(props) {
                     >
                         Contact Us
                     </PrimaryBtn>
+                    <span className="block lg:hidden h-10 w-10 sm:h-12 sm:w-12"
+                        onClick={() => {
+                            handleOpenMenu(true)
+                        }}>
+                        <img src={Menu} alt="" className="w-full h-full" />
+                    </span>
+
+                </div>
+                <div ref={menuInfoBlockRef} className={`absolute top-10 right-0 md:top-20  lg:hidden lg:w-auto ${showMenu ? "  w-fit " : "hidden"} `} id="navbar-default">
+                    <ul className="font-medium flex flex-col p-4  mt-4 border border-gray-100 rounded-lg bg-gray-50   md:mt-0 md:border-0">
+                        {navMenu?.map((item) => (
+                            <li
+                                className="text-black py-1"
+                                key={item?.id}
+                                onClick={() => {
+                                    if (item?.label2 === "download") {
+                                        return
+                                    } else {
+                                        navigate(item?.slug)
+                                    }
+                                }
+                                }>
+                                {
+                                    item.label2 === "download" ?
+                                        <a download onClick={() => { window.open(ppt, '_blank', 'fullscreen=yes') }} className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">{item?.label}</a> :
+                                        <a >{item?.label}</a>
+                                }
+
+
+                            </li>
+
+                        ))}
+                    </ul>
                 </div>
             </div>
         </div >

@@ -83,14 +83,42 @@ export default function Services(props) {
     }, [])
     const settings = {
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
+        initialSlide: 0,
+        speed: 500,
         arrows: false,
+        // adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 625,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
     return (
         <div className="font-jakarta">
-            <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
+            {/* <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
                 <div className="absolute top-0 left-0 w-full h-full mix-blend-overlay opacity-80 -z-[1px]">
                     <img
                         src={bgMain}
@@ -130,7 +158,7 @@ export default function Services(props) {
                         />
                     </div>
                 </div>
-                <div className="max-w-screen-xl mx-auto px-14">
+                <div className="max-w-screen-xl mx-auto px-3 sm:px-8 md:px-14">
                     <div className="lg:w-10/12">
                         <p className="text-lg font-medium text-white2 mb-4">
                             Social Media Marketing
@@ -149,11 +177,11 @@ export default function Services(props) {
                         className="rounded-3xl"
                     />
                 </div>
-            </div>
+            </div> */}
 
-            <section className="max-w-screen-xl mx-auto px-12 pt-40 pb-20">
-                <div className="grid grid-cols-2">
-                    <div className="pl-16">
+            <section className="max-w-screen-xl mx-auto px-3 sm:px-8 md:px-12 pt-20 sm:pt-40 pb-20">
+                <div className="grid md:grid-cols-2">
+                    <div className="lg:pl-16">
                         <ul>
                             {processData?.map((item) => (
                                 <li className="mb-8" key={item?.id}>
@@ -233,41 +261,20 @@ export default function Services(props) {
                 </div>
             </section>
 
-            <section className="py-20 bg-grey5">
-                <div className="max-w-screen-xl mx-auto px-12">
-                    <div className="flex justify-center mb-16">
-                        <div className="w-8/12 text-center">
-                            <h1 className="text-[54px] leading-tight font-semibold text-black2">
+            <section className="py-10 sm:py-20 bg-grey5">
+                <div className="max-w-screen-xl mx-auto px-3 sm:px-8 md:px-12">
+                    <div className="flex md:justify-center mb-16">
+                        <div className="md:w-8/12 text-center">
+                            <h1 className="text-4xl sm:text-5xl sm:text-[54px] leading-tight font-semibold text-black2">
                                 How can a perth social media help grow my
                                 business?
                             </h1>
                         </div>
                     </div>
-
-                    {/* <div className="grid grid-cols-3 gap-7"> */}
-                    {/* {businessData?.map((item, i) => (
-                            <div
-                                className="group px-8 pt-10 shadow-business1 rounded-xl hover:shadow-business2 bg-white1 transition-all duration-500"
-                                key={i}
-                            >
-                                <div className="mb-20">
-                                    <h4 className="text-[28px] leading-[36px] font-semibold w-8/12 duration-500 cursor-pointer mb-5 group-hover:text-blue1">
-                                        {item?.heading}
-                                    </h4>
-                                    <p className=" text-grey1">{item?.desc}</p>
-                                </div>
-                                <div>
-                                    <img
-                                        src={item?.image}
-                                        alt={item?.heading}
-                                    />
-                                </div>
-                            </div>
-                        ))} */}
                     <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
                         <Slider {...settings}>
                             {Price?.map((item, index) => (
-                                <div key={index} className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-700 dark:text-white cursor-pointer">
+                                <div key={index} className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg  shadow cursor-pointer">
                                     <div>
                                         <h3 className="mb-4 text-2xl font-semibold">{item?.title}</h3>
                                         <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">{item?.desc}</p>
@@ -276,7 +283,7 @@ export default function Services(props) {
                                             <span className="text-gray-500 dark:text-gray-400">/month</span>
                                         </div>
                                         {/* List  */}
-                                        <ul role="list" className="mb-8 space-y-3 text-left">
+                                        <ul role="list" className="mb-8 space-y-3 text-left h-[350px] overflow-y-scroll no-scrollbar">
                                             {
                                                 item?.description?.map((desc, i) => (
                                                     <li key={i} className="flex items-center space-x-3">
@@ -303,9 +310,9 @@ export default function Services(props) {
                 </div>
             </section>
 
-            <section className="max-w-screen-xl mx-auto pb-28 mt-10">
+            <section className="max-w-screen-xl mx-auto pb-0 sm:pb-14 md:pb-28 mt-10">
                 <div className="md:flex py-10">
-                    <div className="w-full md:w-1/2 mx-3 px-10 py-10">
+                    <div className="w-full md:w-1/2 sm:mx-3 px-10 py-10">
                         <div className="relative">
                             <div>
                                 <img
@@ -323,18 +330,18 @@ export default function Services(props) {
                                 <img
                                     src={InputImg}
                                     alt=""
-                                    className="absolute top-32 -left-10"
+                                    className="absolute top-32 sm:-left-10"
                                 />
                                 <img
                                     src={StatImg}
                                     alt=""
-                                    className="absolute top-20 -right-10 shadow-2xl "
+                                    className="absolute top-20 sm:-right-10 shadow-2xl "
                                 />
                             </div>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 ms-20 mx-3">
-                        <div className="my-10">
+                    <div className="w-full md:w-1/2 sm:ms-20 sm:mx-3">
+                        <div className="px-3 sm:px-0 my-10">
                             <p className="text-blue1 text-lg font-semibold mb-5">
                                 Get the best
                             </p>
@@ -384,15 +391,15 @@ export default function Services(props) {
                 </div>
             </section>
 
-            <section className="max-w-screen-xl mx-auto px-12">
+            <section className="max-w-screen-xl mx-auto px-3 sm:px-8 md:px-12">
                 <div className="border-4 border-black2 relative shadow-serviceVideo">
                     <img
                         src={videoBanner}
                         alt="social-marketing"
                         className="w-full"
                     />
-                    <div className="absolute left-14 bottom-10">
-                        <h4 className="text-3xl font-bold text-white1">
+                    <div className="absolute left-4 sm:left-14 bottom-4 sm:bottom-10">
+                        <h4 className="text-xl md:text-3xl font-bold text-white1">
                             Social <br />
                             Media Marketing
                         </h4>
@@ -402,7 +409,7 @@ export default function Services(props) {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-10 mt-14">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-10 mt-14">
                     {servicesData?.map((item) => (
                         <div
                             className="group transition-all duration-300"
@@ -427,8 +434,8 @@ export default function Services(props) {
                 </div>
             </section>
 
-            <section className="max-w-screen-xl mx-auto px-12 my-28">
-                <div className="grid grid-cols-2 gap-10">
+            <section className="max-w-screen-xl mx-auto px-3 sm:px-8 md:px-12 my-14 sm:my-28">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10">
                     {serviceSocial?.map((item) => (
                         <div
                             key={item?.id}

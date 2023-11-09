@@ -29,11 +29,34 @@ function AboutHero() {
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: false,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 625,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
     let dotStyle = "before:bg-blue1 before:h-2 before:w-2 before:inline-block before:rounded-full before:mr-3"
     return (
         <div>
-            <div className='relative my-40'>
+            <div className='relative mt-40 mb-10 sm:my-40'>
                 <div className='absolute left-24 -top-40'>
                     <img src={innerShape1} alt="" />
                 </div>
@@ -44,16 +67,16 @@ function AboutHero() {
                     <img src={innerHand} alt="" />
                 </div>
                 <Container>
-                    <div className='flex justify-center items-center relative'>
+                    <div className='flex md:justify-center items-center relative'>
 
-                        <div className='w-1/2 -mt-72'>
+                        <div className='md:w-1/2 -mt-72'>
                             <div className='relative'>
                                 <div className='absolute -left-10 right-40 object-cover'>
                                     <img src={aboutInner} alt="" className='rounded-xl' />
                                 </div>
                             </div>
                         </div>
-                        <div className='w-1/2'>
+                        <div className='md:w-1/2'>
                             <div>
                                 <span className={`text-blue1 ${dotStyle}  `}>
                                     Welcome
@@ -61,7 +84,7 @@ function AboutHero() {
                                 <h4 className='text-5xl font-bold mb-3'>Working Hard to Make <br />Digital Marketing Easy. Together</h4>
                                 {/* <p>Lorem ipsum dolor sit amet, consectetur
                                     <br />adipiscing elit.</p> */}
-                                <p>Welcome to GGCS, where digital meets intelligence to achieve market excellence.
+                                <p className='my-3 md:my-0'>Welcome to GGCS, where digital meets intelligence to achieve market excellence.
                                     <br />We are digital marketers.</p>
 
                             </div>
@@ -71,9 +94,9 @@ function AboutHero() {
 
                 </Container>
                 <div className='flex'>
-                    <div className='w-1/5 ml-[32rem]'>
+                    <div className='w-1/5 xl:ml-[32rem]'>
                         <div className=' relative z-20'>
-                            <div className='bg-blue1 rounded-r-lg p-6'>
+                            <div className='bg-blue1 rounded-r-lg px-2 py-5 sm:p-6'>
                                 <h5 className='text-white'>
                                     Scroll down <br /> to explore more
                                 </h5>

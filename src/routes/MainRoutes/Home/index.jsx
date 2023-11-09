@@ -23,7 +23,8 @@ export default function Home(props) {
             <Featured {...props} />
             <Process {...props} />
             <SEO {...props} />
-            <CaseStudies {...props} />
+            {/* <CaseStudies {...props} /> */}
+
             {/* <Testimonial {...props} /> */}
             {/* <Review {...props} /> */}
             <Contact {...props} />

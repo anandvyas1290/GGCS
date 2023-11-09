@@ -12,10 +12,10 @@ import { PrimaryBtn } from "../../../components/Button";
 function SEO() {
     return (
         <div>
-            <div className="max-w-screen-lg lg:max-w-screen-xl mx-auto py-10">
+            <div className="max-w-screen-lg lg:max-w-screen-xl mx-auto py-0 sm:py-10">
                 {/* SEO UI */}
-                <div className="md:flex py-10">
-                    <div className="w-full md:w-1/2 mx-3">
+                <div className="md:flex psm:py-10">
+                    <div className="w-full md:w-1/2 px-3 md:mx-3">
                         <div className="my-10">
                             <p className="text-lg font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">Looking for best SEO results?</p>
                             <h2 className='text-4xl sm:text-5xl font-semibold mb-4 sm:!leading-[4rem] !leading-[3rem]'>Organic Search<br />
@@ -60,10 +60,10 @@ function SEO() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 mx-3 px-10 py-10 ">
+                    <div className="w-full md:w-1/2 sm:mx-3 px-10 py-10 ">
                         <div className="relative">
                             <div>
-                                <img src={GradientBgImg} alt="GradientBgImg" />
+                                <img src={GradientBgImg} alt="GradientBgImg" className="w-full" />
                             </div>
                             <div>
                                 <img
@@ -74,12 +74,12 @@ function SEO() {
                                 <img
                                     src={InputImg}
                                     alt=""
-                                    className="absolute top-32 -left-10"
+                                    className="absolute top-32 lg:-left-10"
                                 />
                                 <img
                                     src={StatImg}
                                     alt=""
-                                    className="absolute top-20 -right-10 shadow-2xl "
+                                    className="absolute top-20 right-0 lg:-right-10 shadow-2xl "
                                 />
                             </div>
                         </div>
@@ -87,15 +87,15 @@ function SEO() {
                 </div>
 
                 {/* Counter UI */}
-                <div className='bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F] my-20 py-12 px-64 rounded-2xl'>
+                <div className='bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F] my-0 sm:my-20 px-3 sm:px-5 py-12 md:px-64 md:rounded-2xl'>
                     <div>
                         <div>
                             <img src="" alt="" />
                         </div>
                         <div className="flex items-center justify-between">
-                            <div className="flex items-baseline">
+                            <div className="flex items-center">
                                 <div className="pr-4">
-                                    <img src={BadgeIcon} alt="Badge" />
+                                    <img src={BadgeIcon} alt="Badge" className="w-10 h-10" />
                                 </div>
                                 <div>
                                     <h3 className="text-4xl text-white">
@@ -106,9 +106,9 @@ function SEO() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="flex items-baseline">
+                            <div className="flex items-center">
                                 <div className="pr-4">
-                                    <img src={SmileyIcon} alt="smiley" />
+                                    <img src={SmileyIcon} alt="smiley" className="w-10 h-10" />
                                 </div>
                                 <div>
                                     <h3 className="text-4xl text-white">
@@ -119,9 +119,9 @@ function SEO() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="flex items-baseline">
+                            <div className="flex items-center">
                                 <div className="pr-4">
-                                    <img src={TeamIcon} alt="teams" />
+                                    <img src={TeamIcon} alt="teams" className="w-10 h-10" />
                                 </div>
                                 <div>
                                     <h3 className="text-4xl text-white">6+</h3>

@@ -32,8 +32,8 @@ export default function Process(props) {
         },
     ];
     return (
-        <div className="max-w-screen-xl mx-auto px-12 pt-10 pb-20">
-            <div className="grid grid-cols-2">
+        <div className="max-w-screen-xl mx-auto px-3 sm:px-8 lg:px-12 pt-10 pb-5 sm:pb-20">
+            <div className="grid md:grid-cols-2">
                 <div className="relative">
                     <img
                         src={image1}
@@ -52,7 +52,7 @@ export default function Process(props) {
                         </div>
                     </div>
                 </div>
-                <div className="pl-16">
+                <div className="md:pl-16">
                     <div className="flex flex-col items-left mb-10">
                         <p className="text-lg max-w-fit font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
                             Let us do the work
@@ -66,11 +66,10 @@ export default function Process(props) {
                         {processData?.map((item) => (
                             <li className="mb-8" key={item?.id}>
                                 <div
-                                    className={`flex relative ${
-                                        item?.id % 2 === 0
-                                            ? "justify-center"
-                                            : "justify-start"
-                                    }`}
+                                    className={`flex relative ${item?.id % 2 === 0
+                                        ? "justify-center"
+                                        : "justify-start"
+                                        }`}
                                 >
                                     <div className="mr-7">
                                         <div className="relative">

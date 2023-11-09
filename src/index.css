@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* // add the code bellow */
+@layer utilities {
+    @variants responsive {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    }
+  }
 .parallax > use {
     animation: move-forever 20s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }

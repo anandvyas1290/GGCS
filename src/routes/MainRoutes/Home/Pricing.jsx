@@ -8,37 +8,41 @@ export default function Pricing() {
     const navigate = useNavigate()
     const settings = {
         dots: true,
-        infinite: true,
-        slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        infinite: false,
+        slidesToShow: 1,
         slidesToScroll: 1,
+        initialSlide: 0,
+        speed: 500,
         arrows: false,
+        adaptiveHeight: false,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 625,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
     return (
         <div className='mxa-w-screen-lg max-w-screen-xl mx-auto pb-5'>
-            {/* <div className='text-center'>
-                        <h6 className="text-lg mx-auto font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">Pricing Plans</h6>
-                        <h2 className='text-4xl sm:text-6xl font-semibold mt-1 mb-4'>Packages for everyone</h2>
-                    </div> */}
-
-            {/* <div className='flex px-5'>
-                                <div className='w-3/12'></div>
-                                <div className='w-9/12 '>
-                                    <div className='flex '>
-                                        <div className='w-1/3 text-center px-2 py-10 '>
-                                            <p>Essential</p>
-                                            <h4 className='text-5xl font-semibold'>$36.00</h4>
-                                        </div>
-                                        <div className='w-1/3 text-white rounded-t-xl bg-primaryBtn text-center px-2 py-10'>
-                                            <p>Pro</p>
-                                            <h4 className='text-5xl font-semibold '>$54.00</h4></div>
-                                        <div className='w-1/3 text-center  px-2 py-10'>
-                                            <p>Business</p>
-                                            <h4 className='text-5xl font-semibold'>$89.00</h4></div>
-                                    </div>
-                                </div>
-                            </div> */}
-            {/* <div className='absolute h-10 w-w-1/2 bg-primaryBtn  -top-[18px] left-1/2 w-[24.16%]'>
-                                </div> */}
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                 <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
                     <h6 className="text-lg mx-auto font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">Pricing Plans</h6>
@@ -49,7 +53,7 @@ export default function Pricing() {
                 <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
                     <Slider {...settings}>
                         {Price?.map((item, index) => (
-                            <div key={index} className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-700 dark:text-white cursor-pointer">
+                            <div key={index} className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded border border-gray-100 shadow xl:p-8 cursor-pointer">
                                 <div>
                                     <h3 className="mb-4 text-2xl font-semibold">{item?.title}</h3>
                                     <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">{item?.desc}</p>
@@ -58,7 +62,7 @@ export default function Pricing() {
                                         <span className="text-gray-500 dark:text-gray-400">/month</span>
                                     </div>
                                     {/* List  */}
-                                    <ul role="list" className="mb-8 space-y-3 text-left">
+                                    <ul role="list" className="mb-8 space-y-3 text-left h-[350px] overflow-y-scroll no-scrollbar">
                                         {
                                             item?.description?.map((desc, i) => (
                                                 <li key={i} className="flex items-center space-x-3">

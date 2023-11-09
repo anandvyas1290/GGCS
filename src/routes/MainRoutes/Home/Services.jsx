@@ -10,7 +10,7 @@ import { servicesData } from "../../../db/dummy";
 export default function Services(props) {
     const navigate = useNavigate()
     return (
-        <div className="max-w-screen-xl mx-auto px-12 pb-10">
+        <div className="max-w-screen-xl mx-auto px-3 sm:px-8 md:px-12 pb-10">
             <div>
                 <div className="flex flex-col items-center justify-center">
                     <p className="text-lg font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
@@ -19,7 +19,7 @@ export default function Services(props) {
                     <h5 className="text-6xl font-semibold">Our services</h5>
                 </div>
 
-                <div className="grid grid-cols-3 gap-8 my-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 my-8 sm:my-12">
                     {servicesData?.map((item) => {
                         console.log(item.id, servicesData[servicesData?.length - 1], item?.id === servicesData[servicesData?.length - 1])
                         return (
@@ -65,7 +65,7 @@ export default function Services(props) {
                 </div>
 
                 <div className="flex justify-center">
-                    <div className="w-1/2 rounded-full shadow-contact bg-grey3 p-3 text-center">
+                    <div className="w-full md:w-1/2 rounded-full shadow-contact bg-grey3 p-3 text-center">
                         <div className="flex justify-center gap-2">
                             <span>
                                 <img
