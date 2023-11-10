@@ -7,8 +7,6 @@ import { useLocation } from "react-router-dom";
 const Navbar = (props) => {
     let location = useLocation();
     let fullNav = location.pathname !== "/" ? true : false;
-
-    console.log(fullNav);
     return (
         <div
             className={`${fullNav ? "" : "max-w-screen-xl mx-auto px-3 sm:px-8 z-50"

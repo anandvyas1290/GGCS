@@ -43,7 +43,7 @@ function HOS() {
                 </div>
                 <div className='sm:mb-12'>
                     <div className='relative pb-12 border-b-2 border-gray-100'>
-                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
                             {hosData?.map((d, i) => {
                                 return (
                                     <div key={i} className='w-full relative '>

@@ -87,7 +87,7 @@ function SEO() {
                 </div>
 
                 {/* Counter UI */}
-                <div className='bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F] my-0 sm:my-20 px-3 sm:px-5 py-12 md:px-64 md:rounded-2xl'>
+                <div className='bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F] my-0 sm:my-20 px-3 sm:px-5 py-12 md:px-32 lg:px48 xl:px-64 xl:rounded-2xl'>
                     <div>
                         <div>
                             <img src="" alt="" />

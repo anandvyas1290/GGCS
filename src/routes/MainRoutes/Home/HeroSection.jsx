@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 export default function HeroSection() {
     const navigate = useNavigate()
     return (
-        <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[150px] pb-[60px]  md:pb-[100px] lg:pb-[150px]">
+        <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[150px] pb-[40px] sm:pb-[60px]  md:pb-[100px] lg:pb-[150px]">
             <div className="container">
                 <div className="sm:w-4/6">
                     <div className="">
@@ -92,10 +92,10 @@ export default function HeroSection() {
                     <div className="absolute md:left-[660px] top-[345px] -z-[1] animate-shape2">
                         <img src={shape2} alt="" />
                     </div>
-                    <div className="absolute md:left-[750px] bottom-[280px] -z-[1] animate-shape3">
+                    <div className="absolute lg:left-[750px] bottom-[280px] -z-[1] animate-shape3">
                         <img src={shape3} alt="" />
                     </div>
-                    <div className="absolute md:right-[610px] bottom-[90px] animate-shape4">
+                    <div className="absolute lg:right-[610px] bottom-[90px] animate-shape4">
                         <img src={shape4} alt="" />
                     </div>
                 </div>

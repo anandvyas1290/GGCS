@@ -1,8 +1,10 @@
 import React from 'react'
-import logo from "../../assets/Navbar/GGCS-Logo.svg";
+import logo from "../../assets/footer/GGCSNew.svg";
 import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { menuService, services, socialMedias } from '../../db/dummy';
+import { useNavigate } from 'react-router-dom';
+
 import { PrimaryBtn } from '../../components/Button';
-import { socialMedias } from '../../db/dummy';
 
 const Input = ({ text, placeholder, className }) => {
     return (
@@ -38,34 +40,19 @@ const H5 = ({ children, className }) => {
 //         </div>
 //     )
 // }
-const services = [
-    {
-        label: "SEO (Search Engine Optimization)"
-    },
-    {
-        label: "Social Media Marketing"
-    },
-    {
-        label: "Search Engine Marketing"
-    },
-    {
-        label: "Inbound and Outbound Marketing"
-    },
-    {
-        label: 'Add-On Services'
-    }
-]
+
 export default function Footer() {
+    const navigate = useNavigate()
     return (
         <div className='bg-gray-100'>
             <div className='max-w-screen-md lg:max-w-screen-xl mx-auto pt-14 sm:pt-20 pb-20 px-6'>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5'>
                     <div className='mb-3 lg:mb-0 '>
-                        <div className='mb-6'>
-                            <img src={logo} alt="logo" className="h-full w-full cursor-pointer" />
+                        <div className='mb-4'>
+                            <img src={logo} alt="logo" className="h-full w-1/2 cursor-pointer" />
                         </div>
-                        <div className='mb-6'>
-                            <p className='text-lg font-normal text-gray-500'>
+                        <div className='mb-5'>
+                            <p className=' font-normal text-gray-500'>
                                 This SEO is most reputed firm
                                 which provides various online
                                 marketing
@@ -86,12 +73,15 @@ export default function Footer() {
                             <H5 className="mb-5">Information</H5>
                             <div className='pl-4'>
                                 <ul className="list-disc">
-                                    <li className='text-base font-normal text-gray-500 mb-2'><a href="#">Home</a></li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'><a href="/about">About Us </a></li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'><a href="/services">Services</a></li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'><a href="/why-ggcs">Why GGCS</a></li>
-                                    {/* <li className='text-base font-normal text-gray-500 mb-2'>Blog</li> */}
-                                    <li className='text-base font-normal text-gray-500 mb-2'><a href="/contact">Contact Us</a></li>
+                                    {menuService?.map((item, i) =>
+                                        <li className='text-base font-normal text-gray-500 mb-2 cursor-pointer hover:text-gray-900' key={i}
+                                            onClick={() => {
+                                                navigate(item?.link)
+                                            }}>
+                                            {item.label === "Home" ? <a href="#">{item.label}</a> : <>{item.label}</>}
+                                        </li>
+
+                                    )}
                                 </ul>
                             </div>
                         </div>
@@ -114,7 +104,7 @@ export default function Footer() {
                     </div>
                     <div className=''>
                         <H5 className="mb-2">Subscribe</H5>
-                        <p className='text-lg font-normal text-gray-500'>Only valuable resource no bullshit</p>
+                        <p className=' font-normal text-gray-500'>Only valuable resource no bullshit</p>
                         <div className='my-8'>
                             <Input placeholder={"Your Email"} type={"mail"} />
                         </div>

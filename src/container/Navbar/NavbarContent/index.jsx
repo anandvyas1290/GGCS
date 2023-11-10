@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import ppt from "../../../assets/PDF/GGCS-PPT.pdf"
 // import logo from "../../../assets/Navbar/logo.svg";
 // import logo from "../../../assets/Navbar/logo.png";
-import logo from "../../../assets/Navbar/GGCS-Logo.svg"
+import logo from "../../../assets/Navbar/GGCSNew.svg"
 import Menu from "../../../assets/Navbar/menu.svg"
 // import logo from "../../../assets/Navbar/GGCS-ICON.jpg"
 
@@ -21,9 +21,8 @@ const navMenu = [
         id: 4, label: "Download PPT", slug: "", label2: "download"
     }
 ];
-export default function NavbarContent(props) {
-
-    // const [nav, setNav] = useState(false)
+export default function NavbarContent() {
+    const location = useLocation()
     const [state, setState] = useState({
         showMenu: false
     })
@@ -51,33 +50,30 @@ export default function NavbarContent(props) {
         // console.log(ele.attributes);
         // fixed top-5 animate-fadeInDown
     };
-    const handleOpenMenu = (data) => {
+    const handleOpenMenu = (data = true) => {
         setState((prev) => {
-            return {
-                ...prev,
-                showMenu: data,
-            };
-        })
+            return { ...prev, showMenu: data };
+        });
     }
     const { showMenu } = state
     return (
         <div
-            className="header px-4 mt-1 border rounded-full border-white bg-transparent backdrop-blur shadow-header"
+            className={`header px-4 mt-1 border-white bg-transparent backdrop-blur shadow-header ${location?.pathname === "/" ? "border rounded-full" : ""}`}
             ref={scrollRef}
         >
-            <div className="relative max-w-full flex justify-between items-center">
+            <div className={`relative flex justify-between items-center ${location?.pathname === "/" ? " max-w-full" : "max-w-screen-xl mx-auto"}`}>
                 <div className="flex items-center h-[50px] md:h-[80px]">
                     <img
                         src={logo}
                         alt="ggcs"
-                        className="h-full w-full cursor-pointer"
+                        className="h-1/2 cursor-pointer"
                         onClick={() => navigate("/")}
                     />
                 </div>
                 <div className="hidden lg:flex items-center">
                     {navMenu?.map((item) => (
                         <div
-                            className={`flex items-center !mr-12 cursor-pointer text-lg !font-medium text-black1 hover:text-primary transition-all duration-200  ${item?.label2 === "download" ? "text-blue-500" : ""}`}
+                            className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-lg !font-medium  text-black1 hover:text-primary transition-all duration-200 ${item?.slug === location?.pathname ? "text-primary " : ""}  ${item?.label2 === "download" ? "text-blue-500" : ""}`}
                             key={item?.id}
                             onClick={() => {
                                 if (item?.label2 === "download") {
@@ -98,17 +94,20 @@ export default function NavbarContent(props) {
                     ))}
                 </div>
                 <div className="flex items-center justify-between">
-                    <PrimaryBtn
-                        bgColor="bg-primaryBtn"
-                        className="border-primaryBtn"
-                        onClick={() =>
-                            navigate("/contact")
-                        }
-                    >
-                        Contact Us
-                    </PrimaryBtn>
+                    <span className="hidden lg:block">
+                        <PrimaryBtn
+                            bgColor="bg-primaryBtn"
+                            className="border-primaryBtn"
+                            onClick={() =>
+                                navigate("/contact")
+                            }
+                        >
+                            Contact Us
+                        </PrimaryBtn>
+                    </span>
                     <span className="block lg:hidden h-10 w-10 sm:h-12 sm:w-12"
-                        onClick={() => {
+                        onClick={(e) => {
+                            e.stopPropagation()
                             handleOpenMenu(true)
                         }}>
                         <img src={Menu} alt="" className="w-full h-full" />
@@ -122,6 +121,12 @@ export default function NavbarContent(props) {
                                 className="text-black py-1"
                                 key={item?.id}
                                 onClick={() => {
+                                    setState((prev) => {
+                                        return {
+                                            ...prev,
+                                            showMenu: false
+                                        }
+                                    })
                                     if (item?.label2 === "download") {
                                         return
                                     } else {
@@ -142,6 +147,7 @@ export default function NavbarContent(props) {
                     </ul>
                 </div>
             </div>
+
         </div >
     );
 }

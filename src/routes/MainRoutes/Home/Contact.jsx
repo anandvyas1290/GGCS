@@ -21,7 +21,7 @@ function Contact(props) {
                 <img src={bg} alt="icon" className="absolute -z-[1] bottom-0 left-0 right-0 w-full" />
             </div>
             <div className="max-w-screen-lg lg:max-w-screen-xl mx-auto  ">
-                <div className="md:flex py-10 ">
+                <div className="md:flex py-0 sm:!py-10 ">
                     <div className="md:w-1/2 mx-3">
                         <div className="my-10">
                             <p className=" text-base font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">Get In Touch</p>

@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 
-import bgMain from "../../../assets/services/bgMain.webp";
-import design1 from "../../../assets/services/design1.webp";
-import design2 from "../../../assets/services/design2.webp";
-import design3 from "../../../assets/services/design3.webp";
-import design4 from "../../../assets/services/design4.webp";
-import design5 from "../../../assets/services/design5.webp";
-import design6 from "../../../assets/services/design6.webp";
-import banner from "../../../assets/services/banner.webp";
+// import bgMain from "../../../assets/services/bgMain.webp";
+// import design1 from "../../../assets/services/design1.webp";
+// import design2 from "../../../assets/services/design2.webp";
+// import design3 from "../../../assets/services/design3.webp";
+// import design4 from "../../../assets/services/design4.webp";
+// import design5 from "../../../assets/services/design5.webp";
+// import design6 from "../../../assets/services/design6.webp";
+// import banner from "../../../assets/services/banner.webp";
 import socialTree from "../../../assets/services/socialTree.webp";
 import list1 from "../../../assets/home/process/list1.svg";
 import list2 from "../../../assets/home/process/list2.svg";
@@ -28,7 +28,7 @@ import GradientBgImg from "../../../assets/SEO/optimize-bg.webp";
 import ClientImg from "../../../assets/SEO/optimize-bg-2.webp";
 import InputImg from "../../../assets/SEO/optimize-shape-2.webp";
 import StatImg from "../../../assets/SEO/optimize-shape-1.webp";
-import { PrimaryBtn } from "../../../components/Button";
+// import { PrimaryBtn } from "../../../components/Button";
 
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
 import { Price, servicesData, serviceSocial } from "../../../db/dummy";
@@ -86,7 +86,7 @@ export default function Services(props) {
         autoplay: true,
         autoplaySpeed: 5000,
         infinite: true,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0,
         speed: 500,
@@ -438,6 +438,8 @@ export default function Services(props) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10">
                     {serviceSocial?.map((item) => (
                         <div
+                            onClick={() => window.open(item?.link, "_blank",
+                                "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes")}
                             key={item?.id}
                             className={`flex items-center justify-between group border p-7 rounded-xl cursor-pointer transition-all duration-[400ms] ${item?.class} hover:text-white1 hover:scale-110`}
                         >

@@ -13,6 +13,7 @@ import {
     faInstagram,
     faPinterest,
     faXTwitter,
+    faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
 export const servicesData = [
     {
@@ -45,6 +46,7 @@ export const serviceSocial = [
         iconColor: "#1877F2",
         label: "Follow us on Facebook for Small Business Updates",
         class: "fb-hover",
+        link: "https://www.facebook.com/people/Global-Garner-Consultancy-Services/61552984453919/"
     },
     {
         id: 2,
@@ -52,20 +54,31 @@ export const serviceSocial = [
         iconColor: "#FE005F",
         label: "Follow us on Instagram for Small Business Inspiration",
         class: "instagram-hover",
+        link: "https://www.instagram.com/ggconsultancyservice/"
     },
     {
         id: 3,
-        icon: faPinterest,
-        iconColor: "#FE005F",
-        label: " Get our Newsletter for Small Business Tips & News",
-        class: "pinterest-hover",
+        icon: faLinkedin,
+        iconColor: "#0077B5",
+        label: " Follow us on LinkedIn for Small Business Updates",
+        class: "linkedin-hover",
+        link: "https://www.linkedin.com/in/global-garner-consultancy-services-49b40529a/"
     },
+    // {
+    //     id: 3,
+    //     icon: faPinterest,
+    //     iconColor: "#FE005F",
+    //     label: " Get our Newsletter for Small Business Tips & News",
+    //     class: "pinterest-hover",
+    //     link: "https://www.linkedin.com/in/global-garner-consultancy-services-49b40529a/"
+    // },
     {
         id: 4,
         icon: faXTwitter,
         iconColor: "#000000",
         label: "Follow us on X(Twitter) for Small Business Updates",
         class: "twitter-hover",
+        link: "https://twitter.com/ggconsultancy"
     },
 ];
 
@@ -248,7 +261,49 @@ export const whyGGCS = {
 // social media link 
 export const socialMedias = [
     { icon: facebook, name: "facebook", link: "https://www.facebook.com/people/Global-Garner-Consultancy-Services/61552984453919/" },
-    { icon: twitter, name: "twitter", link: "#" },
-    { icon: linkedin, name: "linkedin", link: "#" },
-    { icon: instagram, name: "instagram", link: "#" },
+    { icon: twitter, name: "twitter", link: "https://twitter.com/ggconsultancy" },
+    { icon: linkedin, name: "linkedin", link: "https://www.linkedin.com/in/global-garner-consultancy-services-49b40529a/" },
+    { icon: instagram, name: "instagram", link: "https://www.instagram.com/ggconsultancyservice/" },
 ];
+
+//footer menu service
+export const menuService = [
+    {
+        label: "Home",
+        link: "#"
+    },
+    {
+        label: "About Us",
+        link: "about"
+    },
+    {
+        label: "Services",
+        link: "services"
+    },
+    {
+        label: "Why GGCS",
+        link: 'why-ggcs'
+    },
+    {
+        label: "Contact Us",
+        link: "contact"
+    }
+]
+// footer service 
+export const services = [
+    {
+        label: "SEO (Search Engine Optimization)"
+    },
+    {
+        label: "Social Media Marketing"
+    },
+    {
+        label: "Search Engine Marketing"
+    },
+    {
+        label: "Inbound and Outbound Marketing"
+    },
+    {
+        label: 'Add-On Services'
+    }
+]

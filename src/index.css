@@ -95,7 +95,15 @@
         #fe005f 103.55%
     );
 }
-
+.linkedin-hover:hover {
+    background: linear-gradient(
+        266.81deg,
+        #0077B5 -6.56%,
+        #0077B5 34.02%,
+        #0077B5 60.87%,
+        #0077B5 103.55%
+    );
+}
 .twitter-hover:hover {
     background: linear-gradient(
         266.81deg,
