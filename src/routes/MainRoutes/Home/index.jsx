@@ -11,15 +11,15 @@ import Contact from "./Contact";
 // import Awards from "./Awards";
 // import Testimonial from "./Testimonial";
 // import Review from "./Review";
-import Pricing from "./Pricing";
 import SEO from "./SEO";
+import PricingSection from "./PricingSection";
 
 export default function Home(props) {
     return (
         <div className="font-jakarta">
             <HeroSection {...props} />
             <Services {...props} />
-            <Pricing {...props} />
+            <PricingSection {...props} />
             <Featured {...props} />
             <Process {...props} />
             <SEO {...props} />

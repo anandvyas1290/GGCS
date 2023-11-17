@@ -9,10 +9,16 @@ function WhyGGCS() {
         window.scrollTo(0, 0)
     }, [])
     return (
-        <Container>
-            <HOS />
-            <HeroSection />
-        </Container>
+        <>
+            <Container>
+                <HOS />
+            </Container>
+            <div className='bg-slate-100 border-b-2 '>
+                <Container>
+                    <HeroSection />
+                </Container >
+            </div>
+        </>
     )
 }
 

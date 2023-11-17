@@ -22,6 +22,7 @@ export const servicesData = [
         icon: digiMarketing,
         heading: "Search Engine Optimization",
         desc: "Unlock Your Brand's Full Potential        ",
+        desc2: "Imagine your brand taking center stage in online searches. Our SEO expertise ensures exactly that. Through meticulous optimization, we pave the path for your brand to ascend search engine rankings, ushering in organic, high-quality traffic.        "
     },
     {
         id: 1,
@@ -29,6 +30,7 @@ export const servicesData = [
         icon: seo,
         heading: "Content Strategy and Creation",
         desc: "Weaving Your Brand's Story        ",
+        desc2: "Captivating stories forge emotional bonds. Our content wizards craft narratives that deeply resonate with your audience. From captivating blog posts to immersive videos and shareable graphics, we ensure your brand's voice resonates across platforms."
     },
     {
         id: 2,
@@ -36,6 +38,7 @@ export const servicesData = [
         icon: socialMarketing,
         heading: "Social Media Management",
         desc: "Where Conversations Flourish ",
+        desc2: "Social media is more than a platform; it's a bustling community. Our social media strategists orchestrate meaningful conversations. With tailored content and timely interactions, we empower you to build a devoted community that engages, advocates, and converts."
     },
 ];
 

@@ -29,7 +29,6 @@ export default function NavbarContent() {
     let navigate = useNavigate();
     let scrollRef = useRef();
     const menuInfoBlockRef = useRef();
-
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
         document.addEventListener("mousedown", handleClickOutside);
@@ -93,7 +92,7 @@ export default function NavbarContent() {
                         </div>
                     ))}
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="relative flex items-center justify-between">
                     <span className="hidden lg:block">
                         <PrimaryBtn
                             bgColor="bg-primaryBtn"
@@ -105,46 +104,52 @@ export default function NavbarContent() {
                             Contact Us
                         </PrimaryBtn>
                     </span>
-                    <span className="block lg:hidden h-10 w-10 sm:h-12 sm:w-12"
+                    <span ref={menuInfoBlockRef} className="block lg:hidden h-10 w-10 sm:h-12 sm:w-12"
                         onClick={(e) => {
                             e.stopPropagation()
-                            handleOpenMenu(true)
+                            setState((prev) => {
+                                return {
+                                    ...prev,
+                                    showMenu: !state?.showMenu
+                                }
+                            })
                         }}>
                         <img src={Menu} alt="" className="w-full h-full" />
-                    </span>
 
-                </div>
-                <div ref={menuInfoBlockRef} className={`absolute top-10 right-0 md:top-20  lg:hidden lg:w-auto ${showMenu ? "  w-fit " : "hidden"} `} id="navbar-default">
-                    <ul className="font-medium flex flex-col p-4  mt-4 border border-gray-100 rounded-lg bg-gray-50   md:mt-0 md:border-0">
-                        {navMenu?.map((item) => (
-                            <li
-                                className="text-black py-1"
-                                key={item?.id}
-                                onClick={() => {
-                                    setState((prev) => {
-                                        return {
-                                            ...prev,
-                                            showMenu: false
+
+                        <div className={`absolute top-10 right-0 md:top-20  lg:hidden lg:w-auto ${showMenu ? "  w-fit " : "hidden"} `} id="navbar-default">
+                            <ul className="font-medium flex flex-col p-4  mt-4 border border-gray-100 rounded-lg bg-gray-50   md:mt-0 md:border-0">
+                                {navMenu?.map((item) => (
+                                    <li
+                                        className="text-black py-1"
+                                        key={item?.id}
+                                        onClick={() => {
+                                            setState((prev) => {
+                                                return {
+                                                    ...prev,
+                                                    showMenu: false
+                                                }
+                                            })
+                                            if (item?.label2 === "download") {
+                                                return
+                                            } else {
+                                                navigate(item?.slug)
+                                            }
                                         }
-                                    })
-                                    if (item?.label2 === "download") {
-                                        return
-                                    } else {
-                                        navigate(item?.slug)
-                                    }
-                                }
-                                }>
-                                {
-                                    item.label2 === "download" ?
-                                        <a download onClick={() => { window.open(ppt, '_blank', 'fullscreen=yes') }} className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">{item?.label}</a> :
-                                        <a >{item?.label}</a>
-                                }
+                                        }>
+                                        {
+                                            item.label2 === "download" ?
+                                                <a download onClick={() => { window.open(ppt, '_blank', 'fullscreen=yes') }} className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">{item?.label}</a> :
+                                                <a >{item?.label}</a>
+                                        }
 
 
-                            </li>
+                                    </li>
 
-                        ))}
-                    </ul>
+                                ))}
+                            </ul>
+                        </div>
+                    </span>
                 </div>
             </div>
 

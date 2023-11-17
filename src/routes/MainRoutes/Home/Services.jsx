@@ -48,14 +48,15 @@ export default function Services(props) {
                                     <p className="text-grey1">{item?.desc}</p>
                                 </div>
                                 <div className=" flex justify-center my-5">
-                                    <span className="flex cursor-pointer" onClick={() => {
+                                    <span className="group flex justify-center items-center cursor-pointer" onClick={() => {
                                         navigate("services");
                                     }}>
-                                        <p className="invisible group-hover:ease-in group-hover:duration-1000  group-hover:visible group-hover:animate-services">
+                                        {/* invisible  group-hover:ease-in group-hover:duration-1000  group-hover:visible group-hover:animate-services */}
+                                        <p className=" group-hover:text-primary   group-hover:animate-services">
                                             Read More
                                         </p>
                                         <span>
-                                            <ArrowRightIcon className="w-7 h-6" />
+                                            <ArrowRightIcon className="w-6 h-5 group-hover:!text-primary" />
                                         </span>
                                     </span>
                                 </div>

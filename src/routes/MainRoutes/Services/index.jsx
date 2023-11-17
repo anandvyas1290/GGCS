@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // import bgMain from "../../../assets/services/bgMain.webp";
 // import design1 from "../../../assets/services/design1.webp";
@@ -12,7 +12,6 @@ import socialTree from "../../../assets/services/socialTree.webp";
 import list1 from "../../../assets/home/process/list1.svg";
 import list2 from "../../../assets/home/process/list2.svg";
 import list3 from "../../../assets/home/process/list3.svg";
-
 import pinterest from "../../../assets/services/pinterest.webp";
 import facebook from "../../../assets/services/facebook.webp";
 import instagram from "../../../assets/services/instagram.webp";
@@ -23,99 +22,64 @@ import business3 from "../../../assets/services/business3.webp";
 import videoBanner from "../../../assets/services/videoBanner.webp";
 import play from "../../../assets/services/play.svg";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-
 import GradientBgImg from "../../../assets/SEO/optimize-bg.webp";
 import ClientImg from "../../../assets/SEO/optimize-bg-2.webp";
 import InputImg from "../../../assets/SEO/optimize-shape-2.webp";
 import StatImg from "../../../assets/SEO/optimize-shape-1.webp";
 // import { PrimaryBtn } from "../../../components/Button";
-
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { Price, servicesData, serviceSocial } from "../../../db/dummy";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Slider from "react-slick";
-import { useNavigate } from 'react-router-dom';
+import Pricing from "../../../components/Pricing";
+
+const processData = [
+    {
+        id: 1,
+        icon: list1,
+        label: "Creative Ideas",
+        desc: "Keyword research and other market research under the SEO analytics umbrella.",
+    },
+    {
+        id: 2,
+        icon: list2,
+        label: "Data Collection",
+        desc: "Keyword research and other market research under the SEO analytics umbrella.",
+    },
+    {
+        id: 3,
+        icon: list3,
+        label: "Targeting",
+        desc: "Keyword research and other market research under the SEO analytics umbrella.",
+    },
+];
+
+const businessData = [
+    {
+        heading: "Growing your business",
+        desc: "With GGCS, you get everything you need for a fast website",
+        image: business1,
+    },
+    {
+        heading: "Speed Optimization",
+        desc: "With GGCS, you get everything you need for a fast website",
+        image: business2,
+    },
+    {
+        heading: "Testing Capabilities",
+        desc: "With GGCS, you get everything you need for a fast website",
+        image: business3,
+    },
+];
 
 export default function Services(props) {
-    const navigate = useNavigate()
-    const processData = [
-        {
-            id: 1,
-            icon: list1,
-            label: "Creative Ideas",
-            desc: "Keyword research and other market research under the SEO analytics umbrella.",
-        },
-        {
-            id: 2,
-            icon: list2,
-            label: "Data Collection",
-            desc: "Keyword research and other market research under the SEO analytics umbrella.",
-        },
-        {
-            id: 3,
-            icon: list3,
-            label: "Targeting",
-            desc: "Keyword research and other market research under the SEO analytics umbrella.",
-        },
-    ];
-
-    const businessData = [
-        {
-            heading: "Growing your business",
-            desc: "With GGCS, you get everything you need for a fast website",
-            image: business1,
-        },
-        {
-            heading: "Speed Optimization",
-            desc: "With GGCS, you get everything you need for a fast website",
-            image: business2,
-        },
-        {
-            heading: "Testing Capabilities",
-            desc: "With GGCS, you get everything you need for a fast website",
-            image: business3,
-        },
-    ];
-
+    const [activeItem, setActiveItem] = useState({
+        0: false
+    })
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-    const settings = {
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        speed: 500,
-        arrows: false,
-        // adaptiveHeight: true,
-        responsive: [
-            {
-                breakpoint: 1920,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 2,
-                },
-            },
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                },
-            },
-            {
-                breakpoint: 625,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
-    };
     return (
         <div className="font-jakarta">
             {/* <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
@@ -272,39 +236,8 @@ export default function Services(props) {
                         </div>
                     </div>
                     <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
-                        <Slider {...settings}>
-                            {Price?.map((item, index) => (
-                                <div key={index} className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg  shadow cursor-pointer">
-                                    <div>
-                                        <h3 className="mb-4 text-2xl font-semibold">{item?.title}</h3>
-                                        <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">{item?.desc}</p>
-                                        <div className="flex justify-center items-baseline my-8">
-                                            <span className="mr-1 text-4xl font-extrabold">{item?.price}</span>
-                                            <span className="text-gray-500 dark:text-gray-400">/month</span>
-                                        </div>
-                                        {/* List  */}
-                                        <ul role="list" className="mb-8 space-y-3 text-left h-[350px] overflow-y-scroll no-scrollbar">
-                                            {
-                                                item?.description?.map((desc, i) => (
-                                                    <li key={i} className="flex items-center space-x-3">
-                                                        {/* Icon  */}
-                                                        <svg className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                                        <span>{desc?.label} <span className="font-semibold">{desc?.time}</span></span>
-                                                    </li>
-                                                ))
-                                            }
-                                        </ul>
-                                    </div>
-                                    <div
-                                        onClick={() => {
-                                            navigate("/contact")
-                                        }}
-                                        className="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-semibold rounded-lg text-lg px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900 cursor-pointer hover:bg-white hover:text-blue-500">
-                                        Join this Plan
-                                    </div>
-                                </div>
-                            ))}
-                        </Slider>
+                        {/* reusable */}
+                        <Pricing Price={Price} />
                     </div>
                     {/* </div> */}
                 </div>
@@ -409,30 +342,37 @@ export default function Services(props) {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-10 mt-14">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-5 mt-14">
                     {servicesData?.map((item) => (
                         <div
-                            className="group transition-all duration-300"
+                            className={`group transition-all duration-300 bg-white px-3 ${activeItem[item?.id] ? "bg-slate-100 rounded-lg" : ""}`}
                             key={item?.id}
                         >
                             <div className="text-center">
-                                <h4 className="text-2xl text-black2 font-semibold my-5">
+                                <h4 className="text-2xl text-black2 font-semibold mt-5 mb-3">
                                     {item?.heading}
                                 </h4>
-                                <p className="text-grey1">{item?.desc}</p>
+                                <p className="text-grey1 mb-1">{item?.desc}</p>
+                                {
+                                    <p className={`text-left mt-1 text-grey1 ${activeItem[item?.id] ? "h-fit" : ""}`}>{activeItem[item?.id] && item?.desc2}</p>
+                                }
                             </div>
-                            <div className=" flex justify-center my-5">
-                                <span className="flex text-black2 cursor-pointer border-b-2 group-hover:border-b-blue1 group-hover:text-blue1 group-hover:animate-services">
-                                    <p className="mr-3">Learn More</p>
-                                    <span>
+                            <div className="flex justify-center my-5">
+                                <span
+                                    onClick={() => {
+                                        setActiveItem({ [item?.id]: !activeItem[item?.id] })
+                                    }}
+                                    className="flex items-center justify-center text-black2 cursor-pointer border-b-2 group-hover:border-b-blue1 group-hover:text-blue1 group-hover:animate-services">
+                                    <p className={`${activeItem[item?.id]} ?"!mr-3":""`}>{activeItem[item?.id] ? "View Less" : "Learn More"}</p>
+                                    {activeItem[item?.id] ? null : <span>
                                         <ArrowRightIcon className="w-4 h-4 font-extrabold " />
-                                    </span>
+                                    </span>}
                                 </span>
                             </div>
                         </div>
                     ))}
                 </div>
-            </section>
+            </section >
 
             <section className="max-w-screen-xl mx-auto px-3 sm:px-8 md:px-12 my-14 sm:my-28">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10">
@@ -461,6 +401,6 @@ export default function Services(props) {
                     ))}
                 </div>
             </section>
-        </div>
+        </div >
     );
 }
