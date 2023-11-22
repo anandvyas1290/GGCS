@@ -7,6 +7,7 @@ import switchIcon from "../../../assets/about/home/switch.svg"
 import brand1 from "../../../assets/about/home/gg-log.svg";
 import brand2 from "../../../assets/about/home/ibn.png"
 import brand3 from "../../../assets/about/home/samachar.png"
+import brand4 from "../../../assets/about/home/quikcraker.png"
 import { Link } from 'react-router-dom'
 import Slider from "react-slick";
 
@@ -15,6 +16,7 @@ const brandWrapper = [
     { image: brand1 },
     { image: brand2 },
     { image: brand3 },
+    { image: brand4 },
     { image: brand1 },
     { image: brand2 },
     { image: brand1 },

@@ -49,15 +49,14 @@ export default function Footer() {
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5'>
                     <div className='mb-3 lg:mb-0 '>
                         <div className='mb-4'>
-                            <H5 className="!text-xl !font-bold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
+                            <H5 className="!text-[22px] !font-bold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
                                 Global Garner Consultancy Service Pvt Limited
                             </H5>                            {/* <img src={logo} alt="logo" className="h-full w-1/2 cursor-pointer" /> */}
                         </div>
                         <div className='mb-5'>
                             <p className=' font-normal text-gray-500'>
-                                This SEO is most reputed firm
-                                which provides various online
-                                marketing
+                                Empower Your Business With The Digital Marketing Landscape Through
+                                Innovative Strategies And Data-Driven Insights
                             </p>
                         </div>
                         <div className=''>

@@ -15,6 +15,7 @@ import {
     faXTwitter,
     faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
+
 export const servicesData = [
     {
         id: 0,
@@ -40,6 +41,95 @@ export const servicesData = [
         desc: "Where Conversations Flourish ",
         desc2: "Social media is more than a platform; it's a bustling community. Our social media strategists orchestrate meaningful conversations. With tailored content and timely interactions, we empower you to build a devoted community that engages, advocates, and converts."
     },
+    {
+        id: 3,
+        shape: digiShape,
+        icon: digiMarketing,
+        heading: "Pay-Per-Click (PPC) Advertising",
+        desc: "Propel Your Brand Instantly ",
+        desc2: "When urgency is paramount, our PPC campaigns deliver. Envision your brand appearing where potential customers are looking. Our experts optimize campaigns for maximum impact, driving targeted traffic and measurable ROI. "
+    },
+    {
+        id: 4,
+        shape: seoShape,
+        icon: seo,
+        heading: "Influencer Marketing",
+        desc: " Elevate Your Brand with Trusted Voices        ",
+        desc2: "Influence is a currency of credibility. Collaborating with influencers mirroring your brand values can propel your reach. We facilitate meaningful partnerships that harness trust and authenticity.        "
+    },
+    {
+        id: 5,
+        shape: socialShape,
+        icon: socialMarketing,
+        heading: "Email Marketing Campaigns",
+        desc: " Nurturing Relationships, Driving Conversions        ",
+        desc2: "The inbox is a realm of exclusivity. Our personalized email campaigns nurture leads, enhance relationships, and drive conversions through strategic messaging and invaluable content."
+    },
+    {
+        id: 6,
+        shape: digiShape,
+        icon: digiMarketing,
+        heading: "Website Design and Development",
+        desc: "Your Digital Threshold        ",
+        desc2: "Your website is your digital sanctuary – inviting and seamless. Our designers and developers craft immersive online experiences that captivate visitors and guide them towards meaningful action.        "
+    },
+    {
+        id: 7,
+        shape: seoShape,
+        icon: seo,
+        heading: "E-commerce Solutions",
+        desc: "Elevate Your Online Storefront",
+        desc2: "In the realm of e-commerce, every interaction holds value. Our e-commerce solutions optimize user journeys, amplify conversions, and ensure a shopping experience that fosters customer loyalty.        "
+    },
+    {
+        id: 8,
+        shape: socialShape,
+        icon: socialMarketing,
+        heading: " Analytics and Performance Tracking",
+        desc: "Data-Driven Insights for Growth        ",
+        desc2: "Data fuels your digital journey. Our comprehensive analytics and performance tracking yield actionable insights, enabling you to refine strategies for optimal growth."
+    },
+    {
+        id: 9,
+        shape: digiShape,
+        icon: digiMarketing,
+        heading: "Reputation Management",
+        desc: "Safeguarding Your Brand's Integrity",
+        desc2: "Your brand's reputation is your most prized asset. Our proactive reputation management ensures your online image remains untarnished, nurturing trust and loyalty.        "
+    },
+    {
+        id: 10,
+        shape: seoShape,
+        icon: seo,
+        heading: " Conversion Rate Optimization (CRO)",
+        desc: "Transforming Clicks into Conversions",
+        desc2: "Beyond clicks, your brand deserves conversions. Our CRO strategies refine user experiences, ensuring every interaction contributes to tangible outcomes. "
+    },
+    {
+        id: 11,
+        shape: socialShape,
+        icon: socialMarketing,
+        heading: "Digital Strategy Consultation",
+        desc: "Your Blueprint to Triumph",
+        desc2: "Embark on a strategic voyage tailored to your brand's ambitions. Our consultants analyze your goals, industry landscape, and target audience to create data-driven strategies illuminating your path to victory.        "
+    },
+    {
+        id: 12,
+        shape: digiShape,
+        icon: digiMarketing,
+        heading: "Video Marketing Excellence",
+        desc: "Captivating Your Audience        ",
+        desc2: "In the visual era, the video holds immense power. Our video marketing crafts captivating stories that resonate with your audience, building deeper connections and engagement."
+    },
+    {
+        id: 13,
+        shape: seoShape,
+        icon: seo,
+        heading: " Mobile App Development",
+        desc: "Your Brand, At Their Fingertips        ",
+        desc2: "Embrace the mobile revolution with bespoke app experiences. Our developers create functional and engaging apps, keeping your brand accessible and interactive."
+    }
+
 ];
 
 export const serviceSocial = [

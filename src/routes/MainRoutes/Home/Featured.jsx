@@ -2,7 +2,7 @@ import React from "react";
 import brand1 from "../../../assets/home/featured/gg.png";
 import brand2 from "../../../assets/home/featured/ibn.png";
 import brand3 from "../../../assets/home/featured/samachar.png";
-import brand4 from "../../../assets/home/featured/GGCS-logo1.svg";
+import brand4 from "../../../assets/about/home/quikcraker.png";
 // import brand5 from "../../../assets/home/featured/brand5.webp";
 
 import Slider from "react-slick";
@@ -14,7 +14,7 @@ export default function Featured(props) {
         { image: brand2 },
         // { image: brand4 },
         { image: brand3 },
-        // { image: brand4 },
+        { image: brand4 },
         { image: brand1 },
         { image: brand2 },
         // { image: brand5 },

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import Slider from "react-slick";
 // import bgMain from "../../../assets/services/bgMain.webp";
 // import design1 from "../../../assets/services/design1.webp";
 // import design2 from "../../../assets/services/design2.webp";
@@ -38,20 +38,32 @@ const processData = [
     {
         id: 1,
         icon: list1,
-        label: "Creative Ideas",
-        desc: "Keyword research and other market research under the SEO analytics umbrella.",
+        label: "Precision Forged by Data",
+        desc: "Our strategy thrives on informed decisions. We base our methodologies on comprehensive data analysis, ensuring each step we take propels your online conquest.",
     },
     {
         id: 2,
         icon: list2,
-        label: "Data Collection",
-        desc: "Keyword research and other market research under the SEO analytics umbrella.",
+        label: "Tailored Triumph",
+        desc: " We recognize the distinct DNA of each business. Hence, we craft personalized strategies that align with your unique prerequisites, avoiding generic solutions.        ",
     },
     {
         id: 3,
         icon: list3,
-        label: "Targeting",
-        desc: "Keyword research and other market research under the SEO analytics umbrella.",
+        label: "Transparency Forged in Trust",
+        desc: "Open communication is our cornerstone. Expect regular updates and detailed reports on your campaign's progress, cultivating a transparent and trustworthy partnership.",
+    },
+    {
+        id: 4,
+        icon: list1,
+        label: "Holistic Services",
+        desc: " From harnessing SEO prowess and mastering content alchemy to conducting social media symphonies and weaving paid advertising wizardry, GGCS unfurls a holistic digital repertoire.",
+    },
+    {
+        id: 5,
+        icon: list2,
+        label: "Endorsed Excellence",
+        desc: "Our achievements speak volumes. GGCS has empowered numerous clients, catalyzing substantial advancements in online prominence, engagement, and conversions.",
     },
 ];
 
@@ -80,6 +92,41 @@ export default function Services(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+    const settings = {
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        speed: 500,
+        arrows: false,
+        // adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 625,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
     return (
         <div className="font-jakarta">
             {/* <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
@@ -154,6 +201,9 @@ export default function Services(props) {
                                             "justify-start",
                                             "justify-center",
                                             "justify-end",
+                                            "justify-end",
+                                            "justify-center",
+                                            "justify-start",
                                         ][item?.id - 1]
                                             }`}
                                     >
@@ -173,14 +223,14 @@ export default function Services(props) {
                                             </div>
                                         </div>
                                         <div className="w-6/12">
-                                            <h4 className="text-2xl font-semibold">
+                                            <h4 className="text-xl font-semibold">
                                                 {item?.label}
                                             </h4>
                                             <p className="text-grey4">
                                                 {item?.desc}
                                             </p>
                                         </div>
-                                        {item?.id < processData?.length ? (
+                                        {item?.id < 3 ? (
                                             <>
                                                 {item?.id === 1 ? (
                                                     <div className="absolute top-5 right-[10%] -rotate-[37deg]">
@@ -342,35 +392,38 @@ export default function Services(props) {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-5 mt-14">
-                    {servicesData?.map((item) => (
-                        <div
-                            className={`group transition-all duration-300 bg-white px-3 ${activeItem[item?.id] ? "bg-slate-100 rounded-lg" : ""}`}
-                            key={item?.id}
-                        >
-                            <div className="text-center">
-                                <h4 className="text-2xl text-black2 font-semibold mt-5 mb-3">
-                                    {item?.heading}
-                                </h4>
-                                <p className="text-grey1 mb-1">{item?.desc}</p>
-                                {
-                                    <p className={`text-left mt-1 text-grey1 ${activeItem[item?.id] ? "h-fit" : ""}`}>{activeItem[item?.id] && item?.desc2}</p>
-                                }
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-5 mt-14"> */}
+                <div className="mt-14">
+                    <Slider {...settings}>
+                        {servicesData?.map((item) => (
+                            <div
+                                className={`group transition-all duration-300 bg-white px-3 ${activeItem[item?.id] ? "bg-slate-100 rounded-lg" : ""}`}
+                                key={item?.id}
+                            >
+                                <div className="text-center">
+                                    <h4 className="text-2xl text-black2 font-semibold mt-5 mb-3">
+                                        {item?.heading}
+                                    </h4>
+                                    <p className="text-grey1 mb-1">{item?.desc}</p>
+                                    {
+                                        <p className={`text-left mt-1 text-grey1 ${activeItem[item?.id] ? "h-fit" : ""}`}>{activeItem[item?.id] && item?.desc2}</p>
+                                    }
+                                </div>
+                                <div className="flex justify-center my-5">
+                                    <span
+                                        onClick={() => {
+                                            setActiveItem({ [item?.id]: !activeItem[item?.id] })
+                                        }}
+                                        className="flex items-center justify-center text-black2 cursor-pointer border-b-2 group-hover:border-b-blue1 group-hover:text-blue1 group-hover:animate-services">
+                                        <p className={`${activeItem[item?.id]} ?"!mr-3":""`}>{activeItem[item?.id] ? "View Less" : "Learn More"}</p>
+                                        {activeItem[item?.id] ? null : <span>
+                                            <ArrowRightIcon className="w-4 h-4 font-extrabold " />
+                                        </span>}
+                                    </span>
+                                </div>
                             </div>
-                            <div className="flex justify-center my-5">
-                                <span
-                                    onClick={() => {
-                                        setActiveItem({ [item?.id]: !activeItem[item?.id] })
-                                    }}
-                                    className="flex items-center justify-center text-black2 cursor-pointer border-b-2 group-hover:border-b-blue1 group-hover:text-blue1 group-hover:animate-services">
-                                    <p className={`${activeItem[item?.id]} ?"!mr-3":""`}>{activeItem[item?.id] ? "View Less" : "Learn More"}</p>
-                                    {activeItem[item?.id] ? null : <span>
-                                        <ArrowRightIcon className="w-4 h-4 font-extrabold " />
-                                    </span>}
-                                </span>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </Slider>
                 </div>
             </section >
 

@@ -14,7 +14,7 @@ function HeroSection() {
                     whyGGCS?.desc?.map((item, i) =>
                         <div key={i} className='bg-white rounded border p-5 shadow-sm transform overflow-hidden duration-200 hover:scale-105 hover:bg-slate-50 cursor-pointer'>
                             <div className='flex justify-center items-center mb-3'>
-                                <span className='flex justify-center items-center shadow-sm border-2 font-bold border-gray-500 h-8 w-8 rounded-full'>{i + 1}</span>
+                                <span className={`flex justify-center items-center shadow-sm border-2 font-bold border-gray-500 h-10 w-10 rounded-full ${i === 0 ? " bg-blue-300" : i === 1 ? " bg-yellow-200" : i === 2 ? " bg-orange-300" : i === 3 ? "  bg-pink-300" : i === 4 ? " bg-blue-300" : ''}`}>{i + 1}</span>
                             </div>
                             <p className='text-base text-gray-500'>
                                 {item?.label}
@@ -23,7 +23,7 @@ function HeroSection() {
                     )
                 }
             </div>
-        </div>
+        </div >
         // </section>
     )
 }

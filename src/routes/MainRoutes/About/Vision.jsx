@@ -52,18 +52,19 @@ function Vision() {
                     <div className="sm:flex">
                         <div className="w-full md:w-1/2 mb-5 lg:mb-0 ">
                             <div className="bg-red-100 px-3 sm:px-6 md:px-14 py-8 md:py-14 rounded-lg">
-                                <span className="hidden md:block">
+                                {/* <span className="hidden md:block">
                                     <img
                                         src={mission}
                                         alt="mission"
-                                        className="mb-5 w-full"
+                                        className="mb-5 w-full h-14"
                                     />
-                                </span>
-                                <p className="text-lg text-gray-700">
-                                    We are in business to develop an SEO
-                                    software that allows anyone to independently
-                                    optimize and promote a website on the web,
-                                    regardless of the level of expertise.
+                                </span> */}
+                                <h5 className="text-xl mb-2 font-bold">
+                                    We are the Digital Marketers that create your brand.
+                                </h5>
+                                <p className=" text-gray-700">
+                                    Welcome to GGCS, where digital prowess meets marketing excellence. We're a dynamic and results-oriented digital marketing company dedicated to elevating businesses to new heights in the digital realm. Our mission is to design compelling strategies that not only enhance brand visibility but also deliver measurable returns on investment.
+
                                 </p>
                             </div>
                         </div>
@@ -84,20 +85,43 @@ function Vision() {
                         </div>
                         <div className="md:w-3/5 relative">
                             <div className="bg-green-100 px-3 sm:px-6 md:px-14 py-8 md:py-14 rounded-lg ">
-                                <span>
+                                {/* <span>
                                     <img
                                         src={purpose}
                                         alt="purpose"
                                         className="mb-5"
                                     />
-                                </span>
+                                </span> */}
+                                <h5 className="text-xl mb-2 font-bold">
+                                    Our Journey
+                                </h5>
+
                                 <p className="text-lg text-gray-700">
-                                    We aim to constantly improve the user
-                                    experience, functionality, and support to
-                                    provide the best possible options for search
-                                    engine optimization.
+                                    Founded in 2023, GGCS emerged from a shared aspiration to reshape how businesses engage with their audiences in the digital landscape. With a team of seasoned professionals boasting extensive experience across diverse industries, we aimed to redefine digital marketing approaches to align with the rapidly evolving online sphere.
                                 </p>
                             </div>
+                        </div>
+                    </div>
+                    <div className="sm:flex">
+                        <div className="w-full md:w-1/2 mb-5 lg:mb-0 ">
+                            <div className="bg-red-100 px-3 sm:px-6 md:px-14 py-8 md:py-14 rounded-lg">
+                                {/* <span className="hidden md:block">
+                                    <img
+                                        src={mission}
+                                        alt="mission"
+                                        className="mb-5 w-full h-14"
+                                    />
+                                </span> */}
+                                <h5 className="text-xl mb-2 font-bold">
+                                    What Distinguishes Us
+                                </h5>
+                                <p className=" text-gray-700">
+                                    At GGCS, we're not just another digital marketing agency – we're your strategic collaborators. Our success stems from our commitment to staying at the forefront of industry trends. By harnessing the power of cutting-edge technologies and market insights, we create tailored solutions that resonate with your business objectives.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="hidden md:block">
+                            <img src={floatImg} alt="floatIcon" />
                         </div>
                     </div>
                 </div>
