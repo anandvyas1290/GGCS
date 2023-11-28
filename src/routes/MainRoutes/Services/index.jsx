@@ -34,6 +34,7 @@ import { Price, servicesData, serviceSocial } from "../../../db/dummy";
 
 import Pricing from "../../../components/Pricing";
 import InfoModal from "../../../components/UI/Modal";
+import { Modal } from "antd";
 
 const processData = [
     {
