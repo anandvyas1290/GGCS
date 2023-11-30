@@ -13,10 +13,10 @@ import { PrimaryBtn } from "../../../components/Button";
 export default function CompanyBlog() {
     return (
         <div className="bg-gray-100">
-            <div className="max-w-screen-md lg:max-w-screen-xl mx-auto px-6 py-12">
+            <div className="max-w-screen-md lg:max-w-screen-xl mx-auto px-6 py-28">
                 <div className="sm:flex justify-between items-center mb-12">
                     <div>
-                        <h6 className="text-transparent text-lg bg-clip-text bg-gradient-to-r from-purple-700 to-pink-800">
+                        <h6 className="font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
                             What's Going On
                         </h6>
                         <h2 className="text-4xl sm:text-5xl font-semibold">
@@ -42,7 +42,7 @@ export default function CompanyBlog() {
                                         alt=""
                                         className="w-full h-auto  md:w-auto lg:w-1/3   md:rounded-l-2xl"
                                     />
-                                    <div className="py-8 px-6 md:my-4 md:px-10">
+                                    <div className="py-8 px-6 md:px-10">
                                         <div>
                                             <h6 className="text-md w-1/2 lg:w-1/2 text-center p-1 mb-2 rounded-full text-primaryBtn bg-light1">
                                                 SEO agency

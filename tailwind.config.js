@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+    content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+        "node_modules/flowbite-react/lib/esm/**/*.js",
+    ],
     theme: {
         extend: {
             colors: {
@@ -9,19 +13,25 @@ export default {
                 white2: "#DDE2FF",
                 black1: "#271D3A",
                 black2: "#010F1C",
-                primaryBtn: "#775AFC",
                 light1: "rgba(119, 90, 252, 0.1)",
+                light2: "#989899",
                 grey1: "#55585B",
                 grey2: "#9A9B9C",
                 grey3: "#F9F9F9",
                 grey4: "#6F7276",
                 grey5: "#F5F5F5",
+                grey6: "#565764",
+                grey7: "#F1F2F6",
                 blue1: "#4260FF",
                 primaryBtn: "#775AFC",
+                darkBlue: "#1E2B8A",
                 // heroHeading: 'linear-gradient(90deg, #501E9C 0%, #A44CEE 43.75%, #FF847F 100%)',
             },
             fontFamily: {
                 jakarta: " Plus Jakarta Sans, sans-serif",
+            },
+            backgroundImage: {
+                blogBanner: "url('assets/blog/banner.webp')",
             },
             borderRadius: { processImg: "51% 49% 77% 23%/65% 50% 50% 35%" },
             boxShadow: {
@@ -32,6 +42,9 @@ export default {
                 shadow1: "rgba(1, 15, 28, 0.14)",
                 business1: "0px 1px 1px rgba(1, 15, 28, 0.2)",
                 business2: "0px 20px 30px rgba(1, 15, 28, 0.1)",
+                shadow2: "0px 25px 70px rgba(8, 10, 55, 0.1)",
+                serviceVideo: "30px 30px 40px rgba(1, 15, 28, 0.2)",
+                blogCard: "0px 1px 1px rgba(12, 19, 56, 0.06)",
             },
             animation: {
                 fadeInDown:
@@ -53,6 +66,7 @@ export default {
                     "blinkTransform 4s ease-in-out forwards infinite alternate",
                 blinkTransform2:
                     "blinkTransform 5s ease-in-out forwards infinite alternate",
+                blogShape: "blogShape 2.5s linear 0s infinite alternate",
             },
             keyframes: {
                 fadeInDown: {
@@ -145,8 +159,19 @@ export default {
                         opacity: 1,
                     },
                 },
+                blogShape: {
+                    "0%": {
+                        transform: "translateY(-20px)",
+                    },
+                    "100%": {
+                        transform: "translateY(0px)",
+                    },
+                },
+            },
+            backgroundImage: {
+                darkBg: 'url("/funfact1.webp")',
             },
         },
     },
-    plugins: [],
+    plugins: [require("flowbite/plugin")],
 };

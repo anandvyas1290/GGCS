@@ -1,10 +1,9 @@
 import React from 'react'
-import logo from "../../assets/Footer/logo.svg";
-import Fb from "../../assets/Footer/facebook-f.svg"
-import Ig from "../../assets/Footer/instagram.svg"
-import Xt from "../../assets/Footer/x-twitter.svg"
-import In from "../../assets/Footer/linkedin.svg"
+import logo from "../../assets/footer/GGCSNew.svg";
 import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { menuService, services, socialMedias } from '../../db/dummy';
+import { useNavigate } from 'react-router-dom';
+
 import { PrimaryBtn } from '../../components/Button';
 
 const Input = ({ text, placeholder, className }) => {
@@ -34,27 +33,30 @@ const H5 = ({ children, className }) => {
 //         </button>
 //     )
 // }
-const SocialIcons = ({ Icon, name, children, className }) => {
-    return (
-        <div className={`rounded-full w-10 h-10 mr-4 bg-white text-gray-500 flex items-center justify-center  hover:bg-blue-500 cursor-pointer ${className}`}>
-            <img src={Icon} alt={name} className={`w-3 hover:text-white ${children}`} />
-        </div>
-    )
-}
+// const SocialIcons = ({ Icon, name, children, className }) => {
+//     return (
+//         <div className={`rounded-full w-10 h-10 mr-4 bg-white text-gray-500 flex items-center justify-center  hover:bg-blue-400  cursor-pointer ${className}`}>
+//             <img src={Icon} alt={name} className={`w-4 hover:!text-white ${children}`} />
+//         </div>
+//     )
+// }
+
 export default function Footer() {
+    const navigate = useNavigate()
     return (
         <div className='bg-gray-100'>
-            <div className='max-w-screen-md lg:max-w-screen-xl mx-auto pt-20 pb-20 px-6'>
-                <div className='flex  flex-wrap justify-between '>
-                    <div className='mb-3 lg:mb-0 lg:w-1/4 md:w-1/2'>
-                        <div className='mb-6'>
-                            <img src={logo} alt="logo" />
+            <div className='max-w-screen-md lg:max-w-screen-xl mx-auto pt-14 sm:pt-20 pb-20 px-6'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5'>
+                    <div className='mb-3 lg:mb-0 '>
+                        <div className='mb-4'>
+                            <H5 className="!text-[22px] !font-bold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
+                                Global Garner Consultancy Service Pvt Limited
+                            </H5>                            {/* <img src={logo} alt="logo" className="h-full w-1/2 cursor-pointer" /> */}
                         </div>
-                        <div className='mb-6'>
-                            <p className='text-lg font-normal text-gray-500'>
-                                This SEO is most reputed firm
-                                which provides various online
-                                marketing
+                        <div className='mb-5'>
+                            <p className=' font-normal text-gray-500'>
+                                Empower Your Business With The Digital Marketing Landscape Through
+                                Innovative Strategies And Data-Driven Insights
                             </p>
                         </div>
                         <div className=''>
@@ -67,56 +69,65 @@ export default function Footer() {
                             </PrimaryBtn>
                         </div>
                     </div>
-                    <div className='lg:w-1/4 md:w-1/2'>
+                    <div className=''>
                         <div className='lg:pl-10'>
                             <H5 className="mb-5">Information</H5>
                             <div className='pl-4'>
                                 <ul className="list-disc">
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Home</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>About Us </li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Project</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Plan & Pricing</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Blog</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Contact Us</li>
+                                    {menuService?.map((item, i) =>
+                                        <li className='text-base font-normal text-gray-500 mb-2 cursor-pointer hover:text-gray-900' key={i}
+                                            onClick={() => {
+                                                navigate(item?.link)
+                                            }}>
+                                            {item.label === "Home" ? <a href="#">{item.label}</a> : <>{item.label}</>}
+                                        </li>
+
+                                    )}
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div className='lg:w-1/4 md:w-1/2'>
+                    <div className=''>
                         <div className='lg:pl-10'>
                             <H5 className="mb-5">
                                 Services
                             </H5>
                             <div className='pl-4'>
                                 <ul className="list-disc">
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Audit</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Services</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Marketing</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Analysis</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>SEO Optimization</li>
-                                    <li className='text-base font-normal text-gray-500 mb-2'>Social Media</li>
+                                    {
+                                        services?.map((item, i) => (
+                                            <li className='text-base font-normal text-gray-500 mb-2' key={i}>{item?.label}</li>
+                                        ))
+                                    }
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div className='lg:w-1/4 md:w-1/2'>
+                    <div className=''>
                         <H5 className="mb-2">Subscribe</H5>
-                        <p className='text-lg font-normal text-gray-500'>Only valuable resource no bullshit</p>
+                        <p className=' font-normal text-gray-500'>Only valuable resource no bullshit</p>
                         <div className='my-8'>
                             <Input placeholder={"Your Email"} type={"mail"} />
                         </div>
-                        <div className='flex '>
-                            <SocialIcons name="facebook" Icon={Fb} className={"text-blue-500"} />
-                            <SocialIcons name="instagram" Icon={Ig} />
-                            <SocialIcons name="x-twitter" Icon={Xt} />
-                            <SocialIcons name="linkedin" Icon={In} />
+                        <div className="flex gap-8">
+                            {socialMedias?.map((item, i) => (
+                                <div className="" key={i}
+                                    onClick={() => window.open(item?.link, "_blank",
+                                        "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes")}>
+                                    <img
+                                        src={item?.icon}
+                                        alt={item?.name}
+                                        className={`w-6 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
                 <div className='pt-10'>
                     <div className='bg-white rounded-full py-4 sm:px-2 md:px-5 flex justify-center'>
                         <p className='text-gray-400'>
-                            © 2023 <a className="text-blue-600">GGCS</a> All Rights Reserved.
+                            <b>© 2023</b> <a className="font-semibold text-transparent w-fit bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">GGCS</a> All Rights Reserved.
                         </p>
                     </div>
                 </div>

@@ -11,30 +11,49 @@ import shape4 from "../../../assets/home/heroSection/shape4.webp";
 import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 import { PrimaryBtn } from "../../../components/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+    const navigate = useNavigate()
     return (
-        <div className="max-w-screen-xl mx-auto px-12 pt-[150px] pb-[150px]">
+        <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[150px] pb-[40px] sm:pb-[60px]  md:pb-[100px] lg:pb-[150px]">
             <div className="container">
-                <div className="w-4/6">
+                <div className="sm:w-4/6">
                     <div className="">
-                        <h4 className="text-8xl font-bold">
-                            SEO
+                        <div className="text-6xl md:text-8xl font-bold">
+                            {/* SEO
+                            <br /> */}
+                            Digital Marketing
                             <br />
-                            marketing
-                            <br />
-                            <span> value</span> in India
-                        </h4>
-                        <p className="text-xl text-grey1 mt-5 mb-10">
-                            All in one SEO for your business to give real impact
-                            <br />
-                            consultancy and analysis.!
+                            <div className="">
+                                <div className="text-animate">
+                                    <div >
+                                        <h4>agency</h4>
+                                    </div>
+                                    <div >
+                                        <h4>analysis</h4>
+                                    </div>
+                                    <div>
+                                        <h4>value</h4>
+                                    </div>
+                                    <div >
+                                        <h4>Services</h4>
+                                    </div>
+                                </div>
+                                <h5>from India</h5>
+                            </div>
+                        </div>
+                        <p className="text-base mb-4 text-grey2 tracking-[1.2px] ">
+                            Igniting Digital Growth
                         </p>
-                        <div className="mb-7">
+                        <div className="mb-5 sm:mb-7 mt-2 sm:mt-3">
                             <PrimaryBtn
                                 size="px-8 py-3"
                                 bgColor="bg-primaryBtn"
                                 className="border-2 rounded-full border-primaryBtn"
+                                onClick={() => {
+                                    navigate("/services")
+                                }}
                             >
                                 Get Started Now
                             </PrimaryBtn>
@@ -44,11 +63,11 @@ export default function HeroSection() {
                                 <PhoneArrowUpRightIcon className="w-7 h-7 text-primary" />
                             </div>
                             <div>
-                                <p className="text-base text-grey1">
-                                    Got Questions?
+                                <p className="text-base text-grey1 font-semibold">
+                                    Contact Us Today!
                                 </p>
                                 <h4 className="text-xl font-semibold">
-                                    +91 7888478435
+                                    +91 6354917511
                                 </h4>
                             </div>
                         </div>
@@ -70,13 +89,13 @@ export default function HeroSection() {
                     <div className="absolute left-40 bottom-9 -z-[1] animate-upslide">
                         <img src={shape1} alt="" />
                     </div>
-                    <div className="absolute left-[660px] top-[345px] -z-[1] animate-shape2">
+                    <div className="absolute md:left-[660px] top-[345px] -z-[1] animate-shape2">
                         <img src={shape2} alt="" />
                     </div>
-                    <div className="absolute left-[750px] bottom-[280px] -z-[1] animate-shape3">
+                    <div className="absolute lg:left-[750px] bottom-[280px] -z-[1] animate-shape3">
                         <img src={shape3} alt="" />
                     </div>
-                    <div className="absolute right-[610px] bottom-[90px] animate-shape4">
+                    <div className="absolute lg:right-[610px] bottom-[90px] animate-shape4">
                         <img src={shape4} alt="" />
                     </div>
                 </div>

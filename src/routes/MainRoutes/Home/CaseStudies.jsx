@@ -56,10 +56,10 @@ export default function CaseStudies(props) {
     };
 
     return (
-        <div className="w-full pb-36 mb-28 relative">
-            <div className="absolute bottom-0 -z-10">
-                <img src={csbg} alt="portfolio" />
-            </div>
+        <div className="w-full pb-36 relative">
+            {/* <div className="absolute bottom-0 -z-10"> */}
+            <img src={csbg} alt="portfolio" className="absolute -z-[1] bottom-0 left-0 right-0 w-full" />
+            {/* </div> */}
             <div className="container ps-44 flex">
                 <div className="w-4/12">
                     <div className="mb-6">
@@ -76,8 +76,8 @@ export default function CaseStudies(props) {
                             <h5
                                 key={item?.id}
                                 className={`${state.currentCategory === item?.value
-                                        ? "text-primary border-l-4  border-primary bg-gradient-to-r from-[#775afc1a] to-[#775afc00]"
-                                        : "text-grey2 border-l-4 border-white1"
+                                    ? "text-primary border-l-4  border-primary bg-gradient-to-r from-[#775afc1a] to-[#775afc00]"
+                                    : "text-grey2 border-l-4 border-white1"
                                     } font-medium ps-5 py-2 max-w-fit cursor-pointer`}
                                 onClick={() =>
                                     setState((prev) => {

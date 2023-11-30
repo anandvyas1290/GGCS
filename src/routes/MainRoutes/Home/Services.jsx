@@ -1,93 +1,111 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Slider from "react-slick";
 
-import digiShape from "../../../assets/home/services/digiShape.webp";
-import seoShape from "../../../assets/home/services/seoShape.webp";
-import socialShape from "../../../assets/home/services/socialShape.webp";
-import digiMarketing from "../../../assets/home/services/digiMarketing.svg";
-import seo from "../../../assets/home/services/seo.svg";
-import socialMarketing from "../../../assets/home/services/socialMarketing.svg";
 import rocket from "../../../assets/Navbar/rocket.webp";
 import services from "../../../assets/home/services/services.svg";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
+
+import { servicesData } from "../../../db/dummy";
 
 export default function Services(props) {
-    const servicesData = [
-        {
-            id: 0,
-            shape: digiShape,
-            icon: digiMarketing,
-            heading: "Digital Marketing",
-            desc: "We develop digital strategies, products and services appreciated by clients.",
-        },
-        {
-            id: 1,
-            shape: seoShape,
-            icon: seo,
-            heading: "SEO Analytics",
-            desc: "We develop digital strategies, products and services appreciated by clients.",
-        },
-        {
-            id: 2,
-            shape: socialShape,
-            icon: socialMarketing,
-            heading: "Social Marketing",
-            desc: "We develop digital strategies, products and services appreciated by clients.",
-        },
-    ];
-
+    const navigate = useNavigate()
+    const settings = {
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        speed: 500,
+        arrows: false,
+        // adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 625,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
     return (
-        <div className="max-w-screen-xl mx-auto px-12 pb-36">
+        <div className="max-w-screen-xl mx-auto px-3 sm:px-8 md:px-12 pb-10">
             <div>
                 <div className="flex flex-col items-center justify-center">
                     <p className="text-lg font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
-                        Why services Us
+                        Why services Us We are Digital Marketers.
                     </p>
-                    <h5 className="text-6xl font-semibold">Our à services</h5>
+                    <h5 className="text-6xl font-semibold">Our services</h5>
                 </div>
 
-                <div className="grid grid-cols-3 gap-8 my-12">
-                    {servicesData?.map((item) => (
-                        <div
-                            className="group animate-services p-2"
-                            key={item.id}
-                        >
-                            <div className="flex justify-center">
-                                <div className="relative">
-                                    <img
-                                        src={item?.shape}
-                                        alt={item?.heading}
-                                        className="relative"
-                                    />
-                                    <img
-                                        src={item?.icon}
-                                        alt={item?.heading}
-                                        className="absolute left-0 right-0 top-1/2 text-center -translate-y-1/2"
-                                    />
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 my-8 sm:my-12"> */}
+                <div className="mt-5">
+                    <Slider {...settings}>
+                        {servicesData?.map((item) => {
+                            return (
+                                <div
+                                    className="group animate-services p-2 w-full"
+                                    key={item.id}
+                                >
+                                    <div className="flex justify-center">
+                                        <div className="relative flex justify-center">
+                                            <img
+                                                src={item?.shape}
+                                                alt={item?.heading}
+                                                className="relative"
+                                            />
+                                            <img
+                                                src={item?.icon}
+                                                alt={item?.heading}
+                                                className={`absolute   top-1/2 text-center -translate-y-1/2 `}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="grid text-center">
+                                        <h4 className="text-2xl text-black2 font-semibold my-5">
+                                            {item?.heading}
+                                        </h4>
+                                        <p className="text-grey1">{item?.desc}</p>
+                                    </div>
+                                    <div className=" flex justify-center my-5">
+                                        <span className="group flex justify-center items-center cursor-pointer" onClick={() => {
+                                            navigate("services");
+                                        }}>
+                                            {/* invisible  group-hover:ease-in group-hover:duration-1000  group-hover:visible group-hover:animate-services */}
+                                            <p className=" group-hover:text-primary   group-hover:animate-services">
+                                                Read More
+                                            </p>
+                                            <span>
+                                                <ArrowRightIcon className="w-6 h-5 group-hover:!text-primary" />
+                                            </span>
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="text-center">
-                                <h4 className="text-2xl text-black2 font-semibold my-5">
-                                    {item?.heading}
-                                </h4>
-                                <p className="text-grey1">{item?.desc}</p>
-                            </div>
-                            <div className=" flex justify-center my-5">
-                                <span className="flex cursor-pointer">
-                                    <p className="invisible group-hover:visible group-hover:animate-services">
-                                        Read More
-                                    </p>
-                                    <span>
-                                        <ArrowRightIcon className="w-7 h-6" />
-                                    </span>
-                                </span>
-                            </div>
-                        </div>
-                    ))}
+                            )
+                        })}
+                    </Slider>
                 </div>
+                {/* </div> */}
 
-                <div className="flex justify-center">
-                    <div className="w-1/2 rounded-full shadow-contact   bg-grey3 p-3 text-center">
+                <div className="flex justify-center mt-5">
+                    <div className="w-full md:w-1/2 rounded-full shadow-contact bg-grey3 p-3 text-center">
                         <div className="flex justify-center gap-2">
                             <span>
                                 <img
@@ -97,7 +115,7 @@ export default function Services(props) {
                             </span>
                             <p className="flex">
                                 You can also find our
-                                <Link className="mx-2 relative text-primary ">
+                                <Link to={"services"} className="mx-2 relative text-primary ">
                                     Services
                                     <img
                                         src={services}

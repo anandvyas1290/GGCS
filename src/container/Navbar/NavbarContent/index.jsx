@@ -1,64 +1,196 @@
-import React, { useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
-import logo from "../../../assets/Navbar/logo.svg";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import ppt from "../../../assets/PDF/GGCS-PPT.pdf";
+// import logo from "../../../assets/Navbar/logo.svg";
+// import logo from "../../../assets/Navbar/logo.png";
+import logo from "../../../assets/Navbar/GGCSNew.svg";
+import Menu from "../../../assets/Navbar/menu.svg";
+// import logo from "../../../assets/Navbar/GGCS-ICON.jpg"
 
 import { PrimaryBtn } from "../../../components/Button";
 
 const navMenu = [
-    { id: 0, label: "Home", slug: "/", child: [{ id: "c" }] },
-    { id: 1, label: "About", slug: "/about" },
-    { id: 2, label: "Services", slug: "/services", child: [{ id: "c" }] },
-    { id: 3, label: "Pages", slug: "/", child: [{ id: "c" }] },
-    { id: 4, label: "Blog", slug: "/blog", child: [{ id: "c" }] },
-    { id: 5, label: "Contact", slug: "/contact" },
+    { id: 1, label: "Services", slug: "/services" },
+    { id: 2, label: "About", slug: "/about" },
+    { id: 3, label: "Career", slug: "/career" },
+    { id: 4, label: "Our Team", slug: "/team" },
+    {
+        id: 4,
+        label: "Download PPT",
+        slug: "",
+        label2: "download",
+    },
 ];
-export default function NavbarContent(props) {
-    let scrollRef = useRef();
+export default function NavbarContent() {
+    const location = useLocation();
+    const [state, setState] = useState({
+        showMenu: false,
+    });
     let navigate = useNavigate();
-
+    let scrollRef = useRef();
+    const menuInfoBlockRef = useRef();
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
-    });
-
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.addEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+    const handleClickOutside = (event) => {
+        if (!menuInfoBlockRef.current?.contains(event.target)) {
+            setState((prev) => {
+                return { ...prev, showMenu: false };
+            });
+        }
+    };
     const onScroll = () => {
         // console.log(scrollRef.current);
         let ele = document.querySelector(".header");
         // console.log(ele.attributes);
         // fixed top-5 animate-fadeInDown
     };
-
+    const handleOpenMenu = (data = true) => {
+        setState((prev) => {
+            return { ...prev, showMenu: data };
+        });
+    };
+    const { showMenu } = state;
     return (
         <div
-            className="header px-4 py-3 mt-1 border rounded-full border-white bg-transparent backdrop-blur shadow-header"
+            className={`header px-4 mt-1 border-white bg-transparent backdrop-blur shadow-header ${
+                location?.pathname === "/" ? "border rounded-full" : ""
+            }`}
             ref={scrollRef}
         >
-            <div className="max-w-full flex justify-between">
-                <div className="flex items-center">
-                    <img src={logo} alt="ggcs" />
+            <div
+                className={`relative flex justify-between items-center ${
+                    location?.pathname === "/"
+                        ? " max-w-full"
+                        : "max-w-screen-xl mx-auto"
+                }`}
+            >
+                <div className="flex items-center h-[50px] md:h-[80px]">
+                    <img
+                        src={logo}
+                        alt="ggcs"
+                        className="h-1/2 cursor-pointer"
+                        onClick={() => navigate("/")}
+                    />
                 </div>
-                <div className="flex items-center">
+                <div className="hidden lg:flex items-center">
                     {navMenu?.map((item) => (
                         <div
-                            className="flex items-center gap-2 mr-9 cursor-pointer text-lg font-normal text-black1 hover:text-primary transition-all duration-200"
+                            className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-lg !font-medium  text-black1 hover:text-primary transition-all duration-200 ${
+                                item?.slug === location?.pathname
+                                    ? "text-primary "
+                                    : ""
+                            }  ${
+                                item?.label2 === "download"
+                                    ? "text-blue-500"
+                                    : ""
+                            }`}
                             key={item?.id}
-                            onClick={() => navigate(item?.slug)}
+                            onClick={() => {
+                                if (item?.label2 === "download") {
+                                    return;
+                                } else {
+                                    navigate(item?.slug);
+                                }
+                            }}
                         >
-                            <p>{item?.label}</p>
-                            {item?.child ? (
-                                <ChevronDownIcon className="h-4 w-4 font-bold flex items-center" />
-                            ) : null}
+                            {item.label2 === "download" ? (
+                                <a
+                                    download
+                                    onClick={() => {
+                                        window.open(
+                                            ppt,
+                                            "_blank",
+                                            "fullscreen=yes"
+                                        );
+                                    }}
+                                >
+                                    {item?.label}
+                                </a>
+                            ) : (
+                                <a>{item?.label}</a>
+                            )}
                         </div>
                     ))}
                 </div>
-                <div>
-                    <PrimaryBtn
-                        bgColor="bg-primaryBtn"
-                        className="border-primaryBtn"
+                <div className="relative flex items-center justify-between">
+                    <span className="hidden lg:block">
+                        <PrimaryBtn
+                            bgColor="bg-primaryBtn"
+                            className="border-primaryBtn"
+                            onClick={() => navigate("/contact")}
+                        >
+                            Contact Us
+                        </PrimaryBtn>
+                    </span>
+                    <span
+                        ref={menuInfoBlockRef}
+                        className="block lg:hidden h-10 w-10 sm:h-12 sm:w-12"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setState((prev) => {
+                                return {
+                                    ...prev,
+                                    showMenu: !state?.showMenu,
+                                };
+                            });
+                        }}
                     >
-                        Contact Us
-                    </PrimaryBtn>
+                        <img src={Menu} alt="" className="w-full h-full" />
+
+                        <div
+                            className={`absolute top-10 right-0 md:top-20  lg:hidden lg:w-auto ${
+                                showMenu ? "  w-fit " : "hidden"
+                            } `}
+                            id="navbar-default"
+                        >
+                            <ul className="font-medium flex flex-col p-4  mt-4 border border-gray-100 rounded-lg bg-gray-50   md:mt-0 md:border-0">
+                                {navMenu?.map((item) => (
+                                    <li
+                                        className="text-black py-1"
+                                        key={item?.id}
+                                        onClick={() => {
+                                            setState((prev) => {
+                                                return {
+                                                    ...prev,
+                                                    showMenu: false,
+                                                };
+                                            });
+                                            if (item?.label2 === "download") {
+                                                return;
+                                            } else {
+                                                navigate(item?.slug);
+                                            }
+                                        }}
+                                    >
+                                        {item.label2 === "download" ? (
+                                            <a
+                                                download
+                                                onClick={() => {
+                                                    window.open(
+                                                        ppt,
+                                                        "_blank",
+                                                        "fullscreen=yes"
+                                                    );
+                                                }}
+                                                className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                                                aria-current="page"
+                                            >
+                                                {item?.label}
+                                            </a>
+                                        ) : (
+                                            <a>{item?.label}</a>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </span>
                 </div>
             </div>
         </div>
