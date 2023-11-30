@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
+import { Modal } from "flowbite-react";
 // import bgMain from "../../../assets/services/bgMain.webp";
 // import design1 from "../../../assets/services/design1.webp";
 // import design2 from "../../../assets/services/design2.webp";
@@ -33,8 +34,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Price, servicesData, serviceSocial } from "../../../db/dummy";
 
 import Pricing from "../../../components/Pricing";
-import InfoModal from "../../../components/UI/Modal";
-import { Modal } from "antd";
 
 const processData = [
     {
@@ -90,15 +89,13 @@ const businessData = [
 export default function Services(props) {
     const [activeItem, setActiveItem] = useState({
         0: false,
+        openDialog: false,
+        dialogData: {},
     });
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const readMoreModal = (title, desc) => {
-        console.log(title);
-        return <InfoModal title={title}>{desc}</InfoModal>;
-    };
     const settings = {
         dots: true,
         autoplay: true,
