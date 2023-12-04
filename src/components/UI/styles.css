@@ -1,0 +1,18 @@
+.tabs-switch:after {
+    content: "";
+    position: absolute;
+    width: 33%;
+    top: 0;
+    transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+    border-radius: 27.5px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+    height: 100%;
+    /* background: linear-gradient(to right, #501e9c, #a44cee, #ff847f) !important; */
+    background: linear-gradient(
+        90deg,
+        rgba(80, 30, 156, 1) 25%,
+        rgba(164, 76, 238, 1) 64%,
+        rgba(255, 132, 127, 1) 100%
+    );
+    z-index: 0;
+}
