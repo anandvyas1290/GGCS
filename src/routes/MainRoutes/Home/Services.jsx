@@ -60,9 +60,7 @@ export default function Services(props) {
                     <Slider {...settings}>
                         {servicesData?.map((item) => {
                             return (
-                                <div
-                                    className="group animate-services p-2 w-full"
-                                    key={item.id}
+                                <div className=" group animate-services p-2 w-full" key={item.id}
                                 >
                                     <div className="flex justify-center">
                                         <div className="relative flex justify-center">

@@ -56,7 +56,7 @@ export default function Footer() {
                         <div className='mb-5'>
                             <p className=' font-normal text-gray-500'>
                                 Empower Your Business With The Digital Marketing Landscape Through
-                                Innovative Strategies And Data-Driven Insights
+                                Innovative Strategies and Data-Driven Insights
                             </p>
                         </div>
                         <div className=''>
@@ -71,7 +71,7 @@ export default function Footer() {
                     </div>
                     <div className=''>
                         <div className='lg:pl-10'>
-                            <H5 className="mb-5">Information</H5>
+                            <H5 className="mb-5">Information Quick Links</H5>
                             <div className='pl-4'>
                                 <ul className="list-disc">
                                     {menuService?.map((item, i) =>
@@ -105,7 +105,7 @@ export default function Footer() {
                     </div>
                     <div className=''>
                         <H5 className="mb-2">Subscribe</H5>
-                        <p className=' font-normal text-gray-500'>Only valuable resource no bullshit</p>
+                        {/* <p className=' font-normal text-gray-500'>Only valuable resource</p> */}
                         <div className='my-8'>
                             <Input placeholder={"Your Email"} type={"mail"} />
                         </div>
@@ -124,10 +124,21 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className='pt-10'>
+                <div className='text-center pt-5'>
+                    <ul className='list-disc flex justify-center '>
+                        <li className='mx-3'>Privacy Policy </li>
+                        <li className='mx-3'>Terms and Condition</li>
+                        <li className='mx-3'>Help</li>
+                        <li className='mx-3'>Legal Info</li>
+                    </ul>
+                    <address>
+                        <b>Global Garner Sales Services Limited </b>
+                        5th floor, Grand Emporio, Motera Stadium Road, Ahmedabad, Gujarat 380005</address>
+                </div>
+                <div className='pt-5'>
                     <div className='bg-white rounded-full py-4 sm:px-2 md:px-5 flex justify-center'>
                         <p className='text-gray-400'>
-                            <b>© 2023</b> <a className="font-semibold text-transparent w-fit bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">GGCS</a> All Rights Reserved.
+                            <b>© 2023</b> <a href='/' className=" "><b>GGCS</b></a> All Rights Reserved. A unit of <a href="https://beta.globalgarner.com" target='_blank'><b>Global Garner.</b></a>
                         </p>
                     </div>
                 </div>

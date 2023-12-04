@@ -62,7 +62,7 @@ function Vision() {
                                 <h5 className="text-xl mb-2 font-bold">
                                     We are the Digital Marketers that create your brand.
                                 </h5>
-                                <p className=" text-gray-700">
+                                <p className="text-lg text-gray-700">
                                     Welcome to GGCS, where digital prowess meets marketing excellence. We're a dynamic and results-oriented digital marketing company dedicated to elevating businesses to new heights in the digital realm. Our mission is to design compelling strategies that not only enhance brand visibility but also deliver measurable returns on investment.
 
                                 </p>
@@ -115,7 +115,7 @@ function Vision() {
                                 <h5 className="text-xl mb-2 font-bold">
                                     What Distinguishes Us
                                 </h5>
-                                <p className=" text-gray-700">
+                                <p className="text-lg text-gray-700">
                                     At GGCS, we're not just another digital marketing agency – we're your strategic collaborators. Our success stems from our commitment to staying at the forefront of industry trends. By harnessing the power of cutting-edge technologies and market insights, we create tailored solutions that resonate with your business objectives.
                                 </p>
                             </div>
