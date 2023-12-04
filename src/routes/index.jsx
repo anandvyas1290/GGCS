@@ -7,5 +7,12 @@ export default function Routes(props) {
     const routes = useRoutes([
         { path: "/*", element: <MainRoutes {...props} /> },
     ]);
-    return <main className=" ">{routes}</main>;
+    return (
+        <main className=" ">
+            {routes}
+            <div className="">
+                <img />
+            </div>
+        </main>
+    );
 }
