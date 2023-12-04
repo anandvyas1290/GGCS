@@ -16,7 +16,8 @@ import PricingSection from "./PricingSection";
 
 export default function Home(props) {
     return (
-        <div className="font-jakarta">
+        <div className="font-jakarta ">
+
             <HeroSection {...props} />
             <Services {...props} />
             <PricingSection {...props} />

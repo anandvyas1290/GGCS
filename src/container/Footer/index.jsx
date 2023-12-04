@@ -125,18 +125,21 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className='text-center pt-5'>
-                    <ul className='list-disc flex justify-center '>
-                        <li className='mx-3'>Privacy Policy </li>
-                        <li className='mx-3'>Terms and Condition</li>
-                        <li className='mx-3'>Help</li>
-                        <li className='mx-3'>Legal Info</li>
-                    </ul>
+                    <div className='flex justify-center items-center'>
+                        <ul className=' mb-3 flex justify-center items-center  '>
+                            {["Privacy Policy", "Terms and Condition", "Help", "Legal Info"]?.map((item, i) => {
+                                return (
+                                    <li key={i} className='mx-3 w-fit font-semibold bg-white rounded-full px-4 py-2 border border-blue-500 text-primaryBtn'><p className=''>{item}</p></li>
+                                )
+                            })}
+                        </ul>
+                    </div>
                     <address>
                         <b>Global Garner Sales Services Limited </b>
                         5th floor, Grand Emporio, Motera Stadium Road, Ahmedabad, Gujarat 380005</address>
                 </div>
                 <div className='pt-5'>
-                    <div className='bg-white rounded-full py-4 sm:px-2 md:px-5 flex justify-center border'>
+                    <div className='bg-white rounded-full py-4 sm:px-2 md:px-5 flex justify-center border' >
                         <p className='text-gray-400'>
                             <b>© 2023</b> <a href='/' className=" "><b>GGCS</b></a> All Rights Reserved. A unit of <a href="https://beta.globalgarner.com" target='_blank'><b>Global Garner.</b></a>
                         </p>
