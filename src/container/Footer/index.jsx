@@ -136,7 +136,7 @@ export default function Footer() {
                         5th floor, Grand Emporio, Motera Stadium Road, Ahmedabad, Gujarat 380005</address>
                 </div>
                 <div className='pt-5'>
-                    <div className='bg-white rounded-full py-4 sm:px-2 md:px-5 flex justify-center'>
+                    <div className='bg-white rounded-full py-4 sm:px-2 md:px-5 flex justify-center border'>
                         <p className='text-gray-400'>
                             <b>© 2023</b> <a href='/' className=" "><b>GGCS</b></a> All Rights Reserved. A unit of <a href="https://beta.globalgarner.com" target='_blank'><b>Global Garner.</b></a>
                         </p>

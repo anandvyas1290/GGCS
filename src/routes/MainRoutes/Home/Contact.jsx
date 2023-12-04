@@ -62,9 +62,9 @@ function Contact(props) {
                             <div className='my-2  px-3 w-full sm:w-1/2'>
                                 <Input placeholder={"Website"} type={"mail"} />
                             </div>
-                            <div className="w-full  border-2 relative rounded-xl my-3 mx-4 bg-gray-100 ">
-                                <textarea name="" placeholder="Message" id="" cols="30" rows="10" className="w-full h-40 px-5 my-5 outline-none bg-gray-100"></textarea>
-                            </div>
+                            {/* <div className="w-full  border-2 relative rounded-xl my-3 mx-4 bg-gray-100 "> */}
+                            <textarea name="" placeholder="Message" id="" cols="30" rows="10" className="w-full border-[1px] border-gray-200 relative rounded-xl  mx-4 h-40 px-5 my-3 outline-none  bg-gray-100"></textarea>
+                            {/* </div> */}
                         </div>
                         <div className="w-full mt-3 mx-4">
                             <PrimaryBtn
