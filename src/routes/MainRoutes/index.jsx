@@ -6,6 +6,7 @@ import About from "./About";
 import Services from "./Services";
 // import Blog from "./Blog";
 import Contact from "./Contact";
+import Gallery from "./Gallery";
 import WhyGGCS from "./WhyGGCS";
 
 export default function MainRoutes(props) {
@@ -14,8 +15,9 @@ export default function MainRoutes(props) {
         { path: "/about", element: <About {...props} /> },
         { path: "/services", element: <Services {...props} /> },
         { path: "/why-ggcs", element: <WhyGGCS {...props} /> },
+        { path: "/gallery", element: <Gallery {...props} /> },
         // { path: "/blog", element: <Blog {...props} /> },
-        { path: "/contact", element: <Contact {...props} /> }
+        { path: "/contact", element: <Contact {...props} /> },
     ]);
     return routes;
 }

@@ -11,11 +11,11 @@ import Menu from "../../../assets/Navbar/menu.svg";
 import { PrimaryBtn } from "../../../components/Button";
 
 const navMenu = [
-    { id: 1, label: "Services", slug: "/services" },
-    { id: 2, label: "About", slug: "/about" },
-    { id: 3, label: "Career", slug: "/career" },
-    { id: 4, label: "Our Team", slug: "/team" },
-    { id: 4, label: "Gallery", slug: "/gallery" },
+    { id: 1, label: "About", slug: "/about" },
+    { id: 2, label: "Why GGCS", slug: "/why-ggcs" },
+    { id: 3, label: "Services", slug: "/services" },
+    { id: 4, label: "Team", slug: "/team" },
+    { id: 5, label: "Gallery", slug: "/gallery" },
     // {
     //     id: 5,
     //     label: "Download PPT",
@@ -59,15 +59,17 @@ export default function NavbarContent() {
     const { showMenu } = state;
     return (
         <div
-            className={`header px-4 mt-1 border-white bg-transparent backdrop-blur shadow-header ${location?.pathname === "/" ? "border rounded-full" : ""
-                }`}
+            className={`header px-4 mt-1 border-white bg-transparent backdrop-blur shadow-header ${
+                location?.pathname === "/" ? "border rounded-full" : ""
+            }`}
             ref={scrollRef}
         >
             <div
-                className={`relative flex justify-between items-center ${location?.pathname === "/"
-                    ? " max-w-full"
-                    : "max-w-screen-xl mx-auto"
-                    }`}
+                className={`relative flex justify-between items-center ${
+                    location?.pathname === "/"
+                        ? " max-w-full"
+                        : "max-w-screen-xl mx-auto"
+                }`}
             >
                 <div className="flex items-center h-[50px] md:h-[80px]">
                     <img
@@ -80,13 +82,15 @@ export default function NavbarContent() {
                 <div className="items-center hidden lg:flex">
                     {navMenu?.map((item) => (
                         <div
-                            className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-lg !font-medium  text-black1 hover:text-primary transition-all duration-200 ${item?.slug === location?.pathname
-                                ? "text-primary "
-                                : ""
-                                }  ${item?.label2 === "download"
+                            className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-lg !font-medium  text-black1 hover:text-primary transition-all duration-200 ${
+                                item?.slug === location?.pathname
+                                    ? "text-primary "
+                                    : ""
+                            }  ${
+                                item?.label2 === "download"
                                     ? "text-blue-500"
                                     : ""
-                                }`}
+                            }`}
                             key={item?.id}
                             onClick={() => {
                                 if (item?.label2 === "download") {
@@ -141,8 +145,9 @@ export default function NavbarContent() {
                         <img src={Menu} alt="" className="w-full h-full" />
 
                         <div
-                            className={`absolute top-10 right-0 md:top-20  lg:hidden lg:w-auto ${showMenu ? "  w-fit " : "hidden"
-                                } `}
+                            className={`absolute top-10 right-0 md:top-20  lg:hidden lg:w-auto ${
+                                showMenu ? "  w-fit " : "hidden"
+                            } `}
                             id="navbar-default"
                         >
                             <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:mt-0 md:border-0">
