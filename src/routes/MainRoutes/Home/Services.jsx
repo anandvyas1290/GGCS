@@ -9,9 +9,9 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { servicesData } from "../../../db/dummy";
 
 export default function Services(props) {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const settings = {
-        dots: true,
+        dots: false,
         autoplay: true,
         autoplaySpeed: 5000,
         infinite: true,
@@ -19,7 +19,7 @@ export default function Services(props) {
         slidesToScroll: 1,
         initialSlide: 0,
         speed: 500,
-        arrows: false,
+        arrows: true,
         // adaptiveHeight: true,
         responsive: [
             {
@@ -60,7 +60,9 @@ export default function Services(props) {
                     <Slider {...settings}>
                         {servicesData?.map((item) => {
                             return (
-                                <div className=" group animate-services p-2 w-full" key={item.id}
+                                <div
+                                    className=" group animate-services p-2 w-full"
+                                    key={item.id}
                                 >
                                     <div className="flex justify-center">
                                         <div className="relative flex justify-center">
@@ -80,12 +82,17 @@ export default function Services(props) {
                                         <h4 className="text-2xl text-black2 font-semibold my-5">
                                             {item?.heading}
                                         </h4>
-                                        <p className="text-grey1">{item?.desc}</p>
+                                        <p className="text-grey1">
+                                            {item?.desc}
+                                        </p>
                                     </div>
                                     <div className=" flex justify-center my-5">
-                                        <span className="group flex justify-center items-center cursor-pointer" onClick={() => {
-                                            navigate("services");
-                                        }}>
+                                        <span
+                                            className="group flex justify-center items-center cursor-pointer"
+                                            onClick={() => {
+                                                navigate("services");
+                                            }}
+                                        >
                                             {/* invisible  group-hover:ease-in group-hover:duration-1000  group-hover:visible group-hover:animate-services */}
                                             <p className=" group-hover:text-primary   group-hover:animate-services">
                                                 Read More
@@ -96,7 +103,7 @@ export default function Services(props) {
                                         </span>
                                     </div>
                                 </div>
-                            )
+                            );
                         })}
                     </Slider>
                 </div>
@@ -113,7 +120,10 @@ export default function Services(props) {
                             </span>
                             <p className="flex">
                                 You can also find our
-                                <Link to={"services"} className="mx-2 relative text-primary ">
+                                <Link
+                                    to={"services"}
+                                    className="mx-2 relative text-primary "
+                                >
                                     Services
                                     <img
                                         src={services}

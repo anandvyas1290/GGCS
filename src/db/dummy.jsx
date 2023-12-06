@@ -335,7 +335,7 @@ export const Price = [
 
 // Why GGCS desc
 
-export const whyGGCS = {
+export const whyGGCSData = {
     title: "Why GGCS is Your Ultimate Choice",
     desc: [
         {
