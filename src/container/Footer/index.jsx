@@ -95,27 +95,32 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="">
-                        <div className="lg:pl-10">
-                            <H5 className="mb-5">Services</H5>
-                            <div className="pl-4">
-                                <ul className="list-disc">
-                                    {services?.map((item, i) => (
-                                        <li
-                                            className="text-base font-normal text-gray-500 mb-2"
-                                            key={i}
-                                        >
-                                            {item?.label}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                    <div className=''>
+                        <H5 className="mb-5">
+                            Services
+                        </H5>
+                        <div className='pl-4'>
+                            <ul className="list-disc">
+                                {
+                                    services?.map((item, i) => (
+                                        <li className='text-base font-normal text-gray-500 mb-2' key={i}>{item?.label}</li>
+                                    ))
+                                }
+                            </ul>
                         </div>
                     </div>
-                    <div className="">
-                        <H5 className="mb-2">Subscribe</H5>
+                    <div className=''>
+                        <ul className='list-disc mb-4 border-b-2 border-b-gray-300 '>
+                            {["Privacy Policy", "Terms and Condition", "Disclaimer"]?.map((item, i) => {
+                                return (
+                                    <li key={i} className='text-base font-normal text-gray-500 mb-2'>{item}</li>
+                                )
+                            })}
+                        </ul>
+                        {/* <hr className='border-[1px]' /> */}
+                        <H5 className="mb-4">Subscribe</H5>
                         {/* <p className=' font-normal text-gray-500'>Only valuable resource</p> */}
-                        <div className="my-8">
+                        <div className='mb-8'>
                             <Input placeholder={"Your Email"} type={"mail"} />
                         </div>
                         <div className="flex gap-8">
@@ -141,15 +146,10 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="text-center pt-5">
-                    <div className="flex justify-center items-center">
-                        <ul className=" mb-3 flex justify-center items-center  ">
-                            {[
-                                "Privacy Policy",
-                                "Terms and Condition",
-                                "Help",
-                                "Legal Info",
-                            ]?.map((item, i) => {
+                <div className='text-center pt-5'>
+                    {/* <div className='flex justify-center items-center'>
+                        <ul className=' mb-3 flex justify-center items-center  '>
+                            {["Privacy Policy", "Terms and Condition", "Help", "Legal Info"]?.map((item, i) => {
                                 return (
                                     <li
                                         key={i}
@@ -160,7 +160,7 @@ export default function Footer() {
                                 );
                             })}
                         </ul>
-                    </div>
+                    </div> */}
                     <address>
                         <b>Global Garner Sales Services Limited </b>
                         5th floor, Grand Emporio, Motera Stadium Road,
