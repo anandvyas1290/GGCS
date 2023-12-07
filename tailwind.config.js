@@ -29,6 +29,8 @@ export default {
             },
             fontFamily: {
                 jakarta: " Plus Jakarta Sans, sans-serif",
+                serif: "DM Serif Display, serif",
+                sans: '"DM Sans",sans-serif;',
             },
             backgroundImage: {
                 blogBanner: "url('assets/blog/banner.webp')",
