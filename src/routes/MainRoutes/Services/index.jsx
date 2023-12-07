@@ -194,6 +194,22 @@ export default function Services(props) {
                 </div>
             </div> */}
 
+            <section className="py-10 sm:py-20 bg-grey5">
+                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
+                    <div className="flex mb-16 md:justify-center">
+                        <div className="text-center md:w-8/12">
+                            <h1 className="text-4xl sm:text-5xl sm:text-[54px] leading-tight font-semibold text-black2">
+                                How can a perth social media help grow my
+                                business?
+                            </h1>
+                        </div>
+                    </div>
+                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
+                        <Pricing Price={Price} />
+                    </div>
+                </div>
+            </section>
+
             <section className="max-w-screen-xl px-3 pt-20 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-40">
                 <div className="grid md:grid-cols-2">
                     <div className="lg:pl-16">
@@ -263,9 +279,6 @@ export default function Services(props) {
                                                         <Line2 />
                                                     )}
                                                 </div>
-                                                {/* ) : (  */}
-                                                {/* <div className="absolute top-24 left-20 -rotate-[37deg]"></div> */}
-                                                {/* )} */}
                                             </>
                                         ) : null}
                                     </div>
@@ -327,24 +340,6 @@ export default function Services(props) {
                 </div>
             </section>
 
-            <section className="py-10 sm:py-20 bg-grey5">
-                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
-                    <div className="flex mb-16 md:justify-center">
-                        <div className="text-center md:w-8/12">
-                            <h1 className="text-4xl sm:text-5xl sm:text-[54px] leading-tight font-semibold text-black2">
-                                How can a perth social media help grow my
-                                business?
-                            </h1>
-                        </div>
-                    </div>
-                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
-                        {/* reusable */}
-                        <Pricing Price={Price} />
-                    </div>
-                    {/* </div> */}
-                </div>
-            </section>
-
             <section className="max-w-screen-xl pb-0 mx-auto mt-10 sm:pb-14 md:pb-28">
                 <div className="py-10 md:flex">
                     <div className="w-full px-10 py-10 md:w-1/2 sm:mx-3">
@@ -395,7 +390,7 @@ export default function Services(props) {
                                         <div
                                             className="h-3 bg-green-600 rounded-full dark:bg-green-500"
                                             style={{ width: "74%" }}
-                                        ></div>
+                                        />
                                     </div>
                                 </div>
                                 <div>
@@ -417,7 +412,7 @@ export default function Services(props) {
                                         <div
                                             className="bg-[#9666FE] h-3 rounded-full dark:bg-[#9666FE]"
                                             style={{ width: "54%" }}
-                                        ></div>
+                                        />
                                     </div>
                                 </div>
                             </div>

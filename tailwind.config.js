@@ -67,6 +67,7 @@ export default {
                 blinkTransform2:
                     "blinkTransform 5s ease-in-out forwards infinite alternate",
                 blogShape: "blogShape 2.5s linear 0s infinite alternate",
+                whyGGCSCard: "all .5s ease-in-out",
             },
             keyframes: {
                 fadeInDown: {

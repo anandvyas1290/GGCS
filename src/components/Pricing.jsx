@@ -52,6 +52,7 @@ function Pricing({ Price }) {
             return { ...prev, currentTab: tab };
         });
     };
+
     return (
         <div>
             <Tabs
@@ -80,7 +81,6 @@ function Pricing({ Price }) {
                                     /month
                                 </span>
                             </div>
-                            {/* List  */}
                             <ul
                                 role="list"
                                 className="mb-8 space-y-3 text-left h-[350px] overflow-y-scroll no-scrollbar"
