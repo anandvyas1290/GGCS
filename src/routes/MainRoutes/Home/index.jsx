@@ -20,8 +20,8 @@ export default function Home(props) {
 
             <HeroSection {...props} />
             <Services {...props} />
-            <PricingSection {...props} />
-            <Featured {...props} />
+            {/* <PricingSection {...props} /> */}
+            {/* <Featured {...props} /> */}
             <Process {...props} />
             <SEO {...props} />
             {/* <CaseStudies {...props} /> */}
