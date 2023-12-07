@@ -80,7 +80,7 @@ export default {
                         opacity: 1,
                         "-webkit-transform": "translateY(0)",
                         "-ms-transform": "translateY(0)",
-                        transform: " translateY(0)",
+                        transform: "translateY(0)",
                     },
                 },
                 upslide: {
