@@ -1,90 +1,33 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Modal } from "flowbite-react";
-// import bgMain from "../../../assets/services/bgMain.webp";
-// import design1 from "../../../assets/services/design1.webp";
-// import design2 from "../../../assets/services/design2.webp";
-// import design3 from "../../../assets/services/design3.webp";
-// import design4 from "../../../assets/services/design4.webp";
-// import design5 from "../../../assets/services/design5.webp";
-// import design6 from "../../../assets/services/design6.webp";
-// import banner from "../../../assets/services/banner.webp";
-import socialTree from "../../../assets/services/socialTree.webp";
-import list1 from "../../../assets/home/process/list1.svg";
-import list2 from "../../../assets/home/process/list2.svg";
-import list3 from "../../../assets/home/process/list3.svg";
-import pinterest from "../../../assets/services/pinterest.webp";
-import facebook from "../../../assets/services/facebook.webp";
-import instagram from "../../../assets/services/instagram.webp";
-import linkedin from "../../../assets/services/linkedin.webp";
-import business1 from "../../../assets/services/business1.webp";
-import business2 from "../../../assets/services/business2.webp";
-import business3 from "../../../assets/services/business3.webp";
-import videoBanner from "../../../assets/services/videoBanner.webp";
-import play from "../../../assets/services/play.svg";
+
+import {
+    socialTree,
+    serFB,
+    serLinkedin,
+    serInsta,
+    serPint,
+    videoBanner,
+    play,
+    GradientBgImg,
+    ClientImg,
+    InputImg,
+    StatImg,
+} from "../../../db/assets";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import GradientBgImg from "../../../assets/SEO/optimize-bg.webp";
-import ClientImg from "../../../assets/SEO/optimize-bg-2.webp";
-import InputImg from "../../../assets/SEO/optimize-shape-2.webp";
-import StatImg from "../../../assets/SEO/optimize-shape-1.webp";
-// import { PrimaryBtn } from "../../../components/Button";
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { Price, servicesData, serviceSocial } from "../../../db/dummy";
+import {
+    Price,
+    servicesData,
+    serviceSocial,
+    processData,
+    businessData,
+} from "../../../db/dummy";
 
 import Pricing from "../../../components/Pricing";
-
-const processData = [
-    {
-        id: 1,
-        icon: list1,
-        label: "Precision Forged by Data",
-        desc: "Our strategy thrives on informed decisions. We base our methodologies on comprehensive data analysis, ensuring each step we take propels your online conquest.",
-    },
-    {
-        id: 2,
-        icon: list2,
-        label: "Tailored Triumph",
-        desc: " We recognize the distinct DNA of each business. Hence, we craft personalized strategies that align with your unique prerequisites, avoiding generic solutions.        ",
-    },
-    {
-        id: 3,
-        icon: list3,
-        label: "Transparency Forged in Trust",
-        desc: "Open communication is our cornerstone. Expect regular updates and detailed reports on your campaign's progress, cultivating a transparent and trustworthy partnership.",
-    },
-    {
-        id: 4,
-        icon: list1,
-        label: "Holistic Services",
-        desc: " From harnessing SEO prowess and mastering content alchemy to conducting social media symphonies and weaving paid advertising wizardry, GGCS unfurls a holistic digital repertoire.",
-    },
-    {
-        id: 5,
-        icon: list2,
-        label: "Endorsed Excellence",
-        desc: "Our achievements speak volumes. GGCS has empowered numerous clients, catalyzing substantial advancements in online prominence, engagement, and conversions.",
-    },
-];
-
-const businessData = [
-    {
-        heading: "Growing your business",
-        desc: "With GGCS, you get everything you need for a fast website",
-        image: business1,
-    },
-    {
-        heading: "Speed Optimization",
-        desc: "With GGCS, you get everything you need for a fast website",
-        image: business2,
-    },
-    {
-        heading: "Testing Capabilities",
-        desc: "With GGCS, you get everything you need for a fast website",
-        image: business3,
-    },
-];
 
 export default function Services(props) {
     const [activeItem, setActiveItem] = useState({
@@ -194,6 +137,22 @@ export default function Services(props) {
                 </div>
             </div> */}
 
+            <section className="py-10 sm:py-20 bg-grey5">
+                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
+                    <div className="flex mb-16 md:justify-center">
+                        <div className="text-center md:w-8/12">
+                            <h1 className="text-4xl sm:text-5xl sm:text-[54px] leading-tight font-semibold text-black2">
+                                How can a perth social media help grow my
+                                business?
+                            </h1>
+                        </div>
+                    </div>
+                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
+                        <Pricing Price={Price} />
+                    </div>
+                </div>
+            </section>
+
             <section className="max-w-screen-xl px-3 pt-20 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-40">
                 <div className="grid md:grid-cols-2">
                     <div className="lg:pl-16">
@@ -234,7 +193,7 @@ export default function Services(props) {
                                                 {item?.desc?.slice(0, 60)}...
                                             </p>
                                             <p
-                                                className="text-pink-500 font-semibold cursor-pointer"
+                                                className="font-semibold text-pink-500 cursor-pointer"
                                                 onClick={() =>
                                                     readMoreModal(
                                                         item?.label,
@@ -263,9 +222,6 @@ export default function Services(props) {
                                                         <Line2 />
                                                     )}
                                                 </div>
-                                                {/* ) : (  */}
-                                                {/* <div className="absolute top-24 left-20 -rotate-[37deg]"></div> */}
-                                                {/* )} */}
                                             </>
                                         ) : null}
                                     </div>
@@ -284,7 +240,7 @@ export default function Services(props) {
                                     )
                                 }
                             >
-                                <img src={pinterest} alt="shape1" />
+                                <img src={serPint} alt="shape1" />
                             </div>
                             <div
                                 className="absolute top-[5%] left-[45%] z-[1] animate-blinkTransform2"
@@ -296,7 +252,7 @@ export default function Services(props) {
                                     )
                                 }
                             >
-                                <img src={facebook} alt="shape2" />
+                                <img src={serFB} alt="shape2" />
                             </div>
                             <div
                                 className="absolute -top-[15%] right-[13%] z-[1] animate-blinkTransform1"
@@ -308,7 +264,7 @@ export default function Services(props) {
                                     )
                                 }
                             >
-                                <img src={instagram} alt="shape3" />
+                                <img src={serInsta} alt="shape3" />
                             </div>
                             <div
                                 className="absolute top-[19%] right-[1%] z-[1] animate-blinkTransform2"
@@ -320,28 +276,10 @@ export default function Services(props) {
                                     )
                                 }
                             >
-                                <img src={linkedin} alt="shape3" />
+                                <img src={serLinkedin} alt="shape3" />
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section className="py-10 sm:py-20 bg-grey5">
-                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
-                    <div className="flex mb-16 md:justify-center">
-                        <div className="text-center md:w-8/12">
-                            <h1 className="text-4xl sm:text-5xl sm:text-[54px] leading-tight font-semibold text-black2">
-                                How can a perth social media help grow my
-                                business?
-                            </h1>
-                        </div>
-                    </div>
-                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
-                        {/* reusable */}
-                        <Pricing Price={Price} />
-                    </div>
-                    {/* </div> */}
                 </div>
             </section>
 
@@ -395,7 +333,7 @@ export default function Services(props) {
                                         <div
                                             className="h-3 bg-green-600 rounded-full dark:bg-green-500"
                                             style={{ width: "74%" }}
-                                        ></div>
+                                        />
                                     </div>
                                 </div>
                                 <div>
@@ -417,7 +355,7 @@ export default function Services(props) {
                                         <div
                                             className="bg-[#9666FE] h-3 rounded-full dark:bg-[#9666FE]"
                                             style={{ width: "54%" }}
-                                        ></div>
+                                        />
                                     </div>
                                 </div>
                             </div>

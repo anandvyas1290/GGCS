@@ -29,6 +29,8 @@ export default {
             },
             fontFamily: {
                 jakarta: " Plus Jakarta Sans, sans-serif",
+                serif: "DM Serif Display, serif",
+                sans: '"DM Sans",sans-serif;',
             },
             backgroundImage: {
                 blogBanner: "url('assets/blog/banner.webp')",
@@ -67,6 +69,7 @@ export default {
                 blinkTransform2:
                     "blinkTransform 5s ease-in-out forwards infinite alternate",
                 blogShape: "blogShape 2.5s linear 0s infinite alternate",
+                whyGGCSCard: "all .5s ease-in-out",
             },
             keyframes: {
                 fadeInDown: {
@@ -80,7 +83,7 @@ export default {
                         opacity: 1,
                         "-webkit-transform": "translateY(0)",
                         "-ms-transform": "translateY(0)",
-                        transform: " translateY(0)",
+                        transform: "translateY(0)",
                     },
                 },
                 upslide: {

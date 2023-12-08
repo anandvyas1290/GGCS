@@ -16,11 +16,12 @@ import PricingSection from "./PricingSection";
 
 export default function Home(props) {
     return (
-        <div className="font-jakarta">
+        <div className="font-jakarta ">
+
             <HeroSection {...props} />
             <Services {...props} />
-            <PricingSection {...props} />
-            <Featured {...props} />
+            {/* <PricingSection {...props} /> */}
+            {/* <Featured {...props} /> */}
             <Process {...props} />
             <SEO {...props} />
             {/* <CaseStudies {...props} /> */}

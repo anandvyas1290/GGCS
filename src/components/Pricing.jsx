@@ -20,8 +20,8 @@ function Pricing({ Price }) {
         slidesToScroll: 1,
         initialSlide: 0,
         speed: 500,
-        arrows: false,
-        // adaptiveHeight: true,
+        arrows: true,
+        adaptiveHeight: true,
         responsive: [
             {
                 breakpoint: 1920,
@@ -52,6 +52,7 @@ function Pricing({ Price }) {
             return { ...prev, currentTab: tab };
         });
     };
+
     return (
         <div>
             <Tabs
@@ -72,15 +73,14 @@ function Pricing({ Price }) {
                             <p className="font-light text-gray-500 ">
                                 {item?.desc}
                             </p>
-                            <div className="flex justify-center items-baseline my-8">
+                            <div className="flex items-baseline justify-center my-8">
                                 <span className="mr-1 text-4xl font-extrabold">
                                     {item?.price}
                                 </span>
-                                <span className="text-gray-500 font-medium">
+                                <span className="font-medium text-gray-500">
                                     /month
                                 </span>
                             </div>
-                            {/* List  */}
                             <ul
                                 role="list"
                                 className="mb-8 space-y-3 text-left h-[350px] overflow-y-scroll no-scrollbar"

@@ -2,26 +2,19 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import ppt from "../../../assets/PDF/GGCS-PPT.pdf";
-// import logo from "../../../assets/Navbar/logo.svg";
-// import logo from "../../../assets/Navbar/logo.png";
 import logo from "../../../assets/Navbar/GGCSNew.svg";
 import Menu from "../../../assets/Navbar/menu.svg";
-// import logo from "../../../assets/Navbar/GGCS-ICON.jpg"
 
 import { PrimaryBtn } from "../../../components/Button";
 
 const navMenu = [
-    { id: 1, label: "Services", slug: "/services" },
-    { id: 2, label: "About", slug: "/about" },
-    { id: 3, label: "Career", slug: "/career" },
-    { id: 4, label: "Our Team", slug: "/team" },
-    {
-        id: 4,
-        label: "Download PPT",
-        slug: "",
-        label2: "download",
-    },
+    { id: 1, label: "About", slug: "/about" },
+    { id: 2, label: "Why GGCS", slug: "/why-ggcs" },
+    { id: 3, label: "Services", slug: "/services" },
+    { id: 4, label: "Team", slug: "/team" },
+    { id: 5, label: "Gallery", slug: "/gallery" },
 ];
+
 export default function NavbarContent() {
     const location = useLocation();
     const [state, setState] = useState({
@@ -74,14 +67,14 @@ export default function NavbarContent() {
                     <img
                         src={logo}
                         alt="ggcs"
-                        className="h-1/2 cursor-pointer"
+                        className="cursor-pointer h-1/2"
                         onClick={() => navigate("/")}
                     />
                 </div>
-                <div className="hidden lg:flex items-center">
+                <div className="items-center hidden lg:flex">
                     {navMenu?.map((item) => (
                         <div
-                            className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-lg !font-medium  text-black1 hover:text-primary transition-all duration-200 ${
+                            className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${
                                 item?.slug === location?.pathname
                                     ? "text-primary "
                                     : ""
@@ -99,7 +92,7 @@ export default function NavbarContent() {
                                 }
                             }}
                         >
-                            {item.label2 === "download" ? (
+                            {item?.label2 === "download" ? (
                                 <a
                                     download
                                     onClick={() => {
@@ -130,7 +123,7 @@ export default function NavbarContent() {
                     </span>
                     <span
                         ref={menuInfoBlockRef}
-                        className="block lg:hidden h-10 w-10 sm:h-12 sm:w-12"
+                        className="block w-10 h-10 lg:hidden sm:h-12 sm:w-12"
                         onClick={(e) => {
                             e.stopPropagation();
                             setState((prev) => {
@@ -149,10 +142,10 @@ export default function NavbarContent() {
                             } `}
                             id="navbar-default"
                         >
-                            <ul className="font-medium flex flex-col p-4  mt-4 border border-gray-100 rounded-lg bg-gray-50   md:mt-0 md:border-0">
+                            <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:mt-0 md:border-0">
                                 {navMenu?.map((item) => (
                                     <li
-                                        className="text-black py-1"
+                                        className="py-1 text-black"
                                         key={item?.id}
                                         onClick={() => {
                                             setState((prev) => {
