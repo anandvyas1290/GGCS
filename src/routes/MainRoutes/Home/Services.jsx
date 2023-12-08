@@ -26,41 +26,6 @@ import slide_image_7 from "../../../assets/home/services/img_7.jpg";
 
 export default function Services(props) {
     const navigate = useNavigate();
-    const settings = {
-        dots: false,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        speed: 500,
-        arrows: true,
-        // adaptiveHeight: true,
-        responsive: [
-            {
-                breakpoint: 1920,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 2,
-                },
-            },
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                },
-            },
-            {
-                breakpoint: 625,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
-    };
     return (
         <section className="bg-[#f5f5f5] md:py-14 py-8 ">
             <div className=" max-w-screen-xl mx-auto px-3 sm:px-8 md:px-12 pb-10">
@@ -72,7 +37,7 @@ export default function Services(props) {
                 </div>
 
                 {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 my-8 sm:my-12"> */}
-                <div className="mt-5 ">
+                <div className="mt-5 relative ">
                     <Swiper
                         effect={"coverflow"}
                         grabCursor={true}
@@ -85,10 +50,10 @@ export default function Services(props) {
                             depth: 100,
                             modifier: 2.5,
                         }}
-                        pagination={{
-                            el: ".swiper-pagination",
-                            clickable: true,
-                        }}
+                        // pagination={{
+                        //     el: ".swiper-pagination",
+                        //     clickable: true,
+                        // }}
                         navigation={{
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
@@ -100,43 +65,28 @@ export default function Services(props) {
                         {servicesData?.map((item, i) => {
                             return (
                                 <SwiperSlide key={i}>
-                                    <div className="card-img rounded-xl bg-white shadow-lg">
+                                    <div className="relative card-img rounded-xl bg-white shadow-lg ">
                                         <img
                                             src={slide_image_5}
                                             alt="slide_image"
                                             className="w-full !h-64"
                                         />
-                                    </div>
-                                    <div className="card-desc">
-                                        <h4 className="text-2xl text-black2 font-semibold mt-3 mb-2">
+                                        <h4 className="absolute  bottom-0 text-2xl px-3 !text-center text-black2 font-semibold mt-3 mb-2">
                                             {item?.heading}
                                         </h4>
-                                        <p className="text-grey1">
-                                            {item?.desc}
-                                        </p>
+                                    </div>
+                                    <div className="card-desc m-3">
+                                        <ul className="text-grey1 !list-disc text-left ml-5 ">
+                                            {item?.list?.map((item, i) => {
+                                                return (
+                                                    <li key={i} className="">{item}</li>
+                                                )
+                                            })}
+                                        </ul>
                                     </div>
                                 </SwiperSlide>
                             );
                         })}
-                        {/* <SwiperSlide>
-                            <img src={slide_image_2} alt="slide_image" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={slide_image_3} alt="slide_image" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={slide_image_4} alt="slide_image" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={slide_image_5} alt="slide_image" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={slide_image_6} alt="slide_image" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={slide_image_7} alt="slide_image" />
-                        </SwiperSlide> */}
-
                         <div className="slider-controler">
                             <div className="swiper-button-prev slider-arrow">
                                 <ion-icon name="arrow-back-outline"></ion-icon>
