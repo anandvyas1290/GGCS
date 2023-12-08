@@ -2,11 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import ppt from "../../../assets/PDF/GGCS-PPT.pdf";
-// import logo from "../../../assets/Navbar/logo.svg";
-// import logo from "../../../assets/Navbar/logo.png";
 import logo from "../../../assets/Navbar/GGCSNew.svg";
 import Menu from "../../../assets/Navbar/menu.svg";
-// import logo from "../../../assets/Navbar/GGCS-ICON.jpg"
 
 import { PrimaryBtn } from "../../../components/Button";
 
@@ -16,13 +13,8 @@ const navMenu = [
     { id: 3, label: "Services", slug: "/services" },
     { id: 4, label: "Team", slug: "/team" },
     { id: 5, label: "Gallery", slug: "/gallery" },
-    // {
-    //     id: 5,
-    //     label: "Download PPT",
-    //     slug: "",
-    //     label2: "download",
-    // },
 ];
+
 export default function NavbarContent() {
     const location = useLocation();
     const [state, setState] = useState({
@@ -82,7 +74,7 @@ export default function NavbarContent() {
                 <div className="items-center hidden lg:flex">
                     {navMenu?.map((item) => (
                         <div
-                            className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-lg !font-medium  text-black1 hover:text-primary transition-all duration-200 ${
+                            className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${
                                 item?.slug === location?.pathname
                                     ? "text-primary "
                                     : ""
@@ -100,7 +92,7 @@ export default function NavbarContent() {
                                 }
                             }}
                         >
-                            {item.label2 === "download" ? (
+                            {item?.label2 === "download" ? (
                                 <a
                                     download
                                     onClick={() => {

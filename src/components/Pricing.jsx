@@ -15,36 +15,36 @@ function Pricing({ Price }) {
         dots: true,
         autoplay: true,
         autoplaySpeed: 5000,
-        infinite: true,
+        infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0,
         speed: 500,
-        arrows: false,
-        // adaptiveHeight: true,
-        // responsive: [
-        //     {
-        //         breakpoint: 1920,
-        //         settings: {
-        //             slidesToShow: 3,
-        //             slidesToScroll: 2,
-        //         },
-        //     },
-        //     {
-        //         breakpoint: 1024,
-        //         settings: {
-        //             slidesToShow: 2,
-        //             slidesToScroll: 1,
-        //         },
-        //     },
-        //     {
-        //         breakpoint: 625,
-        //         settings: {
-        //             slidesToShow: 1,
-        //             slidesToScroll: 1,
-        //         },
-        //     },
-        // ],
+        arrows: true,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 625,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
     const currentTabHandler = (tab) => {
@@ -73,11 +73,11 @@ function Pricing({ Price }) {
                             <p className="font-light text-gray-500 ">
                                 {item?.desc}
                             </p>
-                            <div className="flex justify-center items-baseline my-8">
+                            <div className="flex items-baseline justify-center my-8">
                                 <span className="mr-1 text-4xl font-extrabold">
                                     {item?.price}
                                 </span>
-                                <span className="text-gray-500 font-medium">
+                                <span className="font-medium text-gray-500">
                                     /month
                                 </span>
                             </div>

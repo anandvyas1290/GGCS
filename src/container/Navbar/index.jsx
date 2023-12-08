@@ -11,7 +11,7 @@ const Navbar = (props) => {
         <div
             className={`${
                 fullNav ? "" : "max-w-screen-xl mx-auto px-3 sm:px-8 z-50"
-            } relative`}
+            } relative !font-sans`}
         >
             {fullNav ? null : <StatusBar {...props} />}
             <NavbarContent {...props} fullNav={fullNav} />

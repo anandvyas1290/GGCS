@@ -63,7 +63,7 @@ export default function Services(props) {
     };
     return (
         <section className="bg-[#f5f5f5] md:py-14 py-8 ">
-            <div className=" max-w-screen-xl mx-auto px-3 sm:px-8 md:px-12 pb-10">
+            <div className="max-w-screen-xl px-3 pb-10 mx-auto  sm:px-8 md:px-12">
                 <div className="flex flex-col items-center justify-center">
                     <p className="text-lg font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
                         Why services Us We are Digital Marketers.
@@ -71,7 +71,7 @@ export default function Services(props) {
                     <h5 className="text-6xl font-semibold">Our services</h5>
                 </div>
 
-                {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 my-8 sm:my-12"> */}
+                {/* <div className="grid grid-cols-1 gap-5 my-8 sm:grid-cols-2 md:grid-cols-3 md:gap-8 sm:my-12"> */}
                 <div className="mt-5 ">
                     <Swiper
                         effect={"coverflow"}
@@ -100,7 +100,7 @@ export default function Services(props) {
                         {servicesData?.map((item, i) => {
                             return (
                                 <SwiperSlide key={i}>
-                                    <div className="card-img rounded-xl bg-white shadow-lg">
+                                    <div className="bg-white shadow-lg card-img rounded-xl">
                                         <img
                                             src={slide_image_5}
                                             alt="slide_image"
@@ -108,7 +108,7 @@ export default function Services(props) {
                                         />
                                     </div>
                                     <div className="card-desc">
-                                        <h4 className="text-2xl text-black2 font-semibold mt-3 mb-2">
+                                        <h4 className="mt-3 mb-2 text-2xl font-semibold text-black2">
                                             {item?.heading}
                                         </h4>
                                         <p className="text-grey1">
@@ -168,19 +168,19 @@ export default function Services(props) {
                                         </div>
                                     </div>
                                     <div className="grid text-center">
-                                        <h4 className="text-2xl text-black2 font-semibold my-5">
+                                        <h4 className="my-5 text-2xl font-semibold text-black2">
                                             {item?.heading}
                                         </h4>
                                         <p className="text-grey1">
                                             {item?.desc}
                                         </p>
                                     </div>
-                                    {/* <div className=" flex justify-center my-5">
-                                        <span className="group flex justify-center items-center cursor-pointer" onClick={() => {
+                                    {/* <div className="flex justify-center my-5 ">
+                                        <span className="flex items-center justify-center cursor-pointer group" onClick={() => {
                                             navigate("services");
                                         }}>
 
-                                            <p className=" group-hover:text-primary   group-hover:animate-services">
+                                            <p className=" group-hover:text-primary group-hover:animate-services">
                                                 Read More
                                             </p>
                                             <span>
@@ -196,19 +196,19 @@ export default function Services(props) {
                 {/* </div> */}
 
                 <div className="flex justify-center mt-5">
-                    <div className="w-full md:w-1/2 rounded-full shadow-contact bg-grey3 p-3 text-center">
+                    <div className="w-full p-3 text-center rounded-full md:w-1/2 shadow-contact bg-grey3">
                         <div className="flex justify-center gap-2">
                             <span>
                                 <img
                                     src={rocket}
-                                    className="h-4 w-4 flex align-middle animate-pulse"
+                                    className="flex w-4 h-4 align-middle animate-pulse"
                                 />
                             </span>
                             <p className="flex">
                                 You can also find our
                                 <Link
                                     to={"services"}
-                                    className="mx-2 relative text-primary "
+                                    className="relative mx-2 text-primary "
                                 >
                                     Services
                                     <img

@@ -5,18 +5,34 @@
 /* // add the code bellow */
 @layer utilities {
     @variants responsive {
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .no-scrollbar::-webkit-scrollbar {
-          display: none;
-      }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
 
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
-      }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
     }
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* font-family: "DM Serif Display, serif";
+    font-family: '"DM Sans",sans-serif'; */
+    font-family: "Hedvig Letters Serif", serif !important;
+    /* font-family: "Poppins", sans-serif !important; */
+}
+p {
+    font-family: "Afacad", sans-serif !important;
+}
+
 .parallax > use {
     animation: move-forever 20s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
@@ -98,10 +114,10 @@
 .linkedin-hover:hover {
     background: linear-gradient(
         266.81deg,
-        #0077B5 -6.56%,
-        #0077B5 34.02%,
-        #0077B5 60.87%,
-        #0077B5 103.55%
+        #0077b5 -6.56%,
+        #0077b5 34.02%,
+        #0077b5 60.87%,
+        #0077b5 103.55%
     );
 }
 .twitter-hover:hover {
@@ -176,14 +192,14 @@
     --primary: #6a59ff;
     --white: #ffffff;
     --bg: #f5f5f5;
-  }
-  
-   html {
+}
+
+html {
     /* font-size: 62.5%; */
     scroll-behavior: smooth;
-  }
-  
-  /* @media (min-width: 1440px) {
+}
+
+/* @media (min-width: 1440px) {
     html {
       zoom: 1.5;
     }
@@ -200,130 +216,131 @@
       zoom: 2.5;
     }
   }  */
-  
-  .containers {
+
+.containers {
     font-size: 62.5%;
     max-width: 124rem !important;
     padding: 4rem 1rem !important;
     margin: 0 auto !important;
-  }
-  
-  .swiper_container {
+}
+
+.swiper_container {
     height: 480px !important;
     padding: 2rem 0 !important;
     position: relative !important;
-  }
-  
-  .swiper-slide {
+}
+
+.swiper-slide {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 20px 3px;
     width: 22rem !important;
-    height: fit-content ! important;
+    height: fit-content !important;
     position: relative !important;
     background-color: white;
     border-radius: 20px;
-    border: 1px solid #eaeaea;
-  }
-  
-  @media (max-width: 500px) {
+    /* border: 1px solid #eaeaea; */
+}
+
+@media (max-width: 500px) {
     .swiper_container {
-      height: 47rem;
+        height: 47rem;
     }
     .swiper-slide {
-      width: 28rem !important;
-      height: 36rem !important;
+        width: 28rem !important;
+        height: 36rem !important;
     }
     .swiper-slide img {
-      width: 28rem !important;
-      height: 36rem !important;
+        width: 28rem !important;
+        height: 36rem !important;
     }
-  }
-  .swiper-slide .card-desc{
+}
+.swiper-slide .card-desc {
     padding: 10px;
-  }
-  
-  .swiper-slide img {
+}
+
+.swiper-slide img {
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
     /* width: 22rem !important; */
     /* height: 22rem ! important; */
     /* border-radius: 2rem !important; */
     object-fit: cover !important;
-  }
-  
-  .swiper-slide-shadow-left,
-  .swiper-slide-shadow-right {
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
     display: none;
-  }
-  
-  .slider-controler {
+}
+
+.slider-controler {
     position: relative !important;
     bottom: -0.6rem !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-  }
-  
-  .slider-controler .swiper-button-next {
+}
+
+.slider-controler .swiper-button-next {
     left: 58% !important;
     transform: translateX(100%) !important;
-  }
-  
-  @media (max-width: 990px) {
+}
+
+@media (max-width: 990px) {
     .slider-controler .swiper-button-next {
-      left: 70% !important;
-      transform: translateX(-70%) !important;
+        left: 70% !important;
+        transform: translateX(-70%) !important;
     }
-  }
-  
-  @media (max-width: 450px) {
+}
+
+@media (max-width: 450px) {
     .slider-controler .swiper-button-next {
-      left: 80% !important;
-      transform: translateX(-80%) !important;
+        left: 80% !important;
+        transform: translateX(-80%) !important;
     }
-  }
-  
-  @media (max-width: 990px) {
+}
+
+@media (max-width: 990px) {
     .slider-controler .swiper-button-prev {
-      left: 30% !important;
-      transform: translateX(-30%) !important;
+        left: 30% !important;
+        transform: translateX(-30%) !important;
     }
-  }
-  
-  @media (max-width: 450px) {
+}
+
+@media (max-width: 450px) {
     .slider-controler .swiper-button-prev {
-      left: 20% !important;
-      transform: translateX(-20%) !important;
+        left: 20% !important;
+        transform: translateX(-20%) !important;
     }
-  }
-  
-  .slider-controler .slider-arrow {
+}
+
+.slider-controler .slider-arrow {
     background: white;
-    width: 2rem ; 
-    height: 2rem ;
-    border-radius: 50% ;
-    left: 39% ;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    left: 39%;
     transform: translateX(-100%);
-    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1)) ;
-  }
-  
-  .slider-controler .slider-arrow ion-icon {
+    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.slider-controler .slider-arrow ion-icon {
     font-size: 1.3rem !important;
     color: #222224 !important;
-  }
-  
-  .slider-controler .slider-arrow::after {
-    content: '';
-  }
-  
-  .swiper-pagination {
+}
+
+.slider-controler .slider-arrow::after {
+    content: "";
+}
+
+.swiper-pagination {
     position: relative !important;
     width: 15rem !important;
     bottom: 0.6rem !important;
-  }
-  
-  .swiper-pagination .swiper-pagination-bullet {
+}
+
+.swiper-pagination .swiper-pagination-bullet {
     filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1)) !important;
-  }
-  
-  .swiper-pagination .swiper-pagination-bullet-active {
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
     background: gray;
-  }
+}

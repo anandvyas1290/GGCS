@@ -4,10 +4,9 @@ import socialShape from "../assets/home/services/socialShape.webp";
 import digiMarketing from "../assets/home/services/digiMarketing.svg";
 import seo from "../assets/home/services/seo.svg";
 import socialMarketing from "../assets/home/services/socialMarketing.svg";
-import facebook from "../assets/socialMedia/facebook.svg";
-import linkedin from "../assets/socialMedia/linkedin.svg";
-import instagram from "../assets/socialMedia/instagram.svg";
-import twitter from "../assets/socialMedia/x-twitter.svg";
+import { smFB, smlinkedin, smInsta, smX } from "./assets";
+import { list1, list2, list3 } from "./assets";
+import { business1, business2, business3 } from "./assets";
 import {
     faFacebook,
     faInstagram,
@@ -333,8 +332,7 @@ export const Price = [
     },
 ];
 
-// Why GGCS desc
-
+// Why ggcs desc
 export const whyGGCSData = {
     title: "Why GGCS is Your Ultimate Choice",
     desc: [
@@ -364,22 +362,22 @@ export const whyGGCSData = {
 // social media link
 export const socialMedias = [
     {
-        icon: facebook,
+        icon: smFB,
         name: "facebook",
         link: "https://www.facebook.com/people/Global-Garner-Consultancy-Services/61552984453919/",
     },
     {
-        icon: twitter,
+        icon: smX,
         name: "twitter",
         link: "https://twitter.com/ggconsultancy",
     },
     {
-        icon: linkedin,
+        icon: smlinkedin,
         name: "linkedin",
         link: "https://www.linkedin.com/in/global-garner-consultancy-services-49b40529a/",
     },
     {
-        icon: instagram,
+        icon: smInsta,
         name: "instagram",
         link: "https://www.instagram.com/ggconsultancyservice/",
     },
@@ -427,6 +425,7 @@ export const services = [
     },
 ];
 
+//pricing
 export const pricingServices = [
     {
         id: 1,
@@ -436,4 +435,56 @@ export const pricingServices = [
     },
     { id: 2, label: "Social Media", value: "social_media", disabled: false },
     { id: 3, label: "IT Services", value: "it_services", disabled: true },
+];
+
+//service page
+export const processData = [
+    {
+        id: 1,
+        icon: list1,
+        label: "Precision Forged by Data",
+        desc: "Our strategy thrives on informed decisions. We base our methodologies on comprehensive data analysis, ensuring each step we take propels your online conquest.",
+    },
+    {
+        id: 2,
+        icon: list2,
+        label: "Tailored Triumph",
+        desc: " We recognize the distinct DNA of each business. Hence, we craft personalized strategies that align with your unique prerequisites, avoiding generic solutions.        ",
+    },
+    {
+        id: 3,
+        icon: list3,
+        label: "Transparency Forged in Trust",
+        desc: "Open communication is our cornerstone. Expect regular updates and detailed reports on your campaign's progress, cultivating a transparent and trustworthy partnership.",
+    },
+    {
+        id: 4,
+        icon: list1,
+        label: "Holistic Services",
+        desc: " From harnessing SEO prowess and mastering content alchemy to conducting social media symphonies and weaving paid advertising wizardry, GGCS unfurls a holistic digital repertoire.",
+    },
+    {
+        id: 5,
+        icon: list2,
+        label: "Endorsed Excellence",
+        desc: "Our achievements speak volumes. GGCS has empowered numerous clients, catalyzing substantial advancements in online prominence, engagement, and conversions.",
+    },
+];
+
+export const businessData = [
+    {
+        heading: "Growing your business",
+        desc: "With GGCS, you get everything you need for a fast website",
+        image: business1,
+    },
+    {
+        heading: "Speed Optimization",
+        desc: "With GGCS, you get everything you need for a fast website",
+        image: business2,
+    },
+    {
+        heading: "Testing Capabilities",
+        desc: "With GGCS, you get everything you need for a fast website",
+        image: business3,
+    },
 ];
