@@ -26,6 +26,9 @@ const Input = ({ text, placeholder, className }) => {
 const H5 = ({ children, className }) => {
     return <h5 className={`text-xl font-semibold ${className}`}>{children}</h5>;
 };
+const H6 = ({ children, className }) => {
+    return <h5 className={` font-semibold ${className}`}>{children}</h5>;
+};
 // const PrimaryBtn = ({ children, className }) => {
 //     return (
 //         <button className={`border-2 rounded-full py-2 px-10  text-white  bg-blue-600 hover:text-blue-600 hover:bg-white  hover:border-blue-600  ${className}`}>
@@ -73,12 +76,12 @@ export default function Footer() {
                     </div>
                     <div className="">
                         <div className="lg:pl-10">
-                            <H5 className="mb-5">Information Quick Links</H5>
+                            <H6 className="mb-5">Information Quick Links</H6>
                             <div className="pl-4">
                                 <ul className="list-disc">
                                     {menuService?.map((item, i) => (
                                         <li
-                                            className="text-base font-normal text-gray-500 mb-2 cursor-pointer hover:text-gray-900"
+                                            className="text-sm font-normal text-gray-500 mb-2 cursor-pointer hover:text-gray-900"
                                             key={i}
                                             onClick={() => {
                                                 navigate(item?.link);
@@ -96,14 +99,14 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className=''>
-                        <H5 className="mb-5">
+                        <H6 className="mb-5">
                             Services
-                        </H5>
+                        </H6>
                         <div className='pl-4'>
                             <ul className="list-disc">
                                 {
-                                    services?.map((item, i) => (
-                                        <li className='text-base font-normal text-gray-500 mb-2' key={i}>{item?.label}</li>
+                                    services?.map(({ label, url }, i) => (
+                                        <li className='text-sm font-normal text-gray-500 mb-2 cursor-pointer hover:text-gray-900' key={i} onClick={() => window.open(`/${url}`, "_blank")}>{label}</li>
                                     ))
                                 }
                             </ul>
@@ -113,7 +116,7 @@ export default function Footer() {
                         <ul className='list-disc mb-4 border-b-2 border-b-gray-300 '>
                             {["Privacy Policy", "Terms and Condition", "Disclaimer"]?.map((item, i) => {
                                 return (
-                                    <li key={i} className='text-base font-normal text-gray-500 mb-2'>{item}</li>
+                                    <li key={i} className='text-sm font-normal text-gray-500 mb-2'>{item}</li>
                                 )
                             })}
                         </ul>

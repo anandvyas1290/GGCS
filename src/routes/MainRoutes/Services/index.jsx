@@ -14,6 +14,7 @@ import {
     ClientImg,
     InputImg,
     StatImg,
+    serviceVideo
 } from "../../../db/assets";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
@@ -76,6 +77,13 @@ export default function Services(props) {
     };
     return (
         <div className="font-roboto">
+            <section className='w-full h-[60%]'>
+                <section className='hidden lg:flex relative'>
+                    <video className="h-full w-full" autoPlay muted loop>
+                        <source src={serviceVideo} type="video/mp4" />
+                    </video>
+                </section>
+            </section>
             {/* <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
                 <div className="absolute top-0 left-0 w-full h-full mix-blend-overlay opacity-80 -z-[1px]">
                     <img
@@ -153,7 +161,7 @@ export default function Services(props) {
                 </div>
             </section>
 
-            <section className="max-w-screen-xl px-3 pt-20 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-40">
+            {/* <section className="max-w-screen-xl px-3 pt-20 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-40">
                 <div className="grid md:grid-cols-2">
                     <div className="lg:pl-16">
                         <ul>
@@ -281,7 +289,7 @@ export default function Services(props) {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className="max-w-screen-xl pb-0 mx-auto mt-10 sm:pb-14 md:pb-28">
                 <div className="py-10 md:flex">
@@ -387,11 +395,10 @@ export default function Services(props) {
                     <Slider {...settings}>
                         {servicesData?.map((item) => (
                             <div
-                                className={`group transition-all duration-300 bg-white px-3 ${
-                                    activeItem[item?.id]
-                                        ? "bg-slate-100 rounded-lg"
-                                        : ""
-                                }`}
+                                className={`group transition-all duration-300 bg-white px-3 ${activeItem[item?.id]
+                                    ? "bg-slate-100 rounded-lg"
+                                    : ""
+                                    }`}
                                 key={item?.id}
                             >
                                 <div className="text-center">
@@ -403,11 +410,10 @@ export default function Services(props) {
                                     </p>
                                     {
                                         <p
-                                            className={`text-left mt-1 text-grey1 ${
-                                                activeItem[item?.id]
-                                                    ? "h-fit"
-                                                    : ""
-                                            }`}
+                                            className={`text-left mt-1 text-grey1 ${activeItem[item?.id]
+                                                ? "h-fit"
+                                                : ""
+                                                }`}
                                         >
                                             {activeItem[item?.id] &&
                                                 item?.desc2}
@@ -425,9 +431,8 @@ export default function Services(props) {
                                         className="flex items-center justify-center border-b-2 cursor-pointer text-black2 group-hover:border-b-blue1 group-hover:text-blue1 group-hover:animate-services"
                                     >
                                         <p
-                                            className={`${
-                                                activeItem[item?.id]
-                                            } ?"!mr-3":""`}
+                                            className={`${activeItem[item?.id]
+                                                } ?"!mr-3":""`}
                                         >
                                             {activeItem[item?.id]
                                                 ? "View Less"

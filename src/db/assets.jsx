@@ -51,6 +51,8 @@ import rocket from "../assets/Navbar/rocket.webp";
 import services from "../assets/home/services/services.svg";
 import arrow from "../assets/home/services/carousel/arrow.png";
 // export { bgMain, design1, design2, design3, design4, design5, design6, banner };
+
+import serviceVideo from "../assets/animation/services.mp4"
 export { serFB, serLinkedin, serInsta, serPint };
 export { business1, business2, business3 };
 export { smFB, smlinkedin, smInsta, smX };
@@ -86,4 +88,6 @@ export {
     rocket,
     services,
     arrow,
+
+    serviceVideo
 };

@@ -4,10 +4,12 @@ import { MessageOutlined } from "@ant-design/icons";
 import { useRoutes } from "react-router-dom";
 
 import MainRoutes from "./MainRoutes";
+import FooterRoutes from "./FooterRoutes";
 
 export default function Routes(props) {
     const routes = useRoutes([
         { path: "/*", element: <MainRoutes {...props} /> },
+        { path: "/*", element: <FooterRoutes {...props} /> }
     ]);
     return (
         <main className="">

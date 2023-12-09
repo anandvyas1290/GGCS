@@ -435,18 +435,23 @@ export const menuService = [
 export const services = [
     {
         label: "SEO (Search Engine Optimization)",
+        url: "seo"
     },
     {
         label: "Social Media Marketing",
+        url: "social-media-marketing"
     },
     {
         label: "Search Engine Marketing",
+        url: "search-engine-marketing"
     },
     {
         label: "Inbound and Outbound Marketing",
+        url: "io-marketing"
     },
     {
         label: "Add-On Services",
+        url: "add-on-services"
     },
 ];
 
