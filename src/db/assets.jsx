@@ -32,6 +32,24 @@ import business1 from "../assets/services/business1.webp";
 import business2 from "../assets/services/business2.webp";
 import business3 from "../assets/services/business3.webp";
 
+import seo from "../assets/home/services/carousel/seo.png";
+import smm from "../assets/home/services/carousel/smm.png";
+import analytics from "../assets/home/services/carousel/analytics.png";
+import chatBot from "../assets/home/services/carousel/chatBot.png";
+import contentWriting from "../assets/home/services/carousel/contentWriting.png";
+import cro from "../assets/home/services/carousel/cro.png";
+import emailMarketing from "../assets/home/services/carousel/emailMarketing.png";
+import influencerMarketing from "../assets/home/services/carousel/influencerMarketing.png";
+import localSEO from "../assets/home/services/carousel/localSEO.png";
+import onlineReputation from "../assets/home/services/carousel/onlineReputation.png";
+import ppc from "../assets/home/services/carousel/ppc.png";
+import webDev from "../assets/home/services/carousel/webDev.png";
+import affiliateMarketing from "../assets/home/services/carousel/affiliateMarketing.png";
+import videoMarketing from "../assets/home/services/carousel/videoMarketing.png";
+import mobileMarketing from "../assets/home/services/carousel/mobileMarketing.png";
+import rocket from "../assets/Navbar/rocket.webp";
+import services from "../assets/home/services/services.svg";
+import arrow from "../assets/home/services/carousel/arrow.png";
 // export { bgMain, design1, design2, design3, design4, design5, design6, banner };
 export { serFB, serLinkedin, serInsta, serPint };
 export { business1, business2, business3 };
@@ -47,4 +65,25 @@ export {
     ClientImg,
     InputImg,
     StatImg,
+};
+
+export {
+    seo,
+    smm,
+    ppc,
+    webDev,
+    analytics,
+    onlineReputation,
+    chatBot,
+    contentWriting,
+    cro,
+    emailMarketing,
+    influencerMarketing,
+    localSEO,
+    affiliateMarketing,
+    videoMarketing,
+    mobileMarketing,
+    rocket,
+    services,
+    arrow,
 };

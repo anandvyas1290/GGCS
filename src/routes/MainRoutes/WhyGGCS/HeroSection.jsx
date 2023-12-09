@@ -8,9 +8,9 @@ function HeroSection() {
     return (
         // <section className="max-w-screen-lg lg:max-w-screen-xl px-10 md:px-14 lg:mx-auto  lg:my-10">
         <div className="py-10 ">
-            <h2 className="text-4xl text-center font-bold">
+            <h1 className="text-4xl text-center font-bold">
                 {whyGGCSData?.title}
-            </h2>
+            </h1>
             <div className="py-8 grid grid-clos-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {whyGGCSData?.desc?.map(
                     (item, i) => (

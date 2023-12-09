@@ -30,7 +30,11 @@ export default {
             fontFamily: {
                 jakarta: " Plus Jakarta Sans, sans-serif",
                 serif: "DM Serif Display, serif",
-                sans: '"DM Sans",sans-serif;',
+                sans: '"DM Sans",sans-serif',
+                agbalumo: "Agbalumo, serif",
+                tangerine: "Tangerine, cursive",
+                neuton: '"Neuton", serif',
+                roboto: '"Roboto Serif", serif',
             },
             backgroundImage: {
                 blogBanner: "url('assets/blog/banner.webp')",
@@ -70,6 +74,7 @@ export default {
                     "blinkTransform 5s ease-in-out forwards infinite alternate",
                 blogShape: "blogShape 2.5s linear 0s infinite alternate",
                 whyGGCSCard: "all .5s ease-in-out",
+                flipArrow: "flipArrow 2s linear 0s infinite",
             },
             keyframes: {
                 fadeInDown: {
@@ -168,6 +173,17 @@ export default {
                     },
                     "100%": {
                         transform: "translateY(0px)",
+                    },
+                },
+                flipArrow: {
+                    "0%": {
+                        transform: "rotateY(0deg)",
+                    },
+                    "50%": {
+                        transform: "rotateY(90deg)",
+                    },
+                    "100%": {
+                        transform: "rotateY(0deg)",
                     },
                 },
             },

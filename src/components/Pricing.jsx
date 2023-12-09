@@ -104,7 +104,7 @@ function Pricing({ Price }) {
                                             ></path>
                                         </svg>
                                         <span>
-                                            {desc?.label}{" "}
+                                            {desc?.label}
                                             <span className="font-semibold">
                                                 {desc?.time}
                                             </span>
