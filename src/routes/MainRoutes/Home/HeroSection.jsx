@@ -14,7 +14,7 @@ import { PrimaryBtn } from "../../../components/Button";
 import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     return (
         <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[150px] pb-[40px] sm:pb-[60px]  md:pb-[100px] lg:pb-[150px]">
             <div className="container">
@@ -27,16 +27,16 @@ export default function HeroSection() {
                             <br />
                             <div className="">
                                 <div className="text-animate">
-                                    <div >
+                                    <div>
                                         <h4>agency</h4>
                                     </div>
-                                    <div >
+                                    <div>
                                         <h4>analysis</h4>
                                     </div>
                                     <div>
                                         <h4>value</h4>
                                     </div>
-                                    <div >
+                                    <div>
                                         <h4>Services</h4>
                                     </div>
                                 </div>
@@ -52,7 +52,7 @@ export default function HeroSection() {
                                 bgColor="bg-primaryBtn"
                                 className="border-2 rounded-full border-primaryBtn"
                                 onClick={() => {
-                                    navigate("/services")
+                                    navigate("/services");
                                 }}
                             >
                                 Get Started Now

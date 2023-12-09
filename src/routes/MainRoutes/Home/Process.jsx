@@ -54,22 +54,23 @@ export default function Process(props) {
                 </div>
                 <div className="md:pl-16">
                     <div className="flex flex-col items-left mb-10">
-                        <p className="text-lg max-w-fit font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
+                        <p className="!text-4xl font-tangerine  max-w-fit font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
                             Let us do the work
                         </p>
-                        <h5 className="text-[50px] font-semibold">
+                        <h1 className="text-[50px] font-semibold">
                             How we do It
-                        </h5>
+                        </h1>
                     </div>
 
                     <ul>
                         {processData?.map((item) => (
                             <li className="mb-8" key={item?.id}>
                                 <div
-                                    className={`flex relative ${item?.id % 2 === 0
-                                        ? "justify-center"
-                                        : "justify-start"
-                                        }`}
+                                    className={`flex relative ${
+                                        item?.id % 2 === 0
+                                            ? "justify-center"
+                                            : "justify-start"
+                                    }`}
                                 >
                                     <div className="mr-7">
                                         <div className="relative">

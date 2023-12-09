@@ -16,8 +16,7 @@ import PricingSection from "./PricingSection";
 
 export default function Home(props) {
     return (
-        <div className="font-jakarta ">
-
+        <div className="font-roboto ">
             <HeroSection {...props} />
             <Services {...props} />
             {/* <PricingSection {...props} /> */}
@@ -25,7 +24,6 @@ export default function Home(props) {
             <Process {...props} />
             <SEO {...props} />
             {/* <CaseStudies {...props} /> */}
-
             {/* <Testimonial {...props} /> */}
             {/* <Review {...props} /> */}
             <Contact {...props} />

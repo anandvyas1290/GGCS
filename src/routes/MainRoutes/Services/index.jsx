@@ -75,7 +75,7 @@ export default function Services(props) {
         ],
     };
     return (
-        <div className="font-jakarta">
+        <div className="font-roboto">
             {/* <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
                 <div className="absolute top-0 left-0 w-full h-full mix-blend-overlay opacity-80 -z-[1px]">
                     <img
@@ -315,14 +315,14 @@ export default function Services(props) {
                     </div>
                     <div className="w-full md:w-1/2 sm:ms-20 sm:mx-3">
                         <div className="px-3 my-10 sm:px-0">
-                            <p className="mb-5 text-lg font-semibold text-blue1">
+                            <p className="!text-3xl font-tangerine mb-5 text-lg font-semibold text-blue1">
                                 Get the best
                             </p>
-                            <h2 className="mb-4 text-4xl font-semibold sm:text-5xl">
+                            <h1 className="mb-4 text-4xl font-semibold sm:text-5xl">
                                 Social Media is the
                                 <br />
                                 Fastest growing trend
-                            </h2>
+                            </h1>
 
                             <div className="my-10">
                                 <div>
