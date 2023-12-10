@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 import Container from "../../../components/Layout/Layout";
+import { H1Animate, TextAnimate } from "../../../components/Animation/H1Animate";
 const brandWrapper = [
     { image: brand1 },
     { image: brand2 },
@@ -58,84 +59,82 @@ function AboutHero() {
     let dotStyle =
         "before:bg-blue1 before:h-2 before:w-2 before:inline-block before:rounded-full before:mr-3";
     return (
-        <div>
-            <div className="relative mt-40 mb-10 sm:my-40">
-                <div className="absolute left-24 -top-40">
-                    <img src={innerShape1} alt="" />
+        <div className="relative mt-40 mb-10 sm:my-40">
+            <div className="absolute left-24 -top-40">
+                <img src={innerShape1} alt="" />
+            </div>
+            <div className="absolute right-96 -top-20">
+                <img src={innerShape2} alt="" />
+            </div>
+            <div className="absolute right-0 -top-40">
+                <img src={innerHand} alt="" />
+            </div>
+            <Container>
+                <div className="flex md:justify-center items-center relative">
+                    <div className="md:w-1/2 -mt-72">
+                        <div className="relative">
+                            <div className="absolute -left-10 right-40 object-cover">
+                                <img
+                                    src={aboutInner}
+                                    alt=""
+                                    className="rounded-xl"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="md:w-1/2">
+                        <div>
+                            <TextAnimate
+                                className={`!text-4xl font-tangerine font-bold text-blue1 ${dotStyle}  `}
+                            >
+                                Welcome
+                            </TextAnimate>
+                            <H1Animate className="text-5xl font-bold mb-3">
+                                Working Hard to Make <br />
+                                Digital Marketing Easy. Together
+                            </H1Animate>
+                            {/* <p>Lorem ipsum dolor sit amet, consectetur
+                                    <br />adipiscing elit.</p> */}
+                            <p className="my-3 md:my-0">
+                                Welcome to GGCS, where digital meets
+                                intelligence to achieve market excellence.
+                                <br />
+                                We are digital marketers.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div className="absolute right-96 -top-20">
-                    <img src={innerShape2} alt="" />
+            </Container>
+            <div className="flex">
+                <div className="w-1/5 xl:ml-[32rem]">
+                    <div className=" relative z-20">
+                        <div className="bg-blue1 rounded-r-lg px-2 py-5 sm:p-6">
+                            <h5 className="text-white">
+                                Scroll down <br /> to explore more
+                            </h5>
+                            <Link>
+                                <img src={switchIcon} alt="switch" />
+                            </Link>
+                        </div>
+                    </div>
                 </div>
-                <div className="absolute right-0 -top-40">
-                    <img src={innerHand} alt="" />
-                </div>
-                <Container>
-                    <div className="flex md:justify-center items-center relative">
-                        <div className="md:w-1/2 -mt-72">
-                            <div className="relative">
-                                <div className="absolute -left-10 right-40 object-cover">
+                {/* react slick slider */}
+                <div className="w-full overflow-hidden">
+                    <div className="">
+                        <Slider {...settings}>
+                            {brandWrapper?.map((item, i) => (
+                                <div
+                                    key={i}
+                                    className="flex justify-center py-10"
+                                >
                                     <img
-                                        src={aboutInner}
-                                        alt=""
-                                        className="rounded-xl"
+                                        src={item?.image}
+                                        alt="brand"
+                                        className="object-contain object-center w-full max-h-12 transition-all duration-300 hover:opacity-100 !text-300 ml-5"
                                     />
                                 </div>
-                            </div>
-                        </div>
-                        <div className="md:w-1/2">
-                            <div>
-                                <p
-                                    className={`!text-4xl font-tangerine font-bold text-blue1 ${dotStyle}  `}
-                                >
-                                    Welcome
-                                </p>
-                                <h1 className="text-5xl font-bold mb-3">
-                                    Working Hard to Make <br />
-                                    Digital Marketing Easy. Together
-                                </h1>
-                                {/* <p>Lorem ipsum dolor sit amet, consectetur
-                                    <br />adipiscing elit.</p> */}
-                                <p className="my-3 md:my-0">
-                                    Welcome to GGCS, where digital meets
-                                    intelligence to achieve market excellence.
-                                    <br />
-                                    We are digital marketers.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </Container>
-                <div className="flex">
-                    <div className="w-1/5 xl:ml-[32rem]">
-                        <div className=" relative z-20">
-                            <div className="bg-blue1 rounded-r-lg px-2 py-5 sm:p-6">
-                                <h5 className="text-white">
-                                    Scroll down <br /> to explore more
-                                </h5>
-                                <Link>
-                                    <img src={switchIcon} alt="switch" />
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                    {/* react slick slider */}
-                    <div className="w-full overflow-hidden">
-                        <div className="">
-                            <Slider {...settings}>
-                                {brandWrapper?.map((item, i) => (
-                                    <div
-                                        key={i}
-                                        className="flex justify-center py-10"
-                                    >
-                                        <img
-                                            src={item?.image}
-                                            alt="brand"
-                                            className="object-contain object-center w-full max-h-12 transition-all duration-300 hover:opacity-100 !text-300 ml-5"
-                                        />
-                                    </div>
-                                ))}
-                            </Slider>
-                        </div>
+                            ))}
+                        </Slider>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import React from "react";
 import textBg from "../../../assets/about/hoc/text-bg.svg";
 import Container from "../../../components/Layout/Layout";
 import { DashedLine } from "../../../components/UI/ProcessDash";
+import { H1Animate, TextAnimate } from "../../../components/Animation/H1Animate";
 
 const hosData = [
     {
@@ -47,15 +48,15 @@ function HOS() {
                 <div className="flex items-center justify-center">
                     <div className="mb-10 md:mb-20">
                         <div className="relative flex justify-center mb-2">
-                            <p className="!text-4xl font-tangerine font-bold text-blue-500 absolute top-2">
+                            <TextAnimate className="!text-4xl font-tangerine font-bold text-blue-500 absolute top-2">
                                 How we do it
-                            </p>
+                            </TextAnimate>
                             <img src={textBg} alt="bg" />
                         </div>
                         <div>
-                            <h1 className="text-5xl font-bold">
+                            <H1Animate className="text-5xl font-bold">
                                 Helping others Succeed
-                            </h1>
+                            </H1Animate>
                         </div>
                     </div>
                 </div>
@@ -66,34 +67,32 @@ function HOS() {
                                 return (
                                     <div key={i} className="w-full relative ">
                                         <div
-                                            className={` ${
-                                                i === 0
+                                            className={` ${i === 0
                                                     ? "text-center lg:text-left"
                                                     : i === 1
-                                                    ? "text-center"
-                                                    : i === 2
-                                                    ? "text-center lg:text-right"
-                                                    : i === 3
-                                                    ? "text-center lg:text-right"
-                                                    : " text-center"
-                                            }`}
+                                                        ? "text-center"
+                                                        : i === 2
+                                                            ? "text-center lg:text-right"
+                                                            : i === 3
+                                                                ? "text-center lg:text-right"
+                                                                : " text-center"
+                                                }`}
                                         >
                                             <div
                                                 div
                                                 className="inline-block text-center"
                                             >
                                                 <span
-                                                    className={` text-white relative text-xl  rounded-full h-12 w-12 leading-[3rem] mb-6 inline-block text-center before:border before:rounded-full before:h-16 before:w-16 before:absolute before:-top-4 before:-left-2 before:border-blue-1 ${
-                                                        i === 0
+                                                    className={` text-white relative text-xl  rounded-full h-12 w-12 leading-[3rem] mb-6 inline-block text-center before:border before:rounded-full before:h-16 before:w-16 before:absolute before:-top-4 before:-left-2 before:border-blue-1 ${i === 0
                                                             ? " bg-blue-300"
                                                             : i === 1
-                                                            ? " bg-yellow-200"
-                                                            : i === 2
-                                                            ? " bg-orange-300"
-                                                            : i === 3
-                                                            ? "  bg-pink-300"
-                                                            : ""
-                                                    }`}
+                                                                ? " bg-yellow-200"
+                                                                : i === 2
+                                                                    ? " bg-orange-300"
+                                                                    : i === 3
+                                                                        ? "  bg-pink-300"
+                                                                        : ""
+                                                        }`}
                                                 >
                                                     {d?.id + 1}
                                                 </span>

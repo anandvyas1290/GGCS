@@ -107,7 +107,10 @@ export default function Footer() {
                                         className="text-sm font-normal text-gray-500 mb-2 cursor-pointer hover:text-gray-900"
                                         key={i}
                                         onClick={() =>
-                                            window.open(`/${url}`, "_blank")
+                                            window.open(
+                                                `/service/${url}`,
+                                                "_blank"
+                                            )
                                         }
                                     >
                                         {label}

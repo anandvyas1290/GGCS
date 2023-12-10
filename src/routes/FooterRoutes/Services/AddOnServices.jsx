@@ -1,9 +1,11 @@
 import React from 'react'
+import { ServiceHeading } from '../../../components/ServiceContainer/ServiceHeading'
 
 function AddOnServices() {
     return (
-        <div>AddOnServices</div>
+        <ServiceHeading title="Add-On Services" />
     )
 }
+
 
 export default AddOnServices

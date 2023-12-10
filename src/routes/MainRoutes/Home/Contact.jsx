@@ -1,6 +1,7 @@
 import React from "react";
 import bg from "../../../assets/home/contact/contact-4-bg.webp";
 import { PrimaryBtn } from "../../../components/Button";
+import { H1Animate, TextAnimate } from "../../../components/Animation/H1Animate";
 const Input = ({ text, placeholder, className }) => {
     return (
         <div className="relative flex items-center rounded-full w-full bg-gray-100 py-1 px-5 border">
@@ -32,13 +33,13 @@ function Contact(props) {
                 <div className="md:flex py-0 sm:!py-10 ">
                     <div className="md:w-1/2 mx-3">
                         <div className="my-10">
-                            <p className="!text-3xl font-tangerine  font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
+                            <TextAnimate className="!text-3xl font-tangerine  font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
                                 Get In Touch
-                            </p>
-                            <h1 className="text-4xl sm:text-5xl font-semibold mt-1 mb-4 sm:!leading-[3.5rem]">
+                            </TextAnimate>
+                            <H1Animate className="text-4xl sm:text-5xl font-semibold mt-1 mb-4 sm:!leading-[3.5rem]">
                                 Lets Work <br />
                                 Together
-                            </h1>
+                            </H1Animate>
                             <h6 className="text-lg mb-4 text-grey2">
                                 Just tell us your requirements and we will help
                                 you!
