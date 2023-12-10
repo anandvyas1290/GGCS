@@ -34,7 +34,7 @@
     background-clip: padding-box;
     border-radius: 45px;
     padding: 40px;
-
+    box-shadow: 2px -4px 14px -1px #a8e9fd !important ;
     img {
         margin-bottom: 32px;
     }
