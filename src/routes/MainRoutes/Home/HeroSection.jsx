@@ -9,6 +9,7 @@ import shape3 from "../../../assets/home/heroSection/shape3.webp";
 import shape4 from "../../../assets/home/heroSection/shape4.webp";
 
 import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
 
 import { PrimaryBtn } from "../../../components/Button";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +21,10 @@ export default function HeroSection() {
             <div className="container">
                 <div className="sm:w-4/6">
                     <div className="">
-                        <div className="text-6xl md:text-8xl font-bold">
+
+                        <motion.div className="text-6xl md:text-8xl font-bold"
+                            initial={{ opacity: 0, y: 100 }}
+                            animate={{ opacity: 1, y: 0 }}>
                             {/* SEO
                             <br /> */}
                             Digital Marketing
@@ -42,7 +46,7 @@ export default function HeroSection() {
                                 </div>
                                 <h5>from India</h5>
                             </div>
-                        </div>
+                        </motion.div>
                         <p className="text-base mb-4 text-grey2 tracking-[1.2px] ">
                             Igniting Digital Growth
                         </p>

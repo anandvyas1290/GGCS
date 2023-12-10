@@ -14,6 +14,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import { H1Animate, TextAnimate } from "../../../components/Animation/H1Animate";
 
 export default function Services(props) {
     const navigate = useNavigate();
@@ -21,10 +22,10 @@ export default function Services(props) {
         <section className="bg-[#f5f5f5] md:py-14 py-8 ">
             <div className="max-w-screen-xl px-3 pb-10 mx-auto  sm:px-8 md:px-12">
                 <div className="flex flex-col items-center justify-center">
-                    <p className="!text-3xl font-tangerine font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
+                    <TextAnimate className="!text-3xl font-tangerine font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
                         Why services Us We are Digital Marketers.
-                    </p>
-                    <h1 className="text-6xl font-semibold">Our services</h1>
+                    </TextAnimate>
+                    <H1Animate className="text-6xl font-semibold">Our services</H1Animate>
                 </div>
 
                 {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 my-8 sm:my-12"> */}
