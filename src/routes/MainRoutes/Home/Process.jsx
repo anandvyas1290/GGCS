@@ -9,6 +9,7 @@ import list2 from "../../../assets/home/process/list2.svg";
 import list3 from "../../../assets/home/process/list3.svg";
 
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
+import { H1Animate, TextAnimate } from "../../../components/Animation/H1Animate";
 
 export default function Process(props) {
     const processData = [
@@ -31,6 +32,7 @@ export default function Process(props) {
             desc: "Keyword research and other market research under the SEO analytics umbrella.",
         },
     ];
+
     return (
         <div className="max-w-screen-xl mx-auto px-3 sm:px-8 lg:px-12 pt-10 pb-5 sm:pb-20">
             <div className="grid md:grid-cols-2">
@@ -54,23 +56,22 @@ export default function Process(props) {
                 </div>
                 <div className="md:pl-16">
                     <div className="flex flex-col items-left mb-10">
-                        <p className="!text-4xl font-tangerine  max-w-fit font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
+                        <TextAnimate className="!text-4xl font-tangerine  max-w-fit font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
                             Let us do the work
-                        </p>
-                        <h1 className="text-[50px] font-semibold">
+                        </TextAnimate>
+                        <H1Animate className="text-[50px] font-semibold">
                             How we do It
-                        </h1>
+                        </H1Animate>
                     </div>
 
                     <ul>
                         {processData?.map((item) => (
                             <li className="mb-8" key={item?.id}>
                                 <div
-                                    className={`flex relative ${
-                                        item?.id % 2 === 0
-                                            ? "justify-center"
-                                            : "justify-start"
-                                    }`}
+                                    className={`flex relative ${item?.id % 2 === 0
+                                        ? "justify-center"
+                                        : "justify-start"
+                                        }`}
                                 >
                                     <div className="mr-7">
                                         <div className="relative">

@@ -8,6 +8,7 @@ import ClientImg from "../../../assets/SEO/optimize-bg-2.webp";
 import InputImg from "../../../assets/SEO/optimize-shape-2.webp";
 import StatImg from "../../../assets/SEO/optimize-shape-1.webp";
 import { PrimaryBtn } from "../../../components/Button";
+import { H1Animate, TextAnimate } from "../../../components/Animation/H1Animate";
 
 function SEO() {
     return (
@@ -17,14 +18,14 @@ function SEO() {
                 <div className="md:flex psm:py-10">
                     <div className="w-full md:w-1/2 px-3 md:mx-3">
                         <div className="my-10">
-                            <p className="!text-3xl font-tangerine font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
+                            <TextAnimate className="!text-3xl font-tangerine font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
                                 {"Looking for best SEO results?"}
-                            </p>
-                            <h1 className="text-4xl sm:text-5xl font-semibold mb-4 sm:!leading-[4rem] !leading-[3rem]">
+                            </TextAnimate>
+                            <H1Animate className="text-4xl sm:text-5xl font-semibold mb-4 sm:!leading-[4rem] !leading-[3rem]">
                                 Organic Search
                                 <br />
                                 Engine Optimisation
-                            </h1>
+                            </H1Animate>
                             <h6 className="text-base mb-4 text-grey2">
                                 So I said down the you owt to do with me
                                 absolutely bladdered, amongst what a plonker

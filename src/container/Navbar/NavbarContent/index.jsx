@@ -5,15 +5,8 @@ import ppt from "../../../assets/PDF/GGCS-PPT.pdf";
 import logo from "../../../assets/Navbar/GGCSNew.svg";
 import Menu from "../../../assets/Navbar/menu.svg";
 
+import { navMenu } from "../../../db/dummy";
 import { PrimaryBtn } from "../../../components/Button";
-
-const navMenu = [
-    { id: 1, label: "About", slug: "/about" },
-    { id: 2, label: "Why GGCS", slug: "/why-ggcs" },
-    { id: 3, label: "Services", slug: "/services" },
-    { id: 4, label: "Team", slug: "/team" },
-    { id: 5, label: "Gallery", slug: "/gallery" },
-];
 
 export default function NavbarContent() {
     const location = useLocation();
