@@ -2,7 +2,7 @@
 // import seoShape from "../assets/home/services/seoShape.webp";
 // import socialShape from "../assets/home/services/socialShape.webp";
 
-import { smFB, smlinkedin, smInsta, smX } from "./assets";
+import { smFB, smlinkedin, smInsta, smX, ContentCreation, CCM, Post } from "./assets";
 import { list1, list2, list3 } from "./assets";
 import { business1, business2, business3 } from "./assets";
 import {
@@ -37,6 +37,8 @@ import {
     faXTwitter,
     faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+
+import { Organic } from "./assets"
 
 export const navMenu = [
     { id: 1, label: "About", slug: "/about" },
@@ -770,3 +772,27 @@ export const galleryData = [
     { id: 5, platform: "Website", image: website },
     { id: 6, platform: "Facebook", image: facebook },
 ];
+export const uposDetails = {
+    title: "GGCS Go To Package For UPOS",
+    subTitle: "Get Flat Commission Discount With Add-On Cashback",
+    list: [
+        {
+            label: "Organic Traffic on Social Media Handles ",
+            icon: Organic
+        },
+        {
+            label: "Creative Posts, Videos,PromotionVideos,Promotion ",
+            icon: Post
+        },
+        {
+            label: "Content Creation Guide by GGCS",
+            icon: CCM
+        },
+        {
+            label: "Cross-Channel Promotion ",
+            icon: ContentCreation
+        }
+    ],
+    label: "Exclusive Discounted Price",
+    price: "Rs.799/- + GST*"
+}

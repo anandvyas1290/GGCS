@@ -59,6 +59,12 @@ import thumbnail from "../assets/gallery/thumbnail.png";
 import website from "../assets/gallery/website.png";
 import facebook from "../assets/gallery/facebook.png";
 
+//upos
+import Organic from "../assets/Upos/Organic.jpg"
+import Post from "../assets/Upos/Post.jpg"
+import CCM from "../assets/Upos/Cross-Channel-Marketing.webp"
+import ContentCreation from "../assets/Upos/Content-Creation.png"
+
 import serviceVideo from "../assets/animation/services.mp4";
 export { serFB, serLinkedin, serInsta, serPint };
 export { business1, business2, business3 };
@@ -99,3 +105,5 @@ export {
 };
 
 export { flyer, instagram, newsletter, thumbnail, website, facebook };
+
+export { Organic, Post, CCM, ContentCreation };

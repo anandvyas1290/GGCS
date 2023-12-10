@@ -8,6 +8,7 @@ import Services from "./Services";
 import Contact from "./Contact";
 import Gallery from "./Gallery";
 import WhyGGCS from "./WhyGGCS";
+import UposPackage from "./UposPackage/UposPackage";
 
 import BackNavigate from "../../components/UI/BackNavigate";
 import { navMenu } from "../../db/dummy";
@@ -34,6 +35,7 @@ export default function MainRoutes(props) {
         { path: "/gallery", element: <Gallery {...props} /> },
         // { path: "/blog", element: <Blog {...props} /> },
         { path: "/contact", element: <Contact {...props} /> },
+        { path: "/upos-details", element: <UposPackage {...props} /> },
     ]);
     return (
         <div>

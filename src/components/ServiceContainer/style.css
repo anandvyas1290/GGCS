@@ -57,6 +57,7 @@ body {
     background-clip: padding-box;
     border-radius: 45px;
     padding: 40px;
+    box-shadow: 2px -4px 14px -1px #a8e9fd !important ;
     img {
       margin-bottom: 32px;
     }
@@ -84,7 +85,7 @@ body {
   }
   
   .bg-green-box::after {
-    background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
+    background: linear-gradient(71deg, #0d1212, #3da077, #0d1212) !important;
   }
   
   .bg-white-box::after {
