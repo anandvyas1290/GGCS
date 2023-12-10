@@ -3,13 +3,14 @@ import messenger from "../assets/animation/message-bubble.gif";
 import uposGTP from "../assets/animation/uposGTP.gif";
 import { MessageOutlined } from "@ant-design/icons";
 
-import { useRoutes } from "react-router-dom";
+import { useRoutes, useNavigate } from "react-router-dom";
 
 import MainRoutes from "./MainRoutes";
 // import FooterRoutes from "./FooterRoutes";
 import OtherRoutess from "./OtherRoutes";
 
 export default function Routes(props) {
+    const navigate = useNavigate()
     const routes = useRoutes([
         { path: "/*", element: <MainRoutes {...props} /> },
         { path: "/service/*", element: <OtherRoutess {...props} /> },
@@ -19,7 +20,8 @@ export default function Routes(props) {
             <div className="fixed -left-[60px] top-1/2 -rotate-90 z-50 imgBorder px-4 py-3 bg-gradient-to-r from-g1 to-g2 border rounded-b-xl  text-white cursor-pointer">
                 <p className="font-bold">DOWNLOAD PPT</p>
             </div>
-            <div className="fixed h-14  overflow-hidden z-50 bg-gray-200 border rounded-full bottom-28 right-14">
+            <div className="fixed h-14  overflow-hidden z-50 bg-gray-200 border rounded-full bottom-28 right-14 cursor-pointer"
+                onClick={() => navigate("/upos-details")}>
                 <video className="h-full w-full" autoPlay muted loop>
                     <source src={uposGTP} type="video/mp4" />
                 </video>
