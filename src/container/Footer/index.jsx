@@ -98,32 +98,45 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className=''>
-                        <H6 className="mb-5">
-                            Services
-                        </H6>
-                        <div className='pl-4'>
+                    <div className="">
+                        <H6 className="mb-5">Services</H6>
+                        <div className="pl-4">
                             <ul className="list-disc">
-                                {
-                                    services?.map(({ label, url }, i) => (
-                                        <li className='text-sm font-normal text-gray-500 mb-2 cursor-pointer hover:text-gray-900' key={i} onClick={() => window.open(`/${url}`, "_blank")}>{label}</li>
-                                    ))
-                                }
+                                {services?.map(({ label, url }, i) => (
+                                    <li
+                                        className="text-sm font-normal text-gray-500 mb-2 cursor-pointer hover:text-gray-900"
+                                        key={i}
+                                        onClick={() =>
+                                            window.open(`/${url}`, "_blank")
+                                        }
+                                    >
+                                        {label}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
-                    <div className=''>
-                        <ul className='list-disc mb-4 border-b-2 border-b-gray-300 '>
-                            {["Privacy Policy", "Terms and Condition", "Disclaimer"]?.map((item, i) => {
+                    <div className="">
+                        <ul className="list-disc mb-4 border-b-2 border-b-gray-300 ">
+                            {[
+                                "Privacy Policy",
+                                "Terms and Condition",
+                                "Disclaimer",
+                            ]?.map((item, i) => {
                                 return (
-                                    <li key={i} className='text-sm font-normal text-gray-500 mb-2'>{item}</li>
-                                )
+                                    <li
+                                        key={i}
+                                        className="text-sm font-normal text-gray-500 mb-2"
+                                    >
+                                        {item}
+                                    </li>
+                                );
                             })}
                         </ul>
                         {/* <hr className='border-[1px]' /> */}
                         <H5 className="mb-4">Subscribe</H5>
                         {/* <p className=' font-normal text-gray-500'>Only valuable resource</p> */}
-                        <div className='mb-8'>
+                        <div className="mb-8">
                             <Input placeholder={"Your Email"} type={"mail"} />
                         </div>
                         <div className="flex gap-8">
@@ -149,7 +162,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className='text-center pt-5'>
+                <div className="text-center pt-5">
                     {/* <div className='flex justify-center items-center'>
                         <ul className=' mb-3 flex justify-center items-center  '>
                             {["Privacy Policy", "Terms and Condition", "Help", "Legal Info"]?.map((item, i) => {
@@ -173,16 +186,18 @@ export default function Footer() {
                 <div className="pt-5">
                     <div className="bg-white rounded-full py-4 sm:px-2 md:px-5 flex justify-center border">
                         <p className="text-gray-400">
-                            <b>© 2023</b>{" "}
+                            <b>© 2023</b>
                             <a href="/" className=" ">
                                 <b>GGCS</b>
-                            </a>{" "}
-                            All Rights Reserved. A unit of{" "}
+                            </a>
+                            All Rights Reserved. A unit of
                             <a
                                 href="https://beta.globalgarner.com"
                                 target="_blank"
                             >
-                                <b>Global Garner.</b>
+                                <b className="ml-2 bg-gradient-to-r from-g1 via-g2 to-g3 text-transparent bg-clip-text">
+                                    Global Garner.
+                                </b>
                             </a>
                         </p>
                     </div>

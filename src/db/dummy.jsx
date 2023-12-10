@@ -23,6 +23,14 @@ import {
     mobileMarketing,
 } from "./assets";
 import {
+    flyer,
+    instagram,
+    newsletter,
+    thumbnail,
+    website,
+    facebook,
+} from "./assets";
+import {
     faFacebook,
     faInstagram,
     faPinterest,
@@ -30,6 +38,13 @@ import {
     faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
+export const navMenu = [
+    { id: 1, label: "About", slug: "/about" },
+    { id: 2, label: "Why GGCS", slug: "/why-ggcs" },
+    { id: 3, label: "Services", slug: "/services" },
+    { id: 4, label: "Team", slug: "/team" },
+    { id: 5, label: "Gallery", slug: "/gallery" },
+];
 export const servicesData = [
     {
         id: 1,
@@ -435,23 +450,23 @@ export const menuService = [
 export const services = [
     {
         label: "SEO (Search Engine Optimization)",
-        url: "seo"
+        url: "seo",
     },
     {
         label: "Social Media Marketing",
-        url: "social-media-marketing"
+        url: "social-media-marketing",
     },
     {
         label: "Search Engine Marketing",
-        url: "search-engine-marketing"
+        url: "search-engine-marketing",
     },
     {
         label: "Inbound and Outbound Marketing",
-        url: "io-marketing"
+        url: "io-marketing",
     },
     {
         label: "Add-On Services",
-        url: "add-on-services"
+        url: "add-on-services",
     },
 ];
 
@@ -517,4 +532,13 @@ export const businessData = [
         desc: "With GGCS, you get everything you need for a fast website",
         image: business3,
     },
+];
+
+export const galleryData = [
+    { id: 1, platform: "Flyer", image: flyer },
+    { id: 2, platform: "Instagram", image: instagram },
+    { id: 3, platform: "Newsletter", image: newsletter },
+    { id: 4, platform: "Thumbnail", image: thumbnail },
+    { id: 5, platform: "Website", image: website },
+    { id: 6, platform: "Facebook", image: facebook },
 ];

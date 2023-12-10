@@ -25,7 +25,14 @@ export default {
                 blue1: "#4260FF",
                 primaryBtn: "#775AFC",
                 darkBlue: "#1E2B8A",
-                // heroHeading: 'linear-gradient(90deg, #501E9C 0%, #A44CEE 43.75%, #FF847F 100%)',
+                card1: "#4c49ea",
+                card2: "#3ecd5e",
+                card3: "#e44002",
+                card4: "#952aff",
+                card5: "#cd3e94",
+                g1: "#501E9C",
+                g2: "#A44CEE",
+                g3: "#FF847F",
             },
             fontFamily: {
                 jakarta: " Plus Jakarta Sans, sans-serif",
@@ -34,11 +41,15 @@ export default {
                 agbalumo: "Agbalumo, serif",
                 tangerine: "Tangerine, cursive",
                 neuton: '"Neuton", serif',
-                roboto: '"Roboto Serif", serif',
+                roboto: '"Roboto", sans-serif',
+                Ubuntu: "'Ubuntu', sans-serif",
             },
-            backgroundImage: {
+            backgroundImage: (theme) => ({
                 blogBanner: "url('assets/blog/banner.webp')",
-            },
+                grad: `linear-gradient(to right, 90deg ${theme(
+                    "colors.g1"
+                )},${theme("colors.g2")} 43.75%, ${theme("colors.g3")} 100%)`,
+            }),
             borderRadius: { processImg: "51% 49% 77% 23%/65% 50% 50% 35%" },
             boxShadow: {
                 header: "0px 10px 30px rgba(1,15,28,0.1)",
