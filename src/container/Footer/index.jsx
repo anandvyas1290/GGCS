@@ -102,18 +102,18 @@ export default function Footer() {
                         <H6 className="mb-5">Services</H6>
                         <div className="pl-4">
                             <ul className="list-disc">
-                                {services?.map(({ label, url }, i) => (
+                                {services?.map((item, i) => (
                                     <li
                                         className="text-sm font-normal text-gray-500 mb-2 cursor-pointer hover:text-gray-900"
                                         key={i}
                                         onClick={() =>
                                             window.open(
-                                                `/service/${url}`,
+                                                `/service/${item?.slug}`,
                                                 "_blank"
                                             )
                                         }
                                     >
-                                        {label}
+                                        {item?.label}
                                     </li>
                                 ))}
                             </ul>

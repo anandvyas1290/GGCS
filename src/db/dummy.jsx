@@ -42,7 +42,7 @@ export const navMenu = [
     { id: 1, label: "About", slug: "/about" },
     { id: 2, label: "Why GGCS", slug: "/why-ggcs" },
     { id: 3, label: "Services", slug: "/services" },
-    { id: 4, label: "Team", slug: "/team" },
+    // { id: 4, label: "Team", slug: "/team" },
     { id: 5, label: "Gallery", slug: "/gallery" },
 ];
 export const servicesData = [
@@ -393,10 +393,6 @@ brand perception.`,
         ],
     },
 ];
-// {
-//     subHeading: ,
-//     description: ``
-// }
 
 export const serviceSocial = [
     {
@@ -651,7 +647,7 @@ export const socialMedias = [
     },
 ];
 
-//footer menu service
+//footer menu
 export const menuService = [
     {
         label: "Home",
@@ -678,23 +674,23 @@ export const menuService = [
 export const services = [
     {
         label: "SEO (Search Engine Optimization)",
-        url: "seo",
+        slug: "seo",
     },
     {
         label: "Social Media Marketing",
-        url: "social-media-marketing",
+        slug: "social-media-marketing",
     },
     {
         label: "Content Marketing",
-        url: "content-marketing",
+        slug: "content-marketing",
     },
     {
         label: "Inbound and Outbound Marketing",
-        url: "io-marketing",
+        slug: "io-marketing",
     },
     {
         label: "Add-On Services",
-        url: "add-on-services",
+        slug: "add-on-services",
     },
 ];
 

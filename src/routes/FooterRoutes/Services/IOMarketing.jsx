@@ -1,12 +1,12 @@
-import React from 'react'
-import { ServiceHeading } from '../../../components/ServiceContainer/ServiceHeading'
+import React from "react";
+import { OthersServices } from "../../../components/OtherServices";
 
 function IOMarketing() {
     return (
         <main>
-            <ServiceHeading title="Inbound and Outbound Marketing" />
+            <OthersServices title="Inbound and Outbound Marketing" />
         </main>
-    )
+    );
 }
 
-export default IOMarketing
+export default IOMarketing;

@@ -1,11 +1,8 @@
-import React from 'react'
-import { ServiceHeading } from '../../../components/ServiceContainer/ServiceHeading'
+import React from "react";
+import { OthersServices } from "../../../components/OtherServices";
 
 function AddOnServices() {
-    return (
-        <ServiceHeading title="Add-On Services" />
-    )
+    return <OthersServices title="Add-On Services" />;
 }
 
-
-export default AddOnServices
+export default AddOnServices;

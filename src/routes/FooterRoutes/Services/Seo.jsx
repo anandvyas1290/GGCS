@@ -1,18 +1,17 @@
-import React from 'react'
-import { servicesData } from '../../../db/dummy'
-import { ServiceHeading } from "../../../components/ServiceContainer/ServiceHeading"
+import React from "react";
+import { servicesData } from "../../../db/dummy";
+import { OthersServices } from "../../../components/OtherServices";
+
 function SEO() {
     return (
         <main>
-            <ServiceHeading
+            <OthersServices
                 title={servicesData[0]?.heading}
-                // icon1={ }
-                // icon2={ }
                 desc={servicesData[0]?.list}
                 className
             />
         </main>
-    )
+    );
 }
 
-export default SEO
+export default SEO;

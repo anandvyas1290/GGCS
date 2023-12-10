@@ -6,12 +6,13 @@ import { MessageOutlined } from "@ant-design/icons";
 import { useRoutes } from "react-router-dom";
 
 import MainRoutes from "./MainRoutes";
-import FooterRoutes from "./FooterRoutes";
+// import FooterRoutes from "./FooterRoutes";
+import OtherRoutess from "./OtherRoutes";
 
 export default function Routes(props) {
     const routes = useRoutes([
         { path: "/*", element: <MainRoutes {...props} /> },
-        { path: "/service/*", element: <FooterRoutes {...props} /> },
+        { path: "/service/*", element: <OtherRoutess {...props} /> },
     ]);
     return (
         <main className="">
@@ -23,10 +24,9 @@ export default function Routes(props) {
                     <source src={uposGTP} type="video/mp4" />
                 </video>
             </div>
-            <div className="flex justify-center items-center fixed bottom-16 right-16 z-50 !w-10 h-10 bg-white shadow-xl border rounded-full ">
+            {/* <div className="flex justify-center items-center fixed bottom-16 right-16 z-50 !w-10 h-10 bg-white shadow-xl border rounded-full ">
                 <MessageOutlined className="!text-xl " />
-                {/* <img src={messenger} alt="" className="!w-20 h-20 " /> */}
-            </div>
+            </div> */}
             {/* </div> */}
             {routes}
 

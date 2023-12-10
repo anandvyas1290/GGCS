@@ -1,19 +1,17 @@
-import React from 'react'
-import { servicesData } from '../../../db/dummy'
-import { ServiceHeading } from '../../../components/ServiceContainer/ServiceHeading'
+import React from "react";
+import { servicesData } from "../../../db/dummy";
+import { OthersServices } from "../../../components/OtherServices";
 
 function ContentMarketing() {
     return (
         <main>
             <ServiceHeading
                 title={servicesData[3]?.heading}
-                // icon1={ }
-                // icon2={ }
                 desc={servicesData[1]?.list}
                 className
             />
         </main>
-    )
+    );
 }
 
-export default ContentMarketing
+export default ContentMarketing;

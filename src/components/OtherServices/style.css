@@ -1,0 +1,96 @@
+.gradient-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    height: fit-content !important;
+    padding: 30px;
+    @media screen and (max-width: 991px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.container-title {
+    text-align: center;
+    padding: 0 !important;
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.card {
+    max-width: 550px;
+    height: fit-content;
+    border: 0;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.container-card {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    background-clip: padding-box;
+    border-radius: 45px;
+    padding: 40px;
+
+    img {
+        margin-bottom: 32px;
+    }
+}
+
+.bg-box1,
+.bg-box2,
+.bg-box3,
+.bg-box4 {
+    position: relative;
+}
+
+.bg-box1::after,
+.bg-box2::after,
+.bg-box3::after,
+.bg-box4::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 45px;
+}
+
+.bg-box1::after {
+    background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
+}
+
+.bg-box2::after {
+    background: linear-gradient(71deg, #121013, #b0afb0, #121013) !important;
+}
+
+.bg-box3::after {
+    background: linear-gradient(71deg, #110e0e, #afa220, #110e0e) !important;
+}
+
+.bg-box4::after {
+    background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e) !important;
+}
+
+.card-title {
+    font-weight: 600;
+    color: white;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-style: normal;
+    font-size: 28px;
+    padding-bottom: 8px;
+}
+
+.card-description {
+    font-weight: 600;
+    line-height: 32px;
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 16px;
+    max-width: 470px;
+}
