@@ -35,125 +35,330 @@ export const servicesData = [
         id: 1,
         heading: "Search Engine Optimization (SEO)",
         icon: seo,
+        slug: 'seo',
         list: [
-            "On-Page Optimization",
-            "Off-Page Optimization",
-            "Keyword Research",
+            {
+                subHeading: "On-Page Optimization",
+                description: `'Elevate your online presence with meticulous On-Page Optimization, ensuring your web pages
+            rank higher and attract organic traffic. This strategic approach by our experts not only boosts
+            visibility but also establishes credibility, fostering trust among potential customers.
+            '`},
+            {
+                subHeading: "Off-Page Optimization", description: `Through Off-Page Optimization, we build authoritative backlinks, enhancing your website's
+            credibility with search engines and instilling confidence in your audience. The result? Improved
+            search rankings and a reputation as an industry leader.` },
+            {
+                subHeading: "Keyword Research", description: `Our Keyword Research ensures your content aligns seamlessly with user searches, driving
+            targeted traffic. The benefit? A stronger online presence, increased brand recognition, and
+            higher trust levels among your audience.
+            ` }
         ],
     },
     {
         id: 2,
         heading: "Social Media Marketing (SMM)",
         icon: smm,
+        slug: 'social-media-marketing',
         list: [
-            "Social Media Strategy",
-            "Content Creation",
-            "Social Advertising",
+            {
+                subHeading: "Social Media Strategy",
+                description: `Craft a strategic Social Media Strategy with us to align every effort with your business
+                objectives. This not only establishes a consistent online presence but also builds brand loyalty
+                and customer trust."`
+            },
+            {
+                subHeading: "Content Creation",
+                description: `"Engage your audience effectively with our compelling Content Creation. By telling your brand
+                story visually, we not only spark conversations but also increase sharing, broadening your reach
+                and solidifying your brand identity.
+                "`
+            },
+            {
+                subHeading: "Social Advertising",
+                description: `"Leverage the power of Social Advertising to amplify your brand's reach. Our targeted paid
+                campaigns not only boost brand awareness but also result in a higher likelihood of conversion,
+                maximizing your return on investment.
+                "`
+            }
         ],
     },
     {
         id: 3,
         heading: "Content Marketing",
         icon: contentWriting,
-        list: ["Blogging", "Infographics", "Video Content"],
+        slug: 'content-marketing',
+        list: [
+            {
+                subHeading: "Blogging",
+                description: `Establish your brand as an industry authority through our informative and captivating Blogging
+                services. This not only attracts and educates your audience but also enhances your SEO
+                efforts, driving organic traffic.
+                `
+            }, {
+                subHeading: "Infographics",
+                description: `With visually appealing Infographics, your brand messages become easily shareable and
+                digestible. This not only boosts engagement, and enhances visibility, but also strengthens your
+                brand identity.`
+            },
+            {
+                subHeading: "Video Content",
+                description: `Our Video Content not only effectively communicates your brand message but also captivates
+                your audience, fostering deeper connections and increasing the likelihood of conversions.
+                `
+            }]
     },
     {
         id: 4,
         heading: "Email Marketing",
         icon: emailMarketing,
-        list: ["Campaign Management", "Automation", "Email Analytics"],
+        slug: "email-marketing",
+        list: [
+            {
+                subHeading: "Campaign Management",
+                description: `Implement strategic Campaign Management with us to keep your audience engaged and
+                informed. This not only builds a loyal customer base but also increases the potential for repeat
+                business.`
+            },
+            {
+                subHeading: "Automation",
+                description: `Our Automation services deliver personalized content based on user behavior, saving time and
+                enhancing the overall customer experience. The result? Improved customer loyalty and
+                satisfaction.
+                `
+            },
+            {
+                subHeading: "Email Analytics",
+                description: `Analyze and optimize your campaigns with our Email Analytics. This not only ensures your
+                messages resonate with your audience but also provides actionable insights for continuous
+                improvement`
+            }
+        ]
     },
     {
         id: 5,
         heading: "Pay-Per-Click (PPC) Advertising",
         icon: ppc,
-        list: ["Google Ads", "Social Media Ads", "Display Advertising"],
+        slug: "ppc",
+        list: [
+            {
+                subHeading: "Google Ads",
+                description: `Maximize your brand's visibility with our strategic management of Google Ads. This not only
+            drives targeted traffic but also ensures efficient budget utilization, maximizing your return on
+            advertising investment.
+            `
+            },
+            {
+                subHeading: "Social Media Ads",
+                description: `Craft and monitor paid Social Media Ads with us, leveraging platforms like Facebook and
+                Instagram to boost brand awareness. The result? Increased visibility, lead generation, and
+                conversions.`
+            },
+            {
+                subHeading: "Display Advertising",
+                description: `Enhance brand visibility with visually appealing Display Advertising on relevant websites. This
+                not only drives traffic but also increases brand recognition and consideration among your target
+                audience.
+                `
+            }]
     },
     {
         id: 6,
         heading: "Web Design and Development",
         icon: webDev,
+        slug: "web-design-development",
         list: [
-            "Responsive Design",
-            "User Experience (UX) Optimization",
-            "E-commerce Solutions",
+            {
+                subHeading: "Responsive Design",
+                description: `Ensure a seamless user experience across devices with our commitment to Responsive Design.
+            This not only reduces bounce rates but also enhances your brand's professionalism and
+            accessibility.`
+            },
+            {
+                subHeading: "User Experience (UX) Optimization",
+                description: `Optimize the overall user journey with our User Experience (UX) Optimization. This not only
+keeps visitors engaged but also increases the likelihood of conversions, contributing to positive
+brand perception.`
+            },
+            {
+                subHeading: "E-commerce Solutions",
+                description: `Develop and optimize ecomerce platforms with us, streamlining the online shopping
+            experience. The result? Increased customer satisfaction and maximized conversion rates.`
+            }
+
         ],
     },
     {
         id: 7,
         heading: "Analytics and Data Analysis",
         icon: analytics,
-        list: ["Performance Tracking", "Data Interpretation", "Reporting"],
+        slug: "#",
+        list: [{
+            subHeading: "Performance Tracking",
+            description: ``
+        },
+        {
+            subHeading: "Data Interpretation",
+            description: ``
+        },
+        {
+            subHeading: "Reporting",
+            description: ``
+        }
+
+        ],
     },
     {
         id: 8,
         heading: "Influencer Marketing",
         icon: influencerMarketing,
+        slug: "#",
         list: [
-            "Influencer Marketing",
-            "Collaboration Management",
-            "Performance Measurement",
+            {
+                subHeading: "Influencer Marketing",
+                description: ``
+            },
+            {
+                subHeading: "Collaboration Management",
+                description: ``
+            },
+            {
+                subHeading: "Performance Measurement",
+                description: ``
+            }
         ],
     },
     {
         id: 9,
         heading: "Online Reputation Management (ORM)",
         icon: onlineReputation,
-        list: ["Brand Monitoring", "Review Management", "Crisis Response"],
+        slug: "#",
+        list: [{
+            subHeading: "Performance Measurement",
+            description: ``
+        }, {
+            subHeading: "Performance Measurement",
+            description: ``
+        }, {
+            subHeading: "Performance Measurement",
+            description: ``
+        }, "Brand Monitoring", "Review Management", "Crisis Response"],
     },
     {
         id: 10,
         heading: "Mobile Marketing",
         icon: mobileMarketing,
+        slug: "#",
         list: [
-            "Mobile App Advertising",
-            "SMS Marketing",
-            "Location-Based Marketing",
+            {
+                subHeading: "Mobile App Advertising",
+                description: ``
+            }, {
+                subHeading: "SMS Marketing",
+                description: ``
+            }, {
+                subHeading: "Location-Based Marketing",
+                description: ``
+            }
         ],
     },
     {
         id: 11,
         heading: "Affiliate Marketing:",
         icon: affiliateMarketing,
+        slug: "#",
         list: [
-            "Partner Recruitment",
-            "Commission Management",
-            "Performance Tracking",
+            {
+                subHeading: "Partner Recruitment",
+                description: ``
+            }, {
+                subHeading: "Commission Management",
+                description: ``
+            }, {
+                subHeading: "Performance Tracking",
+                description: ``
+            }
         ],
     },
     {
         id: 12,
         heading: "Conversion Rate Optimization (CRO)",
         icon: cro,
-        list: ["A/B Testing", "Landing Page Optimization", "Video Advertising"],
+        slug: "#",
+        list: [{
+            subHeading: "A/B Testing",
+            description: ``
+        }, {
+            subHeading: "Landing Page Optimization",
+            description: ``
+        }, {
+            subHeading: "Video Advertising",
+            description: ``
+        }],
     },
     {
         id: 13,
         heading: "Video Marketing",
         icon: videoMarketing,
-        list: ["Video Production", "YouTube Optimization", "Video Advertising"],
+        slug: "#",
+        list: [
+            {
+                subHeading: "Video Production",
+                description: ``
+            }, {
+                subHeading: "YouTube Optimization",
+                description: ``
+            }, {
+                subHeading: "Video Advertising",
+                description: ``
+            }]
     },
     {
         id: 14,
         heading: "Local Search Marketing",
         icon: localSEO,
+        slug: "#",
         list: [
-            "Local SEO",
-            "Google My Business Optimization",
-            "Location-Based Targeting",
+            {
+                subHeading: "Local SEO",
+                description: ``
+            },
+            {
+                subHeading: "Google My Business Optimization",
+                description: ``
+            },
+            {
+                subHeading: "Location-Based Targeting",
+                description: ``
+            },
+
+
+
         ],
     },
     {
         id: 15,
         heading: "Chatbot Integration",
         icon: chatBot,
+        slug: "#",
         list: [
-            "Chatbot Development",
-            "Customer Support Automation",
-            "User Engagement",
+            {
+                subHeading: "Chatbot Development",
+                description: ``
+            }, {
+                subHeading: "Customer Support Automation",
+                description: ``
+            }, {
+                subHeading: "User Engagement",
+                description: ``
+            }
+
         ],
     },
 ];
+// {
+//     subHeading: ,
+//     description: ``
+// }
 
 export const serviceSocial = [
     {
@@ -442,8 +647,8 @@ export const services = [
         url: "social-media-marketing"
     },
     {
-        label: "Search Engine Marketing",
-        url: "search-engine-marketing"
+        label: "Content Marketing",
+        url: "content-marketing"
     },
     {
         label: "Inbound and Outbound Marketing",

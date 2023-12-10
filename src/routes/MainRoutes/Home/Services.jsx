@@ -56,7 +56,7 @@ export default function Services(props) {
                     >
                         {servicesData?.map((item, i) => {
                             return (
-                                <SwiperSlide key={i}>
+                                <SwiperSlide key={i} onClick={() => navigate(`/service/${item?.slug}`)}>
                                     <div className="h-[60%] relative card-img rounded-xl flex gap-5 items-center justify-center bg-white shadow-lg bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F]">
                                         <img
                                             src={item?.icon}
@@ -82,7 +82,7 @@ export default function Services(props) {
                                                             className="w-5 h-5 !rotate-90 animate-flipArrow "
                                                         />
                                                         <p className="">
-                                                            {item}
+                                                            {item?.subHeading}
                                                         </p>
                                                     </li>
                                                 );

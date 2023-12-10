@@ -1,8 +1,11 @@
 import React from 'react'
+import { ServiceHeading } from '../../../components/ServiceContainer/ServiceHeading'
 
 function IOMarketing() {
     return (
-        <div>IOMarketing</div>
+        <main>
+            <ServiceHeading title="Inbound and Outbound Marketing" />
+        </main>
     )
 }
 

@@ -29,6 +29,7 @@ import {
 } from "../../../db/dummy";
 
 import Pricing from "../../../components/Pricing";
+import { H1Animate, TextAnimate } from "../../../components/Animation/H1Animate";
 
 export default function Services(props) {
     const [activeItem, setActiveItem] = useState({
@@ -149,10 +150,10 @@ export default function Services(props) {
                 <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
                     <div className="flex mb-16 md:justify-center">
                         <div className="text-center md:w-8/12">
-                            <h1 className="text-4xl sm:text-5xl sm:text-[54px] leading-tight font-semibold text-black2">
+                            <H1Animate className="text-4xl sm:text-5xl sm:text-[54px] leading-tight font-semibold text-black2">
                                 How can a perth social media help grow my
                                 business?
-                            </h1>
+                            </H1Animate>
                         </div>
                     </div>
                     <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
@@ -323,14 +324,14 @@ export default function Services(props) {
                     </div>
                     <div className="w-full md:w-1/2 sm:ms-20 sm:mx-3">
                         <div className="px-3 my-10 sm:px-0">
-                            <p className="!text-3xl font-tangerine mb-5 text-lg font-semibold text-blue1">
+                            <TextAnimate className="!text-3xl font-tangerine mb-5  font-semibold text-blue1">
                                 Get the best
-                            </p>
-                            <h1 className="mb-4 text-4xl font-semibold sm:text-5xl">
+                            </TextAnimate>
+                            <H1Animate className="mb-4 text-4xl font-semibold sm:text-5xl">
                                 Social Media is the
                                 <br />
                                 Fastest growing trend
-                            </h1>
+                            </H1Animate>
 
                             <div className="my-10">
                                 <div>

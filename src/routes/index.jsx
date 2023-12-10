@@ -9,7 +9,7 @@ import FooterRoutes from "./FooterRoutes";
 export default function Routes(props) {
     const routes = useRoutes([
         { path: "/*", element: <MainRoutes {...props} /> },
-        { path: "/*", element: <FooterRoutes {...props} /> }
+        { path: "/service/*", element: <FooterRoutes {...props} /> }
     ]);
     return (
         <main className="">

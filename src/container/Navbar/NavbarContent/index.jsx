@@ -57,8 +57,8 @@ export default function NavbarContent() {
         >
             <div
                 className={`relative flex justify-between items-center ${location?.pathname === "/"
-                        ? " max-w-full"
-                        : "max-w-screen-xl mx-auto"
+                    ? " max-w-full"
+                    : "max-w-screen-xl mx-auto"
                     }`}
             >
                 <div className="flex items-center h-[50px] md:h-[80px]">
@@ -73,8 +73,8 @@ export default function NavbarContent() {
                     {navMenu?.map((item) => (
                         <div
                             className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${item?.slug === location?.pathname
-                                    ? "text-primary "
-                                    : ""
+                                ? "text-primary "
+                                : ""
                                 }  ${item?.label2 === "download"
                                     ? "text-blue-500"
                                     : ""

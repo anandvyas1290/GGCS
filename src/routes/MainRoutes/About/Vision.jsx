@@ -48,7 +48,7 @@ function Vision() {
     return (
         <div>
             <Container>
-                <div className="pt-10 pb-48">
+                <div className="pt-10 pb-24">
                     <div className="sm:flex">
                         <div className="w-full md:w-1/2 mb-5 lg:mb-0 ">
                             <div className="bg-red-100 px-3 sm:px-6 md:px-14 py-8 md:py-14 rounded-lg">
