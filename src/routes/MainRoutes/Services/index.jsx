@@ -78,9 +78,9 @@ export default function Services(props) {
     };
     return (
         <div className="font-roboto">
-            <section className='w-full bg-black md:py-32'>
+            <section className='w-full  md:py-32'>
                 <section className='hidden lg:flex relative'>
-                    <video className="w-full h-[350px]" autoPlay muted loop>
+                    <video className="w-full h-[480px]" autoPlay muted loop>
                         <source src={serviceVideo} type="video/mp4" />
                     </video>
                 </section>

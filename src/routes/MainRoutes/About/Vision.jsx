@@ -1,6 +1,6 @@
 import React from "react";
-import mission from "../../../assets/about/vision/mission.svg";
-import purpose from "../../../assets/about/vision/purpose.svg";
+// import mission from "../../../assets/about/vision/mission.svg";
+// import purpose from "../../../assets/about/vision/purpose.svg";
 import floatImg from "../../../assets/about/vision/smill.webp";
 import missionShape from "../../../assets/about/vision/mission-shape-1.webp";
 import treeIcon from "../../../assets/about/vision/mission-shape-2.webp";
@@ -35,7 +35,7 @@ const counterData = [
 
     {
         Icon: counter3,
-        num: "1 +",
+        num: "6 +",
         label: (
             <p className=" text-base pl-3">
                 Satisfied Clients On <br />
@@ -63,8 +63,7 @@ function Vision() {
                                     We are the Digital Marketers that create your brand.
                                 </h5>
                                 <p className="text-lg text-gray-700">
-                                    Welcome to GGCS, where digital prowess meets marketing excellence. We're a dynamic and results-oriented digital marketing company dedicated to elevating businesses to new heights in the digital realm. Our mission is to design compelling strategies that not only enhance brand visibility but also deliver measurable returns on investment.
-
+                                    GGCS or Global Garner Consultancy Services, stands out as a leading digital marketing company utilizing advanced technology and a team of seasoned professionals to elevate businesses' brand presence and growth.
                                 </p>
                             </div>
                         </div>
@@ -97,7 +96,7 @@ function Vision() {
                                 </h5>
 
                                 <p className="text-lg text-gray-700">
-                                    Founded in 2023, GGCS emerged from a shared aspiration to reshape how businesses engage with their audiences in the digital landscape. With a team of seasoned professionals boasting extensive experience across diverse industries, we aimed to redefine digital marketing approaches to align with the rapidly evolving online sphere.
+                                    The genesis of GGCS traces back to the firsthand challenges faced by Global Garner Sales Services Limited in 2016. They needed help finding an effective yet affordable digital marketing solution, so they created GGCS. This initiative not only resolved their issues but also became a catalyst for numerous other businesses seeking success in the online realm.
                                 </p>
                             </div>
                         </div>
@@ -116,12 +115,41 @@ function Vision() {
                                     What Distinguishes Us
                                 </h5>
                                 <p className="text-lg text-gray-700">
-                                    At GGCS, we're not just another digital marketing agency – we're your strategic collaborators. Our success stems from our commitment to staying at the forefront of industry trends. By harnessing the power of cutting-edge technologies and market insights, we create tailored solutions that resonate with your business objectives.
+                                    At GGCS, our primary goal is to ensure brands and businesses appear on platforms like Google and experience significant growth in the digital business marketplace. We achieve this through in-depth market research and industry best practices. What sets GGCS apart is our unwavering commitment to transparency and ethical practices, demonstrated through real-time display of statistics for our clients using advanced tools and industry benchmarks.
                                 </p>
                             </div>
                         </div>
                         <div className="hidden md:block">
                             <img src={floatImg} alt="floatIcon" />
+                        </div>
+                    </div>
+                    <div className="md:flex">
+                        <div className="md:w-2/5 hidden md:block">
+                            <div className="flex relative">
+                                <div>
+                                    <img src={treeIcon} alt="floatIcon" />
+                                </div>
+                                {/* <div className="absolute -top-10 right-2">
+                                    <img src={missionShape} alt="floatIcon" />
+                                </div> */}
+                            </div>
+                        </div>
+                        <div className="md:w-3/5 relative">
+                            <div className="bg-green-100 px-3 sm:px-6 md:px-14 py-8 md:py-14 rounded-lg ">
+                                {/* <span>
+                                    <img
+                                        src={purpose}
+                                        alt="purpose"
+                                        className="mb-5"
+                                    />
+                                </span> */}
+                                {/* <h5 className="text-xl mb-2 font-bold">
+                                    Our Journey
+                                </h5> */}
+
+                                <p className="text-lg text-gray-700">
+                                    THowever, GGCS is not merely a provider of digital marketing services. We consider ourselves a digital partner, taking the time to understand the intricacies of your business and expectations. GGCS aspires to leave a lasting mark as a trusted digital ally in the ever-evolving digital landscape by positioning itself as more than just a service.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
