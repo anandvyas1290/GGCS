@@ -19,7 +19,7 @@ export default function Home(props) {
         <div className="font-roboto ">
             <HeroSection {...props} />
             <Services {...props} />
-            {/* <PricingSection {...props} /> */}
+            <PricingSection {...props} />
             {/* <Featured {...props} /> */}
             <Process {...props} />
             <SEO {...props} />
