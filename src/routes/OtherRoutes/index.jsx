@@ -3,8 +3,9 @@ import React from "react";
 import { useLocation } from "react-router";
 import { useRoutes } from "react-router-dom";
 
-import { OtherServices } from "../../components/OtherServices";
 import { servicesData } from "../../db/dummy";
+import BackNavigate from "../../components/UI/BackNavigate";
+import { OtherServices } from "../../components/OtherServices";
 
 export default function OtherRoutess(props) {
     let location = useLocation();
@@ -23,5 +24,12 @@ export default function OtherRoutess(props) {
             element: <OtherServices data={serviceData[0]} {...props} />,
         },
     ]);
-    return routes;
+    return (
+        <div className="bg-gray-100">
+            {location?.state ? (
+                <BackNavigate backLabel={serviceData[0]?.heading} />
+            ) : null}
+            {routes}
+        </div>
+    );
 }

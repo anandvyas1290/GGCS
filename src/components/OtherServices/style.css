@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
-    height: fit-content !important;
     padding: 30px;
     @media screen and (max-width: 991px) {
         grid-template-columns: 1fr;
@@ -21,7 +20,6 @@
 
 .card {
     max-width: 550px;
-    height: fit-content;
     border: 0;
     width: 100%;
     margin-inline: auto;
@@ -34,10 +32,11 @@
     background-clip: padding-box;
     border-radius: 45px;
     padding: 40px;
-    box-shadow: 2px -4px 14px -1px #a8e9fd !important ;
-    img {
-        margin-bottom: 32px;
-    }
+    /* box-shadow: 2px -4px 14px -1px #a8e9fd !important ; */
+}
+
+.container-card img {
+    margin-bottom: 32px;
 }
 
 .bg-box1,
@@ -52,13 +51,33 @@
 .bg-box3::after,
 .bg-box4::after {
     position: absolute;
-    top: -1px;
-    bottom: -1px;
-    left: -1px;
-    right: -1px;
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    right: -3px;
     content: "";
     z-index: -1;
     border-radius: 45px;
+}
+
+.bg-box1,
+.bg-box1 figure {
+    box-shadow: 2px -4px 14px -1px #3da077 !important ;
+}
+
+.bg-box2,
+.bg-box2 figure {
+    box-shadow: 2px -4px 14px -1px #b0afb0 !important ;
+}
+
+.bg-box3,
+.bg-box3 figure {
+    box-shadow: 2px -4px 14px -1px #afa220 !important ;
+}
+
+.bg-box4,
+.bg-box4 figure {
+    box-shadow: 2px -4px 14px -1px #5f6fad !important ;
 }
 
 .bg-box1::after {

@@ -10,8 +10,8 @@ import Gallery from "./Gallery";
 import WhyGGCS from "./WhyGGCS";
 import UposPackage from "./UposPackage/UposPackage";
 
-import BackNavigate from "../../components/UI/BackNavigate";
 import { navMenu } from "../../db/dummy";
+import BackNavigate from "../../components/UI/BackNavigate";
 
 export default function MainRoutes(props) {
     const [state, setState] = useState({ title: "" });

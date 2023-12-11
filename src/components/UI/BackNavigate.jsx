@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function BackNavigate({ backLabel }) {
     let navigate = useNavigate();
     return (
-        <div className="max-w-screen-xl mx-auto px-3 mt-5 flex items-center gap-3 ">
+        <div className="flex items-center max-w-screen-xl gap-3 px-3 pt-5 mx-auto ">
             <img
                 src={backIcon}
                 alt="back"
@@ -14,7 +14,7 @@ export default function BackNavigate({ backLabel }) {
                 onClick={() => navigate("/")}
             />
             {backLabel ? (
-                <h5 className="text-2xl font-bold font-sans text-primary">
+                <h5 className="font-sans text-2xl font-bold text-primary">
                     {backLabel}
                 </h5>
             ) : null}

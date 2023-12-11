@@ -50,6 +50,8 @@ import mobileMarketing from "../assets/home/services/carousel/mobileMarketing.pn
 import rocket from "../assets/Navbar/rocket.webp";
 import services from "../assets/home/services/services.svg";
 import arrow from "../assets/home/services/carousel/arrow.png";
+import contactBg from "../assets/home/contact/contact-4-bg.webp";
+import office from "../assets/icons/office.png";
 
 //gallery
 import flyer from "../assets/gallery/flyer.png";
@@ -60,12 +62,39 @@ import website from "../assets/gallery/website.png";
 import facebook from "../assets/gallery/facebook.png";
 
 //upos
-import Organic from "../assets/Upos/Organic.jpg"
-import Post from "../assets/Upos/Post.jpg"
-import CCM from "../assets/Upos/Cross-Channel-Marketing.webp"
-import ContentCreation from "../assets/Upos/Content-Creation.png"
+import Organic from "../assets/Upos/Organic.jpg";
+import Post from "../assets/Upos/Post.jpg";
+import CCM from "../assets/Upos/Cross-Channel-Marketing.webp";
+import ContentCreation from "../assets/Upos/Content-Creation.png";
 
 import serviceVideo from "../assets/animation/services.mp4";
+
+//other services
+import onPageSeo from "../assets/otherServices/jpg/onPageSeo.jpg";
+import offPageSeo from "../assets/otherServices/jpg/offPageSeo.jpg";
+import keywordResearch from "../assets/otherServices/jpg/keywordResearch.jpg";
+import blog from "../assets/otherServices/jpg/blog.jpg";
+import collaboration from "../assets/otherServices/jpg/collaboration.jpg";
+import crisis from "../assets/otherServices/jpg/offPageSeo.jpg";
+import ecommerce from "../assets/otherServices/jpg/ecommerce.jpg";
+import influencersMarketing from "../assets/otherServices/jpg/influencersMarketing.jpg";
+import infographics from "../assets/otherServices/jpg/infographics.jpg";
+import interpretation from "../assets/otherServices/jpg/interpretation.jpg";
+import locationAds from "../assets/otherServices/jpg/locationAds.jpg";
+import mobileAds from "../assets/otherServices/jpg/mobileAds.jpg";
+import performance from "../assets/otherServices/jpg/performance.jpg";
+import performanceTrack from "../assets/otherServices/jpg/performanceTrack.jpg";
+import reporting from "../assets/otherServices/jpg/reporting.jpg";
+import responsiveDesign from "../assets/otherServices/jpg/responsiveDesign.jpg";
+import review from "../assets/otherServices/jpg/review.jpg";
+import smsAds from "../assets/otherServices/jpg/smsAds.jpg";
+import UX from "../assets/otherServices/jpg/UX.jpg";
+import videoMaking from "../assets/otherServices/jpg/videoMaking.jpg";
+// import review from "../assets/otherServices/jpg/offPageSeo.jpg";
+// import smsAds from "../assets/otherServices/jpg/offPageSeo.jpg";
+// import review from "../assets/otherServices/jpg/offPageSeo.jpg";
+// import smsAds from "../assets/otherServices/jpg/offPageSeo.jpg";
+
 export { serFB, serLinkedin, serInsta, serPint };
 export { business1, business2, business3 };
 export { smFB, smlinkedin, smInsta, smX };
@@ -80,6 +109,8 @@ export {
     ClientImg,
     InputImg,
     StatImg,
+    office,
+    contactBg,
 };
 
 export {
@@ -107,3 +138,26 @@ export {
 export { flyer, instagram, newsletter, thumbnail, website, facebook };
 
 export { Organic, Post, CCM, ContentCreation };
+
+export {
+    onPageSeo,
+    offPageSeo,
+    keywordResearch,
+    blog,
+    collaboration,
+    crisis,
+    ecommerce,
+    influencersMarketing,
+    infographics,
+    interpretation,
+    locationAds,
+    mobileAds,
+    performance,
+    performanceTrack,
+    reporting,
+    responsiveDesign,
+    review,
+    smsAds,
+    UX,
+    videoMaking,
+};
