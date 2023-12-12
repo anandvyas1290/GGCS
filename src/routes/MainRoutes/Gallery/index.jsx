@@ -8,11 +8,11 @@ export default function Gallery(props) {
     });
     console.log(state.currentPlatform);
     return (
-        <div className="max-w-screen-xl mx-auto py-10">
+        <div className="max-w-screen-xl py-10 mx-auto">
             <div className="grid grid-cols-[0.3fr_1fr] gap-6">
                 <aside className="bg-gray-">
-                    <div className="border-2 border-grey7 rounded-xl overflow-hidden">
-                        <h4 className="text-2xl font-bold text-primary bg-gray-200 p-3">
+                    <div className="overflow-hidden border-2 border-grey7 rounded-xl">
+                        <h4 className="p-3 text-2xl font-bold bg-gray-200 text-primary">
                             Filters
                         </h4>
                         <hr className="mb-5" />
@@ -24,7 +24,7 @@ export default function Gallery(props) {
                                         className={`flex gap-4 my-3 text-lg text-grey2 font-semibold cursor-pointer transition-all duration-200 ${
                                             state?.currentPlatform?.platform ===
                                             item?.platform
-                                                ? "grayscale-1 text-blue-600"
+                                                ? "grayscale-1 !text-blue-600"
                                                 : "grayscale-[1]"
                                         }`}
                                         onClick={() => {
@@ -51,7 +51,7 @@ export default function Gallery(props) {
                     </div>
                 </aside>
                 <main className="">
-                    <section className="text-xl font-bold p-3 mb-4 text-primary border-2 rounded-xl border-grey7 bg-gray-200">
+                    <section className="p-3 mb-4 text-xl font-bold bg-gray-200 border-2 text-primary rounded-xl border-grey7">
                         Header Filters
                     </section>
                     <section className="grid grid-cols-1 overflow-hidden border-2 border-grey7 rounded-3xl bg-red-50">
@@ -66,44 +66,44 @@ export default function Gallery(props) {
 }
 
 // <main className="">
-// <div className="-m-1 flex flex-wrap md:-m-2">
-//     <div className="flex w-1/2 flex-wrap">
+// <div className="flex flex-wrap -m-1 md:-m-2">
+//     <div className="flex flex-wrap w-1/2">
 //         <div className="w-1/2 p-1 md:p-2">
 //             <img
 //                 alt="gallery"
-//                 className="block h-full w-full rounded-lg object-cover object-center"
+//                 className="block object-cover object-center w-full h-full rounded-lg"
 //                 src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
 //         </div>
 //         <div className="w-1/2 p-1 md:p-2">
 //             <img
 //                 alt="gallery"
-//                 className="block h-full w-full rounded-lg object-cover object-center"
+//                 className="block object-cover object-center w-full h-full rounded-lg"
 //                 src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
 //         </div>
 //         <div className="w-full p-1 md:p-2">
 //             <img
 //                 alt="gallery"
-//                 className="block h-full w-full rounded-lg object-cover object-center"
+//                 className="block object-cover object-center w-full h-full rounded-lg"
 //                 src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
 //         </div>
 //     </div>
-//     <div className="flex w-1/2 flex-wrap">
+//     <div className="flex flex-wrap w-1/2">
 //         <div className="w-full p-1 md:p-2">
 //             <img
 //                 alt="gallery"
-//                 className="block h-full w-full rounded-lg object-cover object-center"
+//                 className="block object-cover object-center w-full h-full rounded-lg"
 //                 src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
 //         </div>
 //         <div className="w-1/2 p-1 md:p-2">
 //             <img
 //                 alt="gallery"
-//                 className="block h-full w-full rounded-lg object-cover object-center"
+//                 className="block object-cover object-center w-full h-full rounded-lg"
 //                 src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
 //         </div>
 //         <div className="w-1/2 p-1 md:p-2">
 //             <img
 //                 alt="gallery"
-//                 className="block h-full w-full rounded-lg object-cover object-center"
+//                 className="block object-cover object-center w-full h-full rounded-lg"
 //                 src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" />
 //         </div>
 //     </div>

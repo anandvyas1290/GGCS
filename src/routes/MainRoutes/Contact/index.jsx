@@ -1,42 +1,63 @@
 import React, { useEffect } from "react";
-import bg from "../../../assets/home/contact/contact-4-bg.webp";
 
+import { contactBg, office } from "../../../db/assets";
+import { addresses } from "../../../db/dummy";
 import { PrimaryBtn } from "../../../components/Button";
 
-const Input = ({ text, placeholder, className }) => {
+const Input = ({ type, placeholder, className }) => {
     return (
-        <div className='relative flex items-center rounded-full w-full bg-gray-100 py-1 px-5 border'>
-            {/* <EnvelopeIcon className="h-6 w-6 mx-2" /> */}
-            <div className=''>
-                <input type={text} placeholder={placeholder} className={`px-1 py-2 outline-none bg-gray-100 ${className}`} />
+        <div className="relative flex items-center w-full px-5 py-1 bg-gray-100 border rounded-full">
+            {/* <EnvelopeIcon className="w-6 h-6 mx-2" /> */}
+            <div className="">
+                <input
+                    type={type}
+                    placeholder={placeholder}
+                    className={`px-1 py-2 !outline-none bg-gray-100 ${
+                        className ?? ""
+                    }`}
+                />
             </div>
-            {/* <div className="p-2  absolute right-3 rounded-full bg-blue-600">
-                <ArrowUpRightIcon className="h-6 w-6 text-white" />
+            {/* <div className="absolute p-2 bg-blue-600 rounded-full right-3">
+                <ArrowUpRightIcon className="w-6 h-6 text-white" />
             </div> */}
         </div>
-    )
-}
+    );
+};
 function Contact(props) {
     useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <section className="relative  z-[1] sm:py-10">
             <div className="hidden sm:block">
-                <img src={bg} alt="icon" className="absolute -z-[1] bottom-0 left-0 right-0 w-full" />
+                <img
+                    src={contactBg}
+                    alt="icon"
+                    className="absolute -z-[1] bottom-0 left-0 right-0 w-full"
+                />
             </div>
-            <div className="max-w-screen-lg lg:max-w-screen-xl mx-auto  ">
-                <div className="relative md:flex pt-5 pb-5 sm:pt-10 sm:pb-20 ">
-                    <div className="relative md:w-1/2 mx-3">
+            <div className="max-w-screen-lg mx-auto lg:max-w-screen-xl ">
+                <div className="relative pt-5 pb-5 md:flex sm:pt-10 sm:pb-20 ">
+                    <div className="relative mx-3 md:w-1/2">
                         <div className="my-10">
-                            <p className=" text-base font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">Get In Touch</p>
-                            <h2 className='text-4xl sm:text-5xl font-semibold mt-1 mb-4 sm:!leading-[3.5rem]'>Lets Work <br />Together</h2>
-                            <h6 className="text-lg mb-4 text-grey2">
-                                Just tell us your requirements and we will help you!
+                            <p className=" text-base font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
+                                Get In Touch
+                            </p>
+                            <h2 className="text-4xl sm:text-5xl font-semibold mt-1 mb-4 sm:!leading-[3.5rem]">
+                                Lets Work <br />
+                                Together
+                            </h2>
+                            <h6 className="mb-4 text-lg text-grey2">
+                                Just tell us your requirements and we will help
+                                you!
                             </h6>
                             <div>
-                                <h5 className="text-3xl text-red-500 mb-1"> +91 6354917511</h5>
-                                <h6 className="text-grey2">ggcs@globalgarner.com</h6>
+                                <h5 className="mb-1 text-3xl text-red-500">
+                                    +91 6354917511
+                                </h5>
+                                <h6 className="text-grey2">
+                                    ggcs@globalgarner.com
+                                </h6>
                             </div>
                             <div className="mt-5">
                                 <PrimaryBtn
@@ -46,33 +67,43 @@ function Contact(props) {
                                 >
                                     <a
                                         href={"tel:+91 6354917511"}
-                                        data-rel="external">
+                                        data-rel="external"
+                                    >
                                         Call Us Now
                                     </a>
                                 </PrimaryBtn>
                             </div>
                         </div>
-
                     </div>
-                    <div className="md:w-1/2 mx-3 rounded-3xl bg-white px-3 sm:px-6 md:px-10 py-10 before:bg-homeGradient before:-top-4 before:left-0 before:absolute shadow-services ">
-                        <div className=" flex flex-wrap" >
-                            <div className='my-2 px-3 w-full sm:w-1/2'>
-                                <Input placeholder={"Fill Name "} type={"mail"} />
+                    <div className="px-3 py-10 mx-3 bg-white md:w-1/2 rounded-3xl sm:px-6 md:px-10 before:bg-homeGradient before:-top-4 before:left-0 before:absolute shadow-services">
+                        <div className="flex flex-wrap">
+                            <div className="w-full px-3 my-2 sm:w-1/2">
+                                <Input placeholder="Fill Name" type="text" />
                             </div>
-                            <div className='my-2 px-3  w-full sm:w-1/2'>
-                                <Input placeholder={"Email Address"} type={"mail"} />
+                            <div className="w-full px-3 my-2 sm:w-1/2">
+                                <Input
+                                    placeholder="Email Address"
+                                    type="mail"
+                                />
                             </div>
-                            <div className='my-2 px-3  w-full sm:w-1/2'>
-                                <Input placeholder={"Phone Number"} type={"mail"} />
+                            <div className="w-full px-3 my-2 sm:w-1/2">
+                                <Input placeholder="Phone Number" type="tel" />
                             </div>
-                            <div className='my-2  px-3 w-full sm:w-1/2'>
-                                <Input placeholder={"Website"} type={"mail"} />
+                            <div className="w-full px-3 my-2 sm:w-1/2">
+                                <Input placeholder="Website" type="mail" />
                             </div>
-                            <div className="w-full  border-2 relative rounded-xl my-3 mx-4 bg-gray-100 ">
-                                <textarea name="" placeholder="Message" id="" cols="30" rows="10" className="w-full h-40 px-5 my-5 !outline-none border-none bg-gray-100"></textarea>
+                            <div className="relative w-full mx-4 my-3 bg-gray-100 border-2 rounded-xl">
+                                <textarea
+                                    name=""
+                                    placeholder="Message"
+                                    id=""
+                                    cols="30"
+                                    rows="10"
+                                    className="w-full h-40 px-5 my-5 !outline-none border-none bg-gray-100"
+                                ></textarea>
                             </div>
                         </div>
-                        <div className="w-full mt-3 mx-4">
+                        <div className="w-full mx-4 mt-3">
                             <PrimaryBtn
                                 size="px-8 py-3"
                                 bgColor="bg-primaryBtn"
@@ -81,25 +112,32 @@ function Contact(props) {
                             </PrimaryBtn>
                         </div>
                     </div>
-
                 </div>
-                <section className="md:flex ">
-                    <div>
-                        <address className="text-white">
-                            <b className="text-black underline"> Ahmedabad Office :</b><br />
-                            <b>Global Garner Sales Services Limited 5th floor, Grand Emporio, Motera Stadium Road, Ahmedabad, Gujarat 380005</b>
-                        </address>
-                    </div>
-                    <br />
-                    <div>
-                        <address className="text-white">
-                            <b className="text-black underline"> Bengaluru Office :</b><br />
-                            <b>4th floor, SAKET CALLIPOLIS, Sarjapur - Marathahalli Rd, near Wipro, Rainbow Drive, Bengaluru, Karnataka 560035</b>
-                        </address>
-                    </div>
+                <section className="grid grid-cols-2 gap-20">
+                    {addresses?.map((item) => (
+                        <div key={item?.id} className="w-full">
+                            <address className="h-full w-fit flex gap-5 px-10 py-4 not-italic rounded-3xl item-center bg-slate-200 !backdrop-blur-3xl">
+                                <figure className="relative w-32 h-24">
+                                    <div className="absolute top-3 -left-1 w-[70px] h-[65px] rounded-full top-5 bg-gradient-to-r from-g2 to-g1 -z-10" />
+                                    <img
+                                        src={office}
+                                        alt="address"
+                                        className="z-10 w-full h-full"
+                                    />
+                                </figure>
+                                <main>
+                                    <h3 className="text-xl font-semibold text-primary">
+                                        {item?.title}
+                                    </h3>
+                                    <br />
+                                    <b>{item?.address}</b>
+                                </main>
+                            </address>
+                        </div>
+                    ))}
                 </section>
-            </div >
-        </section >
+            </div>
+        </section>
     );
 }
 

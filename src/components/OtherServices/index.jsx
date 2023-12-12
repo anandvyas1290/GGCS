@@ -4,10 +4,10 @@ import { H1Animate } from "../Animation/H1Animate";
 import Container from "../Layout/Layout";
 
 export function OtherServices({ data }) {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     return (
         <>
-            <div className={`py-20 sm:py-32 bg-gray-100`}>
+            <div className={`py-20 sm:py-32`}>
                 <Container>
                     <H1Animate className={`text-5xl text-center`}>
                         {data?.heading}
@@ -19,13 +19,19 @@ export function OtherServices({ data }) {
                     <div className="gradient-cards">
                         {data?.list?.map((item, i) => {
                             return (
-                                <div className="card" key={i}>
+                                <div className=" card" key={i}>
                                     <div
-                                        className={`container-card bg-box${
+                                        className={`h-full w-fit container-card bg-box${
                                             i + 1
                                         }`}
                                     >
-                                        <svg
+                                        <figure className="w-20 h-20 overflow-hidden rounded-xl">
+                                            <img
+                                                src={item?.icon}
+                                                className="object-cover w-full h-full"
+                                            />
+                                        </figure>
+                                        {/* <svg
                                             width="80"
                                             height="80"
                                             viewBox="0 0 120 120"
@@ -91,8 +97,8 @@ export function OtherServices({ data }) {
                                                     ></stop>
                                                 </radialGradient>
                                             </defs>
-                                        </svg>
-                                        <p className="card-title mt-5">
+                                        </svg> */}
+                                        <p className="mt-5 card-title">
                                             {item?.subHeading}
                                         </p>
                                         <p className="card-description">

@@ -2,7 +2,15 @@
 // import seoShape from "../assets/home/services/seoShape.webp";
 // import socialShape from "../assets/home/services/socialShape.webp";
 
-import { smFB, smlinkedin, smInsta, smX, ContentCreation, CCM, Post } from "./assets";
+import {
+    smFB,
+    smlinkedin,
+    smInsta,
+    smX,
+    ContentCreation,
+    CCM,
+    Post,
+} from "./assets";
 import { list1, list2, list3 } from "./assets";
 import { business1, business2, business3 } from "./assets";
 import {
@@ -38,7 +46,29 @@ import {
     faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { Organic } from "./assets"
+import { Organic } from "./assets";
+import {
+    onPageSeo,
+    offPageSeo,
+    keywordResearch,
+    blog,
+    collaboration,
+    crisis,
+    ecommerce,
+    influencersMarketing,
+    infographics,
+    interpretation,
+    locationAds,
+    mobileAds,
+    performance,
+    performanceTrack,
+    reporting,
+    responsiveDesign,
+    review,
+    smsAds,
+    UX,
+    videoMaking,
+} from "./assets";
 
 export const navMenu = [
     { id: 1, label: "About", slug: "/about" },
@@ -56,23 +86,21 @@ export const servicesData = [
         list: [
             {
                 subHeading: "On-Page Optimization",
-                description: `'Elevate your online presence with meticulous On-Page Optimization, ensuring your web pages
-            rank higher and attract organic traffic. This strategic approach by our experts not only boosts
-            visibility but also establishes credibility, fostering trust among potential customers.
-            '`,
+                icon: onPageSeo,
+                description:
+                    "Elevate your online presence with meticulous On-Page Optimization, ensuring your web pages rank higher and attract organic traffic. This strategic approach by our experts not only boosts visibility but also establishes credibility, fostering trust among potential customers.",
             },
             {
                 subHeading: "Off-Page Optimization",
-                description: `Through Off-Page Optimization, we build authoritative backlinks, enhancing your website's
-            credibility with search engines and instilling confidence in your audience. The result? Improved
-            search rankings and a reputation as an industry leader.`,
+                icon: offPageSeo,
+                description:
+                    "Through Off-Page Optimization, we build authoritative backlinks, enhancing your website's credibility with search engines and instilling confidence in your audience. The result? Improved search rankings and a reputation as an industry leader.",
             },
             {
                 subHeading: "Keyword Research",
-                description: `Our Keyword Research ensures your content aligns seamlessly with user searches, driving
-            targeted traffic. The benefit? A stronger online presence, increased brand recognition, and
-            higher trust levels among your audience.
-            `,
+                icon: keywordResearch,
+                description:
+                    "Our Keyword Research ensures your content aligns seamlessly with user searches, driving targeted traffic. The benefit? A stronger online presence, increased brand recognition, and higher trust levels among your audience.",
             },
         ],
     },
@@ -84,23 +112,21 @@ export const servicesData = [
         list: [
             {
                 subHeading: "Social Media Strategy",
-                description: `Craft a strategic Social Media Strategy with us to align every effort with your business
-                objectives. This not only establishes a consistent online presence but also builds brand loyalty
-                and customer trust."`,
+                icon: "",
+                description:
+                    "Craft a strategic Social Media Strategy with us to align every effort with your business objectives. This not only establishes a consistent online presence but also builds brand loyalty and customer trust.",
             },
             {
                 subHeading: "Content Creation",
-                description: `"Engage your audience effectively with our compelling Content Creation. By telling your brand
-                story visually, we not only spark conversations but also increase sharing, broadening your reach
-                and solidifying your brand identity.
-                "`,
+                icon: "",
+                description:
+                    "Engage your audience effectively with our compelling Content Creation. By telling your brand story visually, we not only spark conversations but also increase sharing, broadening your reach and solidifying your brand identity.",
             },
             {
                 subHeading: "Social Advertising",
-                description: `"Leverage the power of Social Advertising to amplify your brand's reach. Our targeted paid
-                campaigns not only boost brand awareness but also result in a higher likelihood of conversion,
-                maximizing your return on investment.
-                "`,
+                icon: "",
+                description:
+                    "Leverage the power of Social Advertising to amplify your brand's reach. Our targeted paid campaigns not only boost brand awareness but also result in a higher likelihood of conversion, maximizing your return on investment.",
             },
         ],
     },
@@ -112,22 +138,21 @@ export const servicesData = [
         list: [
             {
                 subHeading: "Blogging",
-                description: `Establish your brand as an industry authority through our informative and captivating Blogging
-                services. This not only attracts and educates your audience but also enhances your SEO
-                efforts, driving organic traffic.
-                `,
+                icon: blog,
+                description:
+                    "Establish your brand as an industry authority through our informative and captivating Blogging services. This not only attracts and educates your audience but also enhances your SEO efforts, driving organic traffic.",
             },
             {
                 subHeading: "Infographics",
-                description: `With visually appealing Infographics, your brand messages become easily shareable and
-                digestible. This not only boosts engagement, and enhances visibility, but also strengthens your
-                brand identity.`,
+                icon: infographics,
+                description:
+                    "With visually appealing Infographics, your brand messages become easily shareable and digestible. This not only boosts engagement, and enhances visibility, but also strengthens your brand identity.",
             },
             {
                 subHeading: "Video Content",
-                description: `Our Video Content not only effectively communicates your brand message but also captivates
-                your audience, fostering deeper connections and increasing the likelihood of conversions.
-                `,
+                icon: videoMaking,
+                description:
+                    "Our Video Content not only effectively communicates your brand message but also captivates your audience, fostering deeper connections and increasing the likelihood of conversions.",
             },
         ],
     },
@@ -139,22 +164,18 @@ export const servicesData = [
         list: [
             {
                 subHeading: "Campaign Management",
-                description: `Implement strategic Campaign Management with us to keep your audience engaged and
-                informed. This not only builds a loyal customer base but also increases the potential for repeat
-                business.`,
+                description:
+                    "Implement strategic Campaign Management with us to keep your audience engaged and informed. This not only builds a loyal customer base but also increases the potential for repeat business.",
             },
             {
                 subHeading: "Automation",
-                description: `Our Automation services deliver personalized content based on user behavior, saving time and
-                enhancing the overall customer experience. The result? Improved customer loyalty and
-                satisfaction.
-                `,
+                description:
+                    "Our Automation services deliver personalized content based on user behavior, saving time and enhancing the overall customer experience. The result? Improved customer loyalty and satisfaction.",
             },
             {
                 subHeading: "Email Analytics",
-                description: `Analyze and optimize your campaigns with our Email Analytics. This not only ensures your
-                messages resonate with your audience but also provides actionable insights for continuous
-                improvement`,
+                description:
+                    "Analyze and optimize your campaigns with our Email Analytics. This not only ensures your messages resonate with your audience but also provides actionable insights for continuous improvement",
             },
         ],
     },
@@ -194,20 +215,18 @@ export const servicesData = [
         list: [
             {
                 subHeading: "Responsive Design",
-                description: `Ensure a seamless user experience across devices with our commitment to Responsive Design.
-            This not only reduces bounce rates but also enhances your brand's professionalism and
-            accessibility.`,
+                icon: responsiveDesign,
+                description: `Ensure a seamless user experience across devices with our commitment to Responsive Design. This not only reduces bounce rates but also enhances your brand's professionalism and accessibility.`,
             },
             {
                 subHeading: "User Experience (UX) Optimization",
-                description: `Optimize the overall user journey with our User Experience (UX) Optimization. This not only
-keeps visitors engaged but also increases the likelihood of conversions, contributing to positive
-brand perception.`,
+                icon: UX,
+                description: `Optimize the overall user journey with our User Experience (UX) Optimization. This not only keeps visitors engaged but also increases the likelihood of conversions, contributing to positive brand perception.`,
             },
             {
                 subHeading: "E-commerce Solutions",
-                description: `Develop and optimize ecomerce platforms with us, streamlining the online shopping
-            experience. The result? Increased customer satisfaction and maximized conversion rates.`,
+                icon: ecommerce,
+                description: `Develop and optimize e-commerce platforms with us, streamlining the online shopping experience. The result? Increased customer satisfaction and maximized conversion rates.`,
             },
         ],
     },
@@ -219,14 +238,17 @@ brand perception.`,
         list: [
             {
                 subHeading: "Performance Tracking",
+                icon: performanceTrack,
                 description: ``,
             },
             {
                 subHeading: "Data Interpretation",
+                icon: interpretation,
                 description: ``,
             },
             {
                 subHeading: "Reporting",
+                icon: reporting,
                 description: ``,
             },
         ],
@@ -239,14 +261,17 @@ brand perception.`,
         list: [
             {
                 subHeading: "Influencer Marketing",
+                icon: influencersMarketing,
                 description: ``,
             },
             {
                 subHeading: "Collaboration Management",
+                icon: collaboration,
                 description: ``,
             },
             {
                 subHeading: "Performance Measurement",
+                icon: performanceTrack,
                 description: ``,
             },
         ],
@@ -269,9 +294,9 @@ brand perception.`,
                 subHeading: "Performance Measurement",
                 description: ``,
             },
-            "Brand Monitoring",
-            "Review Management",
-            "Crisis Response",
+            // "Brand Monitoring",
+            // "Review Management",
+            // "Crisis Response",
         ],
     },
     {
@@ -282,14 +307,17 @@ brand perception.`,
         list: [
             {
                 subHeading: "Mobile App Advertising",
+                icon: mobileAds,
                 description: ``,
             },
             {
                 subHeading: "SMS Marketing",
+                icon: smsAds,
                 description: ``,
             },
             {
                 subHeading: "Location-Based Marketing",
+                icon: locationAds,
                 description: ``,
             },
         ],
@@ -302,14 +330,17 @@ brand perception.`,
         list: [
             {
                 subHeading: "Partner Recruitment",
+                icon: "",
                 description: ``,
             },
             {
                 subHeading: "Commission Management",
+                icon: "",
                 description: ``,
             },
             {
                 subHeading: "Performance Tracking",
+                icon: performanceTrack,
                 description: ``,
             },
         ],
@@ -362,14 +393,17 @@ brand perception.`,
         list: [
             {
                 subHeading: "Local SEO",
+                icon: localSEO,
                 description: ``,
             },
             {
                 subHeading: "Google My Business Optimization",
+                icon: "",
                 description: ``,
             },
             {
                 subHeading: "Location-Based Targeting",
+                icon: "",
                 description: ``,
             },
         ],
@@ -768,27 +802,43 @@ export const galleryData = [
     { id: 5, platform: "Website", image: website },
     { id: 6, platform: "Facebook", image: facebook },
 ];
+
 export const uposDetails = {
     title: "GGCS Go To Package For UPOS",
     subTitle: "Get Flat Commission Discount With Add-On Cashback",
     list: [
         {
             label: "Organic Traffic on Social Media Handles ",
-            icon: Organic
+            icon: Organic,
         },
         {
             label: "Creative Posts, Videos,PromotionVideos,Promotion ",
-            icon: Post
+            icon: Post,
         },
         {
             label: "Content Creation Guide by GGCS",
-            icon: CCM
+            icon: CCM,
         },
         {
             label: "Cross-Channel Promotion ",
-            icon: ContentCreation
-        }
+            icon: ContentCreation,
+        },
     ],
     label: "Exclusive Discounted Price",
-    price: "Rs.799/- + GST*"
-}
+    price: "Rs.799/- + GST*",
+};
+
+export const addresses = [
+    {
+        id: 1,
+        title: "Ahmedabad Office",
+        address:
+            "Global Garner Sales Services Limited 5th floor,Grand Emporio, Motera Stadium Road, Ahmedabad,Gujarat 380005",
+    },
+    {
+        id: 2,
+        title: "Bengaluru Office",
+        address:
+            "4th floor, SAKET CALLIPOLIS, Sarjapur - Marathahalli Rd, near Wipro, Rainbow Drive,Bengaluru, Karnataka 560035",
+    },
+];
