@@ -294,9 +294,9 @@ export const servicesData = [
                 subHeading: "Performance Measurement",
                 description: ``,
             },
-            "Brand Monitoring",
-            "Review Management",
-            "Crisis Response",
+            // "Brand Monitoring",
+            // "Review Management",
+            // "Crisis Response",
         ],
     },
     {

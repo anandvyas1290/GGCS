@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Slider from "react-slick";
 
 import { rocket, services, arrow } from "../../../db/assets";
 import { ArrowRightIcon, ForwardIcon } from "@heroicons/react/24/outline";
@@ -13,7 +12,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 import {
     H1Animate,
     TextAnimate,
@@ -40,7 +39,7 @@ export default function Services(props) {
                         grabCursor={true}
                         centeredSlides={true}
                         loop={true}
-                        slidesPerView={"auto"}
+                        slidesPerView="auto"
                         coverflowEffect={{
                             rotate: 0,
                             stretch: 0,
@@ -51,12 +50,19 @@ export default function Services(props) {
                         //     el: ".swiper-pagination",
                         //     clickable: true,
                         // }}
+                        autoplay={{ delay: 3500, disableOnInteraction: false }}
+                        speed={800}
                         navigation={{
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
                             clickable: true,
                         }}
-                        modules={[EffectCoverflow, Pagination, Navigation]}
+                        modules={[
+                            EffectCoverflow,
+                            Pagination,
+                            Navigation,
+                            Autoplay,
+                        ]}
                         className="swiper_container"
                     >
                         {servicesData?.map((item, i) => {
@@ -74,7 +80,7 @@ export default function Services(props) {
                                         <img
                                             src={item?.icon}
                                             alt="slide_image"
-                                            className="w-56 h-56 !object-fill !rounded-full mb-8 bg-"
+                                            className="h-56 !object-contain mb-10 "
                                         />
 
                                         <h4 className="absolute bottom-0 text-2xl px-3 !text-center text-white font-medium mt-3 mb-2">
@@ -92,7 +98,7 @@ export default function Services(props) {
                                                         <img
                                                             src={arrow}
                                                             alt="services"
-                                                            className="w-5 h-5 !rotate-90 animate-flipArrow "
+                                                            className="w-5 h-5 !rotate-90 animate-flipArrow"
                                                         />
                                                         <p className="">
                                                             {item?.subHeading}
