@@ -35,7 +35,7 @@ export default {
                 g2: "#A44CEE",
                 g3: "#FF847F",
                 course1: "#B7B8E5",
-                course2: "##E5C9B7",
+                course2: "#E5C9B7",
                 course3: "#B7DEE6",
                 course4: "#B7E6CF",
                 course5: "#AEC6F4",

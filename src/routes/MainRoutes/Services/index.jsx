@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
 import { Modal } from "flowbite-react";
 
 import {
@@ -43,6 +42,7 @@ import {
     H1Animate,
     TextAnimate,
 } from "../../../components/Animation/H1Animate";
+import SwiperCarousel from "../../../components/Carousel/Swiper";
 
 export default function Services(props) {
     const [activeItem, setActiveItem] = useState({
@@ -54,41 +54,6 @@ export default function Services(props) {
         window.scrollTo(0, 0);
     }, []);
 
-    const settings = {
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        speed: 500,
-        arrows: false,
-        // adaptiveHeight: true,
-        responsive: [
-            {
-                breakpoint: 1920,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 2,
-                },
-            },
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                },
-            },
-            {
-                breakpoint: 625,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
-    };
     return (
         <div className="font-roboto">
             <section className="max-w-screen-xl px-3 pt-20 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-40">
@@ -168,7 +133,7 @@ export default function Services(props) {
                         </ul>
                     </div>
                     <div className="relative">
-                        <section className="w-full md:py-0">
+                        <section className="w-full md:-py-10">
                             <section className="relative hidden lg:flex">
                                 <video
                                     className="w-full h-[480px]"
@@ -327,72 +292,14 @@ export default function Services(props) {
                             Media Marketing
                         </h4>
                     </div>
-                    <div className="absolute right-14 bottom-14 border-2 rounded-full p-2 ps-2.5 cursor-pointer">
-                        <img src={play} alt="seo video" />
-                    </div>
+                    {/*  <div className="absolute right-14 bottom-14 border-2 rounded-full p-2 ps-2.5 cursor-pointer">
+                       <img src={play} alt="seo video" />
+                    </div> */}
                 </div>
 
                 {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-5 mt-14"> */}
                 <div className="mt-14">
-                    <Slider {...settings}>
-                        {servicesData?.map((item) => (
-                            <div
-                                className={`group transition-all duration-300 bg-white px-3 ${
-                                    activeItem[item?.id]
-                                        ? "bg-slate-100 rounded-lg"
-                                        : ""
-                                }`}
-                                key={item?.id}
-                            >
-                                <div className="text-center">
-                                    <h4 className="mt-5 mb-3 text-2xl font-semibold text-black2">
-                                        {item?.heading}
-                                    </h4>
-                                    <p className="mb-1 text-grey1">
-                                        {item?.desc}
-                                    </p>
-                                    {
-                                        <p
-                                            className={`text-left mt-1 text-grey1 ${
-                                                activeItem[item?.id]
-                                                    ? "h-fit"
-                                                    : ""
-                                            }`}
-                                        >
-                                            {activeItem[item?.id] &&
-                                                item?.desc2}
-                                        </p>
-                                    }
-                                </div>
-                                <div className="flex justify-center my-5">
-                                    <span
-                                        onClick={() => {
-                                            setActiveItem({
-                                                [item?.id]:
-                                                    !activeItem[item?.id],
-                                            });
-                                        }}
-                                        className="flex items-center justify-center border-b-2 cursor-pointer text-black2 group-hover:border-b-blue1 group-hover:text-blue1 group-hover:animate-services"
-                                    >
-                                        <p
-                                            className={`${
-                                                activeItem[item?.id]
-                                            } ?"!mr-3":""`}
-                                        >
-                                            {activeItem[item?.id]
-                                                ? "View Less"
-                                                : "Learn More"}
-                                        </p>
-                                        {activeItem[item?.id] ? null : (
-                                            <span>
-                                                <ArrowRightIcon className="w-4 h-4 font-extrabold " />
-                                            </span>
-                                        )}
-                                    </span>
-                                </div>
-                            </div>
-                        ))}
-                    </Slider>
+                    <SwiperCarousel carouselData={servicesData} />
                 </div>
             </section>
 
