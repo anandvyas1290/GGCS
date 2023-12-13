@@ -70,6 +70,12 @@ import {
     videoMaking,
 } from "./assets";
 
+import fullStack from "../assets/training/courses/fullStack.jpg";
+import backendDev from "../assets/training/courses/backendDev.jpg";
+import dataAnalytics from "../assets/training/courses/dataAnalytics.jpg";
+import mobileDev from "../assets/training/courses/mobileDev.jpg";
+import testing from "../assets/training/courses/testing.jpg";
+
 export const navMenu = [
     { id: 1, label: "About", slug: "/about" },
     { id: 2, label: "Why GGCS", slug: "/why-ggcs" },
@@ -845,96 +851,111 @@ export const addresses = [
 ];
 
 export const privacyPolicy = {
-    title: 'Privacy Policy',
+    title: "Privacy Policy",
     slug: "privacy-policy",
     desc: "Welcome to the Privacy Policy of Global Garner Consultancy Services (GGCS). This document articulates our commitment to safeguarding your privacy and outlines the procedures for collecting, utilizing, and securing your information. Please carefully review this policy to comprehend our practices.",
     list: [
         {
             id: 1,
-            title: ' Information Collection',
+            title: " Information Collection",
             info: "We collect information to enhance our services, which may include:",
             data: [
                 {
-                    content: "Personal Information: Your name, contact details, job title, and affiliations are gathered through registrations, newsletter subscriptions, and service usage."
-                }
-                , {
-                    content: "Financial Information: For transactions, we collect financial data (e.g., credit card information) securely, without retention on our servers."
+                    content:
+                        "Personal Information: Your name, contact details, job title, and affiliations are gathered through registrations, newsletter subscriptions, and service usage.",
                 },
                 {
-                    content: "Technical Information: We automatically collect technical details (IP addresses, browser specifications, device information) to optimize website functionality."
-                }
-            ]
+                    content:
+                        "Financial Information: For transactions, we collect financial data (e.g., credit card information) securely, without retention on our servers.",
+                },
+                {
+                    content:
+                        "Technical Information: We automatically collect technical details (IP addresses, browser specifications, device information) to optimize website functionality.",
+                },
+            ],
         },
         {
             id: 2,
-            title: 'Purpose of Information Use:            ',
+            title: "Purpose of Information Use:            ",
             info: "We use your information for:            ",
             data: [
                 {
-                    content: "Service Fulfillment: Personal information is used to respond to inquiries, provide customer support, and fulfill service requests."
-                }
-                , {
-                    content: "Marketing and Promotions: With your explicit consent, we send marketing communications and promotional content about our products, services, and industry insights."
+                    content:
+                        "Service Fulfillment: Personal information is used to respond to inquiries, provide customer support, and fulfill service requests.",
                 },
                 {
-                    content: "Analytics and Enhancement: Non-personal information is analyzed to understand user behavior, preferences, and trends, allowing continuous refinement of our website and services.                    "
-                }
-            ]
+                    content:
+                        "Marketing and Promotions: With your explicit consent, we send marketing communications and promotional content about our products, services, and industry insights.",
+                },
+                {
+                    content:
+                        "Analytics and Enhancement: Non-personal information is analyzed to understand user behavior, preferences, and trends, allowing continuous refinement of our website and services.                    ",
+                },
+            ],
         },
         {
             id: 3,
-            title: 'Information Sharing and Disclosure: ',
+            title: "Information Sharing and Disclosure: ",
             info: "We may share your information:",
             data: [
                 {
-                    content: "Third-Party Service Providers: Collaboration with providers enhances service delivery and functionality."
-                }
-                , {
-                    content: "Legal Compliance: Information may be disclosed to comply with applicable laws, regulations, or legal procedures.                    "
+                    content:
+                        "Third-Party Service Providers: Collaboration with providers enhances service delivery and functionality.",
                 },
                 {
-                    content: "Business Transfers: In mergers, acquisitions, or asset sales, your information may be transferred to the acquiring entity.                    "
-                }
-            ]
+                    content:
+                        "Legal Compliance: Information may be disclosed to comply with applicable laws, regulations, or legal procedures.                    ",
+                },
+                {
+                    content:
+                        "Business Transfers: In mergers, acquisitions, or asset sales, your information may be transferred to the acquiring entity.                    ",
+                },
+            ],
         },
         {
             id: 4,
-            title: 'Cookies and Tracking Technologies: ',
+            title: "Cookies and Tracking Technologies: ",
             info: "We use cookies and similar technologies: ",
             data: [
                 {
-                    content: "Cookies: These help gather insights into browsing behavior, preferences, and session data for a more personalized user experience.                    "
-                }
-                , {
-                    content: "Opt-Out: You can manage cookie preferences through browser settings, though disabling cookies may impact certain website functionalities."
-                }
-            ]
+                    content:
+                        "Cookies: These help gather insights into browsing behavior, preferences, and session data for a more personalized user experience.                    ",
+                },
+                {
+                    content:
+                        "Opt-Out: You can manage cookie preferences through browser settings, though disabling cookies may impact certain website functionalities.",
+                },
+            ],
         },
         {
             id: 5,
-            title: 'Data Security:',
+            title: "Data Security:",
             info: "We implement security measures to protect your information:            ",
             data: [
                 {
-                    content: "Security Protocols: Industry-standard measures prevent unauthorized access, disclosure, alteration, and destruction. "
+                    content:
+                        "Security Protocols: Industry-standard measures prevent unauthorized access, disclosure, alteration, and destruction. ",
                 },
                 {
-                    content: "Encryption: Sensitive data, including financial information, is encrypted for secure transmission and storage."
-                }
-            ]
+                    content:
+                        "Encryption: Sensitive data, including financial information, is encrypted for secure transmission and storage.",
+                },
+            ],
         },
         {
             id: 6,
-            title: 'Your Rights:',
+            title: "Your Rights:",
             info: "You have rights regarding your personal information:",
             data: [
                 {
-                    content: "Access and Correction: Contact us to access and correct your personal information.                    "
+                    content:
+                        "Access and Correction: Contact us to access and correct your personal information.                    ",
                 },
                 {
-                    content: "Opt-Out: Unsubscribe from marketing communications by following the instructions in our emails or contacting us directly."
-                }
-            ]
+                    content:
+                        "Opt-Out: Unsubscribe from marketing communications by following the instructions in our emails or contacting us directly.",
+                },
+            ],
         },
         {
             id: 7,
@@ -942,81 +963,83 @@ export const privacyPolicy = {
             info: "",
             data: [
                 {
-                    content: "Our services are not intended for individuals under the age of 16. We do not knowingly collect or process personal information from minors without parental consent."
-                }
-            ]
+                    content:
+                        "Our services are not intended for individuals under the age of 16. We do not knowingly collect or process personal information from minors without parental consent.",
+                },
+            ],
         },
         {
             id: 8,
-            title: 'Changes to the Privacy Policy:            ',
+            title: "Changes to the Privacy Policy:            ",
             info: "",
             data: [
                 {
-                    content: "We reserve the right to update this Privacy Policy periodically. Material changes will be communicated through our website.                    "
-                }
-            ]
+                    content:
+                        "We reserve the right to update this Privacy Policy periodically. Material changes will be communicated through our website.                    ",
+                },
+            ],
         },
         {
             id: 9,
-            title: 'Contact Information:',
+            title: "Contact Information:",
             info: "For inquiries or concerns about our Privacy Policy, contact us at contact@ggcs.com.            ",
             data: [
                 {
-                    content: ""
-                }
-                , {
-                    content: ""
+                    content: "",
                 },
                 {
-                    content: ""
-                }
-            ]
-        }
-    ]
-}
+                    content: "",
+                },
+                {
+                    content: "",
+                },
+            ],
+        },
+    ],
+};
 
 export const disclaimer = {
     desc: `Welcome to the Global Garner Consultancy Services Digital Marketing website ("Website"). By accessing and using this Website, you agree to comply with and be bound by the following disclaimer. Please read the disclaimer carefully before using our services.`,
     list: [
         {
             id: 1,
-            title: 'Accuracy of Information:            ',
+            title: "Accuracy of Information:            ",
             info: "Global Garner Consultancy Services strives to provide accurate and up-to-date information on this Website. However, we make no warranties or representations regarding the accuracy, completeness, or reliability of the information provided. Users are advised to independently verify the information before relying on it.            ",
         },
         {
             id: 2,
-            title: 'No Professional Advice:',
+            title: "No Professional Advice:",
             info: "The content on this Website is for informational purposes only and should not be construed as professional advice. Global Garner Consultancy Services is not responsible for any decisions made based on the information provided on the Website. Users are encouraged to seek professional advice relevant to their specific circumstances.",
         },
         {
             id: 3,
-            title: 'Third-Party Links',
+            title: "Third-Party Links",
             info: " This GGCS website may contain links to third-party websites. Global Garner Consultancy Services has no control over the content, accuracy, or availability of these external sites and is not responsible for any damages or losses arising from the use of such links. The inclusion of any third-party link does not imply endorsement by Global Garner Consultancy Services.",
         },
         {
             id: 4,
-            title: 'Limitation of Liability:            ',
+            title: "Limitation of Liability:            ",
             info: "GGCS, its affiliates, partners, employees, or agents will not be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in any way connected with the use of our website. This includes but is not limited to loss or damage to data, profits, or business interruption.",
         },
         {
             id: 5,
-            title: 'Changes and Modifications:            ',
+            title: "Changes and Modifications:            ",
             info: "Global Garner Consultancy Services reserves the right to modify, suspend, or discontinue any aspect of the Website at any time without prior notice. We do not guarantee that the Website will be error-free or uninterrupted.",
         },
         {
             id: 6,
-            title: 'Privacy and Security:',
+            title: "Privacy and Security:",
             info: "While Global Garner Consultancy Services takes reasonable measures to protect user data, we cannot guarantee the security of information transmitted over the Internet. Users are encouraged to review our Privacy Policy for details on data collection, storage, and usage practices.            ",
         },
         {
             id: 7,
-            title: 'Acceptance of Terms:            ',
+            title: "Acceptance of Terms:            ",
             info: "By using this Website, you acknowledge that you have read, understood, and agree to be bound by this disclaimer. Global Garner Consultancy Services reserves the right to update or change these terms at any time without notice.            ",
         },
     ],
     descp1: "If you have any questions or concerns about this disclaimer, please contact us at contact@ggcs.com.",
-    updated: "This Disclaimer was Last updated on December 10, 2023.    "
-}
+    updated: "This Disclaimer was Last updated on December 10, 2023.    ",
+};
 
 export const termsAndConditions = {
     title: "TERMS AND CONDITIONS    ",
@@ -1024,76 +1047,72 @@ export const termsAndConditions = {
     list: [
         {
             id: 1,
-            title: 'Acceptance of Terms',
+            title: "Acceptance of Terms",
             info: `By accessing or using the services provided by Global Garner Consultancy Services ("GGCS"), you agree to comply with and be bound by the following terms and conditions. If you do not agree to these terms, please refrain from using our services.            `,
         },
         {
             id: 2,
-            title: 'Services',
+            title: "Services",
             info: "GGCS offers digital marketing services, including but not limited to, social media management, search engine optimization, content creation, online advertising, and website development. The specifics of the services provided will be outlined in a separate agreement between GGCS and the client.            ",
         },
         {
             id: 3,
-            title: 'Client Responsibilities',
+            title: "Client Responsibilities",
             info: "Clients must provide accurate and timely information necessary for the delivery of services. GGCS is not responsible for any delays or deficiencies in service resulting from incomplete or inaccurate client-provided information.            ",
         },
         {
             id: 4,
-            title: 'Payments and Fees',
+            title: "Payments and Fees",
             info: "Clients agree to pay GGCS the fees specified in the service agreement. Payment terms, including due dates and acceptable forms of payment, will be outlined in the agreement. Failure to make timely payments may result in the suspension or termination of services.            ",
         },
         {
             id: 5,
-            title: 'Confidentiality',
+            title: "Confidentiality",
             info: "Both GGCS and the client agree to keep confidential any proprietary or sensitive information disclosed during the course of the engagement. This includes but is not limited to business strategies, marketing plans, and financial information.",
         },
         {
             id: 6,
-            title: 'Intellectual Property',
+            title: "Intellectual Property",
             info: "All intellectual property developed or provided by GGCS in the course of providing services, including but not limited to content, designs, and software, shall remain the property of GGCS unless otherwise agreed upon in writing.",
         },
         {
             id: 7,
-            title: 'Termination',
+            title: "Termination",
             info: "Either party may terminate the service agreement with written notice if the other party breaches a material term of the agreement. GGCS reserves the right to terminate services immediately if the client engages in any illegal or unethical activities.",
         },
         {
             id: 8,
-            title: 'Limitation of Liability',
+            title: "Limitation of Liability",
             info: "GGCS shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with the services provided. GGCS's total liability shall be limited to the amount paid by the client for the specific services in question.            ",
         },
         {
             id: 9,
-            title: 'Governing Law',
+            title: "Governing Law",
             info: "These terms and conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising out of or in connection with these terms and conditions shall be subject to the exclusive jurisdiction of the courts of Ahmedabad, Gujarat.",
         },
         {
             id: 10,
-            title: 'Changes to Terms and Conditions',
+            title: "Changes to Terms and Conditions",
             info: "GGCS reserves the right to update or modify these terms and conditions at any time without prior notice. Clients are encouraged to review the terms regularly. Continued use of GGCS services after any such changes constitutes acceptance of the updated terms.            ",
         },
     ],
-    note: "By using GGCS services, you acknowledge that you have read, understood, and agreed to these terms and conditions. If you have any questions or concerns, contact@ggcs.com.    "
-}
-
+    note: "By using GGCS services, you acknowledge that you have read, understood, and agreed to these terms and conditions. If you have any questions or concerns, contact@ggcs.com.    ",
+};
 
 export const GGCSPolicy = [
     {
         label: "Privacy Policy",
-        slug: "privacy-policy"
+        slug: "privacy-policy",
     },
     {
         label: "Terms And Conditions",
-        slug: "terms-conditions"
+        slug: "terms-conditions",
     },
     {
         label: "Disclaimer",
-        slug: "disclaimer"
-    }
-]
-
-
-
+        slug: "disclaimer",
+    },
+];
 
 // export const GGCSPolicy = [{
 //     title: 'Privacy Policy',
@@ -1324,3 +1343,48 @@ export const GGCSPolicy = [
 //     ],
 //     note: "By using GGCS services, you acknowledge that you have read, understood, and agreed to these terms and conditions. If you have any questions or concerns, contact@ggcs.com.    "
 // }]
+
+export const courses = [
+    {
+        id: 1,
+        name: "Full Stack Web Development",
+        desc: "Become job-ready in 24 weeks",
+        icon: fullStack,
+        bg: "bg-course1",
+        features: "Full Stack Developer, Software Engineer & much more.",
+    },
+    {
+        id: 2,
+        name: "Backend Development",
+        desc: "Become job-ready in 24 weeks",
+        icon: backendDev,
+        bg: "bg-course2",
+        features: "Backend Web Developer, API developer & much more.",
+    },
+
+    {
+        id: 3,
+        name: "Data Analytics",
+        desc: "Become job-ready in 24 weeks",
+        icon: dataAnalytics,
+        bg: "bg-course3",
+        features:
+            "Data Engineer, Data Analyst, Machine Learning Engineer & much more.",
+    },
+    {
+        id: 4,
+        name: "Mobile Development",
+        desc: "Become job-ready in 24 weeks",
+        icon: mobileDev,
+        bg: "bg-course4",
+        features: "Mobile App Developer & much more.",
+    },
+    {
+        id: 5,
+        name: "Software Testing & Automation",
+        desc: "Become job-ready in 24 weeks",
+        icon: testing,
+        bg: "bg-course5",
+        features: "QA Tester, Automation Engineer & much more.",
+    },
+];

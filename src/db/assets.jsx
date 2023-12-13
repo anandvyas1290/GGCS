@@ -1,11 +1,12 @@
-// import bgMain from "../../../assets/services/bgMain.webp";
-// import design1 from "../../../assets/services/design1.webp";
-// import design2 from "../../../assets/services/design2.webp";
-// import design3 from "../../../assets/services/design3.webp";
-// import design4 from "../../../assets/services/design4.webp";
-// import design5 from "../../../assets/services/design5.webp";
-// import design6 from "../../../assets/services/design6.webp";
-// import banner from "../../../assets/services/banner.webp";
+import bgMain from "../assets/services/bgMain.webp";
+import design1 from "../assets/services/design1.webp";
+import design2 from "../assets/services/design2.webp";
+import design3 from "../assets/services/design3.webp";
+import design4 from "../assets/services/design4.webp";
+import design5 from "../assets/services/design5.webp";
+import design6 from "../assets/services/design6.webp";
+import banner from "../assets/services/banner.webp";
+
 import socialTree from "../assets/services/socialTree.webp";
 import list1 from "../assets/home/process/list1.svg";
 import list2 from "../assets/home/process/list2.svg";
@@ -95,6 +96,7 @@ import videoMaking from "../assets/otherServices/jpg/videoMaking.jpg";
 // import review from "../assets/otherServices/jpg/offPageSeo.jpg";
 // import smsAds from "../assets/otherServices/jpg/offPageSeo.jpg";
 
+export { bgMain, design1, design2, design3, design4, design5, design6 };
 export { serFB, serLinkedin, serInsta, serPint };
 export { business1, business2, business3 };
 export { smFB, smlinkedin, smInsta, smX };

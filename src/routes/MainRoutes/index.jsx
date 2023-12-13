@@ -6,6 +6,7 @@ import About from "./About";
 import Services from "./Services";
 // import Blog from "./Blog";
 import Contact from "./Contact";
+import Training from "./Training";
 import Gallery from "./Gallery";
 import WhyGGCS from "./WhyGGCS";
 import UposPackage from "./UposPackage/UposPackage";
@@ -32,6 +33,7 @@ export default function MainRoutes(props) {
         { path: "/about", element: <About {...props} /> },
         { path: "/services", element: <Services {...props} /> },
         { path: "/why-ggcs", element: <WhyGGCS {...props} /> },
+        { path: "/training", element: <Training {...props} /> },
         { path: "/gallery", element: <Gallery {...props} /> },
         // { path: "/blog", element: <Blog {...props} /> },
         { path: "/contact", element: <Contact {...props} /> },

@@ -14,11 +14,21 @@ import {
     ClientImg,
     InputImg,
     StatImg,
-    serviceVideo
+    serviceVideo,
 } from "../../../db/assets";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+// import {
+//     bgMain,
+//     design1,
+//     design2,
+//     design3,
+//     design4,
+//     design5,
+//     design6,
+// } from "../../../db/assets";
 
 import {
     Price,
@@ -29,7 +39,10 @@ import {
 } from "../../../db/dummy";
 
 import Pricing from "../../../components/Pricing";
-import { H1Animate, TextAnimate } from "../../../components/Animation/H1Animate";
+import {
+    H1Animate,
+    TextAnimate,
+} from "../../../components/Animation/H1Animate";
 
 export default function Services(props) {
     const [activeItem, setActiveItem] = useState({
@@ -78,91 +91,7 @@ export default function Services(props) {
     };
     return (
         <div className="font-roboto">
-            <section className='w-full  md:py-32'>
-                <section className='hidden lg:flex relative'>
-                    <video className="w-full h-[480px]" autoPlay muted loop>
-                        <source src={serviceVideo} type="video/mp4" />
-                    </video>
-                </section>
-            </section>
-            {/* <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
-                <div className="absolute top-0 left-0 w-full h-full mix-blend-overlay opacity-80 -z-[1px]">
-                    <img
-                        src={bgMain}
-                        alt="social-marketing"
-                        className="object-cover w-full h-full"
-                    />
-                    <div>
-                        <img
-                            src={design1}
-                            alt="social-marketing"
-                            className="absolute -top-[12%] right-[11%] animate-servicesSwing origin-bottom-left"
-                        />
-                        <img
-                            src={design2}
-                            alt="social-marketing"
-                            className="absolute bottom-[2%] 1left-[2%] animate-servicesSwing origin-bottom-left"
-                        />
-                        <img
-                            src={design3}
-                            alt="social-marketing"
-                            className="absolute bottom-[48%] left-[14%] animate-servicesStar1"
-                        />
-                        <img
-                            src={design4}
-                            alt="social-marketing"
-                            className="absolute bottom-[42%] left-[15.5%] animate-servicesStar2"
-                        />
-                        <img
-                            src={design5}
-                            alt="social-marketing"
-                            className="absolute bottom-[48%] left-[16.3%] animate-servicesStar3"
-                        />
-                        <img
-                            src={design6}
-                            alt="social-marketing"
-                            className="absolute top-[14%] right-[15%] animate-servicesStar4"
-                        />
-                    </div>
-                </div>
-                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-14">
-                    <div className="lg:w-10/12">
-                        <p className="mb-4 text-lg font-medium text-white2">
-                            Social Media Marketing
-                        </p>
-                        <h1 className="text-7xl font-bold -space-[0.03em] text-white">
-                            Enabling your brand’s Success via social media
-                        </h1>
-                    </div>
-                </div>
-            </section>
-            <div className="flex justify-center max-w-screen-xl mx-auto">
-                <div className="relative z-10 -mt-64">
-                    <img
-                        src={banner}
-                        alt="social-media-marketing"
-                        className="rounded-3xl"
-                    />
-                </div>
-            </div> */}
-
-            <section className="py-10 sm:py-20 bg-grey5">
-                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
-                    <div className="flex mb-16 md:justify-center">
-                        <div className="text-center md:w-8/12">
-                            <H1Animate className="text-4xl sm:text-5xl sm:text-[54px] leading-tight font-semibold text-black2">
-                                How can a perth social media help grow my
-                                business?
-                            </H1Animate>
-                        </div>
-                    </div>
-                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
-                        <Pricing Price={Price} />
-                    </div>
-                </div>
-            </section>
-
-            {/* <section className="max-w-screen-xl px-3 pt-20 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-40">
+            <section className="max-w-screen-xl px-3 pt-20 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-40">
                 <div className="grid md:grid-cols-2">
                     <div className="lg:pl-16">
                         <ul>
@@ -239,7 +168,22 @@ export default function Services(props) {
                         </ul>
                     </div>
                     <div className="relative">
-                        <img src={socialTree} alt="services" className="" />
+                        <section className="w-full md:py-0">
+                            <section className="relative hidden lg:flex">
+                                <video
+                                    className="w-full h-[480px]"
+                                    autoPlay
+                                    muted
+                                    loop
+                                >
+                                    <source
+                                        src={serviceVideo}
+                                        type="video/mp4"
+                                    />
+                                </video>
+                            </section>
+                        </section>
+                        {/* <img src={socialTree} alt="services" className="" />
                         <div className="">
                             <div
                                 className="absolute -top-5 -left-6 z-[1] animate-blinkTransform1"
@@ -287,88 +231,85 @@ export default function Services(props) {
                             >
                                 <img src={serLinkedin} alt="shape3" />
                             </div>
-                        </div>
+                        </div> */}
+                    </div>
+                </div>
+            </section>
+
+            {/* <section className="pt-44 pb-80 relative bg-gradient-to-r from-[#4260FF] to-[#2346FF]">
+                <div className="absolute top-0 left-0 w-full h-full mix-blend-overlay opacity-80 -z-[1px]">
+                    <img
+                        src={bgMain}
+                        alt="social-marketing"
+                        className="object-cover w-full h-full"
+                    />
+                    <div>
+                        <img
+                            src={design1}
+                            alt="social-marketing"
+                            className="absolute -top-[12%] right-[11%] animate-servicesSwing origin-bottom-left"
+                        />
+                        <img
+                            src={design2}
+                            alt="social-marketing"
+                            className="absolute bottom-[2%] 1left-[2%] animate-servicesSwing origin-bottom-left"
+                        />
+                        <img
+                            src={design3}
+                            alt="social-marketing"
+                            className="absolute bottom-[48%] left-[14%] animate-servicesStar1"
+                        />
+                        <img
+                            src={design4}
+                            alt="social-marketing"
+                            className="absolute bottom-[42%] left-[15.5%] animate-servicesStar2"
+                        />
+                        <img
+                            src={design5}
+                            alt="social-marketing"
+                            className="absolute bottom-[48%] left-[16.3%] animate-servicesStar3"
+                        />
+                        <img
+                            src={design6}
+                            alt="social-marketing"
+                            className="absolute top-[14%] right-[15%] animate-servicesStar4"
+                        />
+                    </div>
+                </div>
+                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-14">
+                    <div className="lg:w-10/12">
+                        <p className="mb-4 text-lg font-medium text-white2">
+                            Social Media Marketing
+                        </p>
+                        <h1 className="text-7xl font-bold -space-[0.03em] text-white">
+                            Enabling your brand’s Success via social media
+                        </h1>
                     </div>
                 </div>
             </section> */}
+            {/* <div className="flex justify-center max-w-screen-xl mx-auto">
+                <div className="relative z-10 -mt-64">
+                    <img
+                        src={banner}
+                        alt="social-media-marketing"
+                        className="rounded-3xl"
+                    />
+                </div>
+            </div> */}
 
-            <section className="max-w-screen-xl pb-0 mx-auto mt-10 sm:pb-14 md:pb-28">
-                <div className="py-10 md:flex">
-                    <div className="w-full px-10 py-10 md:w-1/2 sm:mx-3">
-                        <div className="relative">
-                            <div>
-                                <img
-                                    src={GradientBgImg}
-                                    alt="GradientBgImg"
-                                    className="-scale-x-[1]"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                    src={ClientImg}
-                                    alt=""
-                                    className="absolute bottom-0 right-0 -scale-x-[1]"
-                                />
-                                <img
-                                    src={InputImg}
-                                    alt=""
-                                    className="absolute top-32 sm:-left-10"
-                                />
-                                <img
-                                    src={StatImg}
-                                    alt=""
-                                    className="absolute shadow-2xl top-20 sm:-right-10 "
-                                />
-                            </div>
+            {/* /pricing section */}
+            <section className="py-10 sm:py-20 bg-grey5">
+                <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
+                    <div className="flex mb-16 md:justify-center">
+                        <div className="text-center md:w-8/12">
+                            <H1Animate className="text-4xl sm:text-5xl sm:text-[54px] leading-tight font-semibold text-black2">
+                                How can a perth social media help grow my
+                                business?
+                            </H1Animate>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 sm:ms-20 sm:mx-3">
-                        <div className="px-3 my-10 sm:px-0">
-                            <TextAnimate className="!text-3xl font-tangerine mb-5  font-semibold text-blue1">
-                                Get the best
-                            </TextAnimate>
-                            <H1Animate className="mb-4 text-4xl font-semibold sm:text-5xl">
-                                Social Media is the
-                                <br />
-                                Fastest growing trend
-                            </H1Animate>
-
-                            <div className="my-10">
-                                <div>
-                                    <h5 className="mb-1 text-base">
-                                        Market Research
-                                    </h5>
-                                    <div className="w-full md:w-2/3 border-2 border-gray-100 py-0.5 px-1 flex items-center rounded-full mb-4">
-                                        <div
-                                            className="h-3 bg-green-600 rounded-full dark:bg-green-500"
-                                            style={{ width: "74%" }}
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <h5 className="mb-1 text-base">
-                                        SEO Consultancy
-                                    </h5>
-                                    <div className="w-full md:w-2/3 border-2 border-gray-100 py-0.5 px-1 flex items-center rounded-full mb-4">
-                                        <div
-                                            className="h-3 bg-yellow-600 rounded-full dark:bg-yellow-500"
-                                            style={{ width: "92%" }}
-                                        ></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h5 className="mb-1 text-base">
-                                        SEO Consultancy
-                                    </h5>
-                                    <div className="w-full md:w-2/3 border-2 border-gray-100 py-0.5 px-1 flex items-center rounded-full mb-4">
-                                        <div
-                                            className="bg-[#9666FE] h-3 rounded-full dark:bg-[#9666FE]"
-                                            style={{ width: "54%" }}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
+                        <Pricing Price={Price} />
                     </div>
                 </div>
             </section>
@@ -396,10 +337,11 @@ export default function Services(props) {
                     <Slider {...settings}>
                         {servicesData?.map((item) => (
                             <div
-                                className={`group transition-all duration-300 bg-white px-3 ${activeItem[item?.id]
-                                    ? "bg-slate-100 rounded-lg"
-                                    : ""
-                                    }`}
+                                className={`group transition-all duration-300 bg-white px-3 ${
+                                    activeItem[item?.id]
+                                        ? "bg-slate-100 rounded-lg"
+                                        : ""
+                                }`}
                                 key={item?.id}
                             >
                                 <div className="text-center">
@@ -411,10 +353,11 @@ export default function Services(props) {
                                     </p>
                                     {
                                         <p
-                                            className={`text-left mt-1 text-grey1 ${activeItem[item?.id]
-                                                ? "h-fit"
-                                                : ""
-                                                }`}
+                                            className={`text-left mt-1 text-grey1 ${
+                                                activeItem[item?.id]
+                                                    ? "h-fit"
+                                                    : ""
+                                            }`}
                                         >
                                             {activeItem[item?.id] &&
                                                 item?.desc2}
@@ -432,8 +375,9 @@ export default function Services(props) {
                                         className="flex items-center justify-center border-b-2 cursor-pointer text-black2 group-hover:border-b-blue1 group-hover:text-blue1 group-hover:animate-services"
                                     >
                                         <p
-                                            className={`${activeItem[item?.id]
-                                                } ?"!mr-3":""`}
+                                            className={`${
+                                                activeItem[item?.id]
+                                            } ?"!mr-3":""`}
                                         >
                                             {activeItem[item?.id]
                                                 ? "View Less"
