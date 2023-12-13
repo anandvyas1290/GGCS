@@ -68,13 +68,34 @@ import {
     smsAds,
     UX,
     videoMaking,
+    automation,
+    campaignManage,
+    commission,
+    contentCreation,
+    displayAds,
+    emailAnalytics,
+    googleAds,
+    landingPageOpti,
+    partnerRecruit,
+    performanceMeasure,
+    performanceTracking,
+    socialAds,
+    socialMediaAds,
+    socialStrategy,
+    testing,
+    videoAds,
+    videoProduction,
+    youtubeOptimise,
+    businessOptimization,
+    locationTargeting,
+    userEngagement,
 } from "./assets";
 
 import fullStack from "../assets/training/courses/fullStack.jpg";
 import backendDev from "../assets/training/courses/backendDev.jpg";
 import dataAnalytics from "../assets/training/courses/dataAnalytics.jpg";
 import mobileDev from "../assets/training/courses/mobileDev.jpg";
-import testing from "../assets/training/courses/testing.jpg";
+import testingAutomation from "../assets/training/courses/testing.jpg";
 
 export const navMenu = [
     { id: 1, label: "About", slug: "/about" },
@@ -119,19 +140,19 @@ export const servicesData = [
         list: [
             {
                 subHeading: "Social Media Strategy",
-                icon: "",
+                icon: socialStrategy,
                 description:
                     "Craft a strategic Social Media Strategy with us to align every effort with your business objectives. This not only establishes a consistent online presence but also builds brand loyalty and customer trust.",
             },
             {
                 subHeading: "Content Creation",
-                icon: "",
+                icon: contentCreation,
                 description:
                     "Engage your audience effectively with our compelling Content Creation. By telling your brand story visually, we not only spark conversations but also increase sharing, broadening your reach and solidifying your brand identity.",
             },
             {
                 subHeading: "Social Advertising",
-                icon: "",
+                icon: socialAds,
                 description:
                     "Leverage the power of Social Advertising to amplify your brand's reach. Our targeted paid campaigns not only boost brand awareness but also result in a higher likelihood of conversion, maximizing your return on investment.",
             },
@@ -171,16 +192,19 @@ export const servicesData = [
         list: [
             {
                 subHeading: "Campaign Management",
+                icon: campaignManage,
                 description:
                     "Implement strategic Campaign Management with us to keep your audience engaged and informed. This not only builds a loyal customer base but also increases the potential for repeat business.",
             },
             {
                 subHeading: "Automation",
+                icon: automation,
                 description:
                     "Our Automation services deliver personalized content based on user behavior, saving time and enhancing the overall customer experience. The result? Improved customer loyalty and satisfaction.",
             },
             {
                 subHeading: "Email Analytics",
+                icon: emailAnalytics,
                 description:
                     "Analyze and optimize your campaigns with our Email Analytics. This not only ensures your messages resonate with your audience but also provides actionable insights for continuous improvement",
             },
@@ -194,6 +218,7 @@ export const servicesData = [
         list: [
             {
                 subHeading: "Google Ads",
+                icon: googleAds,
                 description: `Maximize your brand's visibility with our strategic management of Google Ads. This not only
             drives targeted traffic but also ensures efficient budget utilization, maximizing your return on
             advertising investment.
@@ -201,12 +226,14 @@ export const servicesData = [
             },
             {
                 subHeading: "Social Media Ads",
+                icon: socialMediaAds,
                 description: `Craft and monitor paid Social Media Ads with us, leveraging platforms like Facebook and
                 Instagram to boost brand awareness. The result? Increased visibility, lead generation, and
                 conversions.`,
             },
             {
                 subHeading: "Display Advertising",
+                icon: displayAds,
                 description: `Enhance brand visibility with visually appealing Display Advertising on relevant websites. This
                 not only drives traffic but also increases brand recognition and consideration among your target
                 audience.
@@ -241,11 +268,11 @@ export const servicesData = [
         id: 7,
         heading: "Analytics and Data Analysis",
         icon: analytics,
-        slug: "#",
+        slug: "data-analysis",
         list: [
             {
                 subHeading: "Performance Tracking",
-                icon: performanceTrack,
+                icon: performanceTracking,
                 description: ``,
             },
             {
@@ -264,7 +291,7 @@ export const servicesData = [
         id: 8,
         heading: "Influencer Marketing",
         icon: influencerMarketing,
-        slug: "#",
+        slug: "influencer-marketing",
         list: [
             {
                 subHeading: "Influencer Marketing",
@@ -278,7 +305,7 @@ export const servicesData = [
             },
             {
                 subHeading: "Performance Measurement",
-                icon: performanceTrack,
+                icon: performanceMeasure,
                 description: ``,
             },
         ],
@@ -287,30 +314,42 @@ export const servicesData = [
         id: 9,
         heading: "Online Reputation Management (ORM)",
         icon: onlineReputation,
-        slug: "#",
+        slug: "online-reputation-management",
         list: [
             {
                 subHeading: "Performance Measurement",
+                icon: performanceMeasure,
                 description: ``,
             },
             {
                 subHeading: "Performance Measurement",
+                icon: performanceMeasure,
                 description: ``,
             },
             {
                 subHeading: "Performance Measurement",
+                icon: performanceMeasure,
                 description: ``,
             },
             // "Brand Monitoring",
-            // "Review Management",
-            // "Crisis Response",
+            {
+                subHeading: "Review Management",
+                icon: review,
+                description: ``,
+            },
+            {
+                subHeading: "Crisis Response",
+                icon: crisis,
+                description: ``,
+            },
+            ,
         ],
     },
     {
         id: 10,
         heading: "Mobile Marketing",
         icon: mobileMarketing,
-        slug: "#",
+        slug: "mobile-marketing",
         list: [
             {
                 subHeading: "Mobile App Advertising",
@@ -333,16 +372,16 @@ export const servicesData = [
         id: 11,
         heading: "Affiliate Marketing:",
         icon: affiliateMarketing,
-        slug: "#",
+        slug: "affiliate-marketing",
         list: [
             {
                 subHeading: "Partner Recruitment",
-                icon: "",
+                icon: partnerRecruit,
                 description: ``,
             },
             {
                 subHeading: "Commission Management",
-                icon: "",
+                icon: commission,
                 description: ``,
             },
             {
@@ -356,18 +395,21 @@ export const servicesData = [
         id: 12,
         heading: "Conversion Rate Optimization (CRO)",
         icon: cro,
-        slug: "#",
+        slug: "conversion-rate-optimization",
         list: [
             {
                 subHeading: "A/B Testing",
+                icon: testing,
                 description: ``,
             },
             {
                 subHeading: "Landing Page Optimization",
+                icon: landingPageOpti,
                 description: ``,
             },
             {
                 subHeading: "Video Advertising",
+                icon: videoAds,
                 description: ``,
             },
         ],
@@ -376,18 +418,21 @@ export const servicesData = [
         id: 13,
         heading: "Video Marketing",
         icon: videoMarketing,
-        slug: "#",
+        slug: "video-marketing",
         list: [
             {
                 subHeading: "Video Production",
+                icon: videoProduction,
                 description: ``,
             },
             {
                 subHeading: "YouTube Optimization",
+                icon: youtubeOptimise,
                 description: ``,
             },
             {
                 subHeading: "Video Advertising",
+                icon: videoAds,
                 description: ``,
             },
         ],
@@ -396,7 +441,7 @@ export const servicesData = [
         id: 14,
         heading: "Local Search Marketing",
         icon: localSEO,
-        slug: "#",
+        slug: "local-search-marketing",
         list: [
             {
                 subHeading: "Local SEO",
@@ -405,12 +450,12 @@ export const servicesData = [
             },
             {
                 subHeading: "Google My Business Optimization",
-                icon: "",
+                icon: businessOptimization,
                 description: ``,
             },
             {
                 subHeading: "Location-Based Targeting",
-                icon: "",
+                icon: locationTargeting,
                 description: ``,
             },
         ],
@@ -419,19 +464,20 @@ export const servicesData = [
         id: 15,
         heading: "Chatbot Integration",
         icon: chatBot,
-        slug: "#",
+        slug: "chatbot-integration",
         list: [
             {
                 subHeading: "Chatbot Development",
-                description: ``,
+                description: chatBot,
             },
             {
                 subHeading: "Customer Support Automation",
+                icon: automation,
                 description: ``,
             },
             {
                 subHeading: "User Engagement",
-                description: ``,
+                description: userEngagement,
             },
         ],
     },
@@ -1384,7 +1430,7 @@ export const courses = [
         id: 5,
         name: "Software Testing & Automation",
         desc: "Become job-ready in 24 weeks",
-        icon: testing,
+        icon: testingAutomation,
         bg: "bg-course5",
         features: "QA Tester, Automation Engineer & much more.",
     },

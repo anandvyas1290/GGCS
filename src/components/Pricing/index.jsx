@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 
-import Tabs from "./UI/Tabs";
-import { pricingServices } from "../db/dummy";
-import { PrimaryBtn } from "./Button";
+import Tabs from "../UI/Tabs";
+import { pricingServices } from "../../db/dummy";
+import { PrimaryBtn } from "../Button";
 
 function Pricing({ Price }) {
     const [state, setState] = useState({
@@ -65,7 +65,7 @@ function Pricing({ Price }) {
                 {Price?.map((item, index) => (
                     <div
                         key={index}
-                        className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg  shadow cursor-pointer"
+                        className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg shadow cursor-pointer"
                     >
                         <div>
                             <h3 className="mb-1 text-2xl font-semibold">
@@ -116,11 +116,21 @@ function Pricing({ Price }) {
                         </div>
                         <PrimaryBtn
                             onClick={() => {
+                                navigate("/plans");
+                            }}
+                            size="px-8 py-2"
+                            bgColor="bg-card2"
+                            className="mb-4 w-full !rounded-xl !bg-transparent !border-2 !text-card2 border-card2 hover:!bg-card2 hover:!border-card2 hover:!text-white"
+                        >
+                            View Details
+                        </PrimaryBtn>
+                        <PrimaryBtn
+                            onClick={() => {
                                 navigate("/contact");
                             }}
                             size="px-8 py-2"
-                            bgColor="bg-primaryBtn"
-                            className="border-2 rounded-xl border-primaryBtn bg-0 w-full"
+                            // bgColor="bg-primaryBtn"
+                            className="w-full rounded-xl !bg-white  !text-primary border-0 hover:!text-white hover:!bg-gradient-to-r from-g1 via-g2 to-g3 hover:!bg-[length:100%_100%] hover:!animate-gradient "
                         >
                             Join this Plan
                         </PrimaryBtn>

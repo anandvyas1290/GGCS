@@ -6,6 +6,7 @@ import { useRoutes } from "react-router-dom";
 import { servicesData } from "../../db/dummy";
 import BackNavigate from "../../components/UI/BackNavigate";
 import { OtherServices } from "../../components/OtherServices";
+import PricingDetails from "../../components/Pricing/PricingDetails";
 
 export default function OtherRoutess(props) {
     let location = useLocation();
@@ -22,6 +23,10 @@ export default function OtherRoutess(props) {
         {
             path: "/*",
             element: <OtherServices data={serviceData[0]} {...props} />,
+        },
+        {
+            path: "/plans",
+            element: <PricingDetails {...props} />,
         },
     ]);
     return (

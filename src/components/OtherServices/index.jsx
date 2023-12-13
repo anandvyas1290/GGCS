@@ -4,7 +4,7 @@ import { H1Animate } from "../Animation/H1Animate";
 import Container from "../Layout/Layout";
 
 export function OtherServices({ data }) {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     return (
         <>
             <div className={`py-20 sm:py-32`}>

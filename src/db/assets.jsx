@@ -91,10 +91,27 @@ import review from "../assets/otherServices/jpg/review.jpg";
 import smsAds from "../assets/otherServices/jpg/smsAds.jpg";
 import UX from "../assets/otherServices/jpg/UX.jpg";
 import videoMaking from "../assets/otherServices/jpg/videoMaking.jpg";
-// import review from "../assets/otherServices/jpg/offPageSeo.jpg";
-// import smsAds from "../assets/otherServices/jpg/offPageSeo.jpg";
-// import review from "../assets/otherServices/jpg/offPageSeo.jpg";
-// import smsAds from "../assets/otherServices/jpg/offPageSeo.jpg";
+import automation from "../assets/otherServices/jpg/automation.jpg";
+import campaignManage from "../assets/otherServices/jpg/campaignManage.jpg";
+import commission from "../assets/otherServices/jpg/commission.jpg";
+import contentCreation from "../assets/otherServices/jpg/contentCreation.jpg";
+import displayAds from "../assets/otherServices/jpg/displayAds.jpg";
+import emailAnalytics from "../assets/otherServices/jpg/emailAnalytics.jpg";
+import googleAds from "../assets/otherServices/jpg/googleAds.jpg";
+import landingPageOpti from "../assets/otherServices/jpg/landingPageOpti.jpg";
+import partnerRecruit from "../assets/otherServices/jpg/partnerRecruit.jpg";
+import performanceMeasure from "../assets/otherServices/jpg/performanceMeasure.jpg";
+import performanceTracking from "../assets/otherServices/jpg/performanceTracking.jpg";
+import socialAds from "../assets/otherServices/jpg/socialAds.jpg";
+import socialMediaAds from "../assets/otherServices/jpg/socialMediaAds.jpg";
+import socialStrategy from "../assets/otherServices/jpg/socialStrategy.jpg";
+import testing from "../assets/otherServices/jpg/testing.jpg";
+import videoAds from "../assets/otherServices/jpg/videoAds.jpg";
+import videoProduction from "../assets/otherServices/jpg/videoProduction.jpg";
+import youtubeOptimise from "../assets/otherServices/jpg/youtubeOptimise.jpg";
+import businessOptimization from "../assets/otherServices/jpg/businessOptimization.jpg";
+import locationTargeting from "../assets/otherServices/jpg/locationTargeting.jpg";
+import userEngagement from "../assets/otherServices/jpg/userEngagement.jpg";
 
 export { bgMain, design1, design2, design3, design4, design5, design6 };
 export { serFB, serLinkedin, serInsta, serPint };
@@ -114,7 +131,6 @@ export {
     office,
     contactBg,
 };
-
 export {
     seo,
     smm,
@@ -136,11 +152,8 @@ export {
     arrow,
     serviceVideo,
 };
-
 export { flyer, instagram, newsletter, thumbnail, website, facebook };
-
 export { Organic, Post, CCM, ContentCreation };
-
 export {
     onPageSeo,
     offPageSeo,
@@ -162,4 +175,25 @@ export {
     smsAds,
     UX,
     videoMaking,
+    automation,
+    campaignManage,
+    commission,
+    contentCreation,
+    displayAds,
+    emailAnalytics,
+    googleAds,
+    landingPageOpti,
+    partnerRecruit,
+    performanceMeasure,
+    performanceTracking,
+    socialAds,
+    socialMediaAds,
+    socialStrategy,
+    testing,
+    videoAds,
+    videoProduction,
+    youtubeOptimise,
+    businessOptimization,
+    locationTargeting,
+    userEngagement,
 };
