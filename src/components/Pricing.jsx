@@ -5,6 +5,7 @@ import Slider from "react-slick";
 
 import Tabs from "./UI/Tabs";
 import { pricingServices } from "../db/dummy";
+import { PrimaryBtn } from "./Button";
 
 function Pricing({ Price }) {
     const [state, setState] = useState({
@@ -113,14 +114,22 @@ function Pricing({ Price }) {
                                 ))}
                             </ul>
                         </div>
-                        <div
+                        <PrimaryBtn
                             onClick={() => {
                                 navigate("/contact");
                             }}
-                            className="text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-semibold rounded-lg text-lg px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900 cursor-pointer hover:bg-white hover:text-blue-500"
+                            size="px-8 py-2"
+                            bgColor="bg-primaryBtn"
+                            className="border-2 rounded-xl border-primaryBtn bg-0 w-full"
                         >
                             Join this Plan
-                        </div>
+                        </PrimaryBtn>
+                        {/* <div
+
+                            className="text-white bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-semibold rounded-lg text-lg px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900 cursor-pointer hover:bg-white hover:text-blue-500"
+                        >
+                            Join this Plan
+                        </div> */}
                     </div>
                 ))}
             </Slider>

@@ -32,7 +32,7 @@ const H5 = ({ children, className }) => {
     return <h5 className={`text-xl font-semibold ${className}`}>{children}</h5>;
 };
 const H6 = ({ children, className }) => {
-    return <h5 className={` font-semibold ${className}`}>{children}</h5>;
+    return <h5 className={`text-lg font-semibold ${className}`}>{children}</h5>;
 };
 // const PrimaryBtn = ({ children, className }) => {
 //     return (
@@ -69,7 +69,7 @@ export default function Footer() {
                                 Data-Driven Insights
                             </p>
                         </div>
-                        <div className="">
+                        {/* <div className="">
                             <PrimaryBtn
                                 size="px-8 py-2"
                                 bgColor="bg-primaryBtn"
@@ -77,7 +77,7 @@ export default function Footer() {
                             >
                                 Grow Traffic
                             </PrimaryBtn>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="">
                         <div className="lg:pl-10">
@@ -86,7 +86,7 @@ export default function Footer() {
                                 <ul className="list-disc">
                                     {menuService?.map((item, i) => (
                                         <li
-                                            className="mb-2 text-sm font-normal text-gray-500 cursor-pointer hover:text-gray-900"
+                                            className="mb-2 text-base font-normal text-gray-500 cursor-pointer hover:text-gray-900"
                                             key={i}
                                             onClick={() => {
                                                 navigate(item?.link);
@@ -109,7 +109,7 @@ export default function Footer() {
                             <ul className="list-disc">
                                 {services?.map((item, i) => (
                                     <li
-                                        className="mb-2 text-sm font-normal text-gray-500 cursor-pointer hover:text-gray-900"
+                                        className="mb-2 text-base font-normal text-gray-500 cursor-pointer hover:text-gray-900"
                                         key={i}
                                         onClick={() =>
                                             window.open(
@@ -130,7 +130,7 @@ export default function Footer() {
                                 return (
                                     <li
                                         key={i}
-                                        className="mb-2 text-sm font-normal text-gray-500 cursor-pointer"
+                                        className="mb-2 text-base font-normal text-gray-500 cursor-pointer"
                                         onClick={() =>
                                             window.open(
                                                 `${item?.slug}`,
@@ -196,10 +196,10 @@ export default function Footer() {
                 <div className="pt-5">
                     <div className="flex justify-center py-4 bg-white border rounded-full sm:px-2 md:px-5">
                         <p className="text-gray-400">
-                            <b>© 2023</b>
+                            <b>© 2023</b>{" "}
                             <a href="/" className="">
                                 <b>GGCS</b>
-                            </a>
+                            </a>{" "}
                             All Rights Reserved. A unit of
                             <a
                                 href="https://beta.globalgarner.com"
