@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Container from '../../../components/Layout/Layout'
 import { H1Animate, TextAnimate } from '../../../components/Animation/H1Animate'
 import { uposDetails } from '../../../db/dummy'
 
 function UposPackage() {
-    window.scrollTo(0, 0)
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
 
         <main>

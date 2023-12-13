@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/footer/GGCSNew.svg";
 import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
-import { menuService, services, socialMedias } from "../../db/dummy";
+import { GGCSPolicy, menuService, services, socialMedias } from "../../db/dummy";
 import { useNavigate } from "react-router-dom";
 
 import { PrimaryBtn } from "../../components/Button";
@@ -121,17 +121,19 @@ export default function Footer() {
                     </div>
                     <div className="">
                         <ul className="list-disc mb-4 border-b-2 border-b-gray-300 ">
-                            {[
-                                "Privacy Policy",
-                                "Terms and Condition",
-                                "Disclaimer",
-                            ]?.map((item, i) => {
+                            {GGCSPolicy?.map((item, i) => {
                                 return (
                                     <li
                                         key={i}
-                                        className="text-sm font-normal text-gray-500 mb-2"
+                                        className="text-sm font-normal text-gray-500 mb-2 cursor-pointer"
+                                        onClick={() =>
+                                            window.open(
+                                                `/service/${item?.slug}`,
+                                                "_blank"
+                                            )
+                                        }
                                     >
-                                        {item}
+                                        {item?.label}
                                     </li>
                                 );
                             })}

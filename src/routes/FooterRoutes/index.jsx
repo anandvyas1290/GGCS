@@ -5,15 +5,24 @@ import IOMarketing from "./Services/IOMarketing";
 import AddOnServices from "./Services/AddOnServices";
 import SocialMediaMarketing from "./Services/SocialMediaMarketing";
 import ContentMarketing from "./Services/ContentMarketing";
+import PrivacyPolicy from "./OtherServices/PrivacyPolicy";
+import TermsAndCondition from "./OtherServices/TermsAndCondition";
+import Disclaimer from "./OtherServices/Disclaimer";
 
 export default function FooterRoutes(props) {
-    window.scrollTo(0, 0)
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    console.log("first")
     const routes = useRoutes([
         { path: "/seo", element: <SEO {...props} /> },
         { path: "/social-media-marketing", element: <SocialMediaMarketing {...props} /> },
         { path: "/content-marketing", element: <ContentMarketing {...props} /> },
         { path: "/io-marketing", element: <IOMarketing {...props} /> },
-        { path: "/add-on-service", element: <AddOnServices {...props} /> }
+        { path: "/add-on-service", element: <AddOnServices {...props} /> },
+        { path: "/privacy-policy", element: <PrivacyPolicy {...props} /> },
+        { path: "/terms-conditions", element: <TermsAndCondition {...props} /> },
+        { path: "/disclaimer", element: <Disclaimer {...props} /> }
     ])
     return routes;
 }
