@@ -70,7 +70,7 @@ export default {
                 blogCard: "0px 1px 1px rgba(12, 19, 56, 0.06)",
             },
             animation: {
-                gradient: "gradient 1s ease-in-out infinite",
+                gradientBg: "gradientBg 2s ease-in-out infinite",
                 fadeInDown:
                     "fadeInDown 500ms ease-in-out 0s normal none 1 running",
                 upslide: "upslide 4s forwards infinite alternate",
@@ -95,7 +95,7 @@ export default {
                 flipArrow: "flipArrow 2s linear 0s infinite",
             },
             keyframes: {
-                gradient: {
+                gradientBg: {
                     "0%": {
                         "background-position": "0% 50%",
                     },

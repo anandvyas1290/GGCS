@@ -42,8 +42,11 @@ export default function MainRoutes(props) {
         { path: "/contact", element: <Contact {...props} /> },
         { path: "/upos-details", element: <UposPackage {...props} /> },
         { path: "/privacy-policy", element: <PrivacyPolicy {...props} /> },
-        { path: "/terms-conditions", element: <TermsAndCondition {...props} /> },
-        { path: "/disclaimer", element: <Disclaimer {...props} /> }
+        {
+            path: "/terms-conditions",
+            element: <TermsAndCondition {...props} />,
+        },
+        { path: "/disclaimer", element: <Disclaimer {...props} /> },
     ]);
     return (
         <div>

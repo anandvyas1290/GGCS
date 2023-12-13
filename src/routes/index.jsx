@@ -10,11 +10,16 @@ import { useRoutes, useNavigate } from "react-router-dom";
 import MainRoutes from "./MainRoutes";
 // import FooterRoutes from "./FooterRoutes";
 import OtherRoutess from "./OtherRoutes";
+import PricingDetails from "../components/Pricing/PricingDetails";
 
 export default function Routes(props) {
     const navigate = useNavigate();
     const routes = useRoutes([
         { path: "/*", element: <MainRoutes {...props} /> },
+        {
+            path: "/plans",
+            element: <PricingDetails {...props} />,
+        },
         { path: "/service/*", element: <OtherRoutess {...props} /> },
     ]);
     return (
