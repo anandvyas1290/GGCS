@@ -12,6 +12,9 @@ import UposPackage from "./UposPackage/UposPackage";
 
 import { navMenu } from "../../db/dummy";
 import BackNavigate from "../../components/UI/BackNavigate";
+import PrivacyPolicy from "../FooterRoutes/OtherServices/PrivacyPolicy";
+import TermsAndCondition from "../FooterRoutes/OtherServices/TermsAndCondition";
+import Disclaimer from "../FooterRoutes/OtherServices/Disclaimer";
 
 export default function MainRoutes(props) {
     const [state, setState] = useState({ title: "" });
@@ -36,6 +39,9 @@ export default function MainRoutes(props) {
         // { path: "/blog", element: <Blog {...props} /> },
         { path: "/contact", element: <Contact {...props} /> },
         { path: "/upos-details", element: <UposPackage {...props} /> },
+        { path: "/privacy-policy", element: <PrivacyPolicy {...props} /> },
+        { path: "/terms-conditions", element: <TermsAndCondition {...props} /> },
+        { path: "/disclaimer", element: <Disclaimer {...props} /> }
     ]);
     return (
         <div>

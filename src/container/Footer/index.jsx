@@ -128,7 +128,7 @@ export default function Footer() {
                                         className="text-sm font-normal text-gray-500 mb-2 cursor-pointer"
                                         onClick={() =>
                                             window.open(
-                                                `/service/${item?.slug}`,
+                                                `${item?.slug}`,
                                                 "_blank"
                                             )
                                         }

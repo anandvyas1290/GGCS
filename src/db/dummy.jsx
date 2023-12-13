@@ -959,23 +959,24 @@ export const privacyPolicy = {
         {
             id: 9,
             title: 'Contact Information:',
-            info: "For inquiries or concerns about our Privacy Policy, contact us at contact@ggcs.com.            ",
+            info: `For inquiries or concerns about our Privacy Policy, contact us at contact@ggcs.com.            `,
             data: [
-                {
-                    content: ""
-                }
-                , {
-                    content: ""
-                },
-                {
-                    content: ""
-                }
+                // {
+                //     content: ""
+                // }
+                // , {
+                //     content: ""
+                // },
+                // {
+                //     content: ""
+                // }
             ]
         }
     ]
 }
 
 export const disclaimer = {
+    title: "Disclaimer",
     desc: `Welcome to the Global Garner Consultancy Services Digital Marketing website ("Website"). By accessing and using this Website, you agree to comply with and be bound by the following disclaimer. Please read the disclaimer carefully before using our services.`,
     list: [
         {
@@ -990,7 +991,7 @@ export const disclaimer = {
         },
         {
             id: 3,
-            title: 'Third-Party Links',
+            title: 'Third-Party Links:',
             info: " This GGCS website may contain links to third-party websites. Global Garner Consultancy Services has no control over the content, accuracy, or availability of these external sites and is not responsible for any damages or losses arising from the use of such links. The inclusion of any third-party link does not imply endorsement by Global Garner Consultancy Services.",
         },
         {
@@ -1019,7 +1020,7 @@ export const disclaimer = {
 }
 
 export const termsAndConditions = {
-    title: "TERMS AND CONDITIONS    ",
+    title: "Terms And Conditions    ",
     desc: "These Terms and Conditions were Last updated on December 12, 2023.",
     list: [
         {

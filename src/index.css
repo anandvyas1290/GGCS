@@ -189,7 +189,10 @@ html {
     /* font-size: 62.5%; */
     scroll-behavior: smooth;
 }
-
+input{
+    padding: 4px 15px !important;
+    margin: 0 !important;
+}
 /* @media (min-width: 1440px) {
     html {
       zoom: 1.5;
