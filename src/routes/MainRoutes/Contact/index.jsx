@@ -6,21 +6,12 @@ import { PrimaryBtn } from "../../../components/Button";
 
 const Input = ({ type, placeholder, className }) => {
     return (
-        <div className="relative flex items-center w-full px-5 py-1 bg-gray-100 border rounded-full">
-            {/* <EnvelopeIcon className="w-6 h-6 mx-2" /> */}
-            <div className="">
-                <input
-                    type={type}
-                    placeholder={placeholder}
-                    className={`px-1 py-2 !outline-none bg-gray-100 ${
-                        className ?? ""
-                    }`}
-                />
-            </div>
-            {/* <div className="absolute p-2 bg-blue-600 rounded-full right-3">
-                <ArrowUpRightIcon className="w-6 h-6 text-white" />
-            </div> */}
-        </div>
+        <input
+            type={type}
+            placeholder={placeholder}
+            className={`w-full rounded-full  !py-2.5 !outline-none border-none bg-gray-100 ${className ?? ""}`}
+        />
+
     );
 };
 function Contact(props) {
@@ -77,19 +68,19 @@ function Contact(props) {
                     </div>
                     <div className="px-3 py-10 mx-3 bg-white md:w-1/2 rounded-3xl sm:px-6 md:px-10 before:bg-homeGradient before:-top-4 before:left-0 before:absolute shadow-services">
                         <div className="flex flex-wrap">
-                            <div className="w-full px-3 my-2 sm:w-1/2">
+                            <div className="w-full !px-3 my-2 sm:w-1/2">
                                 <Input placeholder="Fill Name" type="text" />
                             </div>
-                            <div className="w-full px-3 my-2 sm:w-1/2">
+                            <div className="w-full !px-3 my-2 sm:w-1/2">
                                 <Input
                                     placeholder="Email Address"
                                     type="mail"
                                 />
                             </div>
-                            <div className="w-full px-3 my-2 sm:w-1/2">
+                            <div className="w-full !px-3 my-2 sm:w-1/2">
                                 <Input placeholder="Phone Number" type="tel" />
                             </div>
-                            <div className="w-full px-3 my-2 sm:w-1/2">
+                            <div className="w-full !px-3 my-2 sm:w-1/2">
                                 <Input placeholder="Website" type="mail" />
                             </div>
                             <div className="relative w-full mx-4 my-3 bg-gray-100 border-2 rounded-xl">
