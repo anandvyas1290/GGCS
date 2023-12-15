@@ -20,6 +20,10 @@ export default function Routes(props) {
             path: "/plans",
             element: <PricingDetails {...props} />,
         },
+        {
+            path: "/packages",
+            element: <PricingDetails {...props} />,
+        },
         { path: "/service/*", element: <OtherRoutess {...props} /> },
     ]);
     return (

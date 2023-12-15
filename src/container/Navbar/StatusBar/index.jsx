@@ -9,7 +9,7 @@ import { useNavigation } from "react-router-dom";
 export default function StatusBar() {
     // let navigate = useNavigation();
     return (
-        <div className="px-0 pt-4 pb-2 sm:px-4">
+        <div className="px-0 pt-3 pb-2 sm:px-4">
             <div className="justify-between max-w-full sm:flex">
                 <div className="flex justify-center gap-2 sm:justify-normal">
                     {/* <span>
@@ -25,11 +25,11 @@ export default function StatusBar() {
                     </span> */}
 
                     <section
-                        className="p-[2px] text-2xl font-agbalumo font-medium rounded-[40px] bg-gradient-to-r from-g1 via-g2 to-g3 bg-[length:80%] cursor-pointer animate-gradientBg hover:scale-110 transition-all duration-300"
+                        className="p-[1px] text-2xl font-agbalumo font-medium rounded-[40px] bg-gradient-to-r from-g1 via-g2 to-g3 bg-[length:80%] cursor-pointer animate-gradientBg hover:scale-110 transition-all duration-300"
                         // onClick={() => navigate("/packages")}
                         onClick={() => window.open(`/packages`, "_blank")}
                     >
-                        <div className="flex items-center gap-2 py-2 px-3 !w-full rounded-[40px] text-card1 bg-white">
+                        <div className="flex items-center gap-2 px-2.5 py-1 !w-full rounded-[40px] text-card1 bg-white">
                             <img
                                 src={packages}
                                 alt="ggcs packages"
