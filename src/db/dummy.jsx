@@ -219,25 +219,18 @@ export const servicesData = [
             {
                 subHeading: "Google Ads",
                 icon: googleAds,
-                description: `Maximize your brand's visibility with our strategic management of Google Ads. This not only
-            drives targeted traffic but also ensures efficient budget utilization, maximizing your return on
-            advertising investment.
+                description: `Maximize your brand's visibility with our strategic management of Google Ads. This not only drives targeted traffic but also ensures efficient budget utilization, maximizing your return on advertising investment.
             `,
             },
             {
                 subHeading: "Social Media Ads",
                 icon: socialMediaAds,
-                description: `Craft and monitor paid Social Media Ads with us, leveraging platforms like Facebook and
-                Instagram to boost brand awareness. The result? Increased visibility, lead generation, and
-                conversions.`,
+                description: `Craft and monitor paid Social Media Ads with us, leveraging platforms like Facebook and Instagram to boost brand awareness. The result? Increased visibility, lead generation, and conversions.`,
             },
             {
                 subHeading: "Display Advertising",
                 icon: displayAds,
-                description: `Enhance brand visibility with visually appealing Display Advertising on relevant websites. This
-                not only drives traffic but also increases brand recognition and consideration among your target
-                audience.
-                `,
+                description: `Enhance brand visibility with visually appealing Display Advertising on relevant websites. This not only drives traffic but also increases brand recognition and consideration among your target audience.`,
             },
         ],
     },
@@ -273,17 +266,17 @@ export const servicesData = [
             {
                 subHeading: "Performance Tracking",
                 icon: performanceTracking,
-                description: ``,
+                description: `Track and analyze key performance indicators with our Performance Tracking services. This not only provides transparency but also allows for quick adjustments to optimize ongoing campaigns.`,
             },
             {
                 subHeading: "Data Interpretation",
                 icon: interpretation,
-                description: ``,
+                description: `Interpret data comprehensively with us, gaining a clear understanding of your audience's behavior and preferences. This not only informs strategic decisions but also ensures marketing efforts are consistently aligned with your audience's needs.`,
             },
             {
                 subHeading: "Reporting",
                 icon: reporting,
-                description: ``,
+                description: `Receive detailed reports from us, offering insights into campaign success and data-driven recommendations. This not only keeps you informed but also empowers you to make informed decisions, ensuring your marketing strategy remains agile and effective.`,
             },
         ],
     },
@@ -296,17 +289,17 @@ export const servicesData = [
             {
                 subHeading: "Influencer Marketing",
                 icon: influencersMarketing,
-                description: ``,
+                description: `Identify influential partners with us, leveraging their reach to amplify your message. This not only increases brand credibility but also expands your reach to new and engaged audiences, fostering trust and brand loyalty.`,
             },
             {
                 subHeading: "Collaboration Management",
                 icon: collaboration,
-                description: ``,
+                description: `Facilitate seamless collaboration with influencers through our Collaboration Management. This not only enhances your brand's authenticity but also drives engagement and conversions through trusted recommendations.`,
             },
             {
                 subHeading: "Performance Measurement",
                 icon: performanceMeasure,
-                description: ``,
+                description: `Evaluate the impact of influencer campaigns with our Performance Measurement. This not only provides tangible results but also allows for continuous optimization, ensuring ongoing success and a positive return on your investment.`,
             },
         ],
     },
@@ -317,30 +310,30 @@ export const servicesData = [
         slug: "online-reputation-management",
         list: [
             {
-                subHeading: "Performance Measurement",
+                subHeading: "Brand Monitoring",
                 icon: performanceMeasure,
-                description: ``,
+                description: `Actively monitor your brand mentions with our Brand Monitoring services, maintaining a positive online presence. This not only protects your brand reputation but also ensures that your audience perceives your brand positively.`,
             },
-            {
-                subHeading: "Performance Measurement",
-                icon: performanceMeasure,
-                description: ``,
-            },
-            {
-                subHeading: "Performance Measurement",
-                icon: performanceMeasure,
-                description: ``,
-            },
+            // {
+            //     subHeading: "Performance Measurement",
+            //     icon: performanceMeasure,
+            //     description: ``,
+            // },
+            // {
+            //     subHeading: "Performance Measurement",
+            //     icon: performanceMeasure,
+            //     description: ``,
+            // },
             // "Brand Monitoring",
             {
                 subHeading: "Review Management",
                 icon: review,
-                description: ``,
+                description: `Respond to customer reviews effectively with our Review Management. This not only demonstrates your commitment to customer satisfaction but also contributes to a positive brand image.`,
             },
             {
                 subHeading: "Crisis Response",
                 icon: crisis,
-                description: ``,
+                description: `Address and manage online incidents swiftly with our Crisis Response services. This not only minimizes potential damage but also showcases your brand's resilience and commitment to resolving issues.`,
             },
             ,
         ],
@@ -354,17 +347,17 @@ export const servicesData = [
             {
                 subHeading: "Mobile App Advertising",
                 icon: mobileAds,
-                description: ``,
+                description: `Promote your mobile applications effectively with our Mobile App Advertising. This not only increases downloads but also fosters user engagement, maximizing the return on your app development investment.`,
             },
             {
                 subHeading: "SMS Marketing",
                 icon: smsAds,
-                description: ``,
+                description: `Engage your audience through targeted SMS campaigns with our SMS Marketing services. This not only ensures direct and immediate communication but also contributes to increased brand awareness and customer engagement.`,
             },
             {
                 subHeading: "Location-Based Marketing",
                 icon: locationAds,
-                description: ``,
+                description: `Deliver personalized content based on user location with our Location-Based Marketing. This not only increases engagement but also ensures that your marketing efforts are highly targeted, maximizing their impact and effectiveness.`,
             },
         ],
     },
@@ -408,10 +401,15 @@ export const servicesData = [
                 description: ``,
             },
             {
-                subHeading: "Video Advertising",
-                icon: videoAds,
+                subHeading: "User Journey Analysis",
+                icon: performanceTrack,
                 description: ``,
             },
+            // {
+            //     subHeading: "Video Advertising",
+            //     icon: videoAds,
+            //     description: ``,
+            // },
         ],
     },
     {
@@ -705,10 +703,10 @@ export const whyGGCSData = {
             label: "Comprehensive Services: From SEO and content marketing to social media management and paid advertising, GGCS offers a comprehensive array of services to cover all aspects of your digital footprint.",
             bg: "bg-[#952aff]",
         },
-        {
-            label: "Comprehensive Services: From SEO and content marketing to social media management and paid advertising, GGCS offers a comprehensive array of services to cover all aspects of your digital footprint.",
-            bg: "bg-[#cd3e94]",
-        },
+        // {
+        //     label: "Comprehensive Services: From SEO and content marketing to social media management and paid advertising, GGCS offers a comprehensive array of services to cover all aspects of your digital footprint.",
+        //     bg: "bg-[#cd3e94]",
+        // },
     ],
 };
 
@@ -1398,6 +1396,7 @@ export const courses = [
         desc: "Become job-ready in 24 weeks",
         icon: fullStack,
         bg: "bg-course1",
+        slug: "full-stack-development",
         features: "Full Stack Developer, Software Engineer & much more.",
     },
     {
@@ -1406,6 +1405,7 @@ export const courses = [
         desc: "Become job-ready in 24 weeks",
         icon: backendDev,
         bg: "bg-course2",
+        slug: "backend-development",
         features: "Backend Web Developer, API developer & much more.",
     },
 
@@ -1415,6 +1415,7 @@ export const courses = [
         desc: "Become job-ready in 24 weeks",
         icon: dataAnalytics,
         bg: "bg-course3",
+        slug: "data-analytics",
         features:
             "Data Engineer, Data Analyst, Machine Learning Engineer & much more.",
     },
@@ -1424,6 +1425,7 @@ export const courses = [
         desc: "Become job-ready in 24 weeks",
         icon: mobileDev,
         bg: "bg-course4",
+        slug: "mobile-development",
         features: "Mobile App Developer & much more.",
     },
     {
@@ -1432,6 +1434,7 @@ export const courses = [
         desc: "Become job-ready in 24 weeks",
         icon: testingAutomation,
         bg: "bg-course5",
+        slug: "software-testing-automation",
         features: "QA Tester, Automation Engineer & much more.",
     },
 ];

@@ -6,7 +6,7 @@ const hosData = [
     {
         id: 0,
         label: (
-            <h6 className=" text-lg">
+            <h6 className="text-lg">
                 Brainstorming and Creative <br />
                 ideas & Research
             </h6>
@@ -15,7 +15,7 @@ const hosData = [
     {
         id: 1,
         label: (
-            <h6 className=" text-lg">
+            <h6 className="text-lg">
                 Fully-Automated Keyword <br />
                 Grouping
             </h6>
@@ -24,7 +24,7 @@ const hosData = [
     {
         id: 2,
         label: (
-            <h6 className=" text-lg">
+            <h6 className="text-lg">
                 Building the strategy to <br /> boost Your Sales
             </h6>
         ),
@@ -32,9 +32,9 @@ const hosData = [
     {
         id: 3,
         label: (
-            <h6 className=" text-lg">
+            <h6 className="text-lg">
                 Helping to achieve <br />
-                more People{" "}
+                more People
             </h6>
         ),
     },
@@ -59,10 +59,10 @@ function HOS() {
             </div>
             <div className="sm:mb-12">
                 <div className="relative pb-12 border-b-2 border-gray-100">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
                         {hosData?.map((d, i) => {
                             return (
-                                <div key={i} className="w-full relative ">
+                                <div key={i} className="relative w-full ">
                                     <div
                                         className={` ${
                                             i === 0
@@ -102,13 +102,13 @@ function HOS() {
                             );
                         })}
                     </div>
-                    <div className="hidden lg:block absolute -top-4 left-56 rotate-0">
+                    <div className="absolute hidden rotate-0 lg:block -top-4 left-56">
                         <DashedLine />
                     </div>
                     <div className="hidden lg:block absolute -top-4  left-[48%]	rotate-180">
                         <DashedLine />
                     </div>
-                    <div className="hidden lg:block absolute -top-4  right-48 rotate-0">
+                    <div className="absolute hidden rotate-0 lg:block -top-4 right-48">
                         <DashedLine />
                     </div>
                 </div>

@@ -4,7 +4,7 @@ import React from "react";
 import packages from "../../../assets/home/packages.jpg";
 import { socialMedias } from "../../../db/dummy";
 
-import { useNavigation } from "react-router-dom";
+// import { useNavigation } from "react-router-dom";
 
 export default function StatusBar() {
     // let navigate = useNavigation();
