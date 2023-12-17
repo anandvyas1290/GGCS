@@ -91,12 +91,6 @@ import {
     userEngagement,
 } from "./assets";
 
-import fullStack from "../assets/training/courses/fullStack.jpg";
-import backendDev from "../assets/training/courses/backendDev.jpg";
-import dataAnalytics from "../assets/training/courses/dataAnalytics.jpg";
-import mobileDev from "../assets/training/courses/mobileDev.jpg";
-import testingAutomation from "../assets/training/courses/testing.jpg";
-
 export const navMenu = [
     { id: 1, label: "About", slug: "/about" },
     { id: 2, label: "Why GGCS", slug: "/why-ggcs" },
@@ -1388,53 +1382,3 @@ export const GGCSPolicy = [
 //     ],
 //     note: "By using GGCS services, you acknowledge that you have read, understood, and agreed to these terms and conditions. If you have any questions or concerns, contact@ggcs.com.    "
 // }]
-
-export const courses = [
-    {
-        id: 1,
-        name: "Full Stack Web Development",
-        desc: "Become job-ready in 24 weeks",
-        icon: fullStack,
-        bg: "bg-course1",
-        slug: "full-stack-development",
-        features: "Full Stack Developer, Software Engineer & much more.",
-    },
-    {
-        id: 2,
-        name: "Backend Development",
-        desc: "Become job-ready in 24 weeks",
-        icon: backendDev,
-        bg: "bg-course2",
-        slug: "backend-development",
-        features: "Backend Web Developer, API developer & much more.",
-    },
-
-    {
-        id: 3,
-        name: "Data Analytics",
-        desc: "Become job-ready in 24 weeks",
-        icon: dataAnalytics,
-        bg: "bg-course3",
-        slug: "data-analytics",
-        features:
-            "Data Engineer, Data Analyst, Machine Learning Engineer & much more.",
-    },
-    {
-        id: 4,
-        name: "Mobile Development",
-        desc: "Become job-ready in 24 weeks",
-        icon: mobileDev,
-        bg: "bg-course4",
-        slug: "mobile-development",
-        features: "Mobile App Developer & much more.",
-    },
-    {
-        id: 5,
-        name: "Software Testing & Automation",
-        desc: "Become job-ready in 24 weeks",
-        icon: testingAutomation,
-        bg: "bg-course5",
-        slug: "software-testing-automation",
-        features: "QA Tester, Automation Engineer & much more.",
-    },
-];

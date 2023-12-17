@@ -45,7 +45,9 @@ export default function NavbarContent() {
     return (
         <div
             className={`header px-4 mt-1 border-white bg-transparent backdrop-blur shadow-header ${
-                location?.pathname === "/" ? "border rounded-full" : ""
+                location?.pathname === "/"
+                    ? "border rounded-full"
+                    : "sticky top-0"
             }`}
             ref={scrollRef}
         >
