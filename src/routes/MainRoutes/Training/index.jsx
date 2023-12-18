@@ -1,6 +1,8 @@
 import React from "react";
 import tick from "../../../assets/training/courses/tick.jpg";
 
+import { useNavigate } from "react-router-dom";
+
 import { courses } from "../../../db/dummy";
 import { H1Animate } from "../../../components/Animation/H1Animate";
 import { PrimaryBtn } from "../../../components/Button";
@@ -11,6 +13,7 @@ const otherFeatures = [
 ];
 
 export default function Training(props) {
+    let navigate = useNavigate();
     return (
         <div className="max-w-screen-xl py-4 mx-auto !font-roboto">
             <section className="text-center">
@@ -70,7 +73,12 @@ export default function Training(props) {
                                         </p>
                                     ))}
 
-                                    <PrimaryBtn className="w-full mt-5 rounded-lg">
+                                    <PrimaryBtn
+                                        className="w-full mt-5 rounded-lg"
+                                        onClick={() =>
+                                            navigate(`/training/${item?.slug}`)
+                                        }
+                                    >
                                         View Details
                                     </PrimaryBtn>
                                 </div>

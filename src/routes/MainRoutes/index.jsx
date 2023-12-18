@@ -16,6 +16,7 @@ import BackNavigate from "../../components/UI/BackNavigate";
 import PrivacyPolicy from "../FooterRoutes/OtherServices/PrivacyPolicy";
 import TermsAndCondition from "../FooterRoutes/OtherServices/TermsAndCondition";
 import Disclaimer from "../FooterRoutes/OtherServices/Disclaimer";
+import CoursesDetails from "./Training/CoursesDetails";
 
 export default function MainRoutes(props) {
     const [state, setState] = useState({ title: "" });
@@ -36,14 +37,23 @@ export default function MainRoutes(props) {
         { path: "/about", element: <About {...props} /> },
         { path: "/services", element: <Services {...props} /> },
         { path: "/why-ggcs", element: <WhyGGCS {...props} /> },
-        { path: "/training", element: <Training {...props} /> },
+        {
+            path: "/training",
+            children: [
+                { path: "", element: <Training {...props} /> },
+                { path: "*", element: <CoursesDetails /> },
+            ],
+        },
         { path: "/gallery", element: <Gallery {...props} /> },
         // { path: "/blog", element: <Blog {...props} /> },
         { path: "/contact", element: <Contact {...props} /> },
         { path: "/upos-details", element: <UposPackage {...props} /> },
         { path: "/privacy-policy", element: <PrivacyPolicy {...props} /> },
-        { path: "/terms-conditions", element: <TermsAndCondition {...props} /> },
-        { path: "/disclaimer", element: <Disclaimer {...props} /> }
+        {
+            path: "/terms-conditions",
+            element: <TermsAndCondition {...props} />,
+        },
+        { path: "/disclaimer", element: <Disclaimer {...props} /> },
     ]);
     return (
         <div>
