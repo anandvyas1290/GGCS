@@ -1,56 +1,14 @@
 import React, { useEffect } from 'react'
 import Container from '../../../components/Layout/Layout'
 import { H1Animate, TextAnimate } from '../../../components/Animation/H1Animate'
-import { admissionProcess, minCriteria, uposDetails } from '../../../db/dummy'
+import { uposDetails } from '../../../db/dummy'
 
 function UposPackage() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
     return (
-
         <main>
-            <section className='max-w-screen-lg mx-auto my-14'>
-                <div className='text-center mb-10'>
-                    <h2 className='text-3xl '>{minCriteria?.title}</h2>
-                    <p className='mt-3'>{minCriteria?.desc}</p>
-                </div>
-                <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8'>
-                    {minCriteria?.list?.map((item) =>
-                    (
-                        <div id={item?.id} className='border rounded-xl text-center px-3 py-5'>
-                            <div className=' flex justify-center bg-gary-100 p-1 '>
-                                <img src={item?.icon} alt={item?.title} className='w-8 h-8' />
-                            </div>
-                            <h5 className='my-2'>{item?.title}</h5>
-                            <p className=''>{item?.desc}</p>
-                        </div>
-                    ))}
-                </div>
-
-            </section>
-            <section className='bg-red-50 py-14'>
-                <Container>
-                    <h2 className='text-center text-3xl'>{admissionProcess?.title}</h2>
-                    <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 my-10'>
-                        {admissionProcess?.process?.map((item) => (
-                            <div id={item?.id} className='bg-white border rounded-xl text-center px-3 py-5'>
-                                <img src={item?.icon} alt={item?.title} className='w-5 h-5' />
-                                <h5 className='my-2'>{item?.title}</h5>
-                                <p className=''>{item?.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                    <div className='flex justify-center items-center gap-5 '>
-                        <button className='uppercase border-2 border-red-500 text-red-600 rounded-lg px-6 py-3 '>
-                            View Details
-                        </button>
-                        <button className='uppercase border-2 border-red-500 bg-red-600  text-white rounded-lg px-6 py-3 '>
-                            Apply Now for free
-                        </button>
-                    </div>
-                </Container>
-            </section>
             <Container>
                 <section className='text-center py-28'>
                     <H1Animate className={"text-5xl "}>
