@@ -188,7 +188,7 @@ export default function Footer() {
                         </ul>
                     </div> */}
                     <address>
-                        <b>Global Garner Sales Services Limited </b>
+                        <b>Global Garner </b>
                         5th floor, Grand Emporio, Motera Stadium Road,
                         Ahmedabad, Gujarat 380005
                     </address>

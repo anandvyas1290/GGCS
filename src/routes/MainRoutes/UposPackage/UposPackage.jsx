@@ -51,7 +51,7 @@ function UposPackage() {
                     </div>
                 </Container>
             </section>
-            {/* <Container>
+            <Container>
                 <section className='text-center py-28'>
                     <H1Animate className={"text-5xl "}>
                         {uposDetails?.title}
@@ -86,7 +86,7 @@ function UposPackage() {
                         </h3>
                     </div>
                 </div>
-            </Container> */}
+            </Container>
         </main>
     )
 }

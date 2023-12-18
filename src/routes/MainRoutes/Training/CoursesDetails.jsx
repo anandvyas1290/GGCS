@@ -1,5 +1,14 @@
 import React from "react";
+import MinCriteria from "./MinCriteria";
+import AdmissionProcess from "./AdmissionProcess";
+import OurAlumni from "./OurAlumni";
+import FAQ from "./FAQ";
 
 export default function CoursesDetails(props) {
-    return <div className="max-w-screen-xl mx-auto">CoursesDetails</div>;
+    return <>
+        <MinCriteria />
+        <AdmissionProcess />
+        <OurAlumni />
+        <FAQ />
+    </>;
 }

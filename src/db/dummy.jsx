@@ -104,6 +104,11 @@ import internet from "../assets/training/courses/internet.svg"
 import communication from "../assets/training/courses/communication.png"
 import oneplus from "../assets/training/courses/one-plus.png"
 
+import AccountSuccess from "../assets/training/courses/user-icon.svg"
+import pc from "../assets/training/courses/computer-icon.svg"
+import CircleIcon from "../assets/training/courses/circle-icon.svg"
+import VideoIcon from "../assets/training/courses/video_icon.svg"
+
 export const navMenu = [
     { id: 1, label: "About", slug: "/about" },
     { id: 2, label: "Why GGCS", slug: "/why-ggcs" },
@@ -1447,7 +1452,7 @@ export const courses = [
 ];
 
 
-// class
+// courses info
 
 export const minCriteria = {
     title: 'Minimum criteria for full stack web development Program',
@@ -1464,10 +1469,28 @@ export const minCriteria = {
 export const admissionProcess = {
     title: "Admission Process for Full Stack Web Development Program",
     process: [
-        { id: 1, icon: "", title: 'Crack the Admissions Test (MSAT)' },
-        { id: 1, icon: "", title: 'Choose a course' },
-        { id: 1, icon: "", title: 'Complete KYC' },
-        { id: 1, icon: "", title: 'You are ready to join the batch' },
+        { id: 1, icon: AccountSuccess, title: 'Crack the Admissions Test (MSAT)' },
+        { id: 2, icon: pc, title: 'Choose a course' },
+        { id: 3, icon: CircleIcon, title: 'Complete KYC' },
+        { id: 4, icon: VideoIcon, title: 'You are ready to join the batch' },
 
+    ]
+}
+
+export const ourAlumni = {
+    title: 'Hear From Our Alumni',
+    list: [
+        { id: 1, color: "#9d789b", image: "", name: "Developer 1", desc: "Even after graduating with a CS degree l had doubts about my technical skills before joining GGCS. But with their intensive program, GGCS School helped me to improve", logo: '' },
+        { id: 2, color: "#7a81a8", image: "", name: "Developer 2", desc: "Even after graduating with a CS degree l had doubts about my technical skills before joining GGCS. But with their intensive program, GGCS School helped me to improve", logo: '' },
+        { id: 3, color: "#6d5b98", image: "", name: "Developer 3", desc: "Even after graduating with a CS degree l had doubts about my technical skills before joining GGCS. But with their intensive program, GGCS School helped me to improve", logo: '' }
+
+    ]
+}
+
+export const faq = {
+    title: "Frequently asked questions",
+    list: [
+        { id: 1, que: "What is the medium of instruction?", ans: "The medium of instruction at GGCS is English. All lectures are delivered in English. As part of the curriculum, we also help you develop your written and verbal communication skills that help you become more employable." },
+        { id: 2, que: "Do you offer loaner laptops for prospective students?", ans: "Not at the moment." },
     ]
 }
