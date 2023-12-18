@@ -76,6 +76,13 @@ import dataAnalytics from "../assets/training/courses/dataAnalytics.jpg";
 import mobileDev from "../assets/training/courses/mobileDev.jpg";
 import testing from "../assets/training/courses/testing.jpg";
 
+import qualification from "../assets/training/courses/qualification.png"
+import account from "../assets/training/courses/account.webp"
+import id from "../assets/training/courses/id-card.svg"
+import internet from "../assets/training/courses/internet.svg"
+import communication from "../assets/training/courses/communication.png"
+import oneplus from "../assets/training/courses/one-plus.png"
+
 export const navMenu = [
     { id: 1, label: "About", slug: "/about" },
     { id: 2, label: "Why GGCS", slug: "/why-ggcs" },
@@ -1389,3 +1396,29 @@ export const courses = [
         features: "QA Tester, Automation Engineer & much more.",
     },
 ];
+
+
+// class
+
+export const minCriteria = {
+    title: 'Minimum criteria for full stack web development Program',
+    desc: "You should meet the following requirements to be eligible for this course.",
+    list: [
+        { id: 1, icon: qualification, title: "Qualification", desc: "Graduation (Any Stream)" },
+        { id: 2, icon: account, title: "Age", desc: "Upto 28 years" },
+        { id: 3, icon: id, title: "ID", desc: "Valid Aadhaar Card" },
+        { id: 4, icon: internet, title: "Internet", desc: "A desktop or laptop with an uninterrupted service connection." },
+        { id: 5, icon: communication, title: "Communication Skills", desc: "Basic English - speaking, reading and writing" },
+        { id: 6, icon: oneplus, title: "CIBIL Score", desc: "650+" }
+    ]
+}
+export const admissionProcess = {
+    title: "Admission Process for Full Stack Web Development Program",
+    process: [
+        { id: 1, icon: "", title: 'Crack the Admissions Test (MSAT)' },
+        { id: 1, icon: "", title: 'Choose a course' },
+        { id: 1, icon: "", title: 'Complete KYC' },
+        { id: 1, icon: "", title: 'You are ready to join the batch' },
+
+    ]
+}
