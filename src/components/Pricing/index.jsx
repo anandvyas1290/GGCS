@@ -10,7 +10,9 @@ import { PrimaryBtn } from "../Button";
 function Pricing() {
     const [state, setState] = useState({
         currentTab: "social_media",
-        plans: [],
+        plans: pricing?.filter((obj) => {
+            return obj?.value === "social_media";
+        })[0]?.plans,
     });
     const navigate = useNavigate();
     const settings = {
@@ -53,7 +55,6 @@ function Pricing() {
         let plans = pricing?.filter((obj) => {
             return obj?.value === state?.currentTab;
         })[0]?.plans;
-        console.log(plans);
 
         setState((prev) => {
             return { ...prev, plans: plans };
@@ -66,7 +67,6 @@ function Pricing() {
         });
     };
 
-    console.log(state?.plans);
     return (
         <div>
             <Tabs
