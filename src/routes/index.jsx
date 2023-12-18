@@ -11,6 +11,7 @@ import MainRoutes from "./MainRoutes";
 // import FooterRoutes from "./FooterRoutes";
 import OtherRoutess from "./OtherRoutes";
 import PricingDetails from "../components/Pricing/PricingDetails";
+import CreatorPackages from "./OtherRoutes/CreatorPackages";
 
 export default function Routes(props) {
     const navigate = useNavigate();
@@ -21,8 +22,8 @@ export default function Routes(props) {
             element: <PricingDetails {...props} />,
         },
         {
-            path: "/packages",
-            element: <PricingDetails {...props} />,
+            path: "/creator-packages",
+            element: <CreatorPackages {...props} />,
         },
         { path: "/service/*", element: <OtherRoutess {...props} /> },
     ]);

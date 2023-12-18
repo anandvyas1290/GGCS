@@ -30,7 +30,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // } from "../../../db/assets";
 
 import {
-    Price,
     servicesData,
     serviceSocial,
     processData,
@@ -274,7 +273,7 @@ export default function Services(props) {
                         </div>
                     </div>
                     <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
-                        <Pricing Price={Price} />
+                        <Pricing />
                     </div>
                 </div>
             </section>

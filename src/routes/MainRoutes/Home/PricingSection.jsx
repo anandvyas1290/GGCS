@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Price } from "../../../db/dummy";
-
 import Pricing from "../../../components/Pricing";
 import {
     H1Animate,
@@ -28,7 +26,7 @@ export default function PricingSection() {
                 {/* Pricing Card  */}
                 <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
                     {/* reusable */}
-                    <Pricing Price={Price} />
+                    <Pricing />
                 </div>
             </div>
             {/* {Price?.map((d, i) => {

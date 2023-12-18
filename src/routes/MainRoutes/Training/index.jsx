@@ -3,7 +3,7 @@ import tick from "../../../assets/training/courses/tick.jpg";
 
 import { useNavigate } from "react-router-dom";
 
-import { courses } from "../../../db/dummy";
+import { courses } from "./dummyData";
 import { H1Animate } from "../../../components/Animation/H1Animate";
 import { PrimaryBtn } from "../../../components/Button";
 
@@ -33,7 +33,7 @@ export default function Training(props) {
                             className="overflow-hidden border-2 border-gray-300 rounded-xl"
                         >
                             <figure
-                                className={`flex items-center justify-center w-full p-10 ${item?.bg}`}
+                                className={`flex items-center justify-center w-full p-10 ${item?.cardBg}`}
                             >
                                 <img src={item?.icon} className="w-40 h-36" />
                             </figure>
@@ -76,7 +76,14 @@ export default function Training(props) {
                                     <PrimaryBtn
                                         className="w-full mt-5 rounded-lg"
                                         onClick={() =>
-                                            navigate(`/training/${item?.slug}`)
+                                            navigate(
+                                                `/training/${item?.slug}`,
+                                                {
+                                                    state: {
+                                                        course: item?.slug,
+                                                    },
+                                                }
+                                            )
                                         }
                                     >
                                         View Details

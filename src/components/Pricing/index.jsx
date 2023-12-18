@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 
 import Tabs from "../UI/Tabs";
-import { pricingServices } from "../../db/dummy";
+import { pricing } from "./dummyData";
 import { PrimaryBtn } from "../Button";
 
-function Pricing({ Price }) {
+function Pricing() {
     const [state, setState] = useState({
         currentTab: "social_media",
+        plans: [],
     });
     const navigate = useNavigate();
     const settings = {
@@ -48,21 +49,33 @@ function Pricing({ Price }) {
         ],
     };
 
+    useEffect(() => {
+        let plans = pricing?.filter((obj) => {
+            return obj?.value === state?.currentTab;
+        })[0]?.plans;
+        console.log(plans);
+
+        setState((prev) => {
+            return { ...prev, plans: plans };
+        });
+    }, [state?.currentTab]);
+
     const currentTabHandler = (tab) => {
         setState((prev) => {
             return { ...prev, currentTab: tab };
         });
     };
 
+    console.log(state?.plans);
     return (
         <div>
             <Tabs
-                options={pricingServices}
+                options={pricing}
                 currentTab={state?.currentTab}
                 currentTabHandler={currentTabHandler}
             />
             <Slider {...settings}>
-                {Price?.map((item, index) => (
+                {state?.plans?.map((item, index) => (
                     <div
                         key={index}
                         className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg shadow cursor-pointer"

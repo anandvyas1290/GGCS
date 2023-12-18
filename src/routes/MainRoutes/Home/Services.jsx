@@ -16,7 +16,8 @@ export default function Services(props) {
             <div className="max-w-screen-xl px-3 pb-10 mx-auto sm:px-8 md:px-12">
                 <div className="flex flex-col items-center justify-center">
                     <TextAnimate className="!text-3xl font-tangerine font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
-                        Why services Us We are Digital Marketers.
+                        {/* Why services Us We are Digital Marketers. */}
+                        Smart Digital Marketing Solutions for your business
                     </TextAnimate>
                     <H1Animate className="text-6xl font-semibold">
                         Our services
