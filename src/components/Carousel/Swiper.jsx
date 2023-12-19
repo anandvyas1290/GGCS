@@ -32,7 +32,7 @@ const SwiperCarousel = ({ carouselData }) => {
                 //     el: ".swiper-pagination",
                 //     clickable: true,
                 // }}
-                autoplay={{ delay: 3500, disableOnInteraction: false }}
+                // autoplay={{ delay: 3500, disableOnInteraction: false }}
                 speed={800}
                 navigation={{
                     nextEl: ".swiper-button-next",
@@ -57,7 +57,7 @@ const SwiperCarousel = ({ carouselData }) => {
                                 <img
                                     src={item?.icon}
                                     alt="slide_image"
-                                    className="h-56 !object-contain mb-10 "
+                                    className="slide_image  sm:h-56 !object-contain mb-10 "
                                 />
 
                                 <h4 className="absolute bottom-0 text-2xl px-3 !text-center text-white font-medium mt-3 mb-2">

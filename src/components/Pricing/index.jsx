@@ -83,6 +83,7 @@ function Pricing() {
         });
     };
 
+    const { currentTab } = state
     return (
         <div>
             <Tabs
@@ -168,7 +169,7 @@ function Pricing() {
                             // bgColor="bg-primaryBtn"
                             className="w-full rounded-xl bg-white  !text-primary border-0 hover:!text-white hover:bg-gradient-to-r from-g1 via-g2 to-g3 hover:bg-[length:200%] hover:animate-gradientBg"
                         >
-                            Join this Plan
+                            {currentTab === "it_services" ? "Send Enquiry" : "Join this Plan"}
                         </PrimaryBtn>
                         {/* <div
 

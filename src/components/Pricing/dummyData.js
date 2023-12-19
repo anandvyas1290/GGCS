@@ -337,5 +337,116 @@ export const pricing = [
             },
         ],
     },
-    { id: 3, label: "IT Services", value: "it_services", disabled: true },
+    { id: 3, label: "IT Services", value: "it_services", disabled: false ,
+        plans:[
+            {
+                title: "Mobile App Development",
+                price: "N/A",
+                desc: "Lorem ipsum",
+                icon:'',
+                description: [
+                    {label: "50% Upfront to get started with the work immediately", icon:""},
+                    {label: "Wireframes", icon:""},
+                    {label: "Intuitive UI UX (Custom App Design)", icon:""},
+                    {label: "Social Media Integration", icon:""},
+                    {label: "App Testing", icon:""},
+                    {label: "Ads Network Integration", icon:""},
+                    {label: "Firebase Integration", icon:""},
+                    {label: "In-App Purchase", icon:""},
+                    {label: "Publishing on App Store", icon:""},
+                    {label: "App Store Optimization", icon:""},
+                    {label: "Paid bug support ($350/m)", icon:""},
+                    {label: "Native iOS OR Android app", icon:""},
+                    {label: "Cross-Platform (Hybrid)", icon:""},
+                    {label: "Push Notifications", icon:""},{label: "", icon:""},
+                    {label: "Messaging API Integration (Live Chat)", icon:""},
+                    {label: "Regular App Updates", icon:""},
+                    {label: "Google Maps Integration", icon:""},
+                    {label: "Admin Panel", icon:""},
+                    {label: "Data Import/Export", icon:""},
+                    {label: "Web APIs and Online Database", icon:""},
+                    {label: "Picture Gallery/Product Display/ Showcase Services", icon:""},
+                    {label: "Product Categories/Sub Categories", icon:""},
+                    {label: "CrashAnalytics Integration", icon:""},
+                    {label: "Audio/Video Streaming", icon:""},
+                    {label: "Payment Gateways Integration", icon:""},
+                    {label: "Shopping Cart", icon:""},
+                    {label: "3rd Party APIs Integrations", icon:""},
+                ]
+            },
+            {
+                title: "Website Development",
+                price: "N/A",
+                desc: "Lorem ipsum",
+                icon:"",
+                description: [
+                    {label: "Layout (Web & Mobile) Responsive", icon:""},
+                    {label: "HTML5/CSS", icon:""},
+                    {label: "Content Management System", icon:""},
+                    {label: "Content Writing 5 ", icon:""},
+                    {label: "On-Page SEO+Site Map", icon:""},
+                    {label: "Contact Us Form + Google Map", icon:""},
+                    {label: "Social Media Integration", icon:""},
+                    {label: "Photo Gallery", icon:""},
+                    {label: "Image Slider Showcase", icon:""},
+                    {label: "Site Search", icon:""},
+                    {label: "Google Analytics", icon:""},
+                    {label: "Mobile Device Friendly", icon:""},
+                    {label: "Stationery Branding", icon:""},
+                    {label: "W3C Validation", icon:""},
+                    {label: "Audio & Video Support", icon:""},
+                    {label: "Blog Section", icon:""},
+                    {label: "Cloud Hosting", icon:""},
+                    {label: "Emails Setup", icon:""},
+                    {label: "Design mockups", icon:""},
+                    {label: "Design mockups", icon:""},
+                    {label: "Website setup (Go Live)", icon:""},
+                    {label: "Stock Photos Not Included", icon:""},
+                    {label: "Dynamic Features", icon:""},
+                    {label: "Integrated Contact Forms with Captcha", icon:""},
+                    {label: "Chatbot Integration", icon:""},
+                    {label: "Newsletter Subscription Box", icon:""},
+                    {label: "Events Calendar Integration", icon:""},
+                    {label: "Job Board", icon:""},
+                    {label: "Website Training", icon:""},
+                ]
+            }
+        ]
+    
+    },
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
