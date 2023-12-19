@@ -69,6 +69,7 @@
     transition: transform 0.5s;
 }
 .package-card:hover .title {
+    opacity: 0;
     transform: translate3d(0%, -50px, 100px);
 }
 

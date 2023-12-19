@@ -12,6 +12,7 @@ import MainRoutes from "./MainRoutes";
 import OtherRoutess from "./OtherRoutes";
 import PricingDetails from "../components/Pricing/PricingDetails";
 import CreatorPackages from "./OtherRoutes/CreatorPackages";
+import PackageDetails from "./OtherRoutes/CreatorPackages/PackageDetails";
 
 export default function Routes(props) {
     const navigate = useNavigate();
@@ -23,7 +24,10 @@ export default function Routes(props) {
         },
         {
             path: "/creator-packages",
-            element: <CreatorPackages {...props} />,
+            children: [
+                { path: "", element: <CreatorPackages {...props} /> },
+                { path: "*", element: <PackageDetails /> },
+            ],
         },
         { path: "/service/*", element: <OtherRoutess {...props} /> },
     ]);

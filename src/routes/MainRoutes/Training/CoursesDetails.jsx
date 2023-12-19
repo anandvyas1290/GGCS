@@ -57,11 +57,7 @@ export default function CoursesDetails(props) {
                             key={item?.id}
                             className="flex flex-col items-center gap-2 text-center w-1/2 text-xl font-bold "
                         >
-                            <img
-                                src={item?.icon}
-                                alt=""
-                                className="w-10 h-10"
-                            />
+                            <img src={item?.icon} alt="" className="w-8 h-8" />
                             <p>{item?.label}</p>
                         </div>
                     ))}
@@ -74,5 +70,4 @@ export default function CoursesDetails(props) {
             <FAQ />
         </div>
     );
-
 }
