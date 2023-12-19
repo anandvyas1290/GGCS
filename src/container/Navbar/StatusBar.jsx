@@ -43,7 +43,7 @@ export default function StatusBar() {
                         </div>
                     </section>
                 </div>
-                <div className="flex justify-center sm:justify-normal gap-3 pt-3 sm:!pt-0">
+                <div className="flex justify-center items-center sm:justify-normal gap-3 pt-3 sm:!pt-0 !backdrop-blur">
                     {socialMedias?.map((item, i) => (
                         <div
                             className=""
@@ -59,7 +59,7 @@ export default function StatusBar() {
                             <img
                                 src={item?.icon}
                                 alt={item?.name}
-                                className={`w-4 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
+                                className={`w-5 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
                             />
                         </div>
                     ))}
