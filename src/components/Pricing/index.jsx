@@ -2,10 +2,26 @@ import React, { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
+import { motion } from "framer-motion";
 
 import Tabs from "../UI/Tabs";
 import { pricing } from "./dummyData";
 import { PrimaryBtn } from "../Button";
+
+
+const fadeInAnimationVariants = {
+    initial: {
+        opacity: 0,
+        // y: 100,
+    },
+    animate: (index) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.15 * index,
+        },
+    }),
+};
 
 function Pricing() {
     const [state, setState] = useState({
@@ -100,9 +116,16 @@ function Pricing() {
                                 className="mb-8 space-y-3 text-left h-[350px] overflow-y-scroll no-scrollbar"
                             >
                                 {item?.description?.map((desc, i) => (
-                                    <li
+                                    <motion.li
+                                        variants={fadeInAnimationVariants}
+                                        initial="initial"
+                                        whileInView="animate"
+                                        viewport={{
+                                            once: true,
+                                        }}
+                                        custom={i}
                                         key={i}
-                                        className="flex items-center space-x-3"
+                                        className="flex items-center space-x-3 fadeIn"
                                     >
                                         {/* Icon  */}
                                         <svg
@@ -123,7 +146,7 @@ function Pricing() {
                                                 {desc?.time}
                                             </span>
                                         </span>
-                                    </li>
+                                    </motion.li>
                                 ))}
                             </ul>
                         </div>
