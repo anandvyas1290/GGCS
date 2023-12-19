@@ -1,8 +1,8 @@
 import React from "react";
 
-// import rocket from "../../../assets/Navbar/rocket.webp";
-import packages from "../../../assets/home/packages.jpg";
-import { socialMedias } from "../../../db/dummy";
+// import rocket from "../../assets/Navbar/rocket.webp";
+import packages from "../../assets/home/packages.jpg";
+import { socialMedias } from "../../db/dummy";
 
 // import { useNavigation } from "react-router-dom";
 
@@ -25,25 +25,25 @@ export default function StatusBar() {
                     </span> */}
 
                     <section
-                        className="p-[1px] text-2xl font-agbalumo font-medium rounded-[40px] bg-gradient-to-r from-g1 via-g2 to-g3 bg-[length:80%] cursor-pointer animate-gradientBg hover:scale-110 transition-all duration-300"
+                        className="p-[1px] text-lg font-agbalumo rounded-[40px] bg-gradient-to-r from-g1 via-g2 to-g3 bg-[length:80%] cursor-pointer animate-gradientBg hover:scale-110 transition-all duration-300"
                         // onClick={() => navigate("/packages")}
                         onClick={() =>
                             window.open(`/creator-packages`, "_blank")
                         }
                     >
-                        <div className="flex items-center gap-2 px-2.5 py-1 !w-full rounded-[40px] text-card1 bg-white">
+                        <div className="flex items-center gap-2 px-2 py-1 !w-full rounded-[40px] text-card1 bg-white">
                             <img
                                 src={packages}
                                 alt="ggcs packages"
-                                className="w-9 h-9"
+                                className="w-7 h-7"
                             />
-                            <p className="[word-spacing:5px]">
+                            <p className="[word-spacing:3px]">
                                 Creator Packages
                             </p>
                         </div>
                     </section>
                 </div>
-                <div className="flex justify-center sm:justify-normal gap-3 pt-3 sm:!pt-0">
+                <div className="flex justify-center items-center sm:justify-normal gap-3 pt-3 sm:!pt-0 !backdrop-blur">
                     {socialMedias?.map((item, i) => (
                         <div
                             className=""
@@ -59,7 +59,7 @@ export default function StatusBar() {
                             <img
                                 src={item?.icon}
                                 alt={item?.name}
-                                className={`w-4 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
+                                className={`w-5 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
                             />
                         </div>
                     ))}

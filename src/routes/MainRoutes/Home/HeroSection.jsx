@@ -1,5 +1,8 @@
-import React from "react";
-import hero1 from "../../../assets/home/heroSection/hero1.webp";
+import React, { useEffect, useState } from "react";
+// import hero1 from "../../../assets/home/heroSection/hero1.webp";
+import ITBanner from "../../../assets/home/heroSection/ITBanner.png";
+import socialMediaBanner from "../../../assets/home/heroSection/socialMediaBanner.png";
+import digitalMarketingBanner from "../../../assets/home/heroSection/digitalMarketingBanner.png";
 import banner1 from "../../../assets/home/heroSection/banner1.webp";
 import banner2 from "../../../assets/home/heroSection/banner2.webp";
 import banner3 from "../../../assets/home/heroSection/banner3.webp";
@@ -8,26 +11,67 @@ import shape2 from "../../../assets/home/heroSection/shape2.webp";
 import shape3 from "../../../assets/home/heroSection/shape3.webp";
 import shape4 from "../../../assets/home/heroSection/shape4.webp";
 
-import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
+import Slider from "react-slick";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 import { PrimaryBtn } from "../../../components/Button";
-import { useNavigate } from "react-router-dom";
+
+const services = ["Digital Marketing", "Social Media", "IT Service"];
 
 export default function HeroSection() {
+    const [state, setState] = useState({ service: services[0], currentTab: 0 });
     const navigate = useNavigate();
+
+    const settings = {
+        dots: false,
+        autoplay: true,
+        infinite: true,
+        speed: 3000,
+        fade: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+    };
+
+    // useEffect(() => {
+    //     let interval = setInterval(() => {
+    //         setState((prev) => {
+    //             return {
+    //                 ...prev,
+    //                 service: services[prev?.currentTab],
+    //                 currentTab:
+    //                     prev?.currentTab >= 2 ? 0 : prev?.currentTab + 1,
+    //             };
+    //         });
+    //     }, 4000);
+
+    //     return () => {
+    //         clearInterval(interval);
+    //     };
+    // }, [state?.currentTab]);
+
     return (
         <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[150px] pb-[40px] sm:pb-[60px]  md:pb-[100px] lg:pb-[150px]">
             <div className="container">
                 <div className="sm:w-4/6">
                     <div className="">
-
-                        <motion.div className="text-6xl md:text-8xl font-bold"
+                        <motion.div
+                            className="text-6xl font-bold md:text-8xl"
                             initial={{ opacity: 0, y: 100 }}
-                            animate={{ opacity: 1, y: 0 }}>
-                            {/* SEO
-                            <br /> */}
-                            Digital Marketing
+                            animate={{ opacity: 1, y: 0 }}
+                        >
+                            {/* <Slider {...settings}>
+                                {[
+                                    "Digital Marketing",
+                                    "Social Media",
+                                    "IT Service",
+                                ]?.map((item) => (
+                                    <p>{item}</p>
+                                ))}
+                            </Slider> */}
+                            {services[state?.currentTab]}
                             <br />
                             <div className="">
                                 <div className="text-animate">
@@ -50,7 +94,7 @@ export default function HeroSection() {
                         <p className="text-base mb-4 text-grey2 tracking-[1.2px] ">
                             Igniting Digital Growth
                         </p>
-                        <div className="mb-5 sm:mb-7 mt-2 sm:mt-3">
+                        <div className="mt-2 mb-5 sm:mb-7 sm:mt-3">
                             <PrimaryBtn
                                 size="px-8 py-3"
                                 bgColor="bg-primaryBtn"
@@ -67,7 +111,7 @@ export default function HeroSection() {
                                 <PhoneArrowUpRightIcon className="w-7 h-7 text-primary" />
                             </div>
                             <div>
-                                <p className="text-base text-grey1 font-semibold">
+                                <p className="text-base font-semibold text-grey1">
                                     Contact Us Today!
                                 </p>
                                 <h4 className="text-xl font-semibold">
@@ -78,8 +122,20 @@ export default function HeroSection() {
                     </div>
                 </div>
                 <div className="">
-                    <div className="absolute top-0 right-0 -z-[1]">
-                        <img src={hero1} alt="hero" className="w-[700px]" />
+                    <div className="absolute top-0 right-0 w-[700px] -z-[1]">
+                        <Slider {...settings}>
+                            {[
+                                digitalMarketingBanner,
+                                socialMediaBanner,
+                                ITBanner,
+                            ]?.map((item) => (
+                                <img
+                                    src={item}
+                                    alt="hero"
+                                    className="w-[700px]"
+                                />
+                            ))}
+                        </Slider>
                     </div>
                     <div className="absolute top-0 right-0 -z-[2]">
                         <img src={banner1} alt="" className="w-[700px]" />
