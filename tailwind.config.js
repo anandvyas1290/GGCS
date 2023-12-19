@@ -99,6 +99,7 @@ export default {
                 blogShape: "blogShape 2.5s linear 0s infinite alternate",
                 whyGGCSCard: "all .5s ease-in-out",
                 flipArrow: "flipArrow 2s linear 0s infinite",
+                animation:"fadeIn 3s"
             },
             keyframes: {
                 gradientBg: {
@@ -222,6 +223,14 @@ export default {
                         transform: "rotateY(0deg)",
                     },
                 },
+                fadeIn: {
+                   "0%":{
+                        opacity: "0",
+                    },
+                   "100%":{
+                        opacity: "1",
+                    }
+                }
             },
             backgroundImage: {
                 darkBg: 'url("/funfact1.webp")',
