@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import ppt from "../../../assets/PDF/GGCS-PPT.pdf";
-import logo from "../../../assets/Navbar/GGCSNew.svg";
-import Menu from "../../../assets/Navbar/menu.svg";
+import ppt from "../../assets/PDF/GGCS-PPT.pdf";
+import logo from "../../assets/Navbar/GGCSNew.svg";
+import Menu from "../../assets/Navbar/menu.svg";
 
-import { navMenu } from "../../../db/dummy";
-import { PrimaryBtn } from "../../../components/Button";
+import { navMenu } from "../../db/dummy";
+import { PrimaryBtn } from "../../components/Button";
 
 export default function NavbarContent() {
     const location = useLocation();
