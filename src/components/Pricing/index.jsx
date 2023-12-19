@@ -78,7 +78,7 @@ function Pricing() {
                 {state?.plans?.map((item, index) => (
                     <div
                         key={index}
-                        className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg shadow cursor-pointer"
+                        className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg shadow"
                     >
                         <div>
                             <h3 className="mb-1 text-2xl font-semibold">
