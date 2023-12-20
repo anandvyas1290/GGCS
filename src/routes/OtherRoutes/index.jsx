@@ -7,7 +7,7 @@ import { servicesData } from "../../db/dummy";
 import BackNavigate from "../../components/UI/BackNavigate";
 import { OtherServices } from "../../components/OtherServices";
 
-export default function OtherRoutess(props) {
+export default function OtherRoutes(props) {
     let location = useLocation();
 
     let slug = location?.state

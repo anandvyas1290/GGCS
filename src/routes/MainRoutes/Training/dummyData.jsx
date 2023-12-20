@@ -85,8 +85,8 @@ export const courses = [
 ];
 
 export const features = [
-    { id: 1, icon: feature1, label: "6000+ Students Currently Enrolled" },
-    { id: 2, icon: feature2, label: "4000+ hiring partners" },
-    { id: 3, icon: feature3, label: "6.9 LPA Average Salary" },
-    { id: 4, icon: feature4, label: "36 LPA Highest Salary" },
+    { id: 1, icon: feature1, label: "100+ Students Currently Enrolled" },
+    { id: 2, icon: feature2, label: "40+ hiring partners" },
+    { id: 3, icon: feature3, label: "5 LPA Average Salary" },
+    { id: 4, icon: feature4, label: "20 LPA Highest Salary" },
 ];
