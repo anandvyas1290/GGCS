@@ -21,12 +21,11 @@ export default function Gallery(props) {
                                 {galleryData?.map((item) => (
                                     <li
                                         key={item?.id}
-                                        className={`flex gap-4 my-3 text-lg text-grey2 font-semibold cursor-pointer transition-all duration-200 ${
-                                            state?.currentPlatform?.platform ===
-                                            item?.platform
+                                        className={`flex gap-4 my-3 text-lg text-grey2 font-semibold cursor-pointer transition-all duration-200 ${state?.currentPlatform?.platform ===
+                                                item?.platform
                                                 ? "grayscale-1 !text-blue-600"
                                                 : "grayscale-[1]"
-                                        }`}
+                                            }`}
                                         onClick={() => {
                                             console.log(
                                                 item?.platform?.toLowerCase()

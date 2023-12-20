@@ -32,7 +32,7 @@ const SwiperCarousel = ({ carouselData }) => {
                 //     el: ".swiper-pagination",
                 //     clickable: true,
                 // }}
-                // autoplay={{ delay: 3500, disableOnInteraction: false }}
+                autoplay={{ delay: 3500, disableOnInteraction: false }}
                 speed={800}
                 navigation={{
                     nextEl: ".swiper-button-next",

@@ -612,6 +612,10 @@ export const menuService = [
         label: "Contact Us",
         link: "contact",
     },
+    {
+        label: "Hire Us",
+        link: "hire-us",
+    },
 ];
 // footer service
 export const services = [
