@@ -9,7 +9,10 @@ import list2 from "../../../assets/home/process/list2.svg";
 import list3 from "../../../assets/home/process/list3.svg";
 
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
-import { H1Animate, TextAnimate } from "../../../components/Animation/H1Animate";
+import {
+    H1Animate,
+    TextAnimate,
+} from "../../../components/Animation/H1Animate";
 
 export default function Process(props) {
     const processData = [
@@ -17,19 +20,19 @@ export default function Process(props) {
             id: 1,
             icon: list1,
             label: "Creative Ideas",
-            desc: "Keyword research and other market research under the SEO analytics umbrella.",
+            desc: "At GGCS, our approach hinges on creativity that transcends boundaries. We believe in the power of innovative thinking to shape compelling strategies and deliver impactful results.",
         },
         {
             id: 2,
             icon: list2,
             label: "Data Collection",
-            desc: "Keyword research and other market research under the SEO analytics umbrella.",
+            desc: "We understand the power of data in steering successful campaigns. Our meticulous approach to data collection empowers us to harness actionable insights, enabling us to drive strategies that resonate and deliver results.",
         },
         {
             id: 3,
             icon: list3,
             label: "Targeting",
-            desc: "Keyword research and other market research under the SEO analytics umbrella.",
+            desc: "We specialize in crafting targeted strategies that ensure your message resonates with the right audience at the right time. Our approach to targeting combines sophisticated techniques with deep insights, allowing us to create campaigns that drive engagement and conversions.",
         },
     ];
 
@@ -68,10 +71,11 @@ export default function Process(props) {
                         {processData?.map((item) => (
                             <li className="mb-8" key={item?.id}>
                                 <div
-                                    className={`flex relative ${item?.id % 2 === 0
-                                        ? "justify-center"
-                                        : "justify-start"
-                                        }`}
+                                    className={`flex relative ${
+                                        item?.id % 2 === 0
+                                            ? "justify-center"
+                                            : "justify-start"
+                                    }`}
                                 >
                                     <div className="mr-7">
                                         <div className="relative">
@@ -88,7 +92,7 @@ export default function Process(props) {
                                             <span className="absolute bottom-0 right-0 h-[2px] w-[2px] rounded-full bg-[#021d3580]" />
                                         </div>
                                     </div>
-                                    <div className="w-6/12">
+                                    <div className="w-8/12">
                                         <h4 className="text-2xl font-semibold">
                                             {item?.label}
                                         </h4>
@@ -99,7 +103,7 @@ export default function Process(props) {
                                     {item?.id < processData?.length ? (
                                         <>
                                             {item?.id === 1 ? (
-                                                <div className="absolute top-5 right-0">
+                                                <div className="absolute top-14 right-0">
                                                     <Line1 />
                                                     {/* <img
                                                         src={line1}
@@ -107,7 +111,7 @@ export default function Process(props) {
                                                     /> */}
                                                 </div>
                                             ) : (
-                                                <div className="absolute top-2 -left-16">
+                                                <div className="absolute top-7 -left-16">
                                                     <Line2 />
                                                     {/* <img
                                                         src={line2}
