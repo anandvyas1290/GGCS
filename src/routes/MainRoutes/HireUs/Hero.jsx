@@ -4,12 +4,12 @@ import { hireUs } from './Json';
 
 export const Card = ({ title, description, Icon, iconClassName = '' }) => {
     return (
-        <div className="w-full border-2 border-gray-200 !bg-white rounded-md text-center py-7 transform transition duration-500 hover:scale-110">
-            <div className={`w-20 h-20 mx-auto rounded-full border p-4 ${iconClassName}`}>
+        <div className={`group w-full shadow-xl border-[1px] !bg-white rounded-md text-center py-7 transform transition duration-500 hover:scale-110 ${iconClassName}`}>
+            <div className={`w-20 h-20 mx-auto rounded-full border p-4 `}>
                 <img src={Icon} alt={title} className='h-full' />
             </div>
-            <div className="text-xl text-navLink pt-4 font-semibold">{title}</div>
-            <div className="text-gray-400 font-normal text-sm">{description}</div>
+            <div className="text-xl text-navLink pt-4 font-semibold group-hover:!text-white">{title}</div>
+            <div className="text-gray-400 font-normal text-sm group-hover:text-black">{description}</div>
         </div>
     );
 };
@@ -28,7 +28,7 @@ function Hero() {
                                 title={item?.title}
                                 description={item?.desc}
                                 Icon={item?.Icon}
-                                iconClassName={item?.className}
+                                iconClassName={item?.style}
                             />
                         ))}
                     </div>

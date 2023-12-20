@@ -1,3 +1,6 @@
+import MobileAppIcon from "../../assets/mobile-app.jpg"
+import WebAppIcon from "../../assets/web-app.jpg"
+
 export const pricing = [
     {
         id: 1,
@@ -341,9 +344,9 @@ export const pricing = [
         plans:[
             {
                 title: "Mobile App Development",
-                price: "N/A",
-                desc: "Lorem ipsum",
-                icon:'',
+                // price: "N/A",
+                // desc: "Lorem ipsum",
+                icon:MobileAppIcon,
                 description: [
                     {label: "50% Upfront to get started with the work immediately", icon:""},
                     {label: "Wireframes", icon:""},
@@ -376,9 +379,9 @@ export const pricing = [
             },
             {
                 title: "Website Development",
-                price: "N/A",
-                desc: "Lorem ipsum",
-                icon:"",
+                // price: "N/A",
+                // desc: "Lorem ipsum",
+                icon:WebAppIcon,
                 description: [
                     {label: "Layout (Web & Mobile) Responsive", icon:""},
                     {label: "HTML5/CSS", icon:""},
