@@ -22,7 +22,9 @@ export default function CreatorPackages(props) {
                             className="package-card rounded-xl cursor-pointer"
                             key={item?.id}
                             onClick={() =>
-                                navigate(`/creator-packages/${item?.slug}`)
+                                navigate(`/creator-packages/${item?.slug}`, {
+                                    state: { category: item?.slug },
+                                })
                             }
                         >
                             <div className="packages-wrapper">

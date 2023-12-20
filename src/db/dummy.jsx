@@ -382,17 +382,17 @@ export const servicesData = [
             {
                 subHeading: "Partner Recruitment",
                 icon: partnerRecruit,
-                description: ``,
+                description: `Partner Recruitment`,
             },
             {
                 subHeading: "Commission Management",
                 icon: commission,
-                description: ``,
+                description: `Commission Management`,
             },
             {
                 subHeading: "Performance Tracking",
                 icon: performanceTrack,
-                description: ``,
+                description: `Performance Tracking`,
             },
         ],
     },
@@ -405,17 +405,17 @@ export const servicesData = [
             {
                 subHeading: "A/B Testing",
                 icon: testing,
-                description: ``,
+                description: `Testing`,
             },
             {
                 subHeading: "Landing Page Optimization",
                 icon: landingPageOpti,
-                description: ``,
+                description: `Landing Page Optimization`,
             },
             {
                 subHeading: "User Journey Analysis",
                 icon: performanceTrack,
-                description: ``,
+                description: `User Journey Analysis`,
             },
             // {
             //     subHeading: "Video Advertising",
@@ -433,17 +433,17 @@ export const servicesData = [
             {
                 subHeading: "Video Production",
                 icon: videoProduction,
-                description: ``,
+                description: `Video Production`,
             },
             {
                 subHeading: "YouTube Optimization",
                 icon: youtubeOptimise,
-                description: ``,
+                description: `YouTube Optimization`,
             },
             {
                 subHeading: "Video Advertising",
                 icon: videoAds,
-                description: ``,
+                description: `Video Advertising`,
             },
         ],
     },
@@ -456,17 +456,17 @@ export const servicesData = [
             {
                 subHeading: "Local SEO",
                 icon: localSEO,
-                description: ``,
+                description: `Local SEO`,
             },
             {
                 subHeading: "Google My Business Optimization",
                 icon: businessOptimization,
-                description: ``,
+                description: `Google My Business Optimization`,
             },
             {
                 subHeading: "Location-Based Targeting",
                 icon: locationTargeting,
-                description: ``,
+                description: `Location-Based Targeting`,
             },
         ],
     },
@@ -478,16 +478,18 @@ export const servicesData = [
         list: [
             {
                 subHeading: "Chatbot Development",
-                description: chatBot,
+                icon: chatBot,
+                description: "chatBot",
             },
             {
                 subHeading: "Customer Support Automation",
                 icon: automation,
-                description: ``,
+                description: `automation`,
             },
             {
                 subHeading: "User Engagement",
-                description: userEngagement,
+                icon: userEngagement,
+                description: "userEngagement",
             },
         ],
     },

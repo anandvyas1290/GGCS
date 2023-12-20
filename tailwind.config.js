@@ -45,6 +45,16 @@ export default {
                 skin2: "#FFDB66",
                 purple1: "#6E71CC",
                 green1: "#6FCD9E",
+                color1: "#ededed",
+                color2: "#64c1cf",
+                color3: "#b1c3c1",
+                color4: "#bd9ac8",
+                color5: "#6d87b5",
+                color6: "#00acb5",
+                color7: "#dbd3b1",
+                color8: "#ffffff",
+                color9: "#edf2f2",
+                color10: "#4d5972",
             },
             fontFamily: {
                 jakarta: " Plus Jakarta Sans, sans-serif",
@@ -99,7 +109,7 @@ export default {
                 blogShape: "blogShape 2.5s linear 0s infinite alternate",
                 whyGGCSCard: "all .5s ease-in-out",
                 flipArrow: "flipArrow 2s linear 0s infinite",
-                animation:"fadeIn 3s"
+                animation: "fadeIn 3s",
             },
             keyframes: {
                 gradientBg: {
@@ -224,13 +234,13 @@ export default {
                     },
                 },
                 fadeIn: {
-                   "0%":{
+                    "0%": {
                         opacity: "0",
                     },
-                   "100%":{
+                    "100%": {
                         opacity: "1",
-                    }
-                }
+                    },
+                },
             },
             backgroundImage: {
                 darkBg: 'url("/funfact1.webp")',

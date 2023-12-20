@@ -1,9 +1,14 @@
 import React from "react";
 import "./style.css";
-import { H1Animate } from "../Animation/H1Animate";
+
+import { useNavigate } from "react-router-dom";
+
+import { PrimaryBtn } from "../Button";
 import Container from "../Layout/Layout";
+import { H1Animate } from "../Animation/H1Animate";
 
 export function OtherServices({ data }) {
+    let navigate = useNavigate();
     window.scrollTo(0, 0);
     return (
         <>
@@ -19,9 +24,9 @@ export function OtherServices({ data }) {
                     <div className="gradient-cards">
                         {data?.list?.map((item, i) => {
                             return (
-                                <div className=" card" key={i}>
+                                <div className="card" key={i}>
                                     <div
-                                        className={`h-full w-fit container-card bg-box${
+                                        className={`h-full w-full container-card bg-box${
                                             i + 1
                                         }`}
                                     >
@@ -110,6 +115,15 @@ export function OtherServices({ data }) {
                         })}
                     </div>
                 </Container>
+
+                <div className="flex justify-center !py-4">
+                    <PrimaryBtn
+                        className="!px-14 !py-3 text-lg !bg-green-600 !border-0"
+                        onClick={() => navigate("/hire-us")}
+                    >
+                        Hire Us
+                    </PrimaryBtn>
+                </div>
             </section>
         </>
     );

@@ -112,6 +112,19 @@ import youtubeOptimise from "../assets/otherServices/jpg/youtubeOptimise.jpg";
 import businessOptimization from "../assets/otherServices/jpg/businessOptimization.jpg";
 import locationTargeting from "../assets/otherServices/jpg/locationTargeting.jpg";
 import userEngagement from "../assets/otherServices/jpg/userEngagement.jpg";
+import security from "../assets/otherServices/jpg/security.jpg";
+import support from "../assets/otherServices/jpg/24X7Support.jpg";
+import certificate from "../assets/otherServices/jpg/certificate.jpg";
+import channelReport from "../assets/otherServices/jpg/channelReport.jpg";
+import creatives from "../assets/otherServices/jpg/creatives.jpg";
+import dbBackup from "../assets/otherServices/jpg/dbBackup.jpg";
+import gst from "../assets/otherServices/jpg/gst.jpg";
+import logoDesign from "../assets/otherServices/jpg/logoDesign.jpg";
+import personalBranding from "../assets/otherServices/jpg/personalBranding.jpg";
+import policy from "../assets/otherServices/jpg/policy.jpg";
+import portfolioWebsite from "../assets/otherServices/jpg/portfolioWebsite.jpg";
+import pvtRegistration from "../assets/otherServices/jpg/pvtRegistration.jpg";
+import socialMediaHandle from "../assets/otherServices/jpg/socialMediaHandle.jpg";
 
 export { bgMain, design1, design2, design3, design4, design5, design6 };
 export { serFB, serLinkedin, serInsta, serPint };
@@ -196,4 +209,17 @@ export {
     businessOptimization,
     locationTargeting,
     userEngagement,
+    security,
+    support,
+    certificate,
+    channelReport,
+    creatives,
+    dbBackup,
+    gst,
+    logoDesign,
+    personalBranding,
+    policy,
+    portfolioWebsite,
+    pvtRegistration,
+    socialMediaHandle,
 };

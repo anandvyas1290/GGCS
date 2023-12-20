@@ -35,22 +35,22 @@ export default function HeroSection() {
         arrows: false,
     };
 
-    // useEffect(() => {
-    //     let interval = setInterval(() => {
-    //         setState((prev) => {
-    //             return {
-    //                 ...prev,
-    //                 service: services[prev?.currentTab],
-    //                 currentTab:
-    //                     prev?.currentTab >= 2 ? 0 : prev?.currentTab + 1,
-    //             };
-    //         });
-    //     }, 4000);
+    useEffect(() => {
+        let interval = setInterval(() => {
+            setState((prev) => {
+                return {
+                    ...prev,
+                    service: services[prev?.currentTab],
+                    currentTab:
+                        prev?.currentTab >= 2 ? 0 : prev?.currentTab + 1,
+                };
+            });
+        }, 4000);
 
-    //     return () => {
-    //         clearInterval(interval);
-    //     };
-    // }, [state?.currentTab]);
+        return () => {
+            clearInterval(interval);
+        };
+    }, [state?.currentTab]);
 
     return (
         <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[150px] pb-[40px] sm:pb-[60px]  md:pb-[100px] lg:pb-[150px]">
@@ -67,8 +67,8 @@ export default function HeroSection() {
                                     "Digital Marketing",
                                     "Social Media",
                                     "IT Service",
-                                ]?.map((item) => (
-                                    <p>{item}</p>
+                                ]?.map((item, i) => (
+                                    <p key={i}>{item}</p>
                                 ))}
                             </Slider> */}
                             {services[state?.currentTab]}
@@ -128,8 +128,9 @@ export default function HeroSection() {
                                 digitalMarketingBanner,
                                 socialMediaBanner,
                                 ITBanner,
-                            ]?.map((item) => (
+                            ]?.map((item, i) => (
                                 <img
+                                    key={i}
                                     src={item}
                                     alt="hero"
                                     className="w-[700px]"
