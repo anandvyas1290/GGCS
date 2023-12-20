@@ -83,6 +83,7 @@ function Pricing() {
         });
     };
 
+    const { currentTab } = state
     return (
         <div>
             <Tabs
@@ -97,23 +98,26 @@ function Pricing() {
                         className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg shadow"
                     >
                         <div>
+                            {
+                                item?.icon ? <div className="flex justify-center items-center bg-gray-200 rounded-full w-24 h-24 mx-auto mb-3  "> <img src={item?.icon} alt="" className="p-3 w-20 h-20" /></div> : null
+                            }
                             <h3 className="mb-1 text-2xl font-semibold">
                                 {item?.title}
                             </h3>
                             <p className="font-light text-gray-500 ">
                                 {item?.desc}
                             </p>
-                            <div className="flex items-baseline justify-center my-8">
+                            {item?.price ? <div className="flex items-baseline justify-center mt-8">
                                 <span className="mr-1 text-4xl font-extrabold">
                                     {item?.price}
                                 </span>
                                 <span className="font-medium text-gray-500">
                                     /month
                                 </span>
-                            </div>
+                            </div> : null}
                             <ul
                                 role="list"
-                                className="mb-8 space-y-3 text-left h-[350px] overflow-y-scroll no-scrollbar"
+                                className="my-8 space-y-3 text-left h-[350px] overflow-y-scroll no-scrollbar"
                             >
                                 {item?.description?.map((desc, i) => (
                                     <motion.li
@@ -168,7 +172,7 @@ function Pricing() {
                             // bgColor="bg-primaryBtn"
                             className="w-full rounded-xl bg-white  !text-primary border-0 hover:!text-white hover:bg-gradient-to-r from-g1 via-g2 to-g3 hover:bg-[length:200%] hover:animate-gradientBg"
                         >
-                            Join this Plan
+                            {currentTab === "it_services" ? "Send Enquiry" : "Join this Plan"}
                         </PrimaryBtn>
                         {/* <div
 

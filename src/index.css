@@ -242,8 +242,8 @@ input{
         width: 28rem !important;
         height: 36rem !important;
     }
-    .swiper-slide img {
-        width: 28rem !important;
+    .swiper-slide .slide_image {
+        /* width: 28rem !important; */
         height: 36rem !important;
     }
 }
@@ -251,7 +251,7 @@ input{
     padding: 10px;
 }
 
-.swiper-slide img {
+.swiper-slide .slide_image {
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
     /* width: 22rem !important; */

@@ -17,6 +17,7 @@ import PrivacyPolicy from "../FooterRoutes/OtherServices/PrivacyPolicy";
 import TermsAndCondition from "../FooterRoutes/OtherServices/TermsAndCondition";
 import Disclaimer from "../FooterRoutes/OtherServices/Disclaimer";
 import CoursesDetails from "./Training/CoursesDetails";
+import HireUs from "./HireUs";
 
 export default function MainRoutes(props) {
     const [state, setState] = useState({ title: "" });
@@ -49,11 +50,9 @@ export default function MainRoutes(props) {
         { path: "/contact", element: <Contact {...props} /> },
         { path: "/upos-details", element: <UposPackage {...props} /> },
         { path: "/privacy-policy", element: <PrivacyPolicy {...props} /> },
-        {
-            path: "/terms-conditions",
-            element: <TermsAndCondition {...props} />,
-        },
+        { path: "/terms-conditions", element: <TermsAndCondition {...props} />, },
         { path: "/disclaimer", element: <Disclaimer {...props} /> },
+        { path: "/hire-us", element: <HireUs {...props} /> },
     ]);
     return (
         <div>
