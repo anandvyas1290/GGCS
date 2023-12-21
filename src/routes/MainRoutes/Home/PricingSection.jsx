@@ -23,64 +23,10 @@ export default function PricingSection() {
                         drive economic growth.
                     </p>
                 </div>
-                {/* Pricing Card  */}
                 <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
-                    {/* reusable */}
                     <Pricing />
                 </div>
             </div>
-            {/* {Price?.map((d, i) => {
-                                    return (
-                                        <div className='flex' key={i}>
-                                            <div className='flex w-3/12 px-2 py-2 text-center '>
-                                                <div className='flex justify-center py-3 border-b' >
-                                                    <p>{d?.label}</p>
-                                                </div>
-                                            </div>
-                                            <div className={`w-9/12 bg-white  ${i === 0 ? "rounded-t-xl" : ""}`}>
-                                                <div className='flex'>
-                                                    <div className='flex justify-center w-1/3 px-2 py-2 text-center '>
-                                                        <div className='flex justify-center w-1/2 py-3 border-b' >
-                                                            <p>{d?.essential}</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className='flex justify-center w-1/3 px-2 py-2 text-white bg-primaryBtn '>
-                                                        <div className='flex justify-center w-1/2 py-3 border-b' >
-                                                            <p>{d?.pro}</p>
-                                                        </div>
-                                                    </div>
-                                                    <div className='flex justify-center w-1/3 px-2 py-2 text-center '>
-                                                        <div className='flex justify-center w-1/2 py-3 border-b' >
-                                                            <p>{d?.business}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )
-                                })} */}
-            {/* <div className='flex '>
-                                    <div className='w-3/12'></div>
-                                    <div className='w-9/12 '>
-                                        <div className='flex '>
-                                            <div className='w-1/3 px-2 py-5 text-center bg-white'>
-                                                <div className='flex justify-center py-3 ' >
-                                                    <SecondaryBtn>Join this Plan</SecondaryBtn>
-                                                </div>
-                                            </div>
-                                            <div className='w-1/3 py-5 text-center text-white bg-primaryBtn '>
-                                                <div className='flex justify-center py-3 ' >
-                                                    <SecondaryBtn2>Join this Plan</SecondaryBtn2>
-                                                </div>
-                                            </div>
-                                            <div className='w-1/3 px-2 py-5 text-center bg-white'>
-                                                <div className='flex justify-center py-3 ' >
-                                                    <SecondaryBtn>Join this Plan</SecondaryBtn>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> */}
         </div>
     );
 }

@@ -68,7 +68,7 @@ import Post from "../assets/Upos/Post.jpg";
 import CCM from "../assets/Upos/Cross-Channel-Marketing.webp";
 import ContentCreation from "../assets/Upos/Content-Creation.png";
 
-import serviceVideo from "../assets/animation/services.mp4";
+import servicesBanner from "../assets/animation/servicesBanner.gif";
 
 //other services
 import onPageSeo from "../assets/otherServices/jpg/onPageSeo.jpg";
@@ -163,7 +163,7 @@ export {
     rocket,
     services,
     arrow,
-    serviceVideo,
+    servicesBanner,
 };
 export { flyer, instagram, newsletter, thumbnail, website, facebook };
 export { Organic, Post, CCM, ContentCreation };

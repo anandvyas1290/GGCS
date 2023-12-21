@@ -4,8 +4,8 @@ import tick from "../../../assets/training/courses/tick.jpg";
 import { useNavigate } from "react-router-dom";
 
 import { courses } from "./dummyData";
-import { H1Animate } from "../../../components/Animation/H1Animate";
 import { PrimaryBtn } from "../../../components/Button";
+import { H1Animate } from "../../../components/Animation/H1Animate";
 
 const otherFeatures = [
     { id: 1, name: "100% offline learning with expert instructors." },

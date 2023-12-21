@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 
 import { useNavigate } from "react-router-dom";
@@ -6,12 +6,18 @@ import { useNavigate } from "react-router-dom";
 import { PrimaryBtn } from "../Button";
 import Container from "../Layout/Layout";
 import { H1Animate } from "../Animation/H1Animate";
+import BackNavigate from "../UI/BackNavigate";
 
-export function OtherServices({ data }) {
+export default function OtherServices({ data, samePage }) {
     let navigate = useNavigate();
-    window.scrollTo(0, 0);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     return (
-        <>
+        <div className="bg-gray-100">
+            {samePage ? <BackNavigate backLabel={data?.heading} /> : null}
             <div className={`py-20 sm:py-32`}>
                 <Container>
                     <H1Animate className={`text-5xl text-center`}>
@@ -125,6 +131,6 @@ export function OtherServices({ data }) {
                     </PrimaryBtn>
                 </div>
             </section>
-        </>
+        </div>
     );
 }

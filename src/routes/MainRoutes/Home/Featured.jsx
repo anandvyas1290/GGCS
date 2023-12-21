@@ -1,8 +1,8 @@
 import React from "react";
 import brand1 from "../../../assets/home/featured/gg.png";
 import brand2 from "../../../assets/home/featured/ibn.png";
-import brand3 from "../../../assets/home/featured/samachar.png";
 import brand4 from "../../../assets/about/home/quikcraker.png";
+import brand3 from "../../../assets/home/featured/samachar.png";
 // import brand5 from "../../../assets/home/featured/brand5.webp";
 
 import Slider from "react-slick";
@@ -60,9 +60,9 @@ export default function Featured(props) {
     };
     return (
         <div className="bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F] relative md:mb-36">
-            <div className="max-w-screen-xl mx-auto px-12">
+            <div className="max-w-screen-xl px-12 mx-auto">
                 <div className="text-center">
-                    <h4 className="text-2xl font-bold text-white1 pt-20 pb-12">
+                    <h4 className="pt-20 pb-12 text-2xl font-bold text-white1">
                         As Featured On:
                     </h4>
                 </div>
@@ -73,7 +73,7 @@ export default function Featured(props) {
                                 <img
                                     src={item?.image}
                                     alt="brand"
-                                    className="object-contain object-center w-full max-h-12 transition-all duration-300 hover:opacity-100"
+                                    className="object-contain object-center w-full transition-all duration-300 max-h-12 hover:opacity-100"
                                 />
                             </div>
                         ))}

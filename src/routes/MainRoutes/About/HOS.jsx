@@ -1,11 +1,12 @@
 import React from "react";
-import textBg from "../../../assets/about/hoc/text-bg.svg";
 import Container from "../../../components/Layout/Layout";
-import { DashedLine } from "../../../components/UI/ProcessDash";
+import textBg from "../../../assets/about/hoc/text-bg.svg";
+
 import {
     H1Animate,
     TextAnimate,
 } from "../../../components/Animation/H1Animate";
+import { DashedLine } from "../../../components/UI/ProcessDash";
 
 const hosData = [
     {

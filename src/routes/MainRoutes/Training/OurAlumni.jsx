@@ -1,26 +1,27 @@
 import React from "react";
-import { ourAlumni } from "../../../db/dummy";
+
+import { ourAlumni } from "./dummyData";
 
 function OurAlumni() {
     return (
-        <section className="max-w-screen-lg mx-auto md:px-10 sm:px-6 px-3 ">
-            <section className=" ">
-                <div className="mx-auto text-center md:max-w-xl lg:max-w-3xl pt-20 sm:pt-14">
+        <section className="max-w-screen-lg px-3 mx-auto md:px-10 sm:px-6 ">
+            <section className="">
+                <div className="pt-20 mx-auto text-center md:max-w-xl lg:max-w-3xl sm:pt-14">
                     <h2 className="mb-6 text-3xl font-bold">
                         {ourAlumni.title}
                     </h2>
-                    {/* <p className="mb-6 pb-2 md:mb-12 md:pb-0">
+                    {/* <p className="pb-2 mb-6 md:mb-12 md:pb-0">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
                         error amet numquam iure provident voluptate esse quasi, veritatis
                         totam voluptas nostrum quisquam eum porro a pariatur veniam.
                     </p> */}
                 </div>
 
-                <div className="grid gap-6 text-center md:grid-cols-3 sm:grid-cols-2 grid-cols-1 pt-5">
+                <div className="grid grid-cols-1 gap-6 pt-5 text-center md:grid-cols-3 sm:grid-cols-2">
                     {ourAlumni?.list?.map((item) => {
                         return (
                             <div key={item?.id} className="text-neutral-700">
-                                <div className="block rounded-lg bg-white shadow-lg ">
+                                <div className="block bg-white rounded-lg shadow-lg ">
                                     <div
                                         className={`h-28 overflow-hidden rounded-t-lg ${
                                             item?.name
@@ -28,7 +29,7 @@ function OurAlumni() {
                                                 : ""
                                         }`}
                                     ></div>
-                                    <div className="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
+                                    <div className="w-24 mx-auto -mt-12 overflow-hidden bg-white border-2 border-white rounded-full dark:border-neutral-800 dark:bg-neutral-800">
                                         <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" />
                                     </div>
                                     <div className="p-6">
@@ -36,7 +37,7 @@ function OurAlumni() {
                                             {item?.name}
                                         </h4>
                                         {/* <div
-                                            className="mx-auto w-10 my-2 overflow-hidden rounded-full border-2 border-white bg-white">
+                                            className="w-10 mx-auto my-2 overflow-hidden bg-white border-2 border-white rounded-full">
                                             <img
                                                 src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" />
                                         </div> */}
@@ -45,7 +46,7 @@ function OurAlumni() {
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 fill="currentColor"
-                                                className="inline-block h-7 w-7 pr-2"
+                                                className="inline-block pr-2 h-7 w-7"
                                                 viewBox="0 0 24 24"
                                             >
                                                 <path d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
@@ -61,7 +62,7 @@ function OurAlumni() {
                     })}
                 </div>
                 <div className="flex justify-center mt-10">
-                    <button className="flex items-center uppercase border-2 border-red-500 bg-red-600  text-white rounded-lg px-6 py-3 ">
+                    <button className="flex items-center px-6 py-3 text-white uppercase bg-red-600 border-2 border-red-500 rounded-lg ">
                         <span> More Stories</span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

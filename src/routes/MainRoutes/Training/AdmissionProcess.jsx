@@ -1,22 +1,23 @@
 import React from "react";
-import { admissionProcess } from "../../../db/dummy";
+
+import { admissionProcess } from "./dummyData";
 import Container from "../../../components/Layout/Layout";
 
 function AdmissionProcess() {
     return (
         <section className="bg-red-50 py-14">
             <Container>
-                <h2 className="text-center text-3xl">
+                <h2 className="text-3xl text-center">
                     {admissionProcess?.title}
                 </h2>
-                <div className="relative grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 my-10">
-                    <div className="absolute top-1/2 left-0 border border-dashed border-red-200 w-full"></div>
+                <div className="relative grid grid-cols-1 gap-8 my-10 md:grid-cols-4 sm:grid-cols-2">
+                    <div className="absolute left-0 w-full border border-red-200 border-dashed top-1/2"></div>
                     {admissionProcess?.process?.map((item) => (
                         <div
                             key={item?.id}
-                            className="bg-white z-0 border rounded-xl text-center px-3 py-5"
+                            className="z-0 px-3 py-5 text-center bg-white border rounded-xl"
                         >
-                            <div className="bg-red-50 w-14 h-14 rounded-xl flex justify-center items-center mx-auto">
+                            <div className="flex items-center justify-center mx-auto bg-red-50 w-14 h-14 rounded-xl">
                                 <img
                                     src={item?.icon}
                                     alt={item?.title}
@@ -28,11 +29,11 @@ function AdmissionProcess() {
                         </div>
                     ))}
                 </div>
-                <div className="flex justify-center items-center gap-5 ">
-                    <button className="uppercase border-2 border-red-500 text-red-600 rounded-lg px-6 py-3 ">
+                <div className="flex items-center justify-center gap-5 ">
+                    <button className="px-6 py-3 text-red-600 uppercase border-2 border-red-500 rounded-lg ">
                         View Details
                     </button>
-                    <button className="uppercase border-2 border-red-500 bg-red-600  text-white rounded-lg px-6 py-3 ">
+                    <button className="px-6 py-3 text-white uppercase bg-red-600 border-2 border-red-500 rounded-lg ">
                         Send Inquiry
                     </button>
                 </div>

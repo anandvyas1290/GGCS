@@ -8,7 +8,6 @@ import blog5 from "../../../assets/blog/blog5.webp";
 import blog6 from "../../../assets/blog/blog6.webp";
 import blog7 from "../../../assets/blog/blog7.webp";
 import shape1 from "../../../assets/blog/shape1.webp";
-
 import {
     ClockIcon,
     UserIcon,
@@ -94,11 +93,12 @@ const categories = [
 
 export default function Blog(props) {
     let navigate = useNavigate();
+
     return (
         <div className="font-jakarta">
-            <section className="pt-48 pb-32 blogBanner relative">
+            <section className="relative pt-48 pb-32 blogBanner">
                 <div className="blackLayer">
-                    <div className="blogBg"></div>
+                    <div className="blogBg" />
                 </div>
                 <div className="container px-12 text-white1">
                     <div className="w-5/12 mx-auto text-center">
@@ -122,8 +122,8 @@ export default function Blog(props) {
                 </div>
             </section>
             <section className="pt-32 pb-24 bg-white">
-                <div className="max-w-screen-xl mx-auto px-12 flex gap-16">
-                    <div className="w-8/12 grid grid-cols-2 gap-10">
+                <div className="flex max-w-screen-xl gap-16 px-12 mx-auto">
+                    <div className="grid w-8/12 grid-cols-2 gap-10">
                         {blogData?.map((item) => (
                             <div
                                 className="border border-[#EAEAED] rounded-lg shadow-blogCard"
@@ -140,7 +140,7 @@ export default function Blog(props) {
                                     <h4 className="max-w-fit bg-[#4260ff1a] text-xs !font-semibold p-1.5 mb-4 rounded-lg text-blue1">
                                         {item?.category?.toUpperCase()}
                                     </h4>
-                                    <h3 className="text-xl font-bold mb-3 cursor-pointer hover:text-blue1 transition-all duration-150">
+                                    <h3 className="mb-3 text-xl font-bold transition-all duration-150 cursor-pointer hover:text-blue1">
                                         {item?.label}
                                     </h3>
                                     <div className="flex gap-2 text-grey6">
@@ -163,20 +163,20 @@ export default function Blog(props) {
                         ))}
                     </div>
                     <div className="w-4/12">
-                        <div className="bg-grey7 mb-5 p-8 rounded-md">
+                        <div className="p-8 mb-5 rounded-md bg-grey7">
                             <div className="flex gap-3">
                                 <input
                                     type=""
                                     placeholder="Type Something..."
-                                    className="w-9/12 p-3 rounded-md text-sm  text-ellipsis"
+                                    className="w-9/12 p-3 text-sm rounded-md text-ellipsis"
                                 />
-                                <div className="w-2/12 bg-blue1 rounded-md p-4">
+                                <div className="w-2/12 p-4 rounded-md bg-blue1">
                                     <MagnifyingGlassIcon className="w-5 h-5 text-white1" />
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-grey7 mb-5 p-8 rounded-md">
-                            <h4 className="text-lg font-semibold mb-5">
+                        <div className="p-8 mb-5 rounded-md bg-grey7">
+                            <h4 className="mb-5 text-lg font-semibold">
                                 Recent Post
                             </h4>
                             <div className="">
@@ -189,10 +189,10 @@ export default function Blog(props) {
                                             <img
                                                 src={item?.image}
                                                 alt={item?.category}
-                                                className="w-20 h-24 object-fill rounded-md"
+                                                className="object-fill w-20 h-24 rounded-md"
                                             />
                                         </div>
-                                        <div className="w-9/12 flex flex-col justify-center gap-3">
+                                        <div className="flex flex-col justify-center w-9/12 gap-3">
                                             <h5 className="!font-medium">
                                                 {item?.label}
                                             </h5>
@@ -204,18 +204,18 @@ export default function Blog(props) {
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-grey7 mb-5 p-8 rounded-md">
-                            <h4 className="text-xl font-semibold mb-5">
+                        <div className="p-8 mb-5 rounded-md bg-grey7">
+                            <h4 className="mb-5 text-xl font-semibold">
                                 Categories
                             </h4>
-                            <div className="text-grey6 text-sm">
+                            <div className="text-sm text-grey6">
                                 {categories?.map((item) => (
                                     <div
                                         key={item?.id}
                                         className="flex justify-between mb-2"
                                     >
                                         <div>{item?.name}</div>
-                                        <div className="bg-white border rounded-2xl py-1 px-3">
+                                        <div className="px-3 py-1 bg-white border rounded-2xl">
                                             <p>
                                                 {item?.count < 10 ? 0 : null}
                                                 {item?.count}

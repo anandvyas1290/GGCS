@@ -1,13 +1,7 @@
 import React, { useState } from "react";
+
+import { faq } from "./dummyData";
 import Container from "../../../components/Layout/Layout";
-import { faq } from "../../../db/dummy";
-import {
-    ArrowDownOutlined,
-    ArrowUpOutlined,
-    CloseCircleFilled,
-    DownOutlined,
-    UpOutlined,
-} from "@ant-design/icons";
 
 function FAQ() {
     const [state, setState] = useState({
@@ -18,7 +12,7 @@ function FAQ() {
     const { accordion } = state;
     return (
         <Container>
-            <div className="md:pt-20 pt-14 pb-10">
+            <div className="pb-10 md:pt-20 pt-14">
                 <h1 className="text-3xl text-center">{faq?.title}</h1>
             </div>
             <div className="pb-20">

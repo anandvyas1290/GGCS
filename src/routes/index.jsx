@@ -1,35 +1,25 @@
 import React from "react";
 
 import ppt from "../assets/PDF/GGCS-PPT.pdf";
-import messenger from "../assets/animation/message-bubble.gif";
 import uposGTP from "../assets/animation/uposGTP.gif";
-import { MessageOutlined } from "@ant-design/icons";
 
 import { useRoutes, useNavigate } from "react-router-dom";
 
 import MainRoutes from "./MainRoutes";
-// import FooterRoutes from "./FooterRoutes";
-import OtherRoutess from "./OtherRoutes";
-import PricingDetails from "../components/Pricing/PricingDetails";
-import CreatorPackages from "./OtherRoutes/CreatorPackages";
-import PackageDetails from "./OtherRoutes/CreatorPackages/PackageDetails";
+import FooterRoutes from "./FooterRoutes";
+import OtherRoutes from "./OtherRoutes";
 
 export default function Routes(props) {
     const navigate = useNavigate();
     const routes = useRoutes([
-        { path: "/*", element: <MainRoutes {...props} /> },
         {
-            path: "/plans",
-            element: <PricingDetails {...props} />,
-        },
-        {
-            path: "/creator-packages",
-            children: [
-                { path: "", element: <CreatorPackages {...props} /> },
-                { path: "*", element: <PackageDetails /> },
+            path: "/*",
+            element: [
+                <MainRoutes {...props} />,
+                <FooterRoutes {...props} />,
+                <OtherRoutes {...props} />,
             ],
         },
-        { path: "/service/*", element: <OtherRoutess {...props} /> },
     ]);
     return (
         <main className="">
@@ -53,18 +43,7 @@ export default function Routes(props) {
                     <source src={uposGTP} type="video/mp4" />
                 </video>
             </div>
-            {/* <div className="flex justify-center items-center fixed bottom-16 right-16 z-50 !w-10 h-10 bg-white shadow-xl border rounded-full ">
-                <MessageOutlined className="!text-xl " />
-            </div> */}
-            {/* </div> */}
             {routes}
-
-            {/* <div className="sticky right-0 z-50 px-3 py-2 -rotate-90 bg-gray-200 border rounded top-1/2 w-fit">
-                <p className="font-bold">DOWNLOAD PPT</p>
-            </div> */}
-            <div className="">
-                <img />
-            </div>
         </main>
     );
 }

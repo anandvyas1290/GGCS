@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-// import hero1 from "../../../assets/home/heroSection/hero1.webp";
-import ITBanner from "../../../assets/home/heroSection/ITBanner.png";
-import socialMediaBanner from "../../../assets/home/heroSection/socialMediaBanner.png";
-import digitalMarketingBanner from "../../../assets/home/heroSection/digitalMarketingBanner.png";
-import banner1 from "../../../assets/home/heroSection/banner1.webp";
-import banner2 from "../../../assets/home/heroSection/banner2.webp";
-import banner3 from "../../../assets/home/heroSection/banner3.webp";
 import shape1 from "../../../assets/home/heroSection/shape1.webp";
 import shape2 from "../../../assets/home/heroSection/shape2.webp";
 import shape3 from "../../../assets/home/heroSection/shape3.webp";
 import shape4 from "../../../assets/home/heroSection/shape4.webp";
+import banner1 from "../../../assets/home/heroSection/banner1.webp";
+import banner2 from "../../../assets/home/heroSection/banner2.webp";
+import banner3 from "../../../assets/home/heroSection/banner3.webp";
+import ITBanner from "../../../assets/home/heroSection/ITBanner.png";
+import socialMediaBanner from "../../../assets/home/heroSection/socialMediaBanner.png";
+import digitalMarketingBanner from "../../../assets/home/heroSection/digitalMarketingBanner.png";
 
 import Slider from "react-slick";
 import { motion } from "framer-motion";

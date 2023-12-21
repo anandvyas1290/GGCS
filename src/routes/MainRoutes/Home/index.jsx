@@ -1,18 +1,19 @@
 import React from "react";
 import "./styles.css";
 
-import HeroSection from "./HeroSection";
 import Services from "./Services";
-import Featured from "./Featured";
 import Process from "./Process";
-// import CaseStudies from "./CaseStudies";
-import Contact from "./Contact";
-// import CompanyBlog from "./CompanyBlog";
-// import Awards from "./Awards";
-// import Testimonial from "./Testimonial";
-// import Review from "./Review";
+import HeroSection from "./HeroSection";
 import SEO from "./SEO";
 import PricingSection from "./PricingSection";
+import ContactUs from "../../../components/Layout/ContactUs";
+
+// import Awards from "./Awards";
+// import Review from "./Review";
+// import Featured from "./Featured";
+// import CompanyBlog from "./CompanyBlog";
+// import CaseStudies from "./CaseStudies";
+// import Testimonial from "./Testimonial";
 
 export default function Home(props) {
     return (
@@ -26,7 +27,7 @@ export default function Home(props) {
             {/* <CaseStudies {...props} /> */}
             {/* <Testimonial {...props} /> */}
             {/* <Review {...props} /> */}
-            <Contact {...props} />
+            <ContactUs {...props} />
             {/* <CompanyBlog {...props} /> */}
             {/* <Awards {...props} /> */}
         </div>

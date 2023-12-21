@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
-import heroShape1 from "../../../assets/training/details/heroShape1.png";
 import star from "../../../assets/icons/star.svg";
+import heroShape1 from "../../../assets/training/details/heroShape1.png";
 
 import { useLocation } from "react-router-dom";
 
-import { courses, features } from "./dummyData";
-import MinCriteria from "./MinCriteria";
-import AdmissionProcess from "./AdmissionProcess";
-import OurAlumni from "./OurAlumni";
 import FAQ from "./FAQ";
+import OurAlumni from "./OurAlumni";
+import MinCriteria from "./MinCriteria";
+import { courses, features } from "./dummyData";
+import AdmissionProcess from "./AdmissionProcess";
 
-export default function CoursesDetails(props) {
+export default function CoursesDetails() {
     let [state, setState] = useState({ data: {} });
     let location = useLocation();
     let routeData = location?.state?.course;
+
     useEffect(() => {
         let courseData = courses?.filter((item) => {
             return item?.slug === routeData;
@@ -31,13 +32,13 @@ export default function CoursesDetails(props) {
             >
                 <img src={heroShape1} className="absolute top-0 left-0" />
                 <div className="flex flex-col items-center text-white">
-                    <h2 className="flex items-center gap-3 text-5xl mb-5">
+                    <h2 className="flex items-center gap-3 mb-5 text-5xl">
                         <img src={star} alt="" />
                         {data?.details?.heading}
                     </h2>
                     <h4 className="flex items-center gap-3 !text-4xl !font-extrabold text-skin2 mb-7">
                         ( Extensive Learning Course )
-                        <p className="px-3 py-1 text-lg text-skin1 bg-white rounded-3xl">
+                        <p className="px-3 py-1 text-lg bg-white text-skin1 rounded-3xl">
                             FULL TIME
                         </p>
                     </h4>
@@ -51,11 +52,11 @@ export default function CoursesDetails(props) {
             </section>
 
             <section className={`bg-gray-200`}>
-                <div className="flex justify-evenly gap-8 max-w-screen-md mx-auto py-10">
+                <div className="flex max-w-screen-md gap-8 py-10 mx-auto justify-evenly">
                     {features?.map((item) => (
                         <div
                             key={item?.id}
-                            className="flex flex-col items-center gap-2 text-center w-1/2 text-xl font-bold "
+                            className="flex flex-col items-center w-1/2 gap-2 text-xl font-bold text-center "
                         >
                             <img src={item?.icon} alt="" className="w-8 h-8" />
                             <p>{item?.label}</p>

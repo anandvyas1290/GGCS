@@ -1,18 +1,19 @@
 import React from "react";
+import TeamIcon from "../../../assets/SEO/teams.svg";
 import BadgeIcon from "../../../assets/SEO/badge.svg";
 import SmileyIcon from "../../../assets/SEO/smiley.svg";
-import TeamIcon from "../../../assets/SEO/teams.svg";
-import GradientBgImg from "../../../assets/SEO/optimize-bg.webp";
 import ClientImg from "../../../assets/SEO/optimize-bg-2.webp";
-import InputImg from "../../../assets/SEO/optimize-shape-2.webp";
 import StatImg from "../../../assets/SEO/optimize-shape-1.webp";
-import { PrimaryBtn } from "../../../components/Button";
+import GradientBgImg from "../../../assets/SEO/optimize-bg.webp";
+import InputImg from "../../../assets/SEO/optimize-shape-2.webp";
 
 import { useNavigate } from "react-router-dom";
+
 import {
     H1Animate,
     TextAnimate,
 } from "../../../components/Animation/H1Animate";
+import { PrimaryBtn } from "../../../components/Button";
 
 function SEO() {
     const navigate = useNavigate();

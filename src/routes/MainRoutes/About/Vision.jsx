@@ -1,12 +1,13 @@
 import React from "react";
+
 // import mission from "../../../assets/about/vision/mission.svg";
 // import purpose from "../../../assets/about/vision/purpose.svg";
 import floatImg from "../../../assets/about/vision/smill.webp";
-import missionShape from "../../../assets/about/vision/mission-shape-1.webp";
-import treeIcon from "../../../assets/about/vision/mission-shape-2.webp";
 import counter1 from "../../../assets/about/vision/trophy.webp";
 import counter2 from "../../../assets/about/vision/multiuser.webp";
 import counter3 from "../../../assets/about/vision/counter-shape3.webp";
+import treeIcon from "../../../assets/about/vision/mission-shape-2.webp";
+import missionShape from "../../../assets/about/vision/mission-shape-1.webp";
 
 import Container from "../../../components/Layout/Layout";
 

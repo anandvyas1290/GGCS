@@ -1,18 +1,23 @@
 import React from "react";
-import innerHand from "../../../assets/about/home/inner-hand-1.webp";
-import innerShape1 from "../../../assets/about/home/about-inner-shape-1.webp";
-import innerShape2 from "../../../assets/about/home/about-inner-shape-2.webp";
-import aboutInner from "../../../assets/about/home/about-inner-1.webp";
-import switchIcon from "../../../assets/about/home/switch.svg";
-import brand1 from "../../../assets/about/home/gg-log.svg";
 import brand2 from "../../../assets/about/home/ibn.png";
+import brand1 from "../../../assets/about/home/gg-log.svg";
 import brand3 from "../../../assets/about/home/samachar.png";
 import brand4 from "../../../assets/about/home/quikcraker.png";
-import { Link } from "react-router-dom";
+import switchIcon from "../../../assets/about/home/switch.svg";
+import innerHand from "../../../assets/about/home/inner-hand-1.webp";
+import aboutInner from "../../../assets/about/home/about-inner-1.webp";
+import innerShape1 from "../../../assets/about/home/about-inner-shape-1.webp";
+import innerShape2 from "../../../assets/about/home/about-inner-shape-2.webp";
+
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 import Container from "../../../components/Layout/Layout";
-import { H1Animate, TextAnimate } from "../../../components/Animation/H1Animate";
+import {
+    H1Animate,
+    TextAnimate,
+} from "../../../components/Animation/H1Animate";
+
 const brandWrapper = [
     { image: brand1 },
     { image: brand2 },
@@ -56,6 +61,7 @@ function AboutHero() {
             },
         ],
     };
+
     let dotStyle =
         "before:bg-blue1 before:h-2 before:w-2 before:inline-block before:rounded-full before:mr-3";
     return (
@@ -70,10 +76,10 @@ function AboutHero() {
                 <img src={innerHand} alt="" />
             </div>
             <Container>
-                <div className="flex md:justify-center items-center relative">
+                <div className="relative flex items-center md:justify-center">
                     <div className="md:w-1/2 -mt-72">
                         <div className="relative">
-                            <div className="absolute -left-10 right-40 object-cover">
+                            <div className="absolute object-cover -left-10 right-40">
                                 <img
                                     src={aboutInner}
                                     alt=""
@@ -89,7 +95,7 @@ function AboutHero() {
                             >
                                 Welcome
                             </TextAnimate>
-                            <H1Animate className="text-5xl font-bold mb-3">
+                            <H1Animate className="mb-3 text-5xl font-bold">
                                 Working Hard to Make <br />
                                 Digital Marketing Easy. Together
                             </H1Animate>
@@ -107,8 +113,8 @@ function AboutHero() {
             </Container>
             <div className="flex">
                 <div className="w-1/5 xl:ml-[32rem]">
-                    <div className=" relative z-20">
-                        <div className="bg-blue1 rounded-r-lg px-2 py-5 sm:p-6">
+                    <div className="relative z-20 ">
+                        <div className="px-2 py-5 rounded-r-lg bg-blue1 sm:p-6">
                             <h5 className="text-white">
                                 Scroll down <br /> to explore more
                             </h5>

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function DiscoverCulture() {
-    return (
-        <div>DiscoverCulture</div>
-    )
+    return <div>DiscoverCulture</div>;
 }
 
-export default DiscoverCulture
+export default DiscoverCulture;

@@ -7,7 +7,7 @@ import { packages } from "../dummyData";
 
 export default function CreatorPackages(props) {
     let navigate = useNavigate();
-    // bg-[#08AEEA] bg-[linear-gradient(90deg,#08AEEA_5%,#2AF598_93%)]
+
     return (
         <>
             <section className="">
@@ -15,11 +15,11 @@ export default function CreatorPackages(props) {
                     Packages for the Creators
                 </h1>
             </section>
-            <section className="max-w-screen-xl py-14 mx-auto">
+            <section className="max-w-screen-xl mx-auto py-14">
                 <div className="grid grid-cols-2 gap-40">
                     {packages?.map((item) => (
                         <div
-                            className="package-card rounded-xl cursor-pointer"
+                            className="cursor-pointer package-card rounded-xl"
                             key={item?.id}
                             onClick={() =>
                                 navigate(`/creator-packages/${item?.slug}`, {
@@ -30,7 +30,7 @@ export default function CreatorPackages(props) {
                             <div className="packages-wrapper">
                                 <img
                                     src={item?.coverImg}
-                                    className="w-full h-full object-cover rounded-2xl"
+                                    className="object-cover w-full h-full rounded-2xl"
                                 />
                             </div>
                             <h2 className="title absolute bottom-10 left-3 right-2 text-3xl text-center bg-gradient-to-r from-g1 via-g2 to-g3 text-transparent bg-clip-text !bg-card3">

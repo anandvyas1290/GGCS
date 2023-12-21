@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Modal } from "flowbite-react";
 
 import {
     socialTree,
@@ -13,11 +12,12 @@ import {
     ClientImg,
     InputImg,
     StatImg,
-    serviceVideo,
+    servicesBanner,
 } from "../../../db/assets";
+
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import { Line1, Line2 } from "../../../components/UI/ProcessDash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Line1, Line2 } from "../../../components/UI/ProcessDash";
 
 // import {
 //     bgMain,
@@ -134,17 +134,7 @@ export default function Services(props) {
                     <div className="relative">
                         <section className="w-full md:-py-10">
                             <section className="relative hidden lg:flex">
-                                <video
-                                    className="w-full h-[480px]"
-                                    autoPlay
-                                    muted
-                                    loop
-                                >
-                                    <source
-                                        src={serviceVideo}
-                                        type="video/mp4"
-                                    />
-                                </video>
+                                <img src={servicesBanner} />
                             </section>
                         </section>
                         {/* <img src={socialTree} alt="services" className="" />

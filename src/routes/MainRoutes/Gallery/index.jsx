@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { galleryData } from "../../../db/dummy";
 import checkbox from "../../../assets/icons/checkbox.webp";
+
+import { galleryData } from "../../../db/dummy";
 
 export default function Gallery(props) {
     const [state, setState] = useState({
         currentPlatform: galleryData[0] ?? {},
     });
-    console.log(state.currentPlatform);
+
     return (
         <div className="max-w-screen-xl py-10 mx-auto">
             <div className="grid grid-cols-[0.3fr_1fr] gap-6">
@@ -21,15 +22,13 @@ export default function Gallery(props) {
                                 {galleryData?.map((item) => (
                                     <li
                                         key={item?.id}
-                                        className={`flex gap-4 my-3 text-lg text-grey2 font-semibold cursor-pointer transition-all duration-200 ${state?.currentPlatform?.platform ===
-                                                item?.platform
+                                        className={`flex gap-4 my-3 text-lg text-grey2 font-semibold cursor-pointer transition-all duration-200 ${
+                                            state?.currentPlatform?.platform ===
+                                            item?.platform
                                                 ? "grayscale-1 !text-blue-600"
                                                 : "grayscale-[1]"
-                                            }`}
+                                        }`}
                                         onClick={() => {
-                                            console.log(
-                                                item?.platform?.toLowerCase()
-                                            );
                                             setState((prev) => {
                                                 return {
                                                     ...prev,

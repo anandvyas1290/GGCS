@@ -1,12 +1,12 @@
 import React from "react";
 
+import list1 from "../../../assets/home/process/list1.svg";
+import list2 from "../../../assets/home/process/list2.svg";
+import list3 from "../../../assets/home/process/list3.svg";
 import image1 from "../../../assets/home/process/image1.webp";
 import shape1 from "../../../assets/home/process/shape1.webp";
 import shape2 from "../../../assets/home/process/shape2.webp";
 import shape3 from "../../../assets/home/process/shape3.webp";
-import list1 from "../../../assets/home/process/list1.svg";
-import list2 from "../../../assets/home/process/list2.svg";
-import list3 from "../../../assets/home/process/list3.svg";
 
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
 import {
@@ -37,7 +37,7 @@ export default function Process(props) {
     ];
 
     return (
-        <div className="max-w-screen-xl mx-auto px-3 sm:px-8 lg:px-12 pt-10 pb-5 sm:pb-20">
+        <div className="max-w-screen-xl px-3 pt-10 pb-5 mx-auto sm:px-8 lg:px-12 sm:pb-20">
             <div className="grid md:grid-cols-2">
                 <div className="relative">
                     <img
@@ -58,7 +58,7 @@ export default function Process(props) {
                     </div>
                 </div>
                 <div className="md:pl-16">
-                    <div className="flex flex-col items-left mb-10">
+                    <div className="flex flex-col mb-10 items-left">
                         <TextAnimate className="!text-4xl font-tangerine  max-w-fit font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
                             Let us do the work
                         </TextAnimate>
@@ -83,7 +83,7 @@ export default function Process(props) {
                                                 src={item?.icon}
                                                 alt={item?.label}
                                             />
-                                            <b className="absolute left-0 right-0 top-1/2 font-medium text-white1 -translate-y-1/2 text-center">
+                                            <b className="absolute left-0 right-0 font-medium text-center -translate-y-1/2 top-1/2 text-white1">
                                                 0{item?.id}
                                             </b>
                                             <span className="absolute top-0 left-0 h-2 w-2 border rounded-full border-[#021d3580]" />
@@ -103,7 +103,7 @@ export default function Process(props) {
                                     {item?.id < processData?.length ? (
                                         <>
                                             {item?.id === 1 ? (
-                                                <div className="absolute top-14 right-0">
+                                                <div className="absolute right-0 top-14">
                                                     <Line1 />
                                                     {/* <img
                                                         src={line1}

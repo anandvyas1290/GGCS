@@ -3,21 +3,16 @@ import { useRoutes } from "react-router-dom";
 
 import Home from "./Home";
 import About from "./About";
-import Services from "./Services";
-// import Blog from "./Blog";
 import Contact from "./Contact";
-import Training from "./Training";
 import Gallery from "./Gallery";
 import WhyGGCS from "./WhyGGCS";
+import Services from "./Services";
+import Training from "./Training";
 import UposPackage from "./UposPackage/UposPackage";
+import CoursesDetails from "./Training/CoursesDetails";
 
 import { navMenu } from "../../db/dummy";
 import BackNavigate from "../../components/UI/BackNavigate";
-import PrivacyPolicy from "../FooterRoutes/OtherServices/PrivacyPolicy";
-import TermsAndCondition from "../FooterRoutes/OtherServices/TermsAndCondition";
-import Disclaimer from "../FooterRoutes/OtherServices/Disclaimer";
-import CoursesDetails from "./Training/CoursesDetails";
-import HireUs from "./HireUs";
 
 export default function MainRoutes(props) {
     const [state, setState] = useState({ title: "" });
@@ -46,13 +41,8 @@ export default function MainRoutes(props) {
             ],
         },
         { path: "/gallery", element: <Gallery {...props} /> },
-        // { path: "/blog", element: <Blog {...props} /> },
         { path: "/contact", element: <Contact {...props} /> },
         { path: "/upos-details", element: <UposPackage {...props} /> },
-        { path: "/privacy-policy", element: <PrivacyPolicy {...props} /> },
-        { path: "/terms-conditions", element: <TermsAndCondition {...props} />, },
-        { path: "/disclaimer", element: <Disclaimer {...props} /> },
-        { path: "/hire-us", element: <HireUs {...props} /> },
     ]);
     return (
         <div>
