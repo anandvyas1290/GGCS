@@ -34,20 +34,6 @@ const H5 = ({ children, className }) => {
 const H6 = ({ children, className }) => {
     return <h5 className={`text-lg font-semibold ${className}`}>{children}</h5>;
 };
-// const PrimaryBtn = ({ children, className }) => {
-//     return (
-//         <button className={`border-2 rounded-full py-2 px-10  text-white  bg-blue-600 hover:text-blue-600 hover:bg-white  hover:border-blue-600  ${className}`}>
-//             {children}
-//         </button>
-//     )
-// }
-// const SocialIcons = ({ Icon, name, children, className }) => {
-//     return (
-//         <div className={`rounded-full w-10 h-10 mr-4 bg-white text-gray-500 flex items-center justify-center  hover:bg-blue-400  cursor-pointer ${className}`}>
-//             <img src={Icon} alt={name} className={`w-4 hover:!text-white ${children}`} />
-//         </div>
-//     )
-// }
 
 export default function Footer() {
     const navigate = useNavigate();

@@ -21,7 +21,7 @@ export default function OtherRoutes(props) {
 
     const routes = useRoutes([
         {
-            path: "/*",
+            path: "/service/*",
             element: (
                 <OtherServices
                     data={serviceData[0]}
@@ -41,7 +41,7 @@ export default function OtherRoutes(props) {
                 { path: "*", element: <PackageDetails /> },
             ],
         },
-        { path: "/service/*", element: <OtherRoutes {...props} /> },
+        // { path: "/service/*", element: <OtherRoutes {...props} /> },
     ]);
     return <div>{routes}</div>;
 }
