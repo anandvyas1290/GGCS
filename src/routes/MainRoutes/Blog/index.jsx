@@ -15,6 +15,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 import { useNavigate } from "react-router-dom";
+import { H5, H6 } from "../../../components/Typography";
 
 const blogData = [
     {
@@ -140,9 +141,9 @@ export default function Blog(props) {
                                     <h4 className="max-w-fit bg-[#4260ff1a] text-xs !font-semibold p-1.5 mb-4 rounded-lg text-blue1">
                                         {item?.category?.toUpperCase()}
                                     </h4>
-                                    <h3 className="mb-3 text-xl font-bold transition-all duration-150 cursor-pointer hover:text-blue1">
+                                    <H5 className="mb-3 transition-all duration-150 cursor-pointer hover:text-blue1">
                                         {item?.label}
-                                    </h3>
+                                    </H5>
                                     <div className="flex gap-2 text-grey6">
                                         <span className="flex items-center gap-2">
                                             <ClockIcon className="w-4 h-4" />
@@ -176,9 +177,7 @@ export default function Blog(props) {
                             </div>
                         </div>
                         <div className="p-8 mb-5 rounded-md bg-grey7">
-                            <h4 className="mb-5 text-lg font-semibold">
-                                Recent Post
-                            </h4>
+                            <H6 className="mb-5">Recent Post</H6>
                             <div className="">
                                 {blogData?.slice(0, 3)?.map((item) => (
                                     <div
@@ -193,9 +192,9 @@ export default function Blog(props) {
                                             />
                                         </div>
                                         <div className="flex flex-col justify-center w-9/12 gap-3">
-                                            <h5 className="!font-medium">
+                                            <H5 className="!font-medium">
                                                 {item?.label}
-                                            </h5>
+                                            </H5>
                                             <p className="text-sm text-light2">
                                                 {item?.date}
                                             </p>
@@ -205,9 +204,7 @@ export default function Blog(props) {
                             </div>
                         </div>
                         <div className="p-8 mb-5 rounded-md bg-grey7">
-                            <h4 className="mb-5 text-xl font-semibold">
-                                Categories
-                            </h4>
+                            <H5 className="mb-5">Categories</H5>
                             <div className="text-sm text-grey6">
                                 {categories?.map((item) => (
                                     <div

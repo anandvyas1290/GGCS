@@ -4,24 +4,18 @@ import { Link } from "react-router-dom";
 import { servicesData } from "../../../db/dummy";
 import { rocket, services } from "../../../db/assets";
 
-import {
-    H1Animate,
-    TextAnimate,
-} from "../../../components/Animation/H1Animate";
 import SwiperCarousel from "../../../components/Carousel/Swiper";
+import { H1Animate, TextAnimate } from "../../../components/Typography";
 
 export default function Services(props) {
     return (
         <section className="bg-[#f5f5f5] md:py-14 py-8 ">
             <div className="max-w-screen-xl px-3 pb-10 mx-auto sm:px-8 md:px-12">
                 <div className="flex flex-col items-center justify-center">
-                    <TextAnimate className="!text-3xl font-tangerine font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
-                        {/* Why services Us We are Digital Marketers. */}
+                    <TextAnimate>
                         Smart Digital Marketing Solutions for your business
                     </TextAnimate>
-                    <H1Animate className="text-6xl font-semibold">
-                        Our services
-                    </H1Animate>
+                    <H1Animate>Our services</H1Animate>
                 </div>
 
                 {/* <div className="grid grid-cols-1 gap-5 my-8 sm:grid-cols-2 md:grid-cols-3 md:gap-8 sm:my-12"> */}

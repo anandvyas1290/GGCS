@@ -9,50 +9,46 @@ import InputImg from "../../../assets/SEO/optimize-shape-2.webp";
 
 import { useNavigate } from "react-router-dom";
 
-import {
-    H1Animate,
-    TextAnimate,
-} from "../../../components/Animation/H1Animate";
 import { PrimaryBtn } from "../../../components/Button";
+import { H1Animate, TextAnimate, H6 } from "../../../components/Typography";
 
 function SEO() {
     const navigate = useNavigate();
     return (
         <div>
             <div className="max-w-screen-lg py-0 mx-auto lg:max-w-screen-xl sm:py-10">
-                {/* SEO UI */}
                 <div className="md:flex psm:py-10">
                     <div className="w-full px-3 md:w-1/2 md:mx-3">
                         <div className="my-10">
-                            <TextAnimate className="!text-3xl font-tangerine font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
-                                {"Looking for best SEO results?"}
+                            <TextAnimate>
+                                Looking for best SEO results?
                             </TextAnimate>
-                            <H1Animate className="text-4xl sm:text-5xl font-semibold mb-4 sm:!leading-[4rem] !leading-[3rem]">
+                            <H1Animate className="mb-4 sm:!leading-[4rem] !leading-[3rem]">
                                 Organic Search
                                 <br />
                                 Engine Optimisation
                             </H1Animate>
-                            <h6 className="mb-4 text-base text-grey2">
+                            <H6 className="mb-4 text-base text-grey2">
                                 So I said down the you owt to do with me
                                 absolutely bladdered, amongst what a plonker
                                 brolly baking.
-                            </h6>
+                            </H6>
                             <div className="my-10">
                                 <div>
-                                    <h5 className="mb-1 text-base">
+                                    <H6 className="mb-1 text-base">
                                         Desktop Score
-                                    </h5>
+                                    </H6>
                                     <div className="w-full h-3 mb-4 bg-gray-200 rounded-full md:w-2/3 dark:bg-gray-100">
                                         <div
                                             className="h-3 bg-green-600 rounded-full dark:bg-green-500"
                                             style={{ width: "90%" }}
-                                        ></div>
+                                        />
                                     </div>
                                 </div>
                                 <div>
-                                    <h5 className="mb-1 text-base">
+                                    <H6 className="mb-1 text-base">
                                         Desktop Score
-                                    </h5>
+                                    </H6>
                                     <div className="w-full h-3 mb-4 bg-gray-200 rounded-full md:w-2/3 dark:bg-gray-100">
                                         <div
                                             className="h-3 bg-yellow-600 rounded-full dark:bg-yellow-500"

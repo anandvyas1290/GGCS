@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import { PrimaryBtn } from "../Button";
 import Container from "../Layout/Layout";
-import { H1Animate } from "../Animation/H1Animate";
+import { H1Animate } from "../Typography";
 import BackNavigate from "../UI/BackNavigate";
 
 export default function OtherServices({ data, samePage }) {
@@ -20,9 +20,7 @@ export default function OtherServices({ data, samePage }) {
             {samePage ? <BackNavigate backLabel={data?.heading} /> : null}
             <div className={`py-20 sm:py-32`}>
                 <Container>
-                    <H1Animate className={`text-5xl text-center`}>
-                        {data?.heading}
-                    </H1Animate>
+                    <H1Animate>{data?.heading}</H1Animate>
                 </Container>
             </div>
             <section className="bg-black opacity-100">

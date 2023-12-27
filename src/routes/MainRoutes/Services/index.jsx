@@ -37,11 +37,8 @@ import {
 } from "../../../db/dummy";
 
 import Pricing from "../../../components/Pricing";
-import {
-    H1Animate,
-    TextAnimate,
-} from "../../../components/Animation/H1Animate";
 import SwiperCarousel from "../../../components/Carousel/Swiper";
+import { H1Animate, H5 } from "../../../components/Typography";
 
 export default function Services(props) {
     const [activeItem, setActiveItem] = useState({
@@ -88,9 +85,7 @@ export default function Services(props) {
                                             </div>
                                         </div>
                                         <div className="w-6/12">
-                                            <h4 className="text-xl font-semibold">
-                                                {item?.label}
-                                            </h4>
+                                            <H5>{item?.label}</H5>
                                             <p className="text-grey4">
                                                 {item?.desc?.slice(0, 60)}...
                                             </p>
@@ -256,7 +251,7 @@ export default function Services(props) {
                 <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
                     <div className="flex mb-16 md:justify-center">
                         <div className="text-center md:w-8/12">
-                            <H1Animate className="text-4xl sm:text-5xl sm:text-[54px] leading-tight font-semibold text-black2">
+                            <H1Animate className="!text-[54px] text-black2">
                                 How can a perth social media help grow my
                                 business?
                             </H1Animate>

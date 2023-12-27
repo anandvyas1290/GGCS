@@ -4,6 +4,7 @@ import "./styles.css";
 import { useNavigate } from "react-router-dom";
 
 import { packages } from "../dummyData";
+import { H1Animate } from "../../../components/Typography";
 
 export default function CreatorPackages(props) {
     let navigate = useNavigate();
@@ -11,9 +12,9 @@ export default function CreatorPackages(props) {
     return (
         <>
             <section className="">
-                <h1 className="text-5xl text-center py-7 text-[#08AEEA]">
+                <H1Animate className="text-center py-7 text-[#08AEEA]">
                     Packages for the Creators
-                </h1>
+                </H1Animate>
             </section>
             <section className="max-w-screen-xl mx-auto py-14">
                 <div className="grid grid-cols-2 gap-40">
@@ -41,9 +42,9 @@ export default function CreatorPackages(props) {
                                 className={`mainImg !rounded-xl flex flex-col gap-5 items-center justify-center ${item?.mainBg} backdrop-blur`}
                             >
                                 <img src={item?.mainImg} className="h-[60%]" />
-                                <h1 className="text-3xl text-white">
+                                <h3 className="text-3xl text-white">
                                     {item?.title}
-                                </h1>
+                                </h3>
                             </div>
                         </div>
                     ))}

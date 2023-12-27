@@ -10,6 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 import { PrimaryBtn } from "../../components/Button";
+import { H5, H6 } from "../../components/Typography";
 
 const Input = ({ text, placeholder, className }) => {
     return (
@@ -28,12 +29,6 @@ const Input = ({ text, placeholder, className }) => {
         </div>
     );
 };
-const H5 = ({ children, className }) => {
-    return <h5 className={`text-xl font-semibold ${className}`}>{children}</h5>;
-};
-const H6 = ({ children, className }) => {
-    return <h5 className={`text-lg font-semibold ${className}`}>{children}</h5>;
-};
 
 export default function Footer() {
     const navigate = useNavigate();
@@ -43,7 +38,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
                     <div className="mb-3 lg:mb-0 ">
                         <div className="mb-4">
-                            <H5 className="!text-[22px] !font-bold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
+                            <H5 className="!text-[22px] w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
                                 Global Garner Consultancy Services
                             </H5>
                             {/* <img src={logo} alt="logo" className="w-1/2 h-full cursor-pointer" /> */}

@@ -7,6 +7,7 @@ import brand3 from "../../../assets/home/featured/samachar.png";
 
 import Slider from "react-slick";
 import Waves from "../../../components/Waves";
+import { H4 } from "../../../components/Typography";
 
 export default function Featured(props) {
     const featuredData = [
@@ -62,9 +63,7 @@ export default function Featured(props) {
         <div className="bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F] relative md:mb-36">
             <div className="max-w-screen-xl px-12 mx-auto">
                 <div className="text-center">
-                    <h4 className="pt-20 pb-12 text-2xl font-bold text-white1">
-                        As Featured On:
-                    </h4>
+                    <H4 className="pt-20 pb-12 text-white1">As Featured On:</H4>
                 </div>
                 <div className="pb-10">
                     <Slider {...settings}>

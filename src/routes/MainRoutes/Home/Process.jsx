@@ -9,10 +9,7 @@ import shape2 from "../../../assets/home/process/shape2.webp";
 import shape3 from "../../../assets/home/process/shape3.webp";
 
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
-import {
-    H1Animate,
-    TextAnimate,
-} from "../../../components/Animation/H1Animate";
+import { H1Animate, TextAnimate } from "../../../components/Typography";
 
 export default function Process(props) {
     const processData = [
@@ -59,10 +56,10 @@ export default function Process(props) {
                 </div>
                 <div className="md:pl-16">
                     <div className="flex flex-col mb-10 items-left">
-                        <TextAnimate className="!text-4xl font-tangerine  max-w-fit font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text">
+                        <TextAnimate className="text-center">
                             Let us do the work
                         </TextAnimate>
-                        <H1Animate className="text-[50px] font-semibold">
+                        <H1Animate className="text-center">
                             How we do It
                         </H1Animate>
                     </div>

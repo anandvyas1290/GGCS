@@ -1,9 +1,10 @@
-import React from 'react'
-import { contactBg, office } from "../../db/assets";
-import { addresses } from "../../db/dummy";
+import React from "react";
+
+import { Input } from "../UI/Input";
 import { PrimaryBtn } from "../Button";
-import { H1Animate, TextAnimate } from '../Animation/H1Animate';
-import { Input } from '../UI/Input';
+import { addresses } from "../../db/dummy";
+import { contactBg, office } from "../../db/assets";
+import { H1Animate, H6, TextAnimate } from "../Typography";
 
 function ContactUs() {
     return (
@@ -19,25 +20,24 @@ function ContactUs() {
                 <div className="md:flex py-0 sm:!py-10 ">
                     <div className="md:w-1/2 mx-3">
                         <div className="my-10">
-                            <TextAnimate className="!text-3xl font-tangerine  font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
+                            <TextAnimate className="w-fit">
                                 Get In Touch
                             </TextAnimate>
-                            <H1Animate className="text-4xl sm:text-5xl font-semibold mt-1 mb-4 sm:!leading-[3.5rem]">
+                            <H1Animate className="mt-1 mb-4 sm:!leading-[3.5rem]">
                                 Lets Work <br />
                                 Together
                             </H1Animate>
-                            <h6 className="text-lg mb-4 text-grey2">
+                            <H6 className="mb-4 text-grey2">
                                 Just tell us your requirements and we will help
                                 you!
-                            </h6>
+                            </H6>
                             <div>
-                                <h5 className="text-3xl text-red-500 mb-1">
-                                    {" "}
+                                <h3 className="text-3xl text-red-500 mb-1">
                                     +91 6354917511
-                                </h5>
-                                <h6 className="text-grey2">
+                                </h3>
+                                <H6 className="text-grey2">
                                     ggcs@globalgarner.com
-                                </h6>
+                                </H6>
                             </div>
                             <div className="mt-5">
                                 <PrimaryBtn
@@ -101,7 +101,7 @@ function ContactUs() {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
-export default ContactUs
+export default ContactUs;

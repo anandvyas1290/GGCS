@@ -9,6 +9,7 @@ import OurAlumni from "./OurAlumni";
 import MinCriteria from "./MinCriteria";
 import { courses, features } from "./dummyData";
 import AdmissionProcess from "./AdmissionProcess";
+import { H1Animate } from "../../../components/Typography";
 
 export default function CoursesDetails() {
     let [state, setState] = useState({ data: {} });
@@ -32,16 +33,16 @@ export default function CoursesDetails() {
             >
                 <img src={heroShape1} className="absolute top-0 left-0" />
                 <div className="flex flex-col items-center text-white">
-                    <h2 className="flex items-center gap-3 mb-5 text-5xl">
+                    <H1Animate className="flex items-center gap-3 mb-5">
                         <img src={star} alt="" />
                         {data?.details?.heading}
-                    </h2>
-                    <h4 className="flex items-center gap-3 !text-4xl !font-extrabold text-skin2 mb-7">
+                    </H1Animate>
+                    <h2 className="flex items-center gap-3 !text-4xl !font-extrabold text-skin2 mb-7">
                         ( Extensive Learning Course )
                         <p className="px-3 py-1 text-lg bg-white text-skin1 rounded-3xl">
                             FULL TIME
                         </p>
-                    </h4>
+                    </h2>
                     <p className="text-2xl">{data?.details?.desc}</p>
                 </div>
                 <div

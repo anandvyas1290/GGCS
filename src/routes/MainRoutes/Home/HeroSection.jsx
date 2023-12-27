@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { PhoneArrowUpRightIcon } from "@heroicons/react/24/outline";
 
+import { H4, H5 } from "../../../components/Typography";
 import { PrimaryBtn } from "../../../components/Button";
 
 const services = ["Digital Marketing", "Social Media", "IT Service"];
@@ -75,19 +76,19 @@ export default function HeroSection() {
                             <div className="">
                                 <div className="text-animate">
                                     <div>
-                                        <h4>agency</h4>
+                                        <H4>agency</H4>
                                     </div>
                                     <div>
-                                        <h4>analysis</h4>
+                                        <H4>analysis</H4>
                                     </div>
                                     <div>
-                                        <h4>value</h4>
+                                        <H4>value</H4>
                                     </div>
                                     <div>
-                                        <h4>Services</h4>
+                                        <H4>Services</H4>
                                     </div>
                                 </div>
-                                <h5>from India</h5>
+                                <H5>from India</H5>
                             </div>
                         </motion.div>
                         <p className="text-base mb-4 text-grey2 tracking-[1.2px] ">
@@ -113,9 +114,7 @@ export default function HeroSection() {
                                 <p className="text-base font-semibold text-grey1">
                                     Contact Us Today!
                                 </p>
-                                <h4 className="text-xl font-semibold">
-                                    +91 6354917511
-                                </h4>
+                                <H5>+91 6354917511</H5>
                             </div>
                         </div>
                     </div>

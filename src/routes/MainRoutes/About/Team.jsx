@@ -99,9 +99,9 @@ function Team() {
                                             Selected Project
                                         </p>
                                     </div>
-                                    <h4 className="text-4xl font-semibold text-white">
+                                    <h2 className="text-4xl font-semibold text-white">
                                         We Believe In Our Success
-                                    </h4>
+                                    </h2>
                                 </div>
                             </div>
                             <div className="">

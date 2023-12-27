@@ -1,6 +1,7 @@
 import React from "react";
 
 import { admissionProcess } from "./dummyData";
+import { H5 } from "../../../components/Typography";
 import Container from "../../../components/Layout/Layout";
 
 function AdmissionProcess() {
@@ -24,7 +25,7 @@ function AdmissionProcess() {
                                     className="w-5 h-5 mx-auto"
                                 />
                             </div>
-                            <h5 className="my-3">{item?.title}</h5>
+                            <H5 className="my-3">{item?.title}</H5>
                             {/* <p className=''>{item?.desc}</p> */}
                         </div>
                     ))}

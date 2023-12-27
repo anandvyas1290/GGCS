@@ -1,15 +1,16 @@
 import React from "react";
 
 import { ourAlumni } from "./dummyData";
+import { H4 } from "../../../components/Typography";
 
 function OurAlumni() {
     return (
         <section className="max-w-screen-lg px-3 mx-auto md:px-10 sm:px-6 ">
             <section className="">
                 <div className="pt-20 mx-auto text-center md:max-w-xl lg:max-w-3xl sm:pt-14">
-                    <h2 className="mb-6 text-3xl font-bold">
+                    <h3 className="mb-6 text-3xl font-bold">
                         {ourAlumni.title}
-                    </h2>
+                    </h3>
                     {/* <p className="pb-2 mb-6 md:mb-12 md:pb-0">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
                         error amet numquam iure provident voluptate esse quasi, veritatis
@@ -33,9 +34,7 @@ function OurAlumni() {
                                         <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" />
                                     </div>
                                     <div className="p-6">
-                                        <h4 className="mb-4 text-2xl font-semibold">
-                                            {item?.name}
-                                        </h4>
+                                        <H4 className="mb-4">{item?.name}</H4>
                                         {/* <div
                                             className="w-10 mx-auto my-2 overflow-hidden bg-white border-2 border-white rounded-full">
                                             <img

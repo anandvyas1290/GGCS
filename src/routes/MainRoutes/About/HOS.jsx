@@ -2,46 +2,43 @@ import React from "react";
 import Container from "../../../components/Layout/Layout";
 import textBg from "../../../assets/about/hoc/text-bg.svg";
 
-import {
-    H1Animate,
-    TextAnimate,
-} from "../../../components/Animation/H1Animate";
 import { DashedLine } from "../../../components/UI/ProcessDash";
+import { H1Animate, TextAnimate, H6 } from "../../../components/Typography";
 
 const hosData = [
     {
         id: 0,
         label: (
-            <h6 className="text-lg">
+            <H6>
                 Brainstorming and Creative <br />
                 ideas & Research
-            </h6>
+            </H6>
         ),
     },
     {
         id: 1,
         label: (
-            <h6 className="text-lg">
+            <H6>
                 Fully-Automated Keyword <br />
                 Grouping
-            </h6>
+            </H6>
         ),
     },
     {
         id: 2,
         label: (
-            <h6 className="text-lg">
+            <H6>
                 Building the strategy to <br /> boost Your Sales
-            </h6>
+            </H6>
         ),
     },
     {
         id: 3,
         label: (
-            <h6 className="text-lg">
+            <H6>
                 Helping to achieve <br />
                 more People
-            </h6>
+            </H6>
         ),
     },
 ];
@@ -52,15 +49,13 @@ function HOS() {
                 <div className="flex items-center justify-center">
                     <div className="mb-10 md:mb-20">
                         <div className="relative flex justify-center mb-2">
-                            <TextAnimate className="!text-4xl font-tangerine font-bold text-blue-500 absolute top-2">
+                            <TextAnimate className="text-blue-500 absolute top-2">
                                 How we do it
                             </TextAnimate>
                             <img src={textBg} alt="bg" />
                         </div>
                         <div>
-                            <H1Animate className="text-5xl font-bold">
-                                Helping others Succeed
-                            </H1Animate>
+                            <H1Animate>Helping others Succeed</H1Animate>
                         </div>
                     </div>
                 </div>

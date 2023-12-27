@@ -1,16 +1,18 @@
 import React, { useEffect } from "react";
+
 import { whyGGCSData } from "../../../db/dummy";
+import { H1Animate } from "../../../components/Typography";
 
 function HeroSection() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
     return (
         // <section className="max-w-screen-lg px-10 lg:max-w-screen-xl md:px-14 lg:mx-auto lg:my-10">
         <div className="py-10 ">
-            <h1 className="text-4xl font-bold text-center">
+            <H1Animate className="!text-5xl text-center">
                 {whyGGCSData?.title}
-            </h1>
+            </H1Animate>
             <div className="grid gap-5 py-8 grid-clos-1 sm:grid-cols-2 lg:grid-cols-3">
                 {whyGGCSData?.desc?.map(
                     (item, i) => (

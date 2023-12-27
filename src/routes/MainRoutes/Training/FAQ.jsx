@@ -13,7 +13,7 @@ function FAQ() {
     return (
         <Container>
             <div className="pb-10 md:pt-20 pt-14">
-                <h1 className="text-3xl text-center">{faq?.title}</h1>
+                <h3 className="text-3xl text-center">{faq?.title}</h3>
             </div>
             <div className="pb-20">
                 {faq?.list?.map((item) => (

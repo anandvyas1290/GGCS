@@ -13,10 +13,7 @@ import Slider from "react-slick";
 import { Link } from "react-router-dom";
 
 import Container from "../../../components/Layout/Layout";
-import {
-    H1Animate,
-    TextAnimate,
-} from "../../../components/Animation/H1Animate";
+import { H1Animate, H5, TextAnimate } from "../../../components/Typography";
 
 const brandWrapper = [
     { image: brand1 },
@@ -90,17 +87,13 @@ function AboutHero() {
                     </div>
                     <div className="md:w-1/2">
                         <div>
-                            <TextAnimate
-                                className={`!text-4xl font-tangerine font-bold text-blue1 ${dotStyle}  `}
-                            >
+                            <TextAnimate className={`!text-blue1 ${dotStyle}`}>
                                 Welcome
                             </TextAnimate>
-                            <H1Animate className="mb-3 text-5xl font-bold">
+                            <H1Animate className="!text-5xl mb-3">
                                 Working Hard to Make <br />
                                 Digital Marketing Easy. Together
                             </H1Animate>
-                            {/* <p>Lorem ipsum dolor sit amet, consectetur
-                                    <br />adipiscing elit.</p> */}
                             <p className="my-3 md:my-0">
                                 Welcome to GGCS, where digital meets
                                 intelligence to achieve market excellence.
@@ -115,9 +108,9 @@ function AboutHero() {
                 <div className="w-1/5 xl:ml-[32rem]">
                     <div className="relative z-20 ">
                         <div className="px-2 py-5 rounded-r-lg bg-blue1 sm:p-6">
-                            <h5 className="text-white">
+                            <H5 className="text-white">
                                 Scroll down <br /> to explore more
-                            </h5>
+                            </H5>
                             <Link>
                                 <img src={switchIcon} alt="switch" />
                             </Link>

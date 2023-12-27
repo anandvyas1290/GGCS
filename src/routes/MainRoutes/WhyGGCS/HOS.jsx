@@ -1,41 +1,43 @@
 import React from "react";
 import textBg from "../../../assets/about/hoc/text-bg.svg";
+
+import { H1Animate, H6 } from "../../../components/Typography";
 import { DashedLine } from "../../../components/UI/ProcessDash";
 
 const hosData = [
     {
         id: 0,
         label: (
-            <h6 className="text-lg">
+            <H6>
                 Brainstorming and Creative <br />
                 ideas & Research
-            </h6>
+            </H6>
         ),
     },
     {
         id: 1,
         label: (
-            <h6 className="text-lg">
+            <H6>
                 Fully-Automated Keyword <br />
                 Grouping
-            </h6>
+            </H6>
         ),
     },
     {
         id: 2,
         label: (
-            <h6 className="text-lg">
+            <H6>
                 Building the strategy to <br /> boost Your Sales
-            </h6>
+            </H6>
         ),
     },
     {
         id: 3,
         label: (
-            <h6 className="text-lg">
+            <H6>
                 Helping to achieve <br />
                 more People
-            </h6>
+            </H6>
         ),
     },
 ];
@@ -51,9 +53,7 @@ function HOS() {
                         <img src={textBg} alt="bg" />
                     </div>
                     <div>
-                        <h1 className="text-5xl font-bold">
-                            Helping others Succeed
-                        </h1>
+                        <H1Animate>Helping others Succeed</H1Animate>
                     </div>
                 </div>
             </div>

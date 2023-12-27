@@ -1,6 +1,7 @@
 import React from "react";
 import Img1 from "./../../../assets/Review&Testimonial/testimonial-4-shape-5.webp";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { H6 } from "../../../components/Typography";
 
 // import GradientText from "../../../components/Button/GradientText";
 
@@ -67,12 +68,10 @@ function Testimonial() {
                                     industries for previewing layouts and visual
                                     mockups.
                                 </p>
-                                <h6 className="text-lg font-bold text-grey1">
-                                    Global Garner
-                                </h6>
-                                <h6 className="text-grey2 ">
+                                <H6 className="text-grey1">Global Garner</H6>
+                                <H6 className="text-grey2 ">
                                     CEO Of Advisor Fuel
-                                </h6>
+                                </H6>
                             </div>
                             <div className="flex">
                                 <button>

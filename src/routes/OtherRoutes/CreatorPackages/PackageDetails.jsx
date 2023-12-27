@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import { packages } from "../dummyData";
 import { PrimaryBtn } from "../../../components/Button";
 import BackNavigate from "../../../components/UI/BackNavigate";
+import { H1Animate } from "../../../components/Typography";
 
 export default function PackageDetails(props) {
     const [state, setState] = useState({ data: {}, inquiryDialog: false });
@@ -32,7 +33,7 @@ export default function PackageDetails(props) {
             />
             <div className="max-w-screen-xl mx-auto p-10 mb-10 text-center">
                 <section className="mb-10">
-                    <h1 className="flex items-center justify-center gap-10 text-5xl p-2 text-transparent bg-clip-text bg-gradient-to-r from-[#c33764] to-[#1d2671]">
+                    <H1Animate className="flex items-center justify-center gap-10 p-2 text-transparent bg-clip-text bg-gradient-to-r from-[#c33764] to-[#1d2671]">
                         {data?.title}
                         <span className="relative flex items-center justify-center gap-3 px-5 py-2 rounded-2xl text-xl text-white font-medium font-roboto bg-primary">
                             <p className="absolute top-3s -left-5 w-0 h-0 border-t-[25px] border-t-transparent border-b-[25px] border-b-transparent border-r-[25px] border-primary" />
@@ -41,7 +42,7 @@ export default function PackageDetails(props) {
                             <br />
                             ₹70,000 / year
                         </span>
-                    </h1>
+                    </H1Animate>
                 </section>
                 <section className="mb-20 flex justify-center items-center">
                     <div>

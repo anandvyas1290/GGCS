@@ -1,17 +1,15 @@
 import React from "react";
 
 import { disclaimer } from "../../db/dummy";
-import { H1Animate, TextAnimate } from "../../components/Animation/H1Animate";
 import Container from "../../components/Layout/Layout";
+import { H1Animate, TextAnimate, H5 } from "../../components/Typography";
 
 export default function Disclaimer(props) {
     return (
         <main>
             <Container>
                 <section className="py-14 md:py-28">
-                    <H1Animate className="text-5xl text-center">
-                        {disclaimer?.title}
-                    </H1Animate>
+                    <H1Animate>{disclaimer?.title}</H1Animate>
                     <TextAnimate className="max-w-screen-lg mx-auto mt-3 text-lg text-center text-gray-700">
                         {disclaimer?.desc}
                     </TextAnimate>
@@ -20,9 +18,7 @@ export default function Disclaimer(props) {
                     {disclaimer?.list?.map((item) => {
                         return (
                             <div key={item?.id} className="mb-6">
-                                <h3 className="mb-2 text-xl font-semibold">
-                                    {item?.title}
-                                </h3>
+                                <H5 className="mb-2">{item?.title}</H5>
                                 <p className="mb-2 text-lg text-gray-600 ">
                                     {item?.info}
                                 </p>

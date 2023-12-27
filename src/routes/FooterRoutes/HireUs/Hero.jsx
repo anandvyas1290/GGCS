@@ -2,6 +2,7 @@ import React from "react";
 
 import { hireUs } from "./Json";
 import Container from "../../../components/Layout/Layout";
+import { H1Animate } from "../../../components/Typography";
 
 export const Card = ({ title, description, Icon, iconClassName = "" }) => {
     return (
@@ -26,9 +27,7 @@ function Hero() {
         <section>
             <section className="relative py-24">
                 <Container className="text-center">
-                    <h1 className="mb-5 text-3xl font-semibold text-center">
-                        Hire Us
-                    </h1>
+                    <H1Animate className="mb-5">Hire Us</H1Animate>
                     <p>{hireUs?.description}</p>
                     <div className="grid grid-cols-1 gap-5 my-12 sm:grid-cols-2 lg:grid-cols-5 text">
                         {hireUs?.list?.map((item, i) => (

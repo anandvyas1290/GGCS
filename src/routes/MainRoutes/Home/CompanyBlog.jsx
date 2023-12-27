@@ -1,6 +1,7 @@
 import React from "react";
 import blog from "../../../assets/home/companyBlog/blog1.webp";
 
+import { H1Animate, TextAnimate, H4, H6 } from "../../components/Typography";
 import { PrimaryBtn } from "../../../components/Button";
 
 export default function CompanyBlog() {
@@ -9,12 +10,10 @@ export default function CompanyBlog() {
             <div className="max-w-screen-md px-6 mx-auto lg:max-w-screen-xl py-28">
                 <div className="items-center justify-between mb-12 sm:flex">
                     <div>
-                        <h6 className="font-semibold w-fit text-transparent bg-clip-text bg-gradient-to-r from-[#501E9C] via-[#A44CEE] to-[#FF847F]">
+                        <TextAnimate className="w-fit">
                             What's Going On
-                        </h6>
-                        <h2 className="text-4xl font-semibold sm:text-5xl">
-                            Company blog & Insights
-                        </h2>
+                        </TextAnimate>
+                        <H1Animate>Company blog & Insights</H1Animate>
                     </div>
                     <div className="my-5 sm:my-0">
                         <PrimaryBtn size="px-8 py-2" bgColor="bg-primaryBtn">
@@ -34,13 +33,13 @@ export default function CompanyBlog() {
                                     />
                                     <div className="px-6 py-8 md:px-10">
                                         <div>
-                                            <h6 className="w-1/2 p-1 mb-2 text-center rounded-full text-md lg:w-1/2 text-primaryBtn bg-light1">
+                                            <H6 className="w-1/2 p-1 mb-2 text-center rounded-full text-md lg:w-1/2 text-primaryBtn bg-light1">
                                                 SEO agency
-                                            </h6>
-                                            <h5 className="mb-3 text-2xl font-bold cursor-pointer hover:text-primaryBtn">
+                                            </H6>
+                                            <H4 className="mb-3 cursor-pointer hover:text-primaryBtn">
                                                 Wins 2023 good design london
                                                 Award
-                                            </h5>
+                                            </H4>
                                             <p className="mb-3 text-grey1">
                                                 The annual good design Awards is
                                                 london oldest prestigious.

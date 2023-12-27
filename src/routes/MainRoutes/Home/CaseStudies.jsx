@@ -5,6 +5,7 @@ import cs3 from "../../../assets/home/caseStudies/cs3.webp";
 import csbg from "../../../assets/home/caseStudies/csbg.webp";
 
 import Slider from "react-slick";
+import { H5 } from "../../../components/Typography";
 
 export default function CaseStudies(props) {
     const [state, setState] = useState({ currentCategory: "marketing" });
@@ -70,14 +71,14 @@ export default function CaseStudies(props) {
                         <p className="text-lg max-w-fit font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text mb-2">
                             Our Case Studies
                         </p>
-                        <h5 className="text-[50px] leading-tight font-semibold">
+                        <H5 className="text-[50px] leading-tight">
                             Creative <br />
                             Works we done
-                        </h5>
+                        </H5>
                     </div>
                     <div className="">
                         {categoryData?.map((item) => (
-                            <h5
+                            <H5
                                 key={item?.id}
                                 className={`${
                                     state.currentCategory === item?.value
@@ -94,7 +95,7 @@ export default function CaseStudies(props) {
                                 }
                             >
                                 {item?.label}
-                            </h5>
+                            </H5>
                         ))}
                     </div>
                 </div>

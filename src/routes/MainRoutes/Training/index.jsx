@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import { courses } from "./dummyData";
 import { PrimaryBtn } from "../../../components/Button";
-import { H1Animate } from "../../../components/Animation/H1Animate";
+import { H1Animate, H4 } from "../../../components/Typography";
 
 const otherFeatures = [
     { id: 1, name: "100% offline learning with expert instructors." },
@@ -17,7 +17,7 @@ export default function Training(props) {
     return (
         <div className="max-w-screen-xl py-4 mx-auto !font-roboto">
             <section className="text-center">
-                <H1Animate className="text-4xl sm:text-5xl sm:text-[54px] mb-4 leading-tight font-semibold text-black2">
+                <H1Animate className="text-4xl sm:text-5xl sm:text-[54px] mb-4 leading-tight text-black2">
                     Our Courses
                 </H1Animate>
 
@@ -38,9 +38,7 @@ export default function Training(props) {
                                 <img src={item?.icon} className="w-40 h-36" />
                             </figure>
                             <div className="p-4 text-left">
-                                <h3 className="text-2xl font-bold">
-                                    {item?.name}
-                                </h3>
+                                <H4>{item?.name}</H4>
                                 <p className="mb-3 text-base text-grey8">
                                     {item?.desc}
                                 </p>

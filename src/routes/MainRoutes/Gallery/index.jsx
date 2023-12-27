@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import checkbox from "../../../assets/icons/checkbox.webp";
 
 import { galleryData } from "../../../db/dummy";
+import { H4 } from "../../../components/Typography";
 
 export default function Gallery(props) {
     const [state, setState] = useState({
@@ -13,9 +14,9 @@ export default function Gallery(props) {
             <div className="grid grid-cols-[0.3fr_1fr] gap-6">
                 <aside className="bg-gray-">
                     <div className="overflow-hidden border-2 border-grey7 rounded-xl">
-                        <h4 className="p-3 text-2xl font-bold bg-gray-200 text-primary">
+                        <H4 className="p-3 bg-gray-200 text-primary">
                             Filters
-                        </h4>
+                        </H4>
                         <hr className="mb-5" />
                         <section className="p-3">
                             <ul>

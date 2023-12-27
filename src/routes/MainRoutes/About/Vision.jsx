@@ -9,6 +9,7 @@ import counter3 from "../../../assets/about/vision/counter-shape3.webp";
 import treeIcon from "../../../assets/about/vision/mission-shape-2.webp";
 import missionShape from "../../../assets/about/vision/mission-shape-1.webp";
 
+import { H5 } from "../../../components/Typography";
 import Container from "../../../components/Layout/Layout";
 
 const counterData = [
@@ -60,10 +61,10 @@ function Vision() {
                                         className="w-full mb-5 h-14"
                                     />
                                 </span> */}
-                                <h5 className="mb-2 text-xl font-bold">
+                                <H5 className="mb-2">
                                     We are the Digital Marketers that create
                                     your brand.
-                                </h5>
+                                </H5>
                                 <p className="text-lg text-gray-700">
                                     GGCS or Global Garner Consultancy Services,
                                     stands out as a leading digital marketing
@@ -97,9 +98,7 @@ function Vision() {
                                         className="mb-5"
                                     />
                                 </span> */}
-                                <h5 className="mb-2 text-xl font-bold">
-                                    Our Journey
-                                </h5>
+                                <H5 className="mb-2">Our Journey</H5>
 
                                 <p className="text-lg text-gray-700">
                                     The genesis of GGCS traces back to the
@@ -125,9 +124,7 @@ function Vision() {
                                         className="w-full mb-5 h-14"
                                     />
                                 </span> */}
-                                <h5 className="mb-2 text-xl font-bold">
-                                    What Distinguishes Us
-                                </h5>
+                                <H5 className="mb-2">What Distinguishes Us</H5>
                                 <p className="text-lg text-gray-700">
                                     At GGCS, our primary goal is to ensure
                                     brands and businesses appear on platforms
@@ -167,9 +164,9 @@ function Vision() {
                                         className="mb-5"
                                     />
                                 </span> */}
-                                {/* <h5 className="mb-2 text-xl font-bold">
+                                {/* <H5 className="mb-2">
                                     Our Journey
-                                </h5> */}
+                                </H5> */}
 
                                 <p className="text-lg text-gray-700">
                                     However, GGCS is not merely a provider of
@@ -197,9 +194,9 @@ function Vision() {
                                     <img src={item?.Icon} alt="img" />
                                 </div>
                                 <div className="flex ml-10">
-                                    <h4 className="text-5xl font-bold text-blue-500 ">
+                                    <h3 className="text-5xl font-bold text-blue-500">
                                         {item?.num}
-                                    </h4>
+                                    </h3>
                                     {item?.label}
                                 </div>
                             </div>

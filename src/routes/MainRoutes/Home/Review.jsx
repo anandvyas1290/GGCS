@@ -1,6 +1,8 @@
 import React from "react";
 import Review1 from "../../../assets/Review&Testimonial/review-logo-1.webp";
 
+import { H6 } from "../../../components/Typography";
+
 export default function Review() {
     return (
         <div>
@@ -24,9 +26,9 @@ export default function Review() {
                                             4.58 out of 5 stars from 1,045
                                             reviews
                                         </p>
-                                        <h6 className="text-center">
+                                        <H6 className="text-center">
                                             Best Apps - Apple
-                                        </h6>
+                                        </H6>
                                     </div>
                                 </div>
                             </div>
