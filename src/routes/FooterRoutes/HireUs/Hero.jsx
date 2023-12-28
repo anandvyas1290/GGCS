@@ -24,24 +24,22 @@ export const Card = ({ title, description, Icon, iconClassName = "" }) => {
 
 function Hero() {
     return (
-        <section>
-            <section className="relative py-24">
-                <Container className="text-center">
-                    <H1Animate className="mb-5">Hire Us</H1Animate>
-                    <p>{hireUs?.description}</p>
-                    <div className="grid grid-cols-1 gap-5 my-12 sm:grid-cols-2 lg:grid-cols-5 text">
-                        {hireUs?.list?.map((item, i) => (
-                            <Card
-                                key={i}
-                                title={item?.title}
-                                description={item?.desc}
-                                Icon={item?.Icon}
-                                iconClassName={item?.style}
-                            />
-                        ))}
-                    </div>
-                </Container>
-            </section>
+        <section className="relative pt-24 pb-10">
+            <Container className="text-center">
+                <H1Animate className="mb-5">Hire Us</H1Animate>
+                <p>{hireUs?.description}</p>
+                <div className="grid grid-cols-1 gap-5 my-12 sm:grid-cols-2 lg:grid-cols-5 text">
+                    {hireUs?.list?.map((item, i) => (
+                        <Card
+                            key={i}
+                            title={item?.title}
+                            description={item?.desc}
+                            Icon={item?.Icon}
+                            iconClassName={item?.style}
+                        />
+                    ))}
+                </div>
+            </Container>
         </section>
     );
 }
