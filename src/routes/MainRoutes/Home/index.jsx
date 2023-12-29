@@ -2,8 +2,8 @@ import React from "react";
 import "./styles.css";
 
 import HeroSection from "./components/HeroSection";
-import Services from "./components/Services";
-import Process from "./components/Process";
+// import Services from "./components/Services";
+// import Process from "./components/Process";
 // import SEO from "./components/SEO/SEO";
 import ContactUs from "../../../components/Layout/ContactUs";
 
@@ -18,7 +18,7 @@ export default function Home(props) {
     return (
         <div className="font-roboto ">
             <HeroSection {...props} />
-            <Services {...props} />
+            {/* <Services {...props} /> */}
             {/* <Featured {...props} /> */}
             {/* <Process {...props} />
             <SEO {...props} /> */}

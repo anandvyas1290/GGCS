@@ -59,7 +59,7 @@ import {
     infographics,
     interpretation,
     locationAds,
-    mobileAds,
+    // mobileAds,
     performance,
     performanceTrack,
     reporting,
@@ -72,7 +72,7 @@ import {
     campaignManage,
     commission,
     contentCreation,
-    displayAds,
+    // displayAds,
     emailAnalytics,
     googleAds,
     landingPageOpti,
@@ -229,7 +229,7 @@ export const servicesData = [
             },
             {
                 subHeading: "Display Advertising",
-                icon: displayAds,
+                // icon: displayAds,
                 description: `Enhance brand visibility with visually appealing Display Advertising on relevant websites. This not only drives traffic but also increases brand recognition and consideration among your target audience.`,
             },
         ],
@@ -346,7 +346,7 @@ export const servicesData = [
         list: [
             {
                 subHeading: "Mobile App Advertising",
-                icon: mobileAds,
+                // icon: mobileAds,
                 description: `Promote your mobile applications effectively with our Mobile App Advertising. This not only increases downloads but also fosters user engagement, maximizing the return on your app development investment.`,
             },
             {

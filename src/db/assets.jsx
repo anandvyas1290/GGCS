@@ -82,7 +82,7 @@ import influencersMarketing from "../assets/otherServices/jpg/influencersMarketi
 import infographics from "../assets/otherServices/jpg/infographics.jpg";
 import interpretation from "../assets/otherServices/jpg/interpretation.jpg";
 import locationAds from "../assets/otherServices/jpg/locationAds.jpg";
-import mobileAds from "../assets/otherServices/jpg/mobileAds.jpg";
+// import mobileAds from "../assets/otherServices/jpg/mobileAds.jpg";
 import performance from "../assets/otherServices/jpg/performance.jpg";
 import performanceTrack from "../assets/otherServices/jpg/performanceTrack.jpg";
 import reporting from "../assets/otherServices/jpg/reporting.jpg";
@@ -95,7 +95,7 @@ import automation from "../assets/otherServices/jpg/automation.jpg";
 import campaignManage from "../assets/otherServices/jpg/campaignManage.jpg";
 import commission from "../assets/otherServices/jpg/commission.jpg";
 import contentCreation from "../assets/otherServices/jpg/contentCreation.jpg";
-import displayAds from "../assets/otherServices/jpg/displayAds.jpg";
+// import displayAds from "../assets/otherServices/jpg/displayAds.jpg";
 import emailAnalytics from "../assets/otherServices/jpg/emailAnalytics.jpg";
 import googleAds from "../assets/otherServices/jpg/googleAds.jpg";
 import landingPageOpti from "../assets/otherServices/jpg/landingPageOpti.jpg";
@@ -179,7 +179,7 @@ export {
     infographics,
     interpretation,
     locationAds,
-    mobileAds,
+    // mobileAds,
     performance,
     performanceTrack,
     reporting,
@@ -192,7 +192,7 @@ export {
     campaignManage,
     commission,
     contentCreation,
-    displayAds,
+    // displayAds,
     emailAnalytics,
     googleAds,
     landingPageOpti,

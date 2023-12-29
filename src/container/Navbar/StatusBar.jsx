@@ -6,7 +6,7 @@ import { socialMedias } from "../../db/dummy";
 
 export default function StatusBar() {
     return (
-        <div className="absolute top-0 px-0 pt-3 pb-2 sm:px-4">
+        <div className="px-0 pt-3 pb-2 sm:px-4">
             <div className="justify-between max-w-full sm:flex">
                 <div className="flex justify-center items-center sm:justify-normal gap-3 pt-3 sm:!pt-0 !backdrop-blur">
                     {socialMedias?.map((item, i) => (
