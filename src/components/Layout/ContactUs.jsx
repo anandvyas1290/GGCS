@@ -99,6 +99,29 @@ function ContactUs() {
                         </div>
                     </div>
                 </div>
+                <section className="grid grid-cols-2 gap-20">
+                    {addresses?.map((item) => (
+                        <div key={item?.id} className="w-full">
+                            <address className="h-full w-fit flex gap-5 px-10 py-4 not-italic rounded-3xl item-center bg-slate-200 !backdrop-blur-3xl">
+                                <figure className="relative w-32 h-24">
+                                    <div className="absolute top-3 -left-1 w-[70px] h-[65px] rounded-full bg-gradient-to-r from-g2 to-g1 -z-10" />
+                                    <img
+                                        src={office}
+                                        alt="address"
+                                        className="z-10 w-full h-full"
+                                    />
+                                </figure>
+                                <main>
+                                    <h3 className="text-xl font-semibold text-primary">
+                                        {item?.title}
+                                    </h3>
+                                    <br />
+                                    <b>{item?.address}</b>
+                                </main>
+                            </address>
+                        </div>
+                    ))}
+                </section>
             </div>
         </section>
     );

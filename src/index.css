@@ -20,8 +20,9 @@
 
 h1,
 h2 {
-    font-family: "Agbalumo", "serif" !important ;
-    font-weight: 500 !important;
+    /* font-family: "Agbalumo", "serif" !important ; */
+    font-family: "DM Serif Display", serif !important;
+    font-weight: 600 !important;
 }
 
 .parallax > use {
@@ -339,6 +340,3 @@ input {
 .swiper-pagination .swiper-pagination-bullet-active {
     background: gray;
 }
-
-
-

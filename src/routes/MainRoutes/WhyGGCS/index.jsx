@@ -10,10 +10,8 @@ function WhyGGCS() {
     }, []);
     return (
         <>
-            <Container>
-                <HOS />
-            </Container>
-            <div className="bg-slate-100 border-b-2 ">
+            <Container>{/* <HOS /> */}</Container>
+            <div className="bg-slate-50  ">
                 <Container>
                     <HeroSection />
                 </Container>

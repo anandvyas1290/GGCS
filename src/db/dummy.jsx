@@ -531,25 +531,34 @@ export const whyGGCSData = {
     title: "Why GGCS is Your Ultimate Choice",
     desc: [
         {
-            label: "Data-Driven Precision: Informed decisions are the cornerstone of our strategy. Our methodologies are grounded in comprehensive data analysis, ensuring that every move we make contributes significantly to your online triumph.",
-            bg: "bg-[#4c49ea]",
+            id: 1,
+            label: "Data-Driven Precision",
+            desc: "Informed decisions are the cornerstone of our strategy. Our methodologies are grounded in comprehensive data analysis, ensuring that every move we make contributes significantly to your online triumph.",
+            // bg: "bg-[#4c49ea]",
+            bg: "bg-gradient-to-r from-[#43cea2] to-[#185a9d]",
         },
         {
-            label: "Tailored Strategies: We recognize that each business is distinct. That's why we craft customized strategies that align with your unique requirements, never settling for one-size-fits-all solutions.",
-            bg: "bg-[#3ecd5e]",
+            id: 2,
+            label: "Tailored Strategies",
+            desc: "We recognize that each business is distinct. That's why we craft customized strategies that align with your unique requirements, never settling for one-size-fits-all solutions.",
+            // bg: "bg-[#3ecd5e]",
+            bg: "bg-gradient-to-r from-[#02aab0] to-[#00cdac]",
         },
         {
-            label: "Transparent Partnership: Open and honest communication defines our approach. Expect regular updates and detailed reports on your campaign's progress, fostering a transparent and trustworthy partnership.",
-            bg: "bg-[#e44002]",
+            id: 3,
+            label: "Transparent Partnership",
+            desc: "Open and honest communication defines our approach. Expect regular updates and detailed reports on your campaign's progress, fostering a transparent and trustworthy partnership.",
+            // bg: "bg-[#e44002]",
+            bg: "bg-gradient-to-r from-[#2193b0] to-[#6dd5ed]",
         },
         {
-            label: "Comprehensive Services: From SEO and content marketing to social media management and paid advertising, GGCS offers a comprehensive array of services to cover all aspects of your digital footprint.",
-            bg: "bg-[#952aff]",
+            id: 4,
+            label: "Comprehensive Services",
+            desc: "From SEO and content marketing to social media management and paid advertising, GGCS offers a comprehensive array of services to cover all aspects of your digital footprint.",
+            // bg: "bg-[#952aff]",
+            bg: "bg-gradient-to-r from-[#06beb6] to-[#48b1bf]",
+            // bg: "bg-[#cd3e94]",
         },
-        // {
-        //     label: "Comprehensive Services: From SEO and content marketing to social media management and paid advertising, GGCS offers a comprehensive array of services to cover all aspects of your digital footprint.",
-        //     bg: "bg-[#cd3e94]",
-        // },
     ],
 };
 

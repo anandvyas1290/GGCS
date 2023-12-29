@@ -18,7 +18,7 @@ export function H1Animate({ className, children }) {
     };
     return (
         <motion.h1
-            className={`!text-6xl font-semibold ${className}`}
+            className={`text-5xl font-medium ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
@@ -32,7 +32,6 @@ export function H1Animate({ className, children }) {
     );
 }
 export function TextAnimate({ className, children }) {
-    // animate txt
     const fadeInAnimationVariants = {
         initial: {
             opacity: 0,
@@ -49,7 +48,7 @@ export function TextAnimate({ className, children }) {
     };
     return (
         <motion.p
-            className={`text-4xl font-tangerine font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text ${className} `}
+            className={`!text-2xl font-neuton font-semibold text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text ${className} `}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"

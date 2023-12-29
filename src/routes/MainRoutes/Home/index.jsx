@@ -1,11 +1,10 @@
 import React from "react";
 import "./styles.css";
 
-import Services from "./Services";
-import Process from "./Process";
-import HeroSection from "./HeroSection";
-import SEO from "./SEO";
-import PricingSection from "./PricingSection";
+import HeroSection from "./components/HeroSection";
+import Services from "./components/Services";
+import Process from "./components/Process";
+// import SEO from "./components/SEO/SEO";
 import ContactUs from "../../../components/Layout/ContactUs";
 
 // import Awards from "./Awards";
@@ -20,16 +19,15 @@ export default function Home(props) {
         <div className="font-roboto ">
             <HeroSection {...props} />
             <Services {...props} />
-            <PricingSection {...props} />
             {/* <Featured {...props} /> */}
-            <Process {...props} />
-            <SEO {...props} />
+            {/* <Process {...props} />
+            <SEO {...props} /> */}
             {/* <CaseStudies {...props} /> */}
             {/* <Testimonial {...props} /> */}
             {/* <Review {...props} /> */}
-            <ContactUs {...props} />
             {/* <CompanyBlog {...props} /> */}
             {/* <Awards {...props} /> */}
+            <ContactUs {...props} />
         </div>
     );
 }

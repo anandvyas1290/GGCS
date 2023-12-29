@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Modal } from "antd";
 
 import {
     socialTree,
@@ -37,18 +38,25 @@ import {
 } from "../../../db/dummy";
 
 import Pricing from "../../../components/Pricing";
-import SwiperCarousel from "../../../components/Carousel/Swiper";
 import { H1Animate, H5 } from "../../../components/Typography";
+import SwiperCarousel from "../../../components/Carousel/Swiper";
 
 export default function Services(props) {
-    const [activeItem, setActiveItem] = useState({
+    const [state, setState] = useState({
         0: false,
         openDialog: false,
         dialogData: {},
     });
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
+
+    const readMoreModal = (open, data) => {
+        console.log(open, data);
+        setState((prev) => {
+            return { ...prev, openDialog: open, dialogData: data };
+        });
+    };
 
     return (
         <div className="font-roboto">
@@ -87,18 +95,16 @@ export default function Services(props) {
                                         <div className="w-6/12">
                                             <H5>{item?.label}</H5>
                                             <p className="text-grey4">
+                                                {/* {item?.desc} */}
                                                 {item?.desc?.slice(0, 60)}...
                                             </p>
                                             <p
                                                 className="font-semibold text-pink-500 cursor-pointer"
                                                 onClick={() =>
-                                                    readMoreModal(
-                                                        item?.label,
-                                                        item?.desc
-                                                    )
+                                                    readMoreModal(true, item)
                                                 }
                                             >
-                                                {"Read More ->"}
+                                                {"Read More..."}
                                             </p>
                                         </div>
                                         {item?.id < processData?.length ? (
@@ -106,10 +112,10 @@ export default function Services(props) {
                                                 <div
                                                     className={`absolute ${
                                                         [
-                                                            "top-5 right-[10%] -rotate-[37deg]",
-                                                            "top-24 left-20 -rotate-[37deg]",
-                                                            "top-48 -right-10 rotate-[15deg]",
-                                                            "top-6 left-0 rotate-[20deg]",
+                                                            "top-0 right-[10%] -rotate-[30deg]",
+                                                            "top-16 left-16 -rotate-[37deg]",
+                                                            "top-28 -right-6 rotate-[35deg]",
+                                                            "-top-10 -left-4 rotate-[45deg]",
                                                         ][item?.id - 1]
                                                     } `}
                                                 >
@@ -127,9 +133,9 @@ export default function Services(props) {
                         </ul>
                     </div>
                     <div className="relative">
-                        <section className="w-full md:-py-10">
+                        <section className="w-full md:py-20">
                             <section className="relative hidden lg:flex">
-                                <img src={servicesBanner} />
+                                <img src={servicesBanner} className="h-full" />
                             </section>
                         </section>
                         {/* <img src={socialTree} alt="services" className="" />
@@ -319,6 +325,16 @@ export default function Services(props) {
                     ))}
                 </div>
             </section>
+            <Modal
+                title={state?.dialogData?.label}
+                styles={{ header: "text-2xl" }}
+                open={state?.openDialog}
+                onOk={() => readMoreModal(false, {})}
+                onCancel={() => readMoreModal(false, {})}
+                footer={false}
+            >
+                <h3 className="">{state?.dialogData?.desc}</h3>
+            </Modal>
         </div>
     );
 }
