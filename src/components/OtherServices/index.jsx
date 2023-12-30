@@ -7,12 +7,13 @@ import { PrimaryBtn } from "../Button";
 import Container from "../Layout/Layout";
 import { H1Animate } from "../Typography";
 import BackNavigate from "../UI/BackNavigate";
+import RadientBtn from "../Button/RadientBtn";
 
 export default function OtherServices({ data, samePage }) {
     let navigate = useNavigate();
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     });
 
     return (
@@ -121,12 +122,15 @@ export default function OtherServices({ data, samePage }) {
                 </Container>
 
                 <div className="flex justify-center !py-4">
-                    <PrimaryBtn
+                    <RadientBtn onClick={() => navigate("/hire-us")}>
+                        Hire Us
+                    </RadientBtn>
+                    {/* <PrimaryBtn
                         className="!px-14 !py-3 text-lg !bg-green-600 !border-0"
                         onClick={() => navigate("/hire-us")}
                     >
                         Hire Us
-                    </PrimaryBtn>
+                    </PrimaryBtn> */}
                 </div>
             </section>
         </div>

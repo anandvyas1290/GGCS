@@ -25,7 +25,7 @@ function HeroSection() {
                                 {item?.label}
                             </h3>
                             {/* <hr className={` ${item?.bg}`} /> */}
-                            <p className="text-xl">{item?.desc}</p>
+                            <p className="text-lg">{item?.desc}</p>
                         </section>
                         <section className="bg-blue-200">ds</section>
                     </div>

@@ -53,7 +53,7 @@ export default function HeroSection() {
     }, [state?.currentTab]);
 
     return (
-        <div className="bg-gradient-to-r from-[#0D0A0B] to-[#009FC2] !text-white">
+        <div className="!max-h-fit !bg-gradient-to-b from-[rgba(68,176,158,0.4)] to-[rgb(224,210,199,0.3)] bg-white !text-black">
             <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[150px] pb-[40px] sm:pb-[60px] md:pb-[100px] lg:pb-[150px]">
                 {/* <div className="container"> */}
                 <div className="sm:w-4/6">
@@ -146,13 +146,13 @@ export default function HeroSection() {
                     <div className="absolute top-0 left-0 z-[1]">
                         <img src={banner3} alt="" />
                     </div>
-                    <div className="absolute left-40 bottom-9 -z-[1] animate-upslide">
+                    <div className="absolute left-40 bottom-9 z-[1] animate-upslide">
                         <img src={shape1} alt="" />
                     </div>
-                    <div className="absolute md:left-[660px] top-[345px] -z-[1] animate-shape2">
+                    <div className="absolute md:left-[660px] top-[345px] z-[1] animate-shape2">
                         <img src={shape2} alt="" />
                     </div>
-                    <div className="absolute lg:left-[750px] bottom-[280px] -z-[1] animate-shape3">
+                    <div className="absolute lg:left-[750px] bottom-[280px] z-[1] animate-shape3">
                         <img src={shape3} alt="" />
                     </div>
                     <div className="absolute lg:right-[610px] bottom-[90px] animate-shape4">

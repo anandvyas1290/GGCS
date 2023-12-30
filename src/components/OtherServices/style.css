@@ -19,10 +19,22 @@
 }
 
 .card {
-    max-width: 550px;
+    /* max-width: 550px; */
     border: 0;
     width: 100%;
     margin-inline: auto;
+}
+
+.card::before {
+    font-family: "Courier New", Courier, monospace;
+    background: conic-gradient(
+        from 180deg at 50% 50%,
+        #333 0deg,
+        #333 176deg,
+        #61dafb 193deg,
+        #333 217deg,
+        #333 1turn
+    );
 }
 
 .container-card {
@@ -32,7 +44,7 @@
     background-clip: padding-box;
     border-radius: 45px;
     padding: 40px;
-    /* box-shadow: 2px -4px 14px -1px #a8e9fd !important ; */
+    box-shadow: 2px -4px 14px -1px #a8e9fd !important ;
 }
 
 .container-card img {
@@ -50,7 +62,7 @@
 .bg-box2::after,
 .bg-box3::after,
 .bg-box4::after {
-    position: absolute;
+    /* position: absolute; */
     top: -3px;
     bottom: -3px;
     left: -3px;

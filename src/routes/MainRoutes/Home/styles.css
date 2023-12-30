@@ -12,7 +12,7 @@
     max-width: max-content;
     overflow: hidden;
 }
-@media (max-width: 640px){
+@media (max-width: 640px) {
     .text-animate {
         height: 70px;
     }
@@ -25,7 +25,7 @@
 }
 
 .text-animate div:first-child {
-    animation: text-animation 8s infinite;
+    animation: text-animation 8s linear infinite;
 }
 
 @keyframes text-animation {

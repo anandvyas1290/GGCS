@@ -55,18 +55,21 @@ export default {
                 color8: "#ffffff",
                 color9: "#edf2f2",
                 color10: "#4d5972",
+                silverPlan: "",
             },
             fontFamily: {
-                jakarta: " Plus Jakarta Sans, sans-serif",
-                serif: "DM Serif Display, serif",
-                sans: '"DM Sans",sans-serif',
-                agbalumo: "Agbalumo, serif",
-                tangerine: "Tangerine, cursive",
-                neuton: '"Neuton", serif',
-                roboto: '"Roboto", sans-serif',
-                Ubuntu: "'Ubuntu', sans-serif",
+                // jakarta: " Plus Jakarta Sans, sans-serif",
+                // serif: "DM Serif Display, serif",
+                // sans: '"DM Sans",sans-serif',
+                // agbalumo: "Agbalumo, serif",
+                // tangerine: "Tangerine, cursive",
+                // neuton: '"Neuton", serif',
+                // roboto: '"Roboto", sans-serif',
+                // Ubuntu: "'Ubuntu', sans-serif",
             },
             backgroundImage: (theme) => ({
+                silverPlan: "linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%)",
+                goldPlan: "linear-gradient(315deg, #fec84e 0%, #ffdea8 74%)",
                 blogBanner: "url('assets/blog/banner.webp')",
                 grad: `linear-gradient(to right, 90deg ${theme(
                     "colors.g1"
@@ -77,7 +80,7 @@ export default {
                 header: "0px 10px 30px rgba(1,15,28,0.1)",
                 services: "0 -1px 0 rgba(110, 56, 255, 0.3)",
                 contact:
-                    "linear-gradient(69.83deg, #501E9C -8.16%, #A44CEE 49.19%, #FF847F 102.99%);",
+                    "linear-gradient(69.83deg, #501E9C -8.16%, #A44CEE 49.19%, #FF847F 102.99%)",
                 shadow1: "rgba(1, 15, 28, 0.14)",
                 business1: "0px 1px 1px rgba(1, 15, 28, 0.2)",
                 business2: "0px 20px 30px rgba(1, 15, 28, 0.1)",

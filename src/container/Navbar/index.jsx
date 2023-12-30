@@ -8,14 +8,14 @@ const Navbar = (props) => {
     let location = useLocation();
     let fullNav = location.pathname !== "/" ? true : false;
     return (
-        <div
+        <header
             className={`${
                 fullNav ? "" : "max-w-screen-xl mx-auto px-3 sm:px-8 z-50"
             } absolute top-0 right-0 left-0 !font-roboto`}
         >
             {fullNav ? null : <StatusBar {...props} />}
             <NavbarContent {...props} fullNav={fullNav} />
-        </div>
+        </header>
     );
 };
 
