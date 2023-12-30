@@ -28,12 +28,15 @@ const brandWrapper = [
 
 function AboutHero() {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
-        speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: false,
+        autoplay: true,
+        speed: 5000,
+        autoplaySpeed: 5000,
+        cssEase: "linear",
         responsive: [
             {
                 breakpoint: 1920,
@@ -111,8 +114,8 @@ function AboutHero() {
                             <H5 className="text-white">
                                 Scroll down <br /> to explore more
                             </H5>
-                            <Link>
-                                <img src={switchIcon} alt="switch" />
+                            <Link >
+                                <img src={switchIcon} alt="switch" className="animate-bounce mt-2" />
                             </Link>
                         </div>
                     </div>

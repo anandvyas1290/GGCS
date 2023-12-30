@@ -15,7 +15,7 @@ function HeroSection() {
                 {whyGGCSData?.desc?.map((item, i) => (
                     <div
                         key={item?.id}
-                        className={`grid grid-cols-[1fr_0.7fr] items-center gap-9`}
+                        className={`grid md:grid-cols-[1fr_0.7fr] grid-cols-1 items-center gap-9`}
                         dir={item?.id % 2 ? "ltr" : "rtl"}
                     >
                         <section className="text-left p-5">

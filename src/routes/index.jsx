@@ -23,20 +23,20 @@ export default function Routes(props) {
     ]);
     return (
         <main className="">
-            <div className="fixed -left-[60px] top-1/2 -rotate-90 z-50 imgBorder px-4 py-3 bg-gradient-to-r from-g1 to-g2 border rounded-b-xl  text-white cursor-pointer">
+            {/* <div className="fixed  md:-left-[60px] -left-[73px] top-1/2 -rotate-90 z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-g1 to-g2 border rounded-b-xl  text-white cursor-pointer">
                 <a
                     download
                     onClick={() => {
                         window.open(ppt, "_blank", "fullscreen=yes");
                     }}
-                    className="font-bold block py-2 pl-3 pr-4 !text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                    className="font-bold block py-2 pl-3 pr-4 !text-white md:p-0 dark:text-white md:dark:text-blue-500"
                     aria-current="page"
                 >
                     DOWNLOAD PPT
                 </a>
-            </div>
+            </div> */}
             <div
-                className="fixed z-50 overflow-hidden bg-gray-200 border rounded-full cursor-pointer h-14 bottom-28 right-14"
+                className="fixed z-50 overflow-hidden bg-gray-200 border rounded-full cursor-pointer h-14 md:bottom-28 md:right-14 bottom-10 right-2"
                 onClick={() => navigate("/upos-details")}
             >
                 <video className="w-full h-full" autoPlay muted loop>

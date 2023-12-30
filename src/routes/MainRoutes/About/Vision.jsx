@@ -65,7 +65,7 @@ function Vision() {
                                     We are the Digital Marketers that create
                                     your brand.
                                 </H5>
-                                <p className="text-lg text-gray-700">
+                                <p className=" ">
                                     GGCS or Global Garner Consultancy Services,
                                     stands out as a leading digital marketing
                                     company utilizing advanced technology and a
@@ -100,7 +100,7 @@ function Vision() {
                                 </span> */}
                                 <H5 className="mb-2">Our Journey</H5>
 
-                                <p className="text-lg text-gray-700">
+                                <p className=" ">
                                     The genesis of GGCS traces back to the
                                     firsthand challenges faced by Global Garner
                                     Sales Services Limited in 2016. They needed
@@ -125,7 +125,7 @@ function Vision() {
                                     />
                                 </span> */}
                                 <H5 className="mb-2">What Distinguishes Us</H5>
-                                <p className="text-lg text-gray-700">
+                                <p className=" ">
                                     At GGCS, our primary goal is to ensure
                                     brands and businesses appear on platforms
                                     like Google and experience significant
@@ -141,7 +141,7 @@ function Vision() {
                             </div>
                         </div>
                         <div className="hidden md:block">
-                            <img src={floatImg} alt="floatIcon" />
+                            <img src={floatImg} alt="floatIcon" className="animate-bounce" />
                         </div>
                     </div>
                     <div className="md:flex">
@@ -168,7 +168,7 @@ function Vision() {
                                     Our Journey
                                 </H5> */}
 
-                                <p className="text-lg text-gray-700">
+                                <p className=" ">
                                     However, GGCS is not merely a provider of
                                     digital marketing services. We consider
                                     ourselves a digital partner, taking the time
