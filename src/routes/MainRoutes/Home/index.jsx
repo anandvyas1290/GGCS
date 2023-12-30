@@ -3,9 +3,10 @@ import "./styles.css";
 
 import HeroSection from "./components/HeroSection";
 import Services from "./components/Services";
-import Process from "./components/Process";
+// import Process from "./components/Process";
 // import SEO from "./components/SEO/SEO";
 import ContactUs from "../../../components/Layout/ContactUs";
+import WhyGGCS from "../WhyGGCS";
 
 // import Awards from "./Awards";
 // import Review from "./Review";
@@ -19,6 +20,7 @@ export default function Home(props) {
         <div className="font-roboto ">
             <HeroSection {...props} />
             <Services {...props} />
+            <WhyGGCS />
             {/* <Featured {...props} /> */}
             {/* <Process {...props} />
             <SEO {...props} /> */}
