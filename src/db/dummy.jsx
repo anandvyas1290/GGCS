@@ -10,10 +10,12 @@ import {
     ContentCreation,
     CCM,
     Post,
-} from "./assets";
-import { list1, list2, list3 } from "./assets";
-import { business1, business2, business3 } from "./assets";
-import {
+    list1,
+    list2,
+    list3,
+    business1,
+    business2,
+    business3,
     seo,
     smm,
     ppc,
@@ -30,6 +32,7 @@ import {
     videoMarketing,
     mobileMarketing,
 } from "./assets";
+
 import {
     flyer,
     instagram,
@@ -96,6 +99,11 @@ import backendDev from "../assets/training/courses/backendDev.jpg";
 import dataAnalytics from "../assets/training/courses/dataAnalytics.jpg";
 import mobileDev from "../assets/training/courses/mobileDev.jpg";
 import testingAutomation from "../assets/training/courses/testing.jpg";
+
+import dataPrecision from "../assets/home/whyGGCS/dataPrecision.svg";
+import strategies from "../assets/home/whyGGCS/strategies.jpg";
+import partnership from "../assets/home/whyGGCS/partnership.jpg";
+import ComprehensiveServices from "../assets/home/whyGGCS/services.jpg";
 
 export const navMenu = [
     { id: 1, label: "About", slug: "/about" },
@@ -535,13 +543,16 @@ export const whyGGCSData = {
             label: "Data-Driven Precision",
             desc: "Informed decisions are the cornerstone of our strategy. Our methodologies are grounded in comprehensive data analysis, ensuring that every move we make contributes significantly to your online triumph.",
             // bg: "bg-[#4c49ea]",
-            bg: "bg-gradient-to-r from-[#43cea2] to-[#185a9d]",
+            image: dataPrecision,
+            // bg: "bg-gradient-to-r from-[#43cea2] to-[#185a9d]",
+            bg: "bg-gradient-to-r from-[#ad5389] to-[#3c1053]",
         },
         {
             id: 2,
             label: "Tailored Strategies",
             desc: "We recognize that each business is distinct. That's why we craft customized strategies that align with your unique requirements, never settling for one-size-fits-all solutions.",
             // bg: "bg-[#3ecd5e]",
+            image: strategies,
             bg: "bg-gradient-to-r from-[#02aab0] to-[#00cdac]",
         },
         {
@@ -549,14 +560,16 @@ export const whyGGCSData = {
             label: "Transparent Partnership",
             desc: "Open and honest communication defines our approach. Expect regular updates and detailed reports on your campaign's progress, fostering a transparent and trustworthy partnership.",
             // bg: "bg-[#e44002]",
-            bg: "bg-gradient-to-r from-[#2193b0] to-[#6dd5ed]",
+            image: partnership,
+            bg: "bg-gradient-to-r from-[#4e54c8] to-[#8f94fb]",
         },
         {
             id: 4,
             label: "Comprehensive Services",
             desc: "From SEO and content marketing to social media management and paid advertising, GGCS offers a comprehensive array of services to cover all aspects of your digital footprint.",
             // bg: "bg-[#952aff]",
-            bg: "bg-gradient-to-r from-[#06beb6] to-[#48b1bf]",
+            image: ComprehensiveServices,
+            bg: "bg-gradient-to-r from-[#23074d] to-[#cc5333]",
             // bg: "bg-[#cd3e94]",
         },
     ],
