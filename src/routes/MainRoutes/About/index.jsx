@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 
-import HOS from "./HOS";
-import Vision from "./Vision";
-import AboutHero from "./AboutHero";
+import HOS from "./components/HOS";
+import Vision from "./components/Vision";
+import AboutHero from "./components/AboutHero";
 // import Team from './Team'
 
 function About(props) {

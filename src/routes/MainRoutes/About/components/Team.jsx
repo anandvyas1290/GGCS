@@ -1,10 +1,10 @@
 import React from "react";
 
-import team1 from "../../../assets/about/team/team-1.webp";
-import team2 from "../../../assets/about/team/team-2.webp";
-import team3 from "../../../assets/about/team/team-3.webp";
-import team4 from "../../../assets/about/team/team-4.webp";
-import textBg from "../../../assets/about/hoc/text-bg.svg";
+import team1 from "../../../../assets/about/team/team-1.webp";
+import team2 from "../../../../assets/about/team/team-2.webp";
+import team3 from "../../../../assets/about/team/team-3.webp";
+import team4 from "../../../../assets/about/team/team-4.webp";
+import textBg from "../../../../assets/about/hoc/text-bg.svg";
 import funfact1 from "../../../assets/about/team/funfact-2.webp";
 import funfact2 from "../../../assets/about/team/funfact-3.webp";
 import funfactBg from "../../../assets/about/team/funfact-1.webp";
@@ -12,10 +12,10 @@ import icon1 from "../../../assets/about/team/funfact-icon1.webp";
 import icon2 from "../../../assets/about/team/funfact-icon2.webp";
 import icon3 from "../../../assets/about/team/funfact-icon3.webp";
 import icon4 from "../../../assets/about/team/funfact-icon4.webp";
-import img1 from "../../../assets/home/awards/award-shape-1.webp";
+import img1 from "../../../../assets/home/awards/award-shape-1.webp";
 
-import { PrimaryBtn } from "../../../components/Button";
-import Container from "../../../components/Layout/Layout";
+import { PrimaryBtn } from "../../../../components/Button";
+import Container from "../../../../components/Layout/Layout";
 
 const cards = [
     {
@@ -88,7 +88,7 @@ function Team() {
                         );
                     })}
                 </div> */}
-                <div className="my-28 ">
+                <div className="my-28">
                     <div>
                         <div className="relative w-full pt-20 overflow-hidden bg-darkBg bg-darkBlue pb-60 -z-10 rounded-3xl">
                             <div className="flex items-center justify-center text-center">

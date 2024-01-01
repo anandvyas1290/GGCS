@@ -1,19 +1,19 @@
 import React from "react";
-import brand2 from "../../../assets/about/home/ibn.png";
-import brand1 from "../../../assets/about/home/gg-log.svg";
-import brand3 from "../../../assets/about/home/samachar.png";
-import brand4 from "../../../assets/about/home/quikcraker.png";
-import switchIcon from "../../../assets/about/home/switch.svg";
-import innerHand from "../../../assets/about/home/inner-hand-1.webp";
-import aboutInner from "../../../assets/about/home/about-inner-1.webp";
-import innerShape1 from "../../../assets/about/home/about-inner-shape-1.webp";
-import innerShape2 from "../../../assets/about/home/about-inner-shape-2.webp";
+import brand2 from "../../../../assets/about/home/ibn.png";
+import brand1 from "../../../../assets/about/home/gg-log.svg";
+import brand3 from "../../../../assets/about/home/samachar.png";
+import brand4 from "../../../../assets/about/home/quikcraker.png";
+import switchIcon from "../../../../assets/about/home/switch.svg";
+import innerHand from "../../../../assets/about/home/inner-hand-1.webp";
+import aboutInner from "../../../../assets/about/home/about-inner-1.webp";
+import innerShape1 from "../../../../assets/about/home/about-inner-shape-1.webp";
+import innerShape2 from "../../../../assets/about/home/about-inner-shape-2.webp";
 
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 
-import Container from "../../../components/Layout/Layout";
-import { H1Animate, H5, TextAnimate } from "../../../components/Typography";
+import Container from "../../../../components/Layout/Layout";
+import { H1Animate, H5, TextAnimate } from "../../../../components/Typography";
 
 const brandWrapper = [
     { image: brand1 },
@@ -114,8 +114,12 @@ function AboutHero() {
                             <H5 className="text-white">
                                 Scroll down <br /> to explore more
                             </H5>
-                            <Link >
-                                <img src={switchIcon} alt="switch" className="animate-bounce mt-2" />
+                            <Link>
+                                <img
+                                    src={switchIcon}
+                                    alt="switch"
+                                    className="animate-bounce mt-2"
+                                />
                             </Link>
                         </div>
                     </div>

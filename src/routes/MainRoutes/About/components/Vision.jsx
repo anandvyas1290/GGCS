@@ -1,16 +1,16 @@
 import React from "react";
 
-// import mission from "../../../assets/about/vision/mission.svg";
-// import purpose from "../../../assets/about/vision/purpose.svg";
-import floatImg from "../../../assets/about/vision/smill.webp";
-import counter1 from "../../../assets/about/vision/trophy.webp";
-import counter2 from "../../../assets/about/vision/multiuser.webp";
-import counter3 from "../../../assets/about/vision/counter-shape3.webp";
-import treeIcon from "../../../assets/about/vision/mission-shape-2.webp";
-import missionShape from "../../../assets/about/vision/mission-shape-1.webp";
+// import mission from "../../../../assets/about/vision/mission.svg";
+// import purpose from "../../../../assets/about/vision/purpose.svg";
+import floatImg from "../../../../assets/about/vision/smill.webp";
+import counter1 from "../../../../assets/about/vision/trophy.webp";
+import counter2 from "../../../../assets/about/vision/multiuser.webp";
+import counter3 from "../../../../assets/about/vision/counter-shape3.webp";
+import treeIcon from "../../../../assets/about/vision/mission-shape-2.webp";
+import missionShape from "../../../../assets/about/vision/mission-shape-1.webp";
 
-import { H5 } from "../../../components/Typography";
-import Container from "../../../components/Layout/Layout";
+import { H5 } from "../../../../components/Typography";
+import Container from "../../../../components/Layout/Layout";
 
 const counterData = [
     {
@@ -141,7 +141,11 @@ function Vision() {
                             </div>
                         </div>
                         <div className="hidden md:block">
-                            <img src={floatImg} alt="floatIcon" className="animate-bounce" />
+                            <img
+                                src={floatImg}
+                                alt="floatIcon"
+                                className="animate-bounce"
+                            />
                         </div>
                     </div>
                     <div className="md:flex">
