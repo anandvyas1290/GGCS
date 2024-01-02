@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.css";
 
-import WhyGGCS from "./components/WhyGGCS";
 import SEO from "./components/SEO";
 import Process from "./components/Process";
+import WhyGGCS from "./components/WhyGGCS";
 import Services from "./components/Services";
 import HeroSection from "./components/HeroSection";
 import IndustryImpact from "./components/IndustryImpact";

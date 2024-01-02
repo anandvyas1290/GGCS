@@ -117,10 +117,8 @@ import govServices from "../assets/home/industryImpact/govServices.svg";
 
 export const navMenu = [
     { id: 1, label: "About", slug: "/about" },
-    // { id: 2, label: "Why GGCS", slug: "/why-ggcs" },
     { id: 3, label: "Services", slug: "/services" },
     { id: 4, label: "Training", slug: "/training" },
-    // { id: 4, label: "Team", slug: "/team" },
     { id: 5, label: "Gallery", slug: "/gallery" },
 ];
 export const servicesData = [
