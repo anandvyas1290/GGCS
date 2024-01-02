@@ -1,34 +1,23 @@
 import React from "react";
 import "./styles.css";
 
-import HeroSection from "./components/HeroSection";
-import Services from "./components/Services";
-import Process from "./components/Process";
+import WhyGGCS from "./components/WhyGGCS";
 import SEO from "./components/SEO";
+import Process from "./components/Process";
+import Services from "./components/Services";
+import HeroSection from "./components/HeroSection";
+import IndustryImpact from "./components/IndustryImpact";
 import ContactUs from "../../../components/Layout/ContactUs";
-import WhyGGCS from "../WhyGGCS";
-
-// import Awards from "./Awards";
-// import Review from "./Review";
-// import Featured from "./Featured";
-// import CompanyBlog from "./CompanyBlog";
-// import CaseStudies from "./CaseStudies";
-// import Testimonial from "./Testimonial";
 
 export default function Home(props) {
     return (
-        <div className="font-roboto ">
+        <div className="font-roboto">
             <HeroSection {...props} />
             <Services {...props} />
             <WhyGGCS />
-            {/* <Featured {...props} /> */}
             <Process {...props} />
             <SEO {...props} />
-            {/* <CaseStudies {...props} /> */}
-            {/* <Testimonial {...props} /> */}
-            {/* <Review {...props} /> */}
-            {/* <CompanyBlog {...props} /> */}
-            {/* <Awards {...props} /> */}
+            <IndustryImpact />
             <ContactUs {...props} />
         </div>
     );

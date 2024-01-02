@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { PrimaryBtn } from "../../../../components/Button";
 import { H1Animate, TextAnimate, H6 } from "../../../../components/Typography";
 
-function SEO() {
+export default function SEO() {
     const navigate = useNavigate();
     return (
         <div>
@@ -156,5 +156,3 @@ function SEO() {
         </div>
     );
 }
-
-export default SEO;

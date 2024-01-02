@@ -19,6 +19,8 @@
 }
 
 html {
+    /* font-family: "Inter", sans-serif;
+    font-family: "Open Sans", sans-serif; */
     /* font-family: "Forum", serif; */
     /* font-family: "Lato", sans-serif; */
     /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -28,9 +30,9 @@ html {
         Noto Sans, ui-sans-serif, sans-serif, Ubuntu, Apple Color Emoji,
         Cantarell, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji, Arial,
         "Open Sans", "Helvetica Neue", sans-serif !important; */
-    font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    /* font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
         Helvetica Neue, Noto Sans, ui-sans-serif, sans-serif, Apple Color Emoji,
-        Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji, Arial !important;
+        Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji, Arial !important; */
 }
 
 h1,
@@ -40,6 +42,46 @@ h2 {
     /* font-family: "Inter", sans-serif; */
     /* font-weight: 600 !important; */
 }
+
+@font-face {
+    font-family: axiformaRegular;
+    src: url("../Pages/SubDomains/UposDashboard/Components/Fonts/Axiforma/Axiforma-Regular.ttf")
+        format("opentype");
+}
+
+/* @font-face {
+    font-family: axiformaSemiBold;
+    src: url("./assets/Fonts/Axiforma/Axiforma-SemiBold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: axiformaBold;
+    src: url("./assets/Fonts/Axiforma/Axiforma-Bold.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: proximaRegular;
+    src: url("./assets/Fonts/ProximaNova/Proxima-Nova-Regular.otf")
+        format("opentype");
+}
+
+@font-face {
+    font-family: proximaSemiBold;
+    src: url("./assets/Fonts/ProximaNova/Proxima-Nova-Semibold.otf")
+        format("opentype");
+}
+
+@font-face {
+    font-family: proximaBold;
+    src: url("./assets/Fonts/ProximaNova/Proxima-Nova-Bold.otf")
+        format("opentype");
+}
+
+@font-face {
+    font-family: poet;
+    src: url("./assets/Fonts/PoetsenOne/PoetsenOne-Regular.ttf")
+        format("opentype");
+} */
 
 .parallax > use {
     animation: move-forever 20s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
@@ -244,7 +286,7 @@ input {
 .swiper-slide {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 20px 3px;
     width: 30rem !important;
-    height:30rem !important;
+    height: 30rem !important;
     position: relative !important;
     background-color: white;
     border-radius: 20px;
@@ -365,6 +407,6 @@ input {
     background: gray;
 }
 
-.swiper-3d{
+.swiper-3d {
     perspective: 700px !important;
 }
