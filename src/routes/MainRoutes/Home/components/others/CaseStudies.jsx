@@ -5,7 +5,7 @@ import cs3 from "../../../assets/home/caseStudies/cs3.webp";
 import csbg from "../../../assets/home/caseStudies/csbg.webp";
 
 import Slider from "react-slick";
-import { H5 } from "../../../../components/Typography";
+import { H5 } from "../../../../../components/Typography";
 
 export default function CaseStudies(props) {
     const [state, setState] = useState({ currentCategory: "marketing" });

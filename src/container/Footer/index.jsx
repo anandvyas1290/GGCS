@@ -106,7 +106,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="">
-                        <ul className="mb-4 list-disc border-b-2 border-b-gray-300 ">
+                        <ul className="mb-4 list-disc border-b-2 border-b-gray-300">
                             {GGCSPolicy?.map((item, i) => {
                                 return (
                                     <li
@@ -171,16 +171,16 @@ export default function Footer() {
                     <address>
                         <b>Global Garner </b>
                         5th floor, Grand Emporio, Motera Stadium Road,
-                        Ahmedabad, Gujarat 380005
+                        Ahmedabad, Gujarat-380005
                     </address>
                 </div>
                 <div className="pt-5">
                     <div className="flex justify-center py-4 bg-white border rounded-full sm:px-2 md:px-5">
                         <p className="text-gray-400">
-                            <b>© 2023</b>{" "}
+                            <b>© 2023</b>
                             <a href="/" className="">
                                 <b>GGCS</b>
-                            </a>{" "}
+                            </a>
                             All Rights Reserved. A unit of
                             <a
                                 href="https://beta.globalgarner.com"

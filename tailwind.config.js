@@ -58,6 +58,14 @@ export default {
                 silverPlan: "",
             },
             fontFamily: {
+                axiforma: "Axiforma",
+                primary: "axiformaRegular",
+                secondary: "axiformaSemiBold",
+                tertiary: "axiformaBold",
+                fourth: "proximaRegular",
+                fifth: "proximaSemiBold",
+                sixth: "proximaBold",
+                poet: "poet",
                 // jakarta: "Plus Jakarta Sans, sans-serif",
                 // serif: "DM Serif Display, serif",
                 // sans: '"DM Sans",sans-serif',
@@ -93,6 +101,7 @@ export default {
                 gradientBg: "gradientBg 2s ease-in-out infinite",
                 fadeInDown:
                     "fadeInDown 500ms ease-in-out 0s normal none 1 running",
+
                 upslide: "upslide 4s forwards infinite alternate",
                 shape2: "shape2 6s infinite linear",
                 shape3: "shape2 8s infinite linear",
@@ -114,6 +123,7 @@ export default {
                 whyGGCSCard: "all .5s ease-in-out",
                 flipArrow: "flipArrow 2s linear 0s infinite",
                 animation: "fadeIn 3s",
+                arrowFadeIn: "arrowFadeIn 0.4s",
             },
             keyframes: {
                 gradientBg: {
@@ -127,7 +137,16 @@ export default {
                         "background-position": "0% 50%",
                     },
                 },
-
+                arrowFadeIn: {
+                    "0%": {
+                        "margin-left": "-20px",
+                        opacity: 0,
+                    },
+                    "100%": {
+                        "margin-left": "0px",
+                        opacity: 1,
+                    },
+                },
                 fadeInDown: {
                     "0%": {
                         opacity: 0,
