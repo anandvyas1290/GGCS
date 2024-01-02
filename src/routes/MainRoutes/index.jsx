@@ -32,7 +32,6 @@ export default function MainRoutes(props) {
         { path: "/", element: <Home {...props} /> },
         { path: "/about", element: <About {...props} /> },
         { path: "/services", element: <Services {...props} /> },
-        // { path: "/why-ggcs", element: <WhyGGCS {...props} /> },
         {
             path: "/training",
             children: [

@@ -105,6 +105,16 @@ import strategies from "../assets/home/whyGGCS/strategies.jpg";
 import partnership from "../assets/home/whyGGCS/partnership.jpg";
 import ComprehensiveServices from "../assets/home/whyGGCS/services.jpg";
 
+import healthcare from "../assets/home/industryImpact/healthcare.svg";
+import financeBanking from "../assets/home/industryImpact/financeBanking.svg";
+import education from "../assets/home/industryImpact/education.svg";
+import supplyChain from "../assets/home/industryImpact/supplyChain.svg";
+import retailCommerce from "../assets/home/industryImpact/retailCommerce.svg";
+import transportLogistics from "../assets/home/industryImpact/transportLogistics.svg";
+import realEstate from "../assets/home/industryImpact/realEstate.svg";
+import hospitalityTourism from "../assets/home/industryImpact/hospitalityTourism.svg";
+import govServices from "../assets/home/industryImpact/govServices.svg";
+
 export const navMenu = [
     { id: 1, label: "About", slug: "/about" },
     // { id: 2, label: "Why GGCS", slug: "/why-ggcs" },
@@ -614,16 +624,16 @@ export const menuService = [
         link: "services",
     },
     {
-        label: "Why GGCS",
-        link: "why-ggcs",
-    },
-    {
         label: "Contact Us",
         link: "contact",
     },
     {
         label: "Hire Us",
         link: "hire-us",
+    },
+    {
+        label: "Career",
+        link: "career",
     },
 ];
 // footer service
@@ -1295,5 +1305,62 @@ export const courses = [
         bg: "bg-course5",
         slug: "software-testing-automation",
         features: "QA Tester, Automation Engineer & much more.",
+    },
+];
+
+export const industryImpact = [
+    {
+        id: 1,
+        label: "Healthcare",
+        desc: "Seamless operations and secure data management for healthcare providers.",
+        icon: healthcare,
+    },
+    {
+        id: 2,
+        label: "Banking and Finance",
+        desc: "Robust fintech solutions and online banking platforms.sss",
+        icon: financeBanking,
+    },
+    {
+        id: 3,
+        label: "Education",
+        desc: "Engaging e-learning platforms and student management systems.",
+        icon: education,
+    },
+    {
+        id: 4,
+        label: "Manufacturing and Supply Chain",
+        desc: "Automation and data analytics for optimized production.",
+        icon: supplyChain,
+    },
+    {
+        id: 5,
+        label: "Retail and E-commerce",
+        desc: "User-friendly websites and efficient e-commerce platforms. ",
+        icon: retailCommerce,
+    },
+    {
+        id: 6,
+        label: "Transportation and Logistics",
+        desc: "Advanced fleet management and real-time tracking.",
+        icon: transportLogistics,
+    },
+    {
+        id: 7,
+        label: "Real Estate",
+        desc: "Property management software and virtual property tours.",
+        icon: realEstate,
+    },
+    {
+        id: 8,
+        label: "Hospitality and Tourism",
+        desc: "Enhanced guest experiences and online booking systems.",
+        icon: hospitalityTourism,
+    },
+    {
+        id: 9,
+        label: "Government and Public Services",
+        desc: "Secure e-governance and data-driven tools.",
+        icon: govServices,
     },
 ];

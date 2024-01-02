@@ -1,7 +1,7 @@
 import React from "react";
 import Review1 from "../../../assets/Review&Testimonial/review-logo-1.webp";
 
-import { H6 } from "../../../../components/Typography";
+import { H6 } from "../../../../../components/Typography";
 
 export default function Review() {
     return (

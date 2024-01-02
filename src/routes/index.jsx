@@ -3,14 +3,15 @@ import React from "react";
 import ppt from "../assets/PDF/GGCS-PPT.pdf";
 import uposGTP from "../assets/animation/uposGTP.gif";
 
-import { useRoutes, useNavigate } from "react-router-dom";
+import { useRoutes, useNavigate, useLocation } from "react-router-dom";
 
 import MainRoutes from "./MainRoutes";
 import FooterRoutes from "./FooterRoutes";
 import OtherRoutes from "./OtherRoutes";
 
 export default function Routes(props) {
-    const navigate = useNavigate();
+    const navigate = useNavigate(),
+        location = useLocation();
     const routes = useRoutes([
         {
             path: "/*",
@@ -22,7 +23,7 @@ export default function Routes(props) {
         },
     ]);
     return (
-        <main className="">
+        <main className={`${location?.pathname === "/" ? "" : "lg:mt-20"}`}>
             {/* <div className="fixed  md:-left-[60px] -left-[73px] top-1/2 -rotate-90 z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-g1 to-g2 border rounded-b-xl  text-white cursor-pointer">
                 <a
                     download

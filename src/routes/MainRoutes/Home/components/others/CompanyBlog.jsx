@@ -2,7 +2,7 @@ import React from "react";
 import blog from "../../../assets/home/companyBlog/blog1.webp";
 
 import { H1Animate, TextAnimate, H4, H6 } from "../../components/Typography";
-import { PrimaryBtn } from "../../../../components/Button";
+import { PrimaryBtn } from "../../../../../components/Button";
 
 export default function CompanyBlog() {
     return (

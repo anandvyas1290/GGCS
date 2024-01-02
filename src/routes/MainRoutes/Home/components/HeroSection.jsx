@@ -54,7 +54,7 @@ export default function HeroSection() {
 
     return (
         <div className="!max-h-fit !bg-gradient-to-b from-[rgba(68,176,158,0.4)] to-[rgb(224,210,199,0.3)] bg-white !text-black">
-            <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[150px] pb-[40px] sm:pb-[60px] md:pb-[100px] lg:pb-[150px]">
+            <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[250px] pb-[40px] sm:pb-[60px] md:pb-[100px] lg:pb-[150px]">
                 {/* <div className="container"> */}
                 <div className="sm:w-4/6">
                     <div className="">

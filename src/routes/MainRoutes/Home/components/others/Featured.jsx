@@ -6,8 +6,8 @@ import brand3 from "../../../../assets/home/featured/samachar.png";
 // import brand5 from "../../../../assets/home/featured/brand5.webp";
 
 import Slider from "react-slick";
-import Waves from "../../../../components/Waves";
-import { H4 } from "../../../../components/Typography";
+import Waves from "../../../../../components/Waves";
+import { H4 } from "../../../../../components/Typography";
 
 export default function Featured(props) {
     const featuredData = [

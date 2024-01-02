@@ -1,7 +1,7 @@
 import React from "react";
 
-import Pricing from "../../../../components/Pricing";
-import { H1Animate, TextAnimate } from "../../../../components/Typography";
+import Pricing from "../../../../../components/Pricing";
+import { H1Animate, TextAnimate } from "../../../../../components/Typography";
 
 export default function PricingSection() {
     return (

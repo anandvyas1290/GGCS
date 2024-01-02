@@ -43,149 +43,164 @@ export default function NavbarContent() {
     };
     const { showMenu } = state;
     return (
-        <div
-            className={`header w-full px-4 border-white bg-transparent backdrop-blur shadow-header !bg-white z-[1000] ${
+        <section
+            className={` left-0 right-0 z-[1000] ${
                 location?.pathname === "/"
-                    ? "  mt-1 border rounded-full"
-                    : "fixed top-0"
+                    ? "max-w-screen-xl mx-auto mt-1 "
+                    : "fixed w-full"
             }`}
-            ref={scrollRef}
         >
             <div
-                className={`relative flex justify-between items-center ${
-                    location?.pathname === "/"
-                        ? "max-w-full"
-                        : "max-w-screen-xl mx-auto"
-                }`}
+                className={`header px-4  shadow-header !bg-white 
+            ${
+                location?.pathname === "/"
+                    ? "border rounded-full border-white bg-transparent backdrop-blur"
+                    : "fixed w-full"
+            }
+            `}
+                ref={scrollRef}
             >
-                <div className="flex items-center h-[50px] md:h-[80px]">
-                    <img
-                        src={logo}
-                        alt="ggcs"
-                        className="cursor-pointer h-1/2"
-                        onClick={() => navigate("/")}
-                    />
-                </div>
-                <div className="flex">
-                    <div className="items-center hidden lg:flex">
-                        {navMenu?.map((item) => (
-                            <div
-                                className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${
-                                    item?.slug === location?.pathname
-                                        ? "text-primary "
-                                        : ""
-                                }  ${
-                                    item?.label2 === "download"
-                                        ? "text-blue-500"
-                                        : ""
-                                }`}
-                                key={item?.id}
-                                onClick={() => {
-                                    if (item?.label2 === "download") {
-                                        return;
-                                    } else {
-                                        navigate(item?.slug);
-                                    }
-                                }}
-                            >
-                                {item?.label2 === "download" ? (
-                                    <a
-                                        download
-                                        onClick={() => {
-                                            window.open(
-                                                ppt,
-                                                "_blank",
-                                                "fullscreen=yes"
-                                            );
-                                        }}
-                                    >
-                                        {item?.label}
-                                    </a>
-                                ) : (
-                                    <a>{item?.label}</a>
-                                )}
-                            </div>
-                        ))}
+                <div
+                    className={`relative flex justify-between items-center ${
+                        location?.pathname === "/"
+                            ? "max-w-full"
+                            : "max-w-screen-xl mx-auto"
+                    }`}
+                >
+                    <div className="flex items-center h-[50px] md:h-[80px]">
+                        <img
+                            src={logo}
+                            alt="ggcs"
+                            className="cursor-pointer h-1/2"
+                            onClick={() => navigate("/")}
+                        />
                     </div>
-                    <div className="relative flex items-center justify-between">
-                        <span className="hidden lg:block">
-                            <PrimaryBtn
-                                bgColor="bg-primaryBtn"
-                                className="border-primaryBtn"
-                                onClick={() => navigate("/contact")}
-                            >
-                                Contact Us
-                            </PrimaryBtn>
-                        </span>
-                        <span
-                            ref={menuInfoBlockRef}
-                            className="block w-10 h-10 lg:hidden sm:h-12 sm:w-12"
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                setState((prev) => {
-                                    return {
-                                        ...prev,
-                                        showMenu: !state?.showMenu,
-                                    };
-                                });
-                            }}
-                        >
-                            <img src={Menu} alt="" className="w-full h-full" />
-
-                            <div
-                                className={`absolute top-10 right-0 md:top-20  lg:hidden lg:w-auto ${
-                                    showMenu ? "  w-fit " : "hidden"
-                                } `}
-                                id="navbar-default"
-                            >
-                                <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:mt-0 md:border-0">
-                                    {navMenu?.map((item) => (
-                                        <li
-                                            className="py-1 text-black"
-                                            key={item?.id}
+                    <div className="flex">
+                        <div className="items-center hidden lg:flex">
+                            {navMenu?.map((item) => (
+                                <div
+                                    className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${
+                                        item?.slug === location?.pathname
+                                            ? "text-primary "
+                                            : ""
+                                    }  ${
+                                        item?.label2 === "download"
+                                            ? "text-blue-500"
+                                            : ""
+                                    }`}
+                                    key={item?.id}
+                                    onClick={() => {
+                                        if (item?.label2 === "download") {
+                                            return;
+                                        } else {
+                                            navigate(item?.slug);
+                                        }
+                                    }}
+                                >
+                                    {item?.label2 === "download" ? (
+                                        <a
+                                            download
                                             onClick={() => {
-                                                setState((prev) => {
-                                                    return {
-                                                        ...prev,
-                                                        showMenu: false,
-                                                    };
-                                                });
-                                                if (
-                                                    item?.label2 === "download"
-                                                ) {
-                                                    return;
-                                                } else {
-                                                    navigate(item?.slug);
-                                                }
+                                                window.open(
+                                                    ppt,
+                                                    "_blank",
+                                                    "fullscreen=yes"
+                                                );
                                             }}
                                         >
-                                            {item.label2 === "download" ? (
-                                                <a
-                                                    download
-                                                    onClick={() => {
-                                                        window.open(
-                                                            ppt,
-                                                            "_blank",
-                                                            "fullscreen=yes"
-                                                        );
-                                                    }}
-                                                    className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                                                    aria-current="page"
-                                                >
-                                                    {item?.label}
-                                                </a>
-                                            ) : (
-                                                <a>{item?.label}</a>
-                                            )}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </span>
+                                            {item?.label}
+                                        </a>
+                                    ) : (
+                                        <a>{item?.label}</a>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="relative flex items-center justify-between">
+                            <span className="hidden lg:block">
+                                <PrimaryBtn
+                                    bgColor="bg-primaryBtn"
+                                    className="border-primaryBtn"
+                                    onClick={() => navigate("/contact")}
+                                >
+                                    Contact Us
+                                </PrimaryBtn>
+                            </span>
+                            <span
+                                ref={menuInfoBlockRef}
+                                className="block w-10 h-10 lg:hidden sm:h-12 sm:w-12"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setState((prev) => {
+                                        return {
+                                            ...prev,
+                                            showMenu: !state?.showMenu,
+                                        };
+                                    });
+                                }}
+                            >
+                                <img
+                                    src={Menu}
+                                    alt=""
+                                    className="w-full h-full"
+                                />
+
+                                <div
+                                    className={`absolute top-10 right-0 md:top-20  lg:hidden lg:w-auto ${
+                                        showMenu ? "  w-fit " : "hidden"
+                                    } `}
+                                    id="navbar-default"
+                                >
+                                    <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:mt-0 md:border-0">
+                                        {navMenu?.map((item) => (
+                                            <li
+                                                className="py-1 text-black"
+                                                key={item?.id}
+                                                onClick={() => {
+                                                    setState((prev) => {
+                                                        return {
+                                                            ...prev,
+                                                            showMenu: false,
+                                                        };
+                                                    });
+                                                    if (
+                                                        item?.label2 ===
+                                                        "download"
+                                                    ) {
+                                                        return;
+                                                    } else {
+                                                        navigate(item?.slug);
+                                                    }
+                                                }}
+                                            >
+                                                {item.label2 === "download" ? (
+                                                    <a
+                                                        download
+                                                        onClick={() => {
+                                                            window.open(
+                                                                ppt,
+                                                                "_blank",
+                                                                "fullscreen=yes"
+                                                            );
+                                                        }}
+                                                        className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                                                        aria-current="page"
+                                                    >
+                                                        {item?.label}
+                                                    </a>
+                                                ) : (
+                                                    <a>{item?.label}</a>
+                                                )}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
