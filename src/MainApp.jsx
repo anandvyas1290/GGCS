@@ -8,9 +8,11 @@ import Footer from "./container/Footer";
 const MainApp = (props) => {
     return (
         <Router>
-            <div className="min-h-[100vh] flex flex-col font-Ubuntu">
-                <div className="flex-1">
+            <div className="relative min-h-[100vh] flex flex-col  font-Ubuntu">
+                <div>
                     <Navbar {...props} />
+                </div>
+                <div className="flex-1">
                     <Routes {...props} />
                 </div>
                 <Footer />

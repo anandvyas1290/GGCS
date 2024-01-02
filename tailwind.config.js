@@ -70,6 +70,7 @@ export default {
             backgroundImage: (theme) => ({
                 silverPlan: "linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%)",
                 goldPlan: "linear-gradient(315deg, #fec84e 0%, #ffdea8 74%)",
+                platinumPlan: "",
                 blogBanner: "url('assets/blog/banner.webp')",
                 grad: `linear-gradient(to right, 90deg ${theme(
                     "colors.g1"

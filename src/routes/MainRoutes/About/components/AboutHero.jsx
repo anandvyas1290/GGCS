@@ -20,10 +20,10 @@ const brandWrapper = [
     { image: brand2 },
     { image: brand3 },
     { image: brand4 },
-    { image: brand1 },
-    { image: brand2 },
-    { image: brand1 },
-    { image: brand2 },
+    // { image: brand1 },
+    // { image: brand2 },
+    // { image: brand1 },
+    // { image: brand2 },
 ];
 
 function AboutHero() {
@@ -34,8 +34,8 @@ function AboutHero() {
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        speed: 5000,
-        autoplaySpeed: 5000,
+        speed: 12000,
+        autoplaySpeed: 0,
         cssEase: "linear",
         responsive: [
             {
