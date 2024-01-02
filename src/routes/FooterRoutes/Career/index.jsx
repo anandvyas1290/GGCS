@@ -1,10 +1,16 @@
 import React from "react";
-import UpdatingPage from "../../../components/Layout/UpdatingPage";
+import Hero from "./Hero";
+import ExploreOpportunities from "./ExploreOpportunities";
+import BrowserCategory from "./BrowseCategory";
+import LatestJob from "./LatestJob";
 
-export default function Career(props) {
+export default function Career() {
     return (
-        <div>
-            <UpdatingPage />
-        </div>
+        <main>
+            <Hero />
+            <ExploreOpportunities />
+            <BrowserCategory />
+            <LatestJob />
+        </main>
     );
 }
