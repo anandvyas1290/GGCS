@@ -58,7 +58,7 @@ export default {
                 silverPlan: "",
             },
             fontFamily: {
-                // jakarta: " Plus Jakarta Sans, sans-serif",
+                // jakarta: "Plus Jakarta Sans, sans-serif",
                 // serif: "DM Serif Display, serif",
                 // sans: '"DM Sans",sans-serif',
                 // agbalumo: "Agbalumo, serif",
