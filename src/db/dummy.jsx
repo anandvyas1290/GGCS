@@ -612,6 +612,10 @@ export const menuService = [
         label: "Hire Us",
         link: "hire-us",
     },
+    {
+        label: "Career",
+        link: "career",
+    },
 ];
 // footer service
 export const services = [

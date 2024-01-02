@@ -5,6 +5,7 @@ import HireUs from "./HireUs";
 import Disclaimer from "./Disclaimer";
 import PrivacyPolicy from "./PrivacyPolicy";
 import TermsAndCondition from "./TermsAndCondition";
+import Career from "./Career";
 
 export default function footerRoutes(props) {
     let routes = useRoutes([
@@ -18,6 +19,7 @@ export default function footerRoutes(props) {
         },
         { path: "/disclaimer", element: <Disclaimer {...props} /> },
         { path: "/hire-us", element: <HireUs {...props} /> },
+        { path: "/career", element: <Career {...props} /> },
     ]);
 
     return routes;

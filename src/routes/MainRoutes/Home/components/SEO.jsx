@@ -1,11 +1,11 @@
 import React from "react";
-import TeamIcon from "../../../assets/SEO/teams.svg";
-import BadgeIcon from "../../../assets/SEO/badge.svg";
-import SmileyIcon from "../../../assets/SEO/smiley.svg";
-import ClientImg from "../../../assets/SEO/optimize-bg-2.webp";
-import StatImg from "../../../assets/SEO/optimize-shape-1.webp";
-import GradientBgImg from "../../../assets/SEO/optimize-bg.webp";
-import InputImg from "../../../assets/SEO/optimize-shape-2.webp";
+import TeamIcon from "../../../../assets/SEO/teams.svg";
+import BadgeIcon from "../../../../assets/SEO/badge.svg";
+import SmileyIcon from "../../../../assets/SEO/smiley.svg";
+import ClientImg from "../../../../assets/SEO/optimize-bg-2.webp";
+import StatImg from "../../../../assets/SEO/optimize-shape-1.webp";
+import GradientBgImg from "../../../../assets/SEO/optimize-bg.webp";
+import InputImg from "../../../../assets/SEO/optimize-shape-2.webp";
 
 import { useNavigate } from "react-router-dom";
 
@@ -47,7 +47,7 @@ function SEO() {
                                 </div>
                                 <div>
                                     <H6 className="mb-1 text-base">
-                                        Desktop Score
+                                        SEO Score
                                     </H6>
                                     <div className="w-full h-3 mb-4 bg-gray-200 rounded-full md:w-2/3 dark:bg-gray-100">
                                         <div

@@ -44,10 +44,10 @@ export default function NavbarContent() {
     const { showMenu } = state;
     return (
         <div
-            className={`header w-full px-4 border-white bg-transparent backdrop-blur shadow-header !bg-white z-[1000] ${
+            className={`fixed header px-4 border-white bg-transparent backdrop-blur shadow-header !bg-white z-[1000] ${
                 location?.pathname === "/"
-                    ? "  mt-1 border rounded-full"
-                    : "fixed top-0"
+                    ? "max-w-screen-xl  mt-1 border rounded-full"
+                    : "top-0 left-0 right-0 w-full"
             }`}
             ref={scrollRef}
         >

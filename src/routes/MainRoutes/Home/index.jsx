@@ -3,8 +3,8 @@ import "./styles.css";
 
 import HeroSection from "./components/HeroSection";
 import Services from "./components/Services";
-// import Process from "./components/Process";
-// import SEO from "./components/SEO/SEO";
+import Process from "./components/Process";
+import SEO from "./components/SEO";
 import ContactUs from "../../../components/Layout/ContactUs";
 import WhyGGCS from "../WhyGGCS";
 
@@ -22,8 +22,8 @@ export default function Home(props) {
             <Services {...props} />
             <WhyGGCS />
             {/* <Featured {...props} /> */}
-            {/* <Process {...props} />
-            <SEO {...props} /> */}
+            <Process {...props} />
+            <SEO {...props} />
             {/* <CaseStudies {...props} /> */}
             {/* <Testimonial {...props} /> */}
             {/* <Review {...props} /> */}
