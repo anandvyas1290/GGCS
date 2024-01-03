@@ -1,9 +1,9 @@
 import React from "react";
-import brand1 from "../../../assets/home/featured/gg.png";
-import brand2 from "../../../assets/home/featured/ibn.png";
-import brand4 from "../../../assets/about/home/quikcraker.png";
-import brand3 from "../../../assets/home/featured/samachar.png";
-// import brand5 from "../../../assets/home/featured/brand5.webp";
+import brand1 from "../../../../assets/home/featured/gg.png";
+import brand2 from "../../../../assets/home/featured/ibn.png";
+import brand4 from "../../../../assets/about/home/quikcraker.png";
+import brand3 from "../../../../assets/home/featured/samachar.png";
+// import brand5 from "../../../../assets/home/featured/brand5.webp";
 
 import Slider from "react-slick";
 import Waves from "../../../../../components/Waves";
