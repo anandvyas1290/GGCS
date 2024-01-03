@@ -1,13 +1,5 @@
 import React from 'react'
 const LatestJob = () => {
-    // const arr = [
-    //     { id: 1, Icon: uber, title: "Title", desc: "lorem ipsum ", },
-    //     { id: 1, Icon: uber, title: "Title", desc: "lorem ipsum", },
-    //     { id: 1, Icon: uber, title: "Title", desc: "lorem ipsum ", },
-    //     { id: 1, Icon: uber, title: "Title", desc: "lorem ipsum ", },
-    //     { id: 1, Icon: uber, title: "Title", desc: "lorem ipsum ", },
-    //     { id: 1, Icon: uber, title: "Title", desc: "lorem ipsum ", },
-    // ]
     return (
         <div className='md:py-20 py-10'>
             <div className='max-w-screen-xl mx-auto xl:px-0 px-3'>

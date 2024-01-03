@@ -2,7 +2,7 @@ import React from "react";
 
 import { hireUs } from "./Json";
 import Container from "../../../components/Layout/Layout";
-import { H1Animate } from "../../../components/Typography";
+import { Desc, H1Animate } from "../../../components/Typography";
 
 export const Card = ({ label, description, Icon, iconClassName = "" }) => {
     return (
@@ -15,7 +15,7 @@ export const Card = ({ label, description, Icon, iconClassName = "" }) => {
             <div className="text-xl text-navLink pt-4 font-semibold group-hover:!text-white">
                 {label}
             </div>
-            <div className="text-sm font-normal text-gray-400 group-hover:text-black">
+            <div className="text-sm font-semibold text-gray-400 group-hover:text-white">
                 {description}
             </div>
         </div>
@@ -24,11 +24,11 @@ export const Card = ({ label, description, Icon, iconClassName = "" }) => {
 
 function Hero() {
     return (
-        <section className="relative pt-24 pb-10">
+        <section className="relative py-20">
             <Container className="text-center">
                 <H1Animate className="mb-5">Hire Us</H1Animate>
-                <p>{hireUs?.description}</p>
-                <div className="grid grid-cols-1 gap-5 my-12 sm:grid-cols-2 lg:grid-cols-5 text">
+                <Desc className="xl:w-3/4 mx-auto">{hireUs?.description}</Desc>
+                <div className="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-2 lg:grid-cols-5 text">
                     {hireUs?.list?.map((item, i) => (
                         <Card
                             key={i}
