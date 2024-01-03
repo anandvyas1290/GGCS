@@ -1,15 +1,19 @@
 import React from "react";
 
+export * from "./GradientText";
+export * from "./RadientBtn";
+export * from "./SubmitBtn";
+
 export function PrimaryBtn({ children, className, onClick }) {
     return (
         <button
-            className={`px-5 md:px-8 py-1.5 md:py-2.5 flex align-middle justify-center text-base font-semibold bg-primaryBtn text-white1 font-jakarta border-2 rounded-full hover:bg-opacity-95 transition-all duration-300 ${className} }`} onClick={onClick}
+            className={`px-5 md:px-8 py-1.5 md:py-2.5 flex align-middle justify-center text-base font-semibold bg-primaryBtn text-white1 font-jakarta border-2 rounded-full hover:bg-opacity-95 transition-all duration-300 ${className} }`}
+            onClick={onClick}
         >
             {children}
-        </button >
+        </button>
     );
 }
-
 export function SecondaryBtn({ children, bgColor, className, onClick }) {
     return (
         <button

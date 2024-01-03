@@ -6,7 +6,7 @@ import logo from "../../assets/Navbar/GGCSNew.svg";
 import Menu from "../../assets/Navbar/menu.svg";
 
 import { navMenu } from "../../db/dummy";
-import { PrimaryBtn } from "../../components/Button";
+import { PrimaryBtn, RadientBtn } from "../../components/Button";
 
 export default function NavbarContent() {
     const location = useLocation();
@@ -118,14 +118,34 @@ export default function NavbarContent() {
                         </div>
                         <div className="relative flex items-center justify-between">
                             <span className="hidden lg:block">
-                                <PrimaryBtn
+                                {/* <PrimaryBtn
                                     bgColor="bg-primaryBtn"
                                     className="border-primaryBtn"
-                                    onClick={() => navigate("/contact")}
+                                    // onClick={() => navigate("/contact")}
+                                    onClick={() => navigate("/hire-us")}
                                 >
-                                    Contact Us
-                                </PrimaryBtn>
+                                    Hire Us
+                                </PrimaryBtn> */}
+
+                                {location?.pathname === "/" ? (
+                                    <RadientBtn
+                                        className="!rounded-full"
+                                        onClick={() => navigate("/hire-us")}
+                                    >
+                                        Hire Us
+                                    </RadientBtn>
+                                ) : (
+                                    <PrimaryBtn
+                                        bgColor="bg-primaryBtn"
+                                        className="border-primaryBtn"
+                                        // onClick={() => navigate("/contact")}
+                                        onClick={() => navigate("/hire-us")}
+                                    >
+                                        Hire Us
+                                    </PrimaryBtn>
+                                )}
                             </span>
+
                             <span
                                 ref={menuInfoBlockRef}
                                 className="block w-10 h-10 lg:hidden sm:h-12 sm:w-12"

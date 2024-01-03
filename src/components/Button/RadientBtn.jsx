@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function RadientBtn({ children, onClick }) {
+export function RadientBtn({ children, className, onClick }) {
     return (
         <div className="relative group">
             <button
-                className="relative z-10 flex items-center gap-1 p-3 px-8 text-lg font-bold text-black bg-white border-4 rounded-xl bg-clip-padding border-white/30"
+                className={`relative z-10 flex items-center gap-1 p-3 px-8 text-lg font-bold text-black bg-white border-4 rounded-xl bg-clip-padding border-white/30 ${className}`}
                 onClick={onClick}
             >
                 {children}

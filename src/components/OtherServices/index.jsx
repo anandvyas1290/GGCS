@@ -3,11 +3,10 @@ import "./style.css";
 
 import { useNavigate } from "react-router-dom";
 
-import { PrimaryBtn } from "../Button";
 import Container from "../Layout/Layout";
 import { H1Animate } from "../Typography";
 import BackNavigate from "../UI/BackNavigate";
-import RadientBtn from "../Button/RadientBtn";
+import { RadientBtn } from "../Button";
 
 export default function OtherServices({ data, samePage }) {
     let navigate = useNavigate();

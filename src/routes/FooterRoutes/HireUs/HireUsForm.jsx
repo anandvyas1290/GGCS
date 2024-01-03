@@ -16,7 +16,7 @@ function HireUsForm() {
                 >
                     <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
                         <div className="input-box">
-                            <Select
+                            {/* <Select
                                 showSearch
                                 style={{
                                     width: 200,
@@ -59,7 +59,7 @@ function HireUsForm() {
                                         label: "Cancelled",
                                     },
                                 ]}
-                            />
+                            /> */}
                             <input
                                 type="number"
                                 placeholder="Mobile Number"

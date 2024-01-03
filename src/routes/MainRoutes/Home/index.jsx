@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-import SEO from "./components/SEO";
+// import SEO from "./components/SEO";
 import Process from "./components/Process";
 import WhyGGCS from "./components/WhyGGCS";
 import Services from "./components/Services";
@@ -16,7 +16,7 @@ export default function Home(props) {
             <Services {...props} />
             <WhyGGCS />
             <Process {...props} />
-            <SEO {...props} />
+            {/* <SEO {...props} /> */}
             <IndustryImpact />
             <ContactUs {...props} />
         </div>

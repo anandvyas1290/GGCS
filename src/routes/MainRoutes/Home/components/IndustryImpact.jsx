@@ -14,7 +14,7 @@ export default function IndustryImpact(props) {
                     requirements. Industries we proudly work with include.
                 </Desc>
             </section>
-            <section className="grid grid-cols-3 gap-8">
+            <section className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8 sm:px-6 lg:px-0 px-3">
                 {industryImpact?.map((item) => (
                     <div
                         key={item?.id}

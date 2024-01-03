@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function SubmitBtn({}) {
+export function SubmitBtn({}) {
     return <div>d</div>;
 }
