@@ -16,7 +16,7 @@ export default function WhyGGCS() {
                     <H1Animate className="text-center">
                         {whyGGCSData?.title}
                     </H1Animate>
-                    <div className="grid grid-cols-1 gap-10 py-8">
+                    <div className="grid grid-cols-1 gap-5 py-8">
                         {whyGGCSData?.desc?.map((item, i) => (
                             <div
                                 key={item?.id}
@@ -35,7 +35,7 @@ export default function WhyGGCS() {
                                 <section className="relative">
                                     <img
                                         src={item?.image}
-                                        className={`relative h-[400px] aspect-video object-contain rounded-full border-2 border-gray-200 z-10`}
+                                        className={`relative h-[400px] aspect-video object-contain rounded-full  border-gray-200 z-10`}
                                     />
                                 </section>
                             </div>
