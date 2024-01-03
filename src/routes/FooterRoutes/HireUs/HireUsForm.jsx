@@ -6,7 +6,7 @@ import { PrimaryBtn } from "../../../components/Button";
 function HireUsForm() {
     return (
         <section className="bg-gray-100">
-            <div className="form-wrapper py-10">
+            <div className="form-wrapper md:py-20 py-10">
                 <H1Animate className="!text-5xl text-center mb-10">
                     Hire Us Form
                 </H1Animate>
