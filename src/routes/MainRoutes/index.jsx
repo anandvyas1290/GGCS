@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useRoutes } from "react-router-dom";
+import { Outlet, useRoutes } from "react-router-dom";
 
 import Home from "./Home";
 import About from "./About";
@@ -42,6 +42,7 @@ export default function MainRoutes(props) {
         { path: "/gallery", element: <Gallery {...props} /> },
         { path: "/contact", element: <Contact {...props} /> },
         { path: "/upos-details", element: <UposPackage {...props} /> },
+        Outlet,
     ]);
     return (
         <div>

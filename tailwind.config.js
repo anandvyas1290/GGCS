@@ -124,6 +124,7 @@ export default {
                 flipArrow: "flipArrow 2s linear 0s infinite",
                 animation: "fadeIn 3s",
                 arrowFadeIn: "arrowFadeIn 0.4s",
+                heroBgChange: "heroBgChange 2.5s ease-in-out infinite",
             },
             keyframes: {
                 gradientBg: {
@@ -262,6 +263,24 @@ export default {
                     },
                     "100%": {
                         opacity: "1",
+                    },
+                },
+                heroBgChange: {
+                    "0%": {
+                        "background-image":
+                            "linear-gradient(315deg, #005f73, #94d2bd, rgb(224,210,199,0.3) )",
+                    },
+                    "25%": {
+                        "background-image":
+                            "linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%)",
+                    },
+                    "50%": {
+                        "background-image":
+                            "linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%)",
+                    },
+                    "100%": {
+                        "background-image":
+                            "linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%)",
                     },
                 },
             },

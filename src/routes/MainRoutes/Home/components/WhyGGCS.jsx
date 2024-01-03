@@ -6,7 +6,7 @@ import { H1Animate, TextAnimate } from "../../../../components/Typography";
 
 export default function WhyGGCS() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
 
     return (

@@ -21,7 +21,9 @@ export default function OtherServices({ data, samePage }) {
             {samePage ? <BackNavigate backLabel={data?.heading} /> : null}
             <div className={`py-20 sm:py-32`}>
                 <Container>
-                    <H1Animate>{data?.heading}</H1Animate>
+                    <H1Animate className="text-center">
+                        {data?.heading}
+                    </H1Animate>
                 </Container>
             </div>
             <section className="bg-black opacity-100">
@@ -31,7 +33,7 @@ export default function OtherServices({ data, samePage }) {
                             return (
                                 <div className="card" key={i}>
                                     <div
-                                        className={`h-full w-full container-card bg-box${
+                                        className={`flex flex-col items-center justify-center text-center h-full w-full container-card bg-box${
                                             i + 1
                                         }`}
                                     >

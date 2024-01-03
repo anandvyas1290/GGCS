@@ -18,7 +18,7 @@ export function H1Animate({ className, children }) {
     };
     return (
         <motion.h1
-            className={`text-[45px] font-bold ${className}`}
+            className={`text-5xl font-bold ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"

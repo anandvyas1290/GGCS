@@ -58,6 +58,8 @@ export default function Services(props) {
         });
     };
 
+    console.log(state.dialogData);
+
     return (
         <div className="font-roboto">
             <section className="max-w-screen-xl px-3 pt-20 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-40">
@@ -96,7 +98,7 @@ export default function Services(props) {
                                             <H5>{item?.label}</H5>
                                             <p className="text-grey4">
                                                 {/* {item?.desc} */}
-                                                {item?.desc?.slice(0, 60)}...
+                                                {/* {item?.desc?.slice(0, 60)}... */}
                                             </p>
                                             <p
                                                 className="font-semibold text-pink-500 cursor-pointer"
@@ -107,7 +109,7 @@ export default function Services(props) {
                                                 {"Read More..."}
                                             </p>
                                         </div>
-                                        {item?.id < processData?.length ? (
+                                        {/* {item?.id < processData?.length ? (
                                             <>
                                                 <div
                                                     className={`absolute ${
@@ -126,7 +128,7 @@ export default function Services(props) {
                                                     )}
                                                 </div>
                                             </>
-                                        ) : null}
+                                        ) : null} */}
                                     </div>
                                 </li>
                             ))}
@@ -326,14 +328,18 @@ export default function Services(props) {
                 </div>
             </section>
             <Modal
-                title={state?.dialogData?.label}
-                styles={{ header: "text-2xl" }}
+                title={
+                    <h2 className="text-xl font-bold text-center">
+                        {state?.dialogData?.label}
+                        <hr className="my-1 border-gray-300 border-1" />
+                    </h2>
+                }
                 open={state?.openDialog}
                 onOk={() => readMoreModal(false, {})}
                 onCancel={() => readMoreModal(false, {})}
                 footer={false}
             >
-                <h3 className="">{state?.dialogData?.desc}</h3>
+                <h3 className="p-4 text-lg">{state?.dialogData?.desc}</h3>
             </Modal>
         </div>
     );

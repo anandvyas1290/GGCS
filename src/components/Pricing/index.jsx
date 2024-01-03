@@ -8,7 +8,6 @@ import Tabs from "../UI/Tabs";
 import { pricing } from "./dummyData";
 import { PrimaryBtn } from "../Button";
 
-
 const fadeInAnimationVariants = {
     initial: {
         opacity: 0,
@@ -83,7 +82,7 @@ function Pricing() {
         });
     };
 
-    const { currentTab } = state
+    const { currentTab } = state;
     return (
         <div>
             <Tabs
@@ -98,23 +97,31 @@ function Pricing() {
                         className=" flex flex-col justify-center p-6 mx-auto max-w-lg text-center text-gray-900 bg-[#F5F9FC] rounded-lg shadow"
                     >
                         <div>
-                            {
-                                item?.icon ? <div className="flex justify-center items-center bg-gray-200 rounded-full w-24 h-24 mx-auto mb-3  "> <img src={item?.icon} alt="" className="p-3 w-20 h-20" /></div> : null
-                            }
+                            {item?.icon ? (
+                                <div className="flex items-center justify-center w-24 h-24 mx-auto mb-3 bg-gray-200 rounded-full ">
+                                    {" "}
+                                    <img
+                                        src={item?.icon}
+                                        alt=""
+                                        className="w-20 h-20 p-3"
+                                    />
+                                </div>
+                            ) : null}
                             <h3 className="mb-1 text-2xl font-semibold">
                                 {item?.title}
                             </h3>
-                            <p className="font-light text-gray-500 ">
-                                {item?.desc}
-                            </p>
-                            {item?.price ? <div className="flex items-baseline justify-center mt-8">
-                                <span className="mr-1 text-4xl font-extrabold">
-                                    {item?.price}
-                                </span>
-                                <span className="font-medium text-gray-500">
-                                    /month
-                                </span>
-                            </div> : null}
+                            <p className="text-gray-500">{item?.desc}</p>
+                            <hr className="my-2 border-2 border-[#caf0f8]" />
+                            {item?.price ? (
+                                <div className="flex items-baseline justify-center mt-8">
+                                    <span className="mr-1 text-4xl font-bold text-[#023e8a]">
+                                        {item?.price}
+                                    </span>
+                                    <span className="font-medium text-gray-500">
+                                        /month
+                                    </span>
+                                </div>
+                            ) : null}
                             <ul
                                 role="list"
                                 className="my-8 space-y-3 text-left h-[350px] overflow-y-scroll no-scrollbar"
@@ -144,7 +151,7 @@ function Pricing() {
                                                 clipRule="evenodd"
                                             ></path>
                                         </svg>
-                                        <span>
+                                        <span className="text-[17px]">
                                             {desc?.label}
                                             <span className="font-semibold">
                                                 {desc?.time}
@@ -172,7 +179,9 @@ function Pricing() {
                             // bgColor="bg-primaryBtn"
                             className="w-full rounded-xl bg-white  !text-primary border-0 hover:!text-white hover:bg-gradient-to-r from-g1 via-g2 to-g3 hover:bg-[length:200%] hover:animate-gradientBg"
                         >
-                            {currentTab === "it_services" ? "Send Enquiry" : "Join this Plan"}
+                            {currentTab === "it_services"
+                                ? "Send Enquiry"
+                                : "Join this Plan"}
                         </PrimaryBtn>
                         {/* <div
 
