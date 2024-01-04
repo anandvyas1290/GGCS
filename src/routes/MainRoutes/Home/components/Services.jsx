@@ -11,7 +11,7 @@ import { H1Animate, TextAnimate } from "../../../../components/Typography";
 
 export default function Services(props) {
     return (
-        <section className="relative bg-[#f5f5f5] md:py-20 py-8">
+        <section className="relative bg-white md:py-20 py-8">
             <img src={lines} alt="dot-svg" className="absolute left-10" />
             <img
                 src={dots}
@@ -20,9 +20,7 @@ export default function Services(props) {
             />
             <div className="max-w-screen-xl px-3 mx-auto sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center">
-                    <TextAnimate className="">
-                        Smart Solutions for your business
-                    </TextAnimate>
+                    <TextAnimate>Smart Solutions for your business</TextAnimate>
                     <H1Animate>Our Services</H1Animate>
                 </div>
 

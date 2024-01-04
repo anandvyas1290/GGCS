@@ -4,7 +4,7 @@ import { Input } from "../UI/Input";
 import { PrimaryBtn } from "../Button";
 import { addresses } from "../../db/dummy";
 import { contactBg, office } from "../../db/assets";
-import { H1Animate, H6, TextAnimate } from "../Typography";
+import { Desc, H1Animate, H6, TextAnimate } from "../Typography";
 
 function ContactUs() {
     return (
@@ -18,21 +18,20 @@ function ContactUs() {
             </div>
             <div className="max-w-screen-lg mx-auto lg:max-w-screen-xl ">
                 <div className="md:flex py-0 sm:!py-10 ">
-                    <div className="md:w-1/2 mx-3">
+                    <div className="mx-3 md:w-1/2">
                         <div className="my-10">
                             <TextAnimate className="w-fit">
                                 Get In Touch
                             </TextAnimate>
-                            <H1Animate className="mt-1 mb-4 sm:!leading-[3.5rem]">
-                                Lets Work <br />
-                                Together
+                            <H1Animate className="mt-1 sm:!leading-[3.5rem] !justify-start">
+                                Lets Work Together
                             </H1Animate>
-                            <H6 className="mb-4 text-grey2">
+                            <Desc className="mb-4">
                                 Just tell us your requirements and we will help
                                 you!
-                            </H6>
+                            </Desc>
                             <div>
-                                <h3 className="text-3xl text-red-500 mb-1">
+                                <h3 className="mb-1 text-3xl text-red-500">
                                     +91 6354917511
                                 </h3>
                                 <H6 className="text-grey2">
@@ -55,30 +54,30 @@ function ContactUs() {
                             </div>
                         </div>
                     </div>
-                    <div className="md:w-1/2 mx-3 rounded-3xl bg-white px-3 sm:px-6 md:px-10 py-10 before:bg-homeGradient before:-top-4 before:left-0 before:absolute shadow-services ">
-                        <div className=" flex flex-wrap">
-                            <div className="my-2 px-3 w-full sm:w-1/2">
+                    <div className="px-3 py-10 mx-3 bg-white md:w-1/2 rounded-3xl sm:px-6 md:px-10 before:bg-homeGradient before:-top-4 before:left-0 before:absolute shadow-services ">
+                        <div className="flex flex-wrap ">
+                            <div className="w-full px-3 my-2 sm:w-1/2">
                                 <Input
                                     placeholder={"Fill Name "}
                                     type={"mail"}
                                 />
                             </div>
-                            <div className="my-2 px-3  w-full sm:w-1/2">
+                            <div className="w-full px-3 my-2 sm:w-1/2">
                                 <Input
                                     placeholder={"Email Address"}
                                     type={"mail"}
                                 />
                             </div>
-                            <div className="my-2 px-3  w-full sm:w-1/2">
+                            <div className="w-full px-3 my-2 sm:w-1/2">
                                 <Input
                                     placeholder={"Phone Number"}
                                     type={"mail"}
                                 />
                             </div>
-                            <div className="my-2  px-3 w-full sm:w-1/2">
+                            <div className="w-full px-3 my-2 sm:w-1/2">
                                 <Input placeholder={"Website"} type={"mail"} />
                             </div>
-                            {/* <div className="w-full  border-2 relative rounded-xl my-3 mx-4 bg-gray-100 "> */}
+                            {/* <div className="relative w-full mx-4 my-3 bg-gray-100 border-2 rounded-xl "> */}
                             <textarea
                                 name=""
                                 placeholder="Message"
@@ -89,7 +88,7 @@ function ContactUs() {
                             ></textarea>
                             {/* </div> */}
                         </div>
-                        <div className="w-full mt-3 mx-4">
+                        <div className="w-full mx-4 mt-3">
                             <PrimaryBtn
                                 size="px-8 py-3"
                                 bgColor="bg-primaryBtn"
@@ -99,11 +98,11 @@ function ContactUs() {
                         </div>
                     </div>
                 </div>
-                <section className="grid sm:grid-cols-2 grid-cols-1 lg:gap-20 gap-10 lg:mb-auto mb-10">
+                <section className="grid grid-cols-1 gap-10 mb-10 sm:grid-cols-2 lg:gap-20 lg:mb-auto">
                     {addresses?.map((item) => (
                         <div key={item?.id} className="w-full">
                             <address className="h-full w-fit flex gap-5 lg:px-10 px-3 py-4 not-italic rounded-3xl item-center bg-slate-200 !backdrop-blur-3xl">
-                                <figure className="relative md:w-32 md:h-24 w-24 h-14">
+                                <figure className="relative w-24 md:w-32 md:h-24 h-14">
                                     <div className="absolute top-3 -left-1 md:w-[70px] md:h-[65px] rounded-full bg-gradient-to-r from-g2 to-g1 -z-10" />
                                     <img
                                         src={office}

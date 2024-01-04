@@ -9,7 +9,7 @@ import counter3 from "../../../../assets/about/vision/counter-shape3.webp";
 import treeIcon from "../../../../assets/about/vision/mission-shape-2.webp";
 import missionShape from "../../../../assets/about/vision/mission-shape-1.webp";
 
-import { H5 } from "../../../../components/Typography";
+import { Desc, H4, H5 } from "../../../../components/Typography";
 import Container from "../../../../components/Layout/Layout";
 
 const counterData = [
@@ -65,13 +65,13 @@ function Vision() {
                                     We are the Digital Marketers that create
                                     your brand.
                                 </H5>
-                                <p className=" ">
+                                <Desc className="">
                                     GGCS or Global Garner Consultancy Services,
                                     stands out as a leading digital marketing
                                     company utilizing advanced technology and a
                                     team of seasoned professionals to elevate
                                     businesses' brand presence and growth.
-                                </p>
+                                </Desc>
                             </div>
                         </div>
                         <div className="hidden md:block">
@@ -99,8 +99,7 @@ function Vision() {
                                     />
                                 </span> */}
                                 <H5 className="mb-2">Our Journey</H5>
-
-                                <p className=" ">
+                                <Desc className="">
                                     The genesis of GGCS traces back to the
                                     firsthand challenges faced by Global Garner
                                     Sales Services Limited in 2016. They needed
@@ -110,7 +109,7 @@ function Vision() {
                                     their issues but also became a catalyst for
                                     numerous other businesses seeking success in
                                     the online realm.
-                                </p>
+                                </Desc>
                             </div>
                         </div>
                     </div>
@@ -124,8 +123,10 @@ function Vision() {
                                         className="w-full mb-5 h-14"
                                     />
                                 </span> */}
-                                <H5 className="mb-2">What Distinguishes Us</H5>
-                                <p className=" ">
+                                <H4 className="mb-2 text-xl">
+                                    What Distinguishes Us
+                                </H4>
+                                <Desc className="">
                                     At GGCS, our primary goal is to ensure
                                     brands and businesses appear on platforms
                                     like Google and experience significant
@@ -137,7 +138,7 @@ function Vision() {
                                     demonstrated through real-time display of
                                     statistics for our clients using advanced
                                     tools and industry benchmarks.
-                                </p>
+                                </Desc>
                             </div>
                         </div>
                         <div className="hidden md:block">
@@ -172,7 +173,7 @@ function Vision() {
                                     Our Journey
                                 </H5> */}
 
-                                <p className=" ">
+                                <p className="">
                                     However, GGCS is not merely a provider of
                                     digital marketing services. We consider
                                     ourselves a digital partner, taking the time

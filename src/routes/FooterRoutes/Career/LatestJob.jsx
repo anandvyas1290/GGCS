@@ -1,75 +1,80 @@
-import React from 'react'
+import React from "react";
+
 const LatestJob = () => {
     return (
-        <div className='md:py-20 py-10'>
-            <div className='max-w-screen-xl mx-auto xl:px-0 px-3'>
-                <div className="antialiased font-sans bg-gray-200">
-                    <div className="container mx-auto px-4 sm:px-8">
+        <div className="py-10 md:py-20">
+            <div className="max-w-screen-xl px-3 mx-auto xl:px-0">
+                <div className="font-sans antialiased bg-gray-200">
+                    <div className="container px-4 mx-auto sm:px-8">
                         <div className="py-8">
                             <div>
-                                <h2 className="text-2xl font-semibold leading-tight">Latest Jobs</h2>
+                                <h2 className="text-2xl font-semibold leading-tight">
+                                    Latest Jobs
+                                </h2>
                             </div>
 
-                            <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-                                <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
+                            <div className="px-4 py-4 -mx-4 overflow-x-auto sm:-mx-8 sm:px-8">
+                                <div className="inline-block min-w-full overflow-hidden rounded-lg shadow">
                                     <table className="min-w-full leading-normal">
                                         <thead>
                                             <tr>
                                                 {/* <th
-                                                    className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-2xl font-semibold text-gray-600  ">
+                                                    className="px-5 py-3 text-2xl font-semibold text-left text-gray-600 bg-gray-100 border-b-2 border-gray-200 ">
                                                     Latest Jobs
                                                 </th> */}
                                                 {/* <th
-                                                    className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                    className="px-5 py-3 text-xs font-semibold tracking-wider text-left text-gray-600 uppercase bg-gray-100 border-b-2 border-gray-200">
                                                     Rol
                                                 </th>
                                                 <th
-                                                    className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                    className="px-5 py-3 text-xs font-semibold tracking-wider text-left text-gray-600 uppercase bg-gray-100 border-b-2 border-gray-200">
                                                     Created at
                                                 </th> */}
-
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                                <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
                                                     <div className="flex items-center">
                                                         <div className="flex-shrink-0 w-10 h-10">
-                                                            <img className="w-full h-full rounded-full"
+                                                            <img
+                                                                className="w-full h-full rounded-full"
                                                                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
-                                                                alt="" />
+                                                                alt=""
+                                                            />
                                                         </div>
                                                         <div className="ml-3">
-                                                            <p className="text-gray-900  text-lg font-semibold whitespace-no-wrap">
+                                                            <p className="text-lg font-semibold text-gray-900 whitespace-no-wrap">
                                                                 Lorem ipsum...
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                    <p className="text-gray-900  font-semibold whitespace-no-wrap">Full Time</p>
+                                                <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                                    <p className="font-semibold text-gray-900 whitespace-no-wrap">
+                                                        Full Time
+                                                    </p>
                                                 </td>
-                                                <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                    <p className="text-gray-900 font-semibold whitespace-no-wrap">
+                                                <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                                                    <p className="font-semibold text-gray-900 whitespace-no-wrap">
                                                         Ahmedabad
                                                     </p>
                                                 </td>
-
                                             </tr>
                                         </tbody>
                                     </table>
                                     {/* <div
-                                        className="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
-                                        <span className="text-xs xs:text-sm text-gray-900">
+                                        className="flex flex-col items-center px-5 py-5 bg-white border-t xs:flex-row xs:justify-between ">
+                                        <span className="text-xs text-gray-900 xs:text-sm">
                                             Showing 1 to 4 of 50 Entries
                                         </span>
                                         <div className="inline-flex mt-2 xs:mt-0">
                                             <button
-                                                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-l">
+                                                className="px-4 py-2 text-sm font-semibold text-gray-800 bg-gray-300 rounded-l hover:bg-gray-400">
                                                 Prev
                                             </button>
                                             <button
-                                                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-r">
+                                                className="px-4 py-2 text-sm font-semibold text-gray-800 bg-gray-300 rounded-r hover:bg-gray-400">
                                                 Next
                                             </button>
                                         </div>
@@ -80,8 +85,8 @@ const LatestJob = () => {
                     </div>
                 </div>
             </div>
-        </div >
-    )
-}
+        </div>
+    );
+};
 
-export default LatestJob
+export default LatestJob;

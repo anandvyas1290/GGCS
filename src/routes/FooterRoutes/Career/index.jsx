@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Hero from "./Hero";
 import ExploreOpportunities from "./ExploreOpportunities";
-import BrowserCategory from "./BrowseCategory";
+// import BrowserCategory from "./BrowseCategory";
 import LatestJob from "./LatestJob";
 
 export default function Career() {
@@ -12,7 +12,7 @@ export default function Career() {
         <main>
             <Hero />
             <ExploreOpportunities />
-            <BrowserCategory />
+            {/* <BrowserCategory /> */}
             <LatestJob />
         </main>
     );

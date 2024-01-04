@@ -81,38 +81,13 @@ export default function NavbarContent() {
                                 <div
                                     className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${
                                         item?.slug === location?.pathname
-                                            ? "text-primary "
-                                            : ""
-                                    }  ${
-                                        item?.label2 === "download"
-                                            ? "text-blue-500"
+                                            ? "text-primary"
                                             : ""
                                     }`}
                                     key={item?.id}
-                                    onClick={() => {
-                                        if (item?.label2 === "download") {
-                                            return;
-                                        } else {
-                                            navigate(item?.slug);
-                                        }
-                                    }}
+                                    onClick={() => navigate(item?.slug)}
                                 >
-                                    {item?.label2 === "download" ? (
-                                        <a
-                                            download
-                                            onClick={() => {
-                                                window.open(
-                                                    ppt,
-                                                    "_blank",
-                                                    "fullscreen=yes"
-                                                );
-                                            }}
-                                        >
-                                            {item?.label}
-                                        </a>
-                                    ) : (
-                                        <a>{item?.label}</a>
-                                    )}
+                                    <a>{item?.label}</a>
                                 </div>
                             ))}
                         </div>

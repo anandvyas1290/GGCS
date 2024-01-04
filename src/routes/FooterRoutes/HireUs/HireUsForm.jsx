@@ -1,14 +1,16 @@
 import React from "react";
-import { Form, Select } from "antd";
-import { Desc, H1Animate } from "../../../components/Typography";
-import { PrimaryBtn } from "../../../components/Button";
 import formBg from "../../../assets/hireUs/formBg.svg";
 import hireUsHero from "../../../assets/hireUs/hireUsHero.svg";
+
+import { Form, Select } from "antd";
+import Input from "../../../components/Input";
+import { Desc, H1Animate } from "../../../components/Typography";
+import { PrimaryBtn, SubmitBtn } from "../../../components/Button";
 
 function HireUsForm() {
     return (
         <section className="bg-gray-100">
-            <div className="max-w-screen-xl mx-auto grid grid-cols-2 justify-center gap-10 form-wrapper md:py-20 py-10">
+            <div className="grid justify-center max-w-screen-xl grid-cols-2 gap-10 py-10 mx-auto form-wrapper md:py-20">
                 <section className="flex flex-col items-center text-center">
                     <H1Animate className="!text-4xl text-center mb-5 border-b-4 border-main3">
                         Hire Us Form
@@ -22,9 +24,9 @@ function HireUsForm() {
                 <section>
                     <Form
                         action=""
-                        className="shadow-2xl bg-cover bg-gray-100 px-10 py-14 rounded-2xl"
+                        className="px-10 bg-gray-100 bg-cover shadow-2xl py-14 rounded-2xl"
                     >
-                        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
+                        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
                             <div className="input-box">
                                 {/* <Select
                                 showSearch
@@ -73,29 +75,29 @@ function HireUsForm() {
                                 <input
                                     type="number"
                                     placeholder="Mobile Number"
-                                    className="w-full rounded-lg outline-none h-12"
+                                    className="w-full h-12 rounded-lg outline-none"
                                 />
                             </div>
                             <div className="input-box">
-                                <input
+                                <Input
                                     type="email"
                                     placeholder="Email"
-                                    className="w-full rounded-lg outline-none h-12"
+                                    className="w-full h-12 rounded-lg outline-none"
                                 />
                             </div>
 
-                            <div className="input-box">
+                            {/* <div className="input-box">
                                 <input
                                     type="text"
                                     placeholder="Technology"
-                                    className="w-full rounded-lg outline-none h-12"
+                                    className="w-full h-12 rounded-lg outline-none"
                                 />
                             </div>
                             <div className="input-box">
                                 <input
                                     type="text"
                                     placeholder="Hour"
-                                    className="w-full rounded-lg outline-none h-12"
+                                    className="w-full h-12 rounded-lg outline-none"
                                 />
                             </div>
 
@@ -103,32 +105,30 @@ function HireUsForm() {
                                 <input
                                     type="text"
                                     placeholder="Requirement"
-                                    className="w-full rounded-lg outline-none h-12"
+                                    className="w-full h-12 rounded-lg outline-none"
                                 />
                             </div>
                             <div className="input-box">
                                 <input
                                     type="text"
                                     placeholder="Experience"
-                                    className="w-full rounded-lg outline-none h-12"
+                                    className="w-full h-12 rounded-lg outline-none"
                                 />
                             </div>
                             <div className="input-box">
+                                
                                 <input
                                     type="text"
                                     placeholder="Purpose"
-                                    className="w-full rounded-lg outline-none h-12"
+                                    className="w-full h-12 rounded-lg outline-none"
                                 />
-                            </div>
+                            </div> */}
                         </div>
 
-                        <div className="lg:w-1/2 mx-auto">
-                            <PrimaryBtn
-                                type="submit"
-                                className="w-full border-2 mt-10 bg-blue-500 text-white py-2 rounded-lg"
-                            >
+                        <div className="mx-auto lg:w-1/2">
+                            <SubmitBtn className="w-full py-2 mt-10 text-white border-2 rounded-lg bg-">
                                 Submit
-                            </PrimaryBtn>
+                            </SubmitBtn>
                         </div>
                     </Form>
                 </section>

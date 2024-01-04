@@ -1,5 +1,5 @@
 import React from "react";
 
-export function SubmitBtn({}) {
-    return <div>d</div>;
+export function SubmitBtn({ children, className }) {
+    return <button className={`bg-mainDark ${className}`}>{children}</button>;
 }

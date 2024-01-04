@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export function H1Animate({ className, children }) {
+    let res = children?.split(" ");
+
     const fadeInAnimationVariants = {
         initial: {
             opacity: 0,
@@ -18,7 +20,7 @@ export function H1Animate({ className, children }) {
     };
     return (
         <motion.h1
-            className={`text-5xl font-bold ${className}`}
+            className={`flex gap-4 items-center justify-center  text-5xl font-bold mb-2.5 ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
@@ -27,7 +29,12 @@ export function H1Animate({ className, children }) {
             }}
             // custom={index}
         >
-            {children}
+            {/* {children} */}
+            {res?.map((item, i) => (
+                <p className={`${i < res?.length / 2 ? "" : "text-[#4ade80]"}`}>
+                    {item}
+                </p>
+            ))}
         </motion.h1>
     );
 }
@@ -48,7 +55,7 @@ export function TextAnimate({ className, children }) {
     };
     return (
         <motion.p
-            className={`!text-2xl font-neuton font-semibold [letter-spacing:-0.3px] text-transparent bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F] bg-clip-text ${className} `}
+            className={`!text-2xl font-neutn font-semibold [letter-spacing:-0.3px] text-transparent bg-gradient-to-r fro-g1 va-g2 t-g3 bg-clip-text !bg-[#7d7c83] ${className} `}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
