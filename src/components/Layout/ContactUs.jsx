@@ -8,7 +8,7 @@ import { H1Animate, H6, TextAnimate } from "../Typography";
 
 function ContactUs() {
     return (
-        <section className="relative  z-[1] sm:py-10">
+        <section className="relative  z-[1] sm:py-10 xl:px-8 md:px-6 px-3">
             <div className="hidden sm:block">
                 <img
                     src={contactBg}
@@ -99,12 +99,12 @@ function ContactUs() {
                         </div>
                     </div>
                 </div>
-                <section className="grid grid-cols-2 gap-20">
+                <section className="grid sm:grid-cols-2 grid-cols-1 lg:gap-20 gap-10 lg:mb-auto mb-10">
                     {addresses?.map((item) => (
                         <div key={item?.id} className="w-full">
-                            <address className="h-full w-fit flex gap-5 px-10 py-4 not-italic rounded-3xl item-center bg-slate-200 !backdrop-blur-3xl">
-                                <figure className="relative w-32 h-24">
-                                    <div className="absolute top-3 -left-1 w-[70px] h-[65px] rounded-full bg-gradient-to-r from-g2 to-g1 -z-10" />
+                            <address className="h-full w-fit flex gap-5 lg:px-10 px-3 py-4 not-italic rounded-3xl item-center bg-slate-200 !backdrop-blur-3xl">
+                                <figure className="relative md:w-32 md:h-24 w-24 h-14">
+                                    <div className="absolute top-3 -left-1 md:w-[70px] md:h-[65px] rounded-full bg-gradient-to-r from-g2 to-g1 -z-10" />
                                     <img
                                         src={office}
                                         alt="address"

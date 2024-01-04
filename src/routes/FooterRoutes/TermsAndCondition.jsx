@@ -6,10 +6,13 @@ import { H1Animate, TextAnimate, H5 } from "../../components/Typography";
 
 export default function TermsAndCondition() {
     return (
-        <main>
+        <main className="relative">
+            {/* <div className='lg:absolute lg:flex none justify-center items-center left-0 lg:w-[40%]  lg:h-1/3 -z-10 bg-[#94d2bd] lg:rounded-br-full'>
+                {/* <img src={careerHero} alt="career" className='lg:h-[500px] h-96 w-full lg:pt-0 lg:pb-0 pb-10 pt-20' /> */}
+            {/* </div> * /} */}
             <Container>
                 <section className="py-14 md:py-28">
-                    <H1Animate>{termsAndConditions?.title}</H1Animate>
+                    <H1Animate className="text-center">{termsAndConditions?.title}</H1Animate>
                     <TextAnimate className="mt-3 text-xl text-center">
                         {termsAndConditions?.desc}
                     </TextAnimate>
@@ -26,7 +29,7 @@ export default function TermsAndCondition() {
                         );
                     })}
                 </section>
-            </Container>
-        </main>
+            </Container >
+        </main >
     );
 }

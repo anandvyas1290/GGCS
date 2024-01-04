@@ -9,7 +9,7 @@ export default function PrivacyPolicy(props) {
         <main>
             <Container>
                 <section className="py-14 md:py-28">
-                    <H1Animate>{privacyPolicy?.title}</H1Animate>
+                    <H1Animate className="text-center">{privacyPolicy?.title}</H1Animate>
                 </section>
                 <section className="max-w-screen-lg mx-auto !mb-24 sm:mb-10">
                     {privacyPolicy?.list?.map((item) => {
