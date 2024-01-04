@@ -79,7 +79,7 @@ export function Desc({ className, children }) {
     };
     return (
         <motion.p
-            className={`text-[20px] font-semibold [letter-spacing:-0.3px] text-grey2 ${className} `}
+            className={`text-[19px] font-semibold [letter-spacing:-0.3px] text-grey2 ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"

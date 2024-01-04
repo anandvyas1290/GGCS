@@ -38,8 +38,8 @@ import {
 } from "../../../db/dummy";
 
 import Pricing from "../../../components/Pricing";
-import { H1Animate, H5 } from "../../../components/Typography";
 import SwiperCarousel from "../../../components/Carousel/Swiper";
+import { Desc, H1Animate, H5 } from "../../../components/Typography";
 
 export default function Services(props) {
     const [state, setState] = useState({
@@ -48,7 +48,7 @@ export default function Services(props) {
         dialogData: {},
     });
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
 
     const readMoreModal = (open, data) => {
@@ -259,10 +259,17 @@ export default function Services(props) {
                 <div className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
                     <div className="flex mb-16 md:justify-center">
                         <div className="text-center md:w-8/12">
-                            <H1Animate className="!text-[54px] text-black2">
-                                How can a perth social media help grow my
-                                business?
+                            <H1Animate className="mb-3 text-black2">
+                                {/* How can a perth social media help grow my
+                                business? */}
+                                Packages for everyone
                             </H1Animate>
+                            <Desc>
+                                {" "}
+                                Here at GGCS we focus on markets where
+                                technology, innovation, and capital can unlock
+                                long-term value and drive economic growth.
+                            </Desc>
                         </div>
                     </div>
                     <div className="space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">

@@ -27,7 +27,9 @@ function Hero() {
         <section className="relative py-20">
             <Container className="text-center">
                 <H1Animate className="mb-5">Hire Us</H1Animate>
-                <Desc className="xl:w-3/4 mx-auto">{hireUs?.description}</Desc>
+                <Desc className="xl:w-[90%] mx-auto">
+                    {hireUs?.description}
+                </Desc>
                 <div className="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-2 lg:grid-cols-5 text">
                     {hireUs?.list?.map((item, i) => (
                         <Card

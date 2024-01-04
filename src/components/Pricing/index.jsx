@@ -99,7 +99,6 @@ function Pricing() {
                         <div>
                             {item?.icon ? (
                                 <div className="flex items-center justify-center w-24 h-24 mx-auto mb-3 bg-gray-200 rounded-full ">
-                                    {" "}
                                     <img
                                         src={item?.icon}
                                         alt=""
