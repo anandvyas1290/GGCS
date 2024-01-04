@@ -650,16 +650,14 @@ export const services = [
         slug: "content-marketing",
     },
     {
-        label: "Inbound and Outbound Marketing",
-        slug: "io-marketing",
+        label: "Web Design and Development",
+        slug: "web-design-development",
     },
     {
-        label: "Add-On Services",
-        slug: "add-on-services",
+        label: "Analytics and Data Analysis",
+        slug: "data-analysis",
     },
 ];
-
-//pricing
 
 //service page
 export const processData = [

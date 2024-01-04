@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import checkbox from "../../../assets/icons/checkbox.webp";
 
 import { galleryData } from "../../../db/dummy";
@@ -8,6 +8,10 @@ export default function Gallery(props) {
     const [state, setState] = useState({
         currentPlatform: galleryData[0] ?? {},
     });
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="max-w-screen-xl py-10 mx-auto">

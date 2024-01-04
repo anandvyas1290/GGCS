@@ -2,7 +2,7 @@ import React from "react";
 
 import { termsAndConditions } from "../../db/dummy";
 import Container from "../../components/Layout/Layout";
-import { H1Animate, TextAnimate, H5 } from "../../components/Typography";
+import { H1Animate, TextAnimate, H5, Desc } from "../../components/Typography";
 
 export default function TermsAndCondition() {
     return (
@@ -11,11 +11,9 @@ export default function TermsAndCondition() {
                 {/* <img src={careerHero} alt="career" className='lg:h-[500px] h-96 w-full lg:pt-0 lg:pb-0 pb-10 pt-20' /> */}
             {/* </div> * /} */}
             <Container>
-                <section className="py-14 md:py-28">
-                    <H1Animate className="text-center">{termsAndConditions?.title}</H1Animate>
-                    <TextAnimate className="mt-3 text-xl text-center">
-                        {termsAndConditions?.desc}
-                    </TextAnimate>
+                <section className="py-14 md:py-28 text-center">
+                    <H1Animate>{termsAndConditions?.title}</H1Animate>
+                    <Desc className="mt-3">{termsAndConditions?.desc}</Desc>
                 </section>
                 <section className="max-w-screen-lg mx-auto !mb-24 sm:mb-10">
                     {termsAndConditions?.list?.map((item) => {
@@ -29,7 +27,7 @@ export default function TermsAndCondition() {
                         );
                     })}
                 </section>
-            </Container >
-        </main >
+            </Container>
+        </main>
     );
 }

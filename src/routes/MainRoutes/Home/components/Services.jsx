@@ -21,9 +21,9 @@ export default function Services(props) {
             <div className="max-w-screen-xl px-3 mx-auto sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center">
                     <TextAnimate className="">
-                        Smart Digital Marketing Solutions for your business
+                        Smart Solutions for your business
                     </TextAnimate>
-                    <H1Animate>Our services</H1Animate>
+                    <H1Animate>Our Services</H1Animate>
                 </div>
 
                 {/* <div className="grid grid-cols-1 gap-5 my-8 sm:grid-cols-2 md:grid-cols-3 md:gap-8 sm:my-12"> */}
@@ -44,7 +44,7 @@ export default function Services(props) {
                                 </span>
                                 <Link
                                     to={"services"}
-                                    className="relative block mx-2 text-primary "
+                                    className="relative block mx-2 text-primary"
                                 >
                                     Services
                                     <img

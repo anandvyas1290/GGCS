@@ -129,7 +129,7 @@ export default function NavbarContent() {
 
                                 {location?.pathname === "/" ? (
                                     <RadientBtn
-                                        className="!rounded-full"
+                                        className="!rounded-full !py-2.5"
                                         onClick={() => navigate("/hire-us")}
                                     >
                                         Hire Us
