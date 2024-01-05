@@ -44,28 +44,25 @@ export default function NavbarContent() {
     const { showMenu } = state;
     return (
         <section
-            className={` left-0 right-0 z-[1000] ${
-                location?.pathname === "/"
-                    ? "max-w-screen-xl mx-auto mt-1 "
-                    : "fixed w-full"
-            }`}
+            className={` left-0 right-0 z-[1000] ${location?.pathname === "/"
+                ? "max-w-screen-xl mx-auto mt-1 "
+                : "fixed w-full"
+                }`}
         >
             <div
                 className={`header px-4  shadow-header !bg-white 
-            ${
-                location?.pathname === "/"
-                    ? "border rounded-full border-white bg-transparent backdrop-blur"
-                    : "fixed w-full"
-            }
+            ${location?.pathname === "/"
+                        ? "border rounded-full border-white bg-transparent backdrop-blur"
+                        : "fixed w-full"
+                    }
             `}
                 ref={scrollRef}
             >
                 <div
-                    className={`relative flex justify-between items-center ${
-                        location?.pathname === "/"
-                            ? "max-w-full"
-                            : "max-w-screen-xl mx-auto"
-                    }`}
+                    className={`relative flex justify-between items-center ${location?.pathname === "/"
+                        ? "max-w-full"
+                        : "max-w-screen-xl mx-auto"
+                        }`}
                 >
                     <div className="flex items-center h-[50px] md:h-[80px]">
                         <img
@@ -79,11 +76,10 @@ export default function NavbarContent() {
                         <div className="items-center hidden lg:flex">
                             {navMenu?.map((item) => (
                                 <div
-                                    className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${
-                                        item?.slug === location?.pathname
-                                            ? "text-primary"
-                                            : ""
-                                    }`}
+                                    className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${item?.slug === location?.pathname
+                                        ? "text-primary"
+                                        : ""
+                                        }`}
                                     key={item?.id}
                                     onClick={() => navigate(item?.slug)}
                                 >
@@ -141,9 +137,8 @@ export default function NavbarContent() {
                                 />
 
                                 <div
-                                    className={`absolute top-10 right-0 md:top-20  lg:hidden lg:w-auto ${
-                                        showMenu ? "  w-fit " : "hidden"
-                                    } `}
+                                    className={`absolute top-10 right-0 md:top-20 lg:hidden lg:w-auto ${showMenu ? "w-64 !z-[250]" : "hidden"
+                                        } `}
                                     id="navbar-default"
                                 >
                                     <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:mt-0 md:border-0">

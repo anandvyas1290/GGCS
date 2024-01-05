@@ -20,14 +20,14 @@ export function H1Animate({ className, children }) {
     };
     return (
         <motion.h1
-            className={`flex gap-4 items-center justify-center  text-5xl font-bold mb-2.5 ${className}`}
+            className={`flex flex-wrap gap-4 items-center justify-center md:!text-5xl text-4xl leading-7 font-bold mb-2.5 ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
                 once: true,
             }}
-            // custom={index}
+        // custom={index}
         >
             {/* {children} */}
             {res?.map((item, i) => (
@@ -62,7 +62,7 @@ export function TextAnimate({ className, children }) {
             viewport={{
                 once: true,
             }}
-            // custom={index}
+        // custom={index}
         >
             {children}
         </motion.p>
@@ -93,7 +93,7 @@ export function Desc({ className, children }) {
             viewport={{
                 once: true,
             }}
-            // custom={index}
+        // custom={index}
         >
             {children}
         </motion.p>

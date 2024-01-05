@@ -23,7 +23,7 @@ export default function WhyGGCS() {
                                 className={`grid md:grid-cols-[1fr_0.7fr] grid-cols-1 items-center gap-5`}
                                 dir={item?.id % 2 ? "ltr" : "rtl"}
                             >
-                                <section className="p-5 text-left">
+                                <section className="sm:p-5 text-left">
                                     <h3
                                         className={`!text-4xl mb-5 font-bold text-transparent bg-clip-text ${item?.bg}`}
                                     >
