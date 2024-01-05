@@ -9,6 +9,9 @@ export default {
         extend: {
             colors: {
                 primary: "#775AFC",
+                mainLight: "#94d2bd",
+                mainDark: "#0a9396",
+                main3: "#2d6a4f",
                 white1: "#ffffff",
                 white2: "#DDE2FF",
                 black1: "#271D3A",
@@ -33,8 +36,8 @@ export default {
                 card3: "#e44002",
                 card4: "#952aff",
                 card5: "#cd3e94",
-                g1: "#501E9C",
-                g2: "#A44CEE",
+                g1: "#0a9396",
+                g2: "#94d2bd",
                 g3: "#FF847F",
                 course1: "#B7B8E5",
                 course2: "#E5C9B7",
@@ -101,7 +104,6 @@ export default {
                 gradientBg: "gradientBg 2s ease-in-out infinite",
                 fadeInDown:
                     "fadeInDown 500ms ease-in-out 0s normal none 1 running",
-
                 upslide: "upslide 4s forwards infinite alternate",
                 shape2: "shape2 6s infinite linear",
                 shape3: "shape2 8s infinite linear",
@@ -140,11 +142,13 @@ export default {
                 },
                 arrowFadeIn: {
                     "0%": {
-                        "margin-left": "-20px",
+                        // "padding-left": "-20px",
+                        transform: "translateX(-50%)",
                         opacity: 0,
                     },
                     "100%": {
-                        "margin-left": "0px",
+                        // "padding-left": "0px",
+                        transform: "translateX(0%)",
                         opacity: 1,
                     },
                 },
@@ -248,13 +252,13 @@ export default {
                 },
                 flipArrow: {
                     "0%": {
-                        transform: "rotateY(0deg)",
+                        transform: "rotateZ(90deg) rotateY(0deg)",
                     },
                     "50%": {
-                        transform: "rotateY(90deg)",
+                        transform: "rotateZ(90deg) rotateY(90deg)",
                     },
                     "100%": {
-                        transform: "rotateY(0deg)",
+                        transform: "rotateZ(90deg) rotateY(0deg)",
                     },
                 },
                 fadeIn: {

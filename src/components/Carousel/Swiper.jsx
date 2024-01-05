@@ -32,7 +32,7 @@ const SwiperCarousel = ({ carouselData }) => {
                 //     el: ".swiper-pagination",
                 //     clickable: true,
                 // }}
-                autoplay={{ delay: 200000, disableOnInteraction: false }}
+                autoplay={{ delay: 2000, disableOnInteraction: true }}
                 speed={800}
                 navigation={{
                     nextEl: ".swiper-button-next ",
@@ -53,19 +53,19 @@ const SwiperCarousel = ({ carouselData }) => {
                             }
                             className="cursor-pointer"
                         >
-                            <div className="h-auto md:h-[60%] relative card-img rounded-t-xl flex gap-5 items-center justify-center bg-white shadow-lg bg-gradient-to-r from-[#501e9c] via-[#A44CEE] to-[#FF847F]">
+                            <div className="h-auto md:h-[60%] relative card-img rounded-t-xl flex gap-5 items-center justify-center !bg-[#56ab91] shadow-lg">
                                 <img
                                     src={item?.icon}
                                     alt="slide_image"
-                                    className="slide_image  h-40 md:h-56 !object-contain mb-10 "
+                                    className="slide_image h-40 md:h-64 !object-contain mb-10"
                                 />
 
-                                <h4 className="absolute bottom-0 text-xl md:text-2xl px-3 !text-center text-white font-medium mt-3 mb-2">
+                                <h4 className="absolute bottom-0 text-xl md:text-2xl px-3 !text-center text-white font-semibold mt-3 mb-2">
                                     {item?.heading}
                                 </h4>
                             </div>
-                            <div className="h-[40%] card-desc m-3">
-                                <ul className="text-grey1 !list-none text-left md:ml-5 text-lg md:text-xl">
+                            <div className="h-[40%] card-desc !bg-mainLigh ">
+                                <ul className="text-grey1 m-3 !list-none text-left md:ml-5 text-lg md:text-xl">
                                     {item?.list?.map((item, i) => {
                                         return (
                                             <li
@@ -75,7 +75,7 @@ const SwiperCarousel = ({ carouselData }) => {
                                                 <img
                                                     src={arrow}
                                                     alt="services"
-                                                    className="w-5 h-5 !rotate-90 animate-flipArrow"
+                                                    className="w-5 h-5 animate-flipArrow"
                                                 />
                                                 <p className="">
                                                     {item?.subHeading}

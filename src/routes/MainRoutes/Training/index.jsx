@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import tick from "../../../assets/training/courses/tick.jpg";
 
 import { useNavigate } from "react-router-dom";
@@ -14,6 +14,9 @@ const otherFeatures = [
 
 export default function Training(props) {
     let navigate = useNavigate();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="max-w-screen-xl py-4 mx-auto !font-roboto">
             <section className="text-center">

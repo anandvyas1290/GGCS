@@ -7,7 +7,10 @@ export default function IndustryImpact(props) {
     return (
         <div className="max-w-screen-xl mx-auto mb-10 sm:px-6 lg:px-0 px-3">
             <section className="flex flex-col items-center justify-center mb-10 text-center">
-                <H1Animate>Industry Impact</H1Animate>
+                <H1Animate className="flex gap-4">
+                    Industry Impact
+                    {/* <p className="text-[#4ade80]">Impact</p> */}
+                </H1Animate>
                 <Desc className="sm:w-[750px] mt-3">
                     Our skilled team delivers top-notch IT services to diverse
                     industries, tailored to their unique challenges and

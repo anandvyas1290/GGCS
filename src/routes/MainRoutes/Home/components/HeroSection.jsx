@@ -53,7 +53,7 @@ export default function HeroSection() {
     }, [state?.currentTab]);
 
     return (
-        <div className="!max-h-fit !bg-gradient-to-b from-[#0a9396] via-[#94d2bd] to-[rgb(224,210,199,0.3)] bg-white !text-black">
+        <div className="!max-h-fit !bg-gradient-to-b from-g1 via-g2 to-white bg-white !text-black">
             <div className="max-w-screen-xl mx-auto px-3 sm:px-12 sm:pt-[250px] pt-[200px] pb-[40px] sm:pb-[60px] md:pb-[100px] lg:pb-[150px]">
                 {/* <div className="container"> */}
                 <div className="sm:w-4/6 relative z-[200]">

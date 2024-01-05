@@ -20,10 +20,6 @@ const brandWrapper = [
     { image: brand2 },
     { image: brand3 },
     { image: brand4 },
-    // { image: brand1 },
-    // { image: brand2 },
-    // { image: brand1 },
-    // { image: brand2 },
 ];
 
 function AboutHero() {
@@ -93,9 +89,9 @@ function AboutHero() {
                             <TextAnimate className={`!text-blue1 ${dotStyle}`}>
                                 Welcome
                             </TextAnimate>
-                            <H1Animate className="!text-5xl mb-3">
-                                Working Hard to Make <br />
-                                Digital Marketing Easy. Together
+                            <H1Animate className="!text-5xl mb-3 !flex-wrap !justify-start">
+                                Working Hard to Make Digital Marketing Easy.
+                                Together
                             </H1Animate>
                             <p className="my-3 md:my-0">
                                 Welcome to GGCS, where digital meets

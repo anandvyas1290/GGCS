@@ -24,7 +24,7 @@ export default function Routes(props) {
     ]);
     return (
         <main className={`${location?.pathname === "/" ? "" : "lg:mt-20"}`}>
-            {/* <div className="fixed  md:-left-[60px] -left-[73px] top-1/2 -rotate-90 z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-g1 to-g2 border rounded-b-xl  text-white cursor-pointer">
+            <div className="fixed  md:-left-[60px] -left-[73px] top-1/2 -rotate-90 z-50 imgBorder px-4 md:py-3 bg-gradient-to-r from-mainDark to-mainDark border rounded-b-xl  text-white cursor-pointer">
                 <a
                     download
                     onClick={() => {
@@ -35,7 +35,7 @@ export default function Routes(props) {
                 >
                     DOWNLOAD PPT
                 </a>
-            </div> */}
+            </div>
             <div
                 className="fixed z-50 overflow-hidden bg-gray-200 border rounded-full cursor-pointer h-14 md:bottom-28 md:right-14 bottom-10 right-2"
                 onClick={() => navigate("/upos-details")}
