@@ -1,24 +1,22 @@
 import React from "react";
 
 import { admissionProcess } from "./dummyData";
-import { H5 } from "../../../components/Typography";
+import { H2, H5 } from "../../../components/Typography";
 import Container from "../../../components/Layout/Layout";
 
 function AdmissionProcess() {
     return (
         <section className="bg-red-50 py-14">
             <Container>
-                <h2 className="text-3xl text-center">
-                    {admissionProcess?.title}
-                </h2>
+                <H2 className="text-center">{admissionProcess?.title}</H2>
                 <div className="relative grid grid-cols-1 gap-8 my-10 md:grid-cols-4 sm:grid-cols-2">
-                    <div className="absolute left-0 w-full border border-red-200 border-dashed top-1/2"></div>
+                    <div className="absolute left-0 w-full border-2 border-red-400 border-dashed top-1/2"></div>
                     {admissionProcess?.process?.map((item) => (
                         <div
                             key={item?.id}
                             className="z-0 px-3 py-5 text-center bg-white border rounded-xl"
                         >
-                            <div className="flex items-center justify-center mx-auto bg-red-50 w-14 h-14 rounded-xl">
+                            <div className="flex items-center justify-center mx-auto shadow-md bg-red-50 w-14 h-14 rounded-xl">
                                 <img
                                     src={item?.icon}
                                     alt={item?.title}

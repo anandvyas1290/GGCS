@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 
 import { whyGGCSData } from "../../../../db/dummy";
 import Container from "../../../../components/Layout/Layout";
-import { Desc, H1Animate, TextAnimate } from "../../../../components/Typography";
+import { Desc, H1Animate, H2 } from "../../../../components/Typography";
 
 export default function WhyGGCS() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
 
     return (
@@ -24,12 +24,14 @@ export default function WhyGGCS() {
                                 dir={item?.id % 2 ? "ltr" : "rtl"}
                             >
                                 <section className="sm:p-5 text-left">
-                                    <h3
-                                        className={`!text-4xl mb-5 font-bold text-transparent bg-clip-text ${item?.bg}`}
+                                    <H2
+                                        className={`!text-[38px] mb-5 font-bold text-transparent bg-clip-text ${item?.bg}`}
                                     >
                                         {item?.label}
-                                    </h3>
-                                    <Desc>{item?.desc}</Desc>
+                                    </H2>
+                                    <Desc className="text-[22px]">
+                                        {item?.desc}
+                                    </Desc>
                                 </section>
                                 <section className="relative">
                                     <img

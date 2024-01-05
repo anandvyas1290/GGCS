@@ -35,10 +35,12 @@ export default function CoursesDetails() {
             >
                 <img src={heroShape1} className="absolute top-0 left-0" />
                 <div className="flex flex-col items-center text-white">
-                    <H1Animate className="flex items-center gap-3 mb-5">
+                    <div className="flex items-center gap-3">
                         <img src={star} alt="" />
-                        {data?.details?.heading}
-                    </H1Animate>
+                        <H1Animate className="mb-5">
+                            {data?.details?.heading}
+                        </H1Animate>
+                    </div>
                     <h2 className="flex items-center gap-3 !text-4xl !font-extrabold text-skin2 mb-7">
                         ( Extensive Learning Course )
                         <p className="px-3 py-1 text-lg bg-white text-skin1 rounded-3xl">

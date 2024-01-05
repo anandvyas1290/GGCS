@@ -721,7 +721,7 @@ export const galleryData = [
 ];
 
 export const uposDetails = {
-    title: "GGCS Go To Package For UPOS",
+    title: "GGCS Boost Up Packages For UPOS",
     subTitle: "Get Flat Commission Discount With Add-On Cashback",
     list: [
         {
@@ -742,7 +742,7 @@ export const uposDetails = {
         },
     ],
     label: "Exclusive Discounted Price",
-    price: "Rs.999/- + GST*",
+    price: "Rs.999/- + GST* per month",
 };
 
 export const addresses = [
