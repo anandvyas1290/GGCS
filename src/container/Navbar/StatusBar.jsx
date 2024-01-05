@@ -1,14 +1,13 @@
 import React from "react";
 
-// import rocket from "../../assets/Navbar/rocket.webp";
 import packages from "../../assets/home/packages.jpg";
 import { socialMedias } from "../../db/dummy";
 
 export default function StatusBar() {
     return (
         <div className="px-0 pt-3 pb-2 sm:px-4">
-            <div className="justify-between max-w-full sm:flex">
-                <div className="flex justify-center items-center sm:justify-normal gap-3 pt-3 sm:!pt-0 !backdrop-blur">
+            <div className="justify-between max-w-full flex items-center">
+                <div className="flex justify-center items-center sm:justify-normal gap-3 sm:!pt-3 !pt-0 !backdrop-blur">
                     {socialMedias?.map((item, i) => (
                         <div
                             className=""
@@ -48,13 +47,13 @@ export default function StatusBar() {
                             window.open(`/creator-packages`, "_blank")
                         }
                     >
-                        <div className="flex items-center gap-2 px-2 py-1 !w-full rounded-[40px] text-card1 bg-white">
+                        <div className="sm:flex items-center gap-2 px-2 py-1 !w-full rounded-[40px] text-card1 bg-white">
                             <img
                                 src={packages}
                                 alt="ggcs packages"
                                 className="w-7 h-7"
                             />
-                            <p className="[word-spacing:3px]">
+                            <p className="sm:block hidden [word-spacing:3px]">
                                 Creator Packages
                             </p>
                         </div>

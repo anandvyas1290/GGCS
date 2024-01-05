@@ -12,11 +12,11 @@ import { H1Animate, TextAnimate } from "../../../../components/Typography";
 export default function Services(props) {
     return (
         <section className="relative bg-[#f5f5f5] md:py-20 py-8">
-            <img src={lines} alt="dot-svg" className="absolute left-10" />
+            <img src={lines} alt="dot-svg" className="md:flex hidden absolute left-10" />
             <img
                 src={dots}
                 alt="dot-svg"
-                className="absolute bottom-0 right-0"
+                className="md:flex hidden absolute bottom-0 right-0"
             />
             <div className="max-w-screen-xl px-3 mx-auto sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center">

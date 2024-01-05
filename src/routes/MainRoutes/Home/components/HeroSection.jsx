@@ -54,7 +54,7 @@ export default function HeroSection() {
 
     return (
         <div className="!max-h-fit !bg-gradient-to-b from-[#0a9396] via-[#94d2bd] to-[rgb(224,210,199,0.3)] bg-white !text-black">
-            <div className="max-w-screen-xl mx-auto px-3 sm:px-12 pt-[250px] pb-[40px] sm:pb-[60px] md:pb-[100px] lg:pb-[150px]">
+            <div className="max-w-screen-xl mx-auto px-3 sm:px-12 sm:pt-[250px] pt-[200px] pb-[40px] sm:pb-[60px] md:pb-[100px] lg:pb-[150px]">
                 {/* <div className="container"> */}
                 <div className="sm:w-4/6 relative z-[200]">
                     <div className="">
@@ -95,7 +95,7 @@ export default function HeroSection() {
                         {/* <p className="text-base mb-4 text-grey2 tracking-[1.2px] ">
                             Igniting Digital Growth
                         </p> */}
-                        <div className="mt-2 mb-5 sm:mb-7 sm:mt-3">
+                        <div className="mt-5">
                             <PrimaryBtn
                                 size="px-8 py-3"
                                 bgColor="bg-primaryBtn"
@@ -121,7 +121,7 @@ export default function HeroSection() {
                     </div>
                 </div>
                 <div className="">
-                    <div className="absolute top-0 right-0 w-[700px] z-[5]">
+                    <div className="lg:block hidden absolute top-0 right-0 w-[700px] z-[5]">
                         <Slider {...settings}>
                             {[
                                 digitalMarketingBanner,
@@ -137,13 +137,13 @@ export default function HeroSection() {
                             ))}
                         </Slider>
                     </div>
-                    <div className="absolute top-0 right-0 z-[4]">
+                    <div className="lg:flex hidden absolute top-0 right-0 z-[4]">
                         <img src={banner1} alt="" className="w-[700px]" />
                     </div>
-                    <div className="absolute top-0 right-0 z-[3]">
+                    <div className="lg:flex hidden absolute top-0 right-0 z-[3]">
                         <img src={banner2} alt="" className="w-[700px]" />
                     </div>
-                    <div className="absolute top-0 left-0 z-[1]">
+                    <div className="lg:flex hidden absolute top-0 left-0 z-[1]">
                         <img src={banner3} alt="" />
                     </div>
                     <div className="absolute left-40 bottom-9 z-[1] animate-upslide">

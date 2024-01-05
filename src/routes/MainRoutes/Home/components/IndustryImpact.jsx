@@ -5,16 +5,16 @@ import { industryImpact } from "../../../../db/dummy";
 
 export default function IndustryImpact(props) {
     return (
-        <div className="max-w-screen-xl mx-auto mb-10">
+        <div className="max-w-screen-xl mx-auto mb-10 sm:px-6 lg:px-0 px-3">
             <section className="flex flex-col items-center justify-center mb-10 text-center">
                 <H1Animate>Industry Impact</H1Animate>
-                <Desc className="w-[750px]">
+                <Desc className="sm:w-[750px] mt-3">
                     Our skilled team delivers top-notch IT services to diverse
                     industries, tailored to their unique challenges and
                     requirements. Industries we proudly work with include.
                 </Desc>
             </section>
-            <section className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8 sm:px-6 lg:px-0 px-3">
+            <section className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8">
                 {industryImpact?.map((item) => (
                     <div
                         key={item?.id}

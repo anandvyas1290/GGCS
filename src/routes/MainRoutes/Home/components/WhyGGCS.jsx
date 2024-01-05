@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import { whyGGCSData } from "../../../../db/dummy";
 import Container from "../../../../components/Layout/Layout";
-import { H1Animate, TextAnimate } from "../../../../components/Typography";
+import { Desc, H1Animate, TextAnimate } from "../../../../components/Typography";
 
 export default function WhyGGCS() {
     useEffect(() => {
@@ -29,8 +29,7 @@ export default function WhyGGCS() {
                                     >
                                         {item?.label}
                                     </h3>
-                                    {/* <hr className={` ${item?.bg}`} /> */}
-                                    <p className="text-xl">{item?.desc}</p>
+                                    <Desc>{item?.desc}</Desc>
                                 </section>
                                 <section className="relative">
                                     <img
