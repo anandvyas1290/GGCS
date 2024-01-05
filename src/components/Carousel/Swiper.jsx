@@ -6,10 +6,11 @@ import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import { arrow } from "../../db/assets";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
-
+import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowRightIcon, ForwardIcon } from "@heroicons/react/24/outline";
+
+import { Desc, H4 } from "../Typography";
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 
 const SwiperCarousel = ({ carouselData }) => {
@@ -32,7 +33,11 @@ const SwiperCarousel = ({ carouselData }) => {
                 //     el: ".swiper-pagination",
                 //     clickable: true,
                 // }}
-                autoplay={{ delay: 2000, disableOnInteraction: true }}
+                autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: true,
+                    pauseOnMouseEnter: true,
+                }}
                 speed={800}
                 navigation={{
                     nextEl: ".swiper-button-next ",
@@ -53,16 +58,16 @@ const SwiperCarousel = ({ carouselData }) => {
                             }
                             className="cursor-pointer"
                         >
-                            <div className="h-auto md:h-[60%] relative card-img rounded-t-xl flex gap-5 items-center justify-center !bg-[#56ab91] shadow-lg">
+                            <div className="h-auto md:h-[65%] relative card-img rounded-t-xl flex gap-5 items-center justify-center !bg-[#56ab91] shadow-lg">
                                 <img
                                     src={item?.icon}
                                     alt="slide_image"
-                                    className="slide_image h-40 md:h-64 !object-contain mb-10"
+                                    className="slide_image h-40 md:h-64 !object-contain mb-14"
                                 />
 
-                                <h4 className="absolute bottom-0 text-xl md:text-2xl px-3 !text-center text-white font-semibold mt-3 mb-2">
+                                <H4 className="absolute bottom-0 text-xl md:text-2xl px-3 !text-center bg-mainDrk text-white font-semibold mt-3 p-1">
                                     {item?.heading}
-                                </h4>
+                                </H4>
                             </div>
                             <div className="h-[40%] card-desc !bg-mainLigh ">
                                 <ul className="text-grey1 m-3 !list-none text-left md:ml-5 text-lg md:text-xl">
@@ -77,9 +82,7 @@ const SwiperCarousel = ({ carouselData }) => {
                                                     alt="services"
                                                     className="w-5 h-5 animate-flipArrow"
                                                 />
-                                                <p className="">
-                                                    {item?.subHeading}
-                                                </p>
+                                                <Desc>{item?.subHeading}</Desc>
                                             </li>
                                         );
                                     })}

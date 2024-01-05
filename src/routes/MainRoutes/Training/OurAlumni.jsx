@@ -1,35 +1,28 @@
 import React from "react";
 
 import { ourAlumni } from "./dummyData";
-import { H4 } from "../../../components/Typography";
+import { H2, H4 } from "../../../components/Typography";
 
 function OurAlumni() {
     return (
         <section className="max-w-screen-lg px-3 mx-auto md:px-10 sm:px-6 ">
             <section className="">
                 <div className="pt-20 mx-auto text-center md:max-w-xl lg:max-w-3xl sm:pt-14">
-                    <h3 className="mb-6 text-3xl font-bold">
-                        {ourAlumni.title}
-                    </h3>
-                    {/* <p className="pb-2 mb-6 md:mb-12 md:pb-0">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-                        error amet numquam iure provident voluptate esse quasi, veritatis
-                        totam voluptas nostrum quisquam eum porro a pariatur veniam.
-                    </p> */}
+                    <H2 className="mb-6">{ourAlumni.title}</H2>
                 </div>
 
                 <div className="grid grid-cols-1 gap-6 pt-5 text-center md:grid-cols-3 sm:grid-cols-2">
                     {ourAlumni?.list?.map((item) => {
                         return (
                             <div key={item?.id} className="text-neutral-700">
-                                <div className="block bg-white rounded-lg shadow-lg ">
+                                <div className="block bg-white rounded-lg shadow-xl">
                                     <div
                                         className={`h-28 overflow-hidden rounded-t-lg ${
                                             item?.name
                                                 ? `bg-[${item?.color}]`
                                                 : ""
                                         }`}
-                                    ></div>
+                                    />
                                     <div className="w-24 mx-auto -mt-12 overflow-hidden bg-white border-2 border-white rounded-full dark:border-neutral-800 dark:bg-neutral-800">
                                         <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" />
                                     </div>

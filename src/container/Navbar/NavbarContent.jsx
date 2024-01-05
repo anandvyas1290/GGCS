@@ -79,15 +79,18 @@ export default function NavbarContent() {
                         <div className="items-center hidden lg:flex">
                             {navMenu?.map((item) => (
                                 <div
-                                    className={`flex items-center mr-7 xl:!mr-12 cursor-pointer text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${
+                                    className={`relative flex items-center  mr-7 xl:!mr-12 p-1 cursor-pointer border-b-[3px] border-transparent text-xl !font-semibold text-black1 hover:text-primary transition-all duration-200 ${
                                         item?.slug === location?.pathname
-                                            ? "text-primary"
+                                            ? "text-primary !border-primary "
                                             : ""
                                     }`}
                                     key={item?.id}
                                     onClick={() => navigate(item?.slug)}
                                 >
                                     <a>{item?.label}</a>
+                                    {/* {item?.slug === location?.pathname ? (
+                                        <figure className="absolute bottom-0 w-0 h-0 transition-all duration-200 border-b-[5px] border-l-[5px] border-transparent border-r-[5px] left-[45%] border-b-primary" />
+                                    ) : null} */}
                                 </div>
                             ))}
                         </div>

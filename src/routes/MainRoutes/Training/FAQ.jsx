@@ -2,40 +2,39 @@ import React, { useState } from "react";
 
 import { faq } from "./dummyData";
 import Container from "../../../components/Layout/Layout";
+import { Desc, H2, H5 } from "../../../components/Typography";
 
 function FAQ() {
     const [state, setState] = useState({
-        accordion: {
-            1: false,
-        },
+        active: null,
     });
-    const { accordion } = state;
+    const { active } = state;
     return (
         <Container>
             <div className="pb-10 md:pt-20 pt-14">
-                <h3 className="text-3xl text-center">{faq?.title}</h3>
+                <H2 className="text-center">{faq?.title}</H2>
             </div>
             <div className="pb-20">
                 {faq?.list?.map((item) => (
                     <div key={item?.id} className="mb-2">
                         <div
                             className={`flex justify-between py-5 px-5 rounded-lg hover:bg-red-50 cursor-pointer  ${
-                                accordion[item?.id] ? "bg-red-50" : ""
+                                active === item?.id ? "bg-red-50" : ""
                             }`}
                             onClick={() => {
                                 setState((prev) => {
                                     return {
                                         ...prev,
-                                        accordion: {
-                                            [item?.id]:
-                                                !prev.accordion[item?.id],
-                                        },
+                                        active:
+                                            prev?.active === item?.id
+                                                ? null
+                                                : item?.id,
                                     };
                                 });
                             }}
                         >
-                            <h3 className="font-semibold">{item?.que}</h3>
-                            {accordion[item?.id] ? (
+                            <H5 className="font-semibold">{item?.que}</H5>
+                            {active === item?.id ? (
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -67,10 +66,10 @@ function FAQ() {
                                 </svg>
                             )}
                         </div>
-                        {accordion[item?.id] ? (
+                        {active === item?.id ? (
                             <div
-                                className={`py-5 px-5 h-0 overflow-hidden transition-all duration-300 ease-in-out ${
-                                    accordion[item?.id]
+                                className={`py-5 px-5  overflow-hidden transition-all duration-300 ease-in-out ${
+                                    active === item?.id
                                         ? "opacity-100"
                                         : "opacity-0"
                                 }`}

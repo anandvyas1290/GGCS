@@ -11,6 +11,7 @@ export default {
                 primary: "#775AFC",
                 mainLight: "#94d2bd",
                 mainDark: "#0a9396",
+                mainHeading: "#4ade80",
                 main3: "#2d6a4f",
                 white1: "#ffffff",
                 white2: "#DDE2FF",

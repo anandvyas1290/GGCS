@@ -7,11 +7,15 @@ import { servicesData } from "../../../../db/dummy";
 import { rocket, services } from "../../../../db/assets";
 
 import SwiperCarousel from "../../../../components/Carousel/Swiper";
-import { H1Animate, TextAnimate } from "../../../../components/Typography";
+import {
+    H1Animate,
+    SubHeading,
+    TextAnimate,
+} from "../../../../components/Typography";
 
 export default function Services(props) {
     return (
-        <section className="relative bg-white md:py-20 py-8">
+        <section className="relative py-8 bg-white md:py-20">
             <img src={lines} alt="dot-svg" className="absolute left-10" />
             <img
                 src={dots}
@@ -20,7 +24,7 @@ export default function Services(props) {
             />
             <div className="max-w-screen-xl px-3 mx-auto sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-center">
-                    <TextAnimate>Smart Solutions for your business</TextAnimate>
+                    <SubHeading>Smart Solutions for your business</SubHeading>
                     <H1Animate>Our Services</H1Animate>
                 </div>
 
@@ -28,7 +32,7 @@ export default function Services(props) {
                 <SwiperCarousel carouselData={servicesData} />
 
                 <div className="flex justify-center mt-5">
-                    <div className="w-full p-3 text-center rounded-full lg:w-1/2 shadow-contact bg-grey3">
+                    <div className="w-full p-3 text-center rounded-full shadow-xl lg:w-1/2 bg-grey3 ">
                         <div className="flex justify-center gap-2">
                             <span>
                                 <img

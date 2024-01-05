@@ -135,9 +135,12 @@ export default function Services(props) {
                         </ul>
                     </div>
                     <div className="relative">
-                        <section className="w-full md:py-20">
+                        <section className="w-full md:py-14">
                             <section className="relative hidden lg:flex">
-                                <img src={servicesBanner} className="h-full" />
+                                <img
+                                    src={servicesBanner}
+                                    className="w-full h-full"
+                                />
                             </section>
                         </section>
                         {/* <img src={socialTree} alt="services" className="" />

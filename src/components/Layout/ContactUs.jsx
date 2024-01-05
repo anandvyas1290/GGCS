@@ -4,7 +4,7 @@ import { Input } from "../UI/Input";
 import { PrimaryBtn } from "../Button";
 import { addresses } from "../../db/dummy";
 import { contactBg, office } from "../../db/assets";
-import { Desc, H1Animate, H6, TextAnimate } from "../Typography";
+import { Desc, H1Animate, H6, SubHeading, TextAnimate } from "../Typography";
 
 function ContactUs() {
     return (
@@ -20,9 +20,9 @@ function ContactUs() {
                 <div className="md:flex py-0 sm:!py-10 ">
                     <div className="mx-3 md:w-1/2">
                         <div className="my-10">
-                            <TextAnimate className="w-fit">
+                            <SubHeading className="w-fit">
                                 Get In Touch
-                            </TextAnimate>
+                            </SubHeading>
                             <H1Animate className="mt-1 sm:!leading-[3.5rem] !justify-start">
                                 Lets Work Together
                             </H1Animate>

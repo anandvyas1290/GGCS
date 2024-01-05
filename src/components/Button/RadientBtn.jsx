@@ -1,12 +1,13 @@
 import React from "react";
 
-export function RadientBtn({ children, className, onClick }) {
+export function RadientBtn({ children, className, onClick, gradient }) {
     return (
         <div className="relative group">
             <button
-                className={`relative z-10 flex items-center justify-center gap-1 p-3 px-8 text-lg font-bold text-black bg-white border-4 rounded-xl bg-clip-padding border-white/30 ${className}`}
+                className={`relative z-10 flex items-center justify-center gap-1 p-3 px-4 text-lg font-bold text-black bg-white border-4 rounded-xl bg-clip-padding border-white/30 ${className}`}
                 onClick={onClick}
             >
+                {/* <p className=""></p> */}
                 {children}
                 <figure className="invisible group-hover:visible group-hover:animate-arrowFadeIn">
                     <svg
@@ -25,11 +26,18 @@ export function RadientBtn({ children, className, onClick }) {
                     </svg>
                 </figure>
             </button>
-            <div className="absolute inset-0 flex items-center overflow-hidden transition-transform duration-500 pointer-events-none blur-lg will-change-transform group-hover:scale-110">
-                <div className="w-full scale-110 aspect-square">
+
+            {/* {gradient ? ( */}
+            <div className="absolute inset-0 flex items-center overflow-hidden transition-transform duration-500 pointer-events-none blur-lg will-change-transform group-hover:scale-105">
+                <div
+                    className={`w-full ${
+                        gradient ? "scale-110" : "scale-100"
+                    } aspect-square`}
+                >
                     <div className="w-full h-full bg-gradient-to-tr from-amber-600 to-teal-600 group-hover:animate-spin" />
                 </div>
             </div>
+            {/* ) : null} */}
         </div>
     );
 }

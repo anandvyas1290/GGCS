@@ -9,7 +9,7 @@ import shape2 from "../../../../assets/home/process/shape2.webp";
 import shape3 from "../../../../assets/home/process/shape3.webp";
 
 import { Line1, Line2 } from "../../../../components/UI/ProcessDash";
-import { H1Animate, TextAnimate } from "../../../../components/Typography";
+import { H1Animate, SubHeading, H4 } from "../../../../components/Typography";
 
 export default function Process(props) {
     const processData = [
@@ -56,9 +56,9 @@ export default function Process(props) {
                 </div>
                 <div className="md:pl-16">
                     <div className="flex flex-col mb-10 items-left">
-                        <TextAnimate className="text-center">
+                        <SubHeading className="text-center">
                             Let us do the work
-                        </TextAnimate>
+                        </SubHeading>
                         <H1Animate className="text-center">
                             How we do It
                         </H1Animate>
@@ -90,9 +90,9 @@ export default function Process(props) {
                                         </div>
                                     </div>
                                     <div className="w-8/12">
-                                        <h4 className="text-2xl font-semibold">
+                                        <H4 className="text-2xl font-semibold">
                                             {item?.label}
-                                        </h4>
+                                        </H4>
                                         <p className="text-grey4">
                                             {item?.desc}
                                         </p>
