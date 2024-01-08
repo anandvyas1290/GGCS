@@ -3,10 +3,12 @@ import backIcon from "../../assets/icons/backBtn.webp";
 
 import { useNavigate } from "react-router-dom";
 
-export default function BackNavigate({ backLabel, backLink }) {
+export default function BackNavigate({ backLabel, backLink, className }) {
     let navigate = useNavigate();
     return (
-        <div className="flex items-center max-w-screen-xl gap-3 px-3 pt-24 mx-auto lg:pt-5 ">
+        <div
+            className={`flex items-center max-w-screen-xl gap-3 px-3 pt-24 mx-auto lg:pt-5 text-primary ${className}`}
+        >
             <img
                 src={backIcon}
                 alt="back"
@@ -14,7 +16,7 @@ export default function BackNavigate({ backLabel, backLink }) {
                 onClick={() => navigate(backLink ?? "/")}
             />
             {backLabel ? (
-                <h5 className="font-sans text-xl font-bold sm:text-2xl text-primary">
+                <h5 className="font-sans text-xl font-bold sm:text-2xl ">
                     {backLabel}
                 </h5>
             ) : null}

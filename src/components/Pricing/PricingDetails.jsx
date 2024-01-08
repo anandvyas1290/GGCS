@@ -1,37 +1,53 @@
-import React from "react";
-// import UpdatingPage from "../Layout/UpdatingPage";
-import BackNavigate from "../UI/BackNavigate";
-import { Desc, H1Animate, H3, H5 } from "../../components/Typography";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+import { colors } from "./dummyData";
+import BackNavigate from "../UI/BackNavigate";
+import { Desc, H1Animate, H2, H3, H5 } from "../../components/Typography";
+
 export default function PricingDetails(props) {
-    const location = useLocation()
-    window.scrollTo(0, 0);
-    const { title, description, price, desc } = location?.state
+    const location = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const { title, description, price, desc } = location?.state;
     return (
         <>
-            <BackNavigate backLabel="Plan Details" backLink="/" />
-            {/* <UpdatingPage /> */}
-            <section className="max-w-screen-xl mx-auto lg:py-10 md:py-10 py-5 lg:px-0 sm:px-6 px-3">
-                <div className="!bg-mainDark py-10 rounded">
-                    <H1Animate className="uppercase !text-white ">{title}</H1Animate>
+            <div className="!bg-mainDark">
+                <BackNavigate
+                    backLabel="Plan Details"
+                    backLink="/services"
+                    className="!text-white"
+                />
+                <section className="py-5 md:py-20">
+                    <H1Animate className="uppercase !text-white">
+                        {title}
+                    </H1Animate>
                     <Desc className="text-center !text-gray-200">{desc}</Desc>
-                    <H3 className="text-center mt-5 text-yellow-200">{price}</H3>
+                    <H3 className="mt-5 text-center text-yellow-200">
+                        {price}
+                    </H3>
+                </section>
+            </div>
+            <div className="max-w-screen-xl px-3 py-5 mx-auto md:py-10 lg:px-0 sm:px-6">
+                <H2 className="my-10 ml-5 text-center">Benefits</H2>
+                <div className="grid grid-cols-1 gap-12 py-10 mx-auto sm:grid-cols-3">
+                    {description?.map((item, i) => (
+                        <div
+                            className="relative group hover:scale-110 transition-all duration-500 grid grid-cols-[1fr_0.4fr] items-center transform -skew-x-12 border-2 rounded-lg shadow-xl border-mainLight h-28 "
+                            key={i}
+                        >
+                            <H5 className="w-full h-full flex items-center justify-center text-center !transform-none ">
+                                {item?.label}
+                            </H5>
+                            <div
+                                className={`absolute w-24 h-24 rounded right-2 -top-8 group-hover:scale-[.80] transition-all duration-500  ${colors[i]}`}
+                            />
+                        </div>
+                    ))}
                 </div>
-                <div>
-                    <H3 className="my-10 ml-5 text-center">Benefits</H3>
-                    <div className="grid sm:grid-cols-2 grid-cols-1 gap-12 max-w-screen-lg mx-auto py-10">
-                        {description?.map((item, i) => (
-                            <div className="relative" key={i}>
-                                <div className="relative shadow-xl border-2 border-mainLight transform -skew-x-12 h-28 rounded-lg ">
-                                </div>
-                                <H5 className="absolute top-10 left-6">{item?.label}</H5>
-                                <div className="absolute -top-8 right-0 bg-mainDark h-24 w-24 -skew-x-12 rounded" />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            </div>
         </>
     );
 }
