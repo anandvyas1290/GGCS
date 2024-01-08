@@ -16,6 +16,8 @@ import {
     servicesBanner,
 } from "../../../db/assets";
 
+import banner from "../../../assets/services/banner1.gif";
+
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Line1, Line2 } from "../../../components/UI/ProcessDash";
@@ -48,7 +50,7 @@ export default function Services(props) {
         dialogData: {},
     });
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
 
     const readMoreModal = (open, data) => {
@@ -58,11 +60,9 @@ export default function Services(props) {
         });
     };
 
-    console.log(state.dialogData);
-
     return (
         <div className="font-roboto">
-            <section className="max-w-screen-xl px-3 pt-20 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-40">
+            <section className="max-w-screen-xl px-3 pt-12 pb-20 mx-auto sm:px-8 md:px-12 sm:pt-20">
                 <div className="grid md:grid-cols-2">
                     <div className="lg:pl-16">
                         <ul>
@@ -79,7 +79,7 @@ export default function Services(props) {
                                             ][item?.id - 1]
                                         }`}
                                     >
-                                        <div className="mr-7">
+                                        <div className="mr-5">
                                             <div className="relative">
                                                 <img
                                                     src={item?.icon}
@@ -94,20 +94,22 @@ export default function Services(props) {
                                                 <span className="absolute bottom-0 right-0 h-[2px] w-[2px] rounded-full bg-[#021d3580]" />
                                             </div>
                                         </div>
-                                        <div className="w-6/12">
-                                            <H5>{item?.label}</H5>
+                                        <div className="w-10/12">
+                                            <H5 className="underline">
+                                                {item?.label}
+                                            </H5>
                                             <p className="text-grey4">
-                                                {/* {item?.desc} */}
+                                                {item?.desc}
                                                 {/* {item?.desc?.slice(0, 60)}... */}
                                             </p>
-                                            <p
+                                            {/* <p
                                                 className="font-semibold text-pink-500 cursor-pointer"
                                                 onClick={() =>
                                                     readMoreModal(true, item)
                                                 }
                                             >
                                                 {"Read More..."}
-                                            </p>
+                                            </p> */}
                                         </div>
                                         {/* {item?.id < processData?.length ? (
                                             <>
@@ -134,16 +136,13 @@ export default function Services(props) {
                             ))}
                         </ul>
                     </div>
-                    <div className="relative">
-                        <section className="w-full md:py-14">
-                            <section className="relative hidden lg:flex">
-                                <img
-                                    src={servicesBanner}
-                                    className="w-full h-full"
-                                />
-                            </section>
-                        </section>
-                        {/* <img src={socialTree} alt="services" className="" />
+                    {/* <div className="relative"> */}
+                    <section className="w-full md:py-0">
+                        {/* <section className="relative hidden lg:flex"> */}
+                        <img src={banner} className="w-full h-full" />
+                        {/* </section> */}
+                    </section>
+                    {/* <img src={socialTree} alt="services" className="" />
                         <div className="">
                             <div
                                 className="absolute -top-5 -left-6 z-[1] animate-blinkTransform1"
@@ -192,7 +191,7 @@ export default function Services(props) {
                                 <img src={serLinkedin} alt="shape3" />
                             </div>
                         </div> */}
-                    </div>
+                    {/* </div> */}
                 </div>
             </section>
 
@@ -282,7 +281,7 @@ export default function Services(props) {
             </section>
 
             <section className="max-w-screen-xl px-3 mx-auto sm:px-8 md:px-12">
-                <div className="relative border-4 border-black2 shadow-serviceVideo">
+                {/* <div className="relative border-4 border-black2 shadow-serviceVideo">
                     <img
                         src={videoBanner}
                         alt="social-marketing"
@@ -294,12 +293,15 @@ export default function Services(props) {
                             Media Marketing
                         </h4>
                     </div>
-                    {/*  <div className="absolute right-14 bottom-14 border-2 rounded-full p-2 ps-2.5 cursor-pointer">
-                       <img src={play} alt="seo video" />
-                    </div> */}
-                </div>
+                    // <div className="absolute right-14 bottom-14 border-2 rounded-full p-2 ps-2.5 cursor-pointer">
+                    //    <img src={play} alt="seo video" />
+                    // </div> 
+                </div> */}
 
                 {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-5 mt-14"> */}
+                {/* <section className="relative hidden bg-blue-100 lg:flex">
+                    <img src={servicesBanner} className="w-full h-full" />
+                </section> */}
                 <div className="mt-14">
                     <SwiperCarousel carouselData={servicesData} />
                 </div>
