@@ -1,7 +1,7 @@
 export * from "./Animation";
 export const H2 = ({ children, className }) => {
     return (
-        <h2 className={`text-4xl font-bold !pb-2 ${className}`}>{children}</h2>
+        <h2 className={`lg:text-4xl text-3xl  font-bold !pb-2 ${className}`}>{children}</h2>
     );
 };
 export const H3 = ({ children, className }) => {

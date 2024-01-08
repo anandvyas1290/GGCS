@@ -32,13 +32,12 @@ export function H1Animate({ className, children, effect = true }) {
             {/* {children} */}
             {res?.map((item, i) => (
                 <p
-                    className={`${
-                        i < res?.length / 2
-                            ? ""
-                            : !effect
+                    className={`${i < res?.length / 2
+                        ? ""
+                        : !effect
                             ? ""
                             : "text-mainHeading"
-                    }`}
+                        }`}
                 >
                     {item}
                 </p>
@@ -94,14 +93,14 @@ export function SubHeading({ className, children }) {
     };
     return (
         <motion.p
-            className={`text-2xl font-medium [letter-spacing:-0.3px] text-gray-500 ${className}`}
+            className={`lg:text-2xl sm:text-xl text-lg font-medium [letter-spacing:-0.3px] text-gray-500 ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
                 once: true,
             }}
-            // custom={index}
+        // custom={index}
         >
             {children}
         </motion.p>
@@ -125,7 +124,7 @@ export function Desc({ className, children }) {
     };
     return (
         <motion.p
-            className={`text-[19px] font-semibold [letter-spacing:-0.3px] text-grey2 ${className}`}
+            className={`lg:text-[19px] text-lg font-semibold [letter-spacing:-0.3px] text-grey2 ${className}`}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"

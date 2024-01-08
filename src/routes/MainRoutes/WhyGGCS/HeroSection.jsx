@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { whyGGCSData } from "../../../db/dummy";
-import { H1Animate, TextAnimate } from "../../../components/Typography";
+import { H1Animate } from "../../../components/Typography";
 
 function HeroSection() {
     useEffect(() => {

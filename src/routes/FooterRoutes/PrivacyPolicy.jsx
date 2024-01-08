@@ -6,9 +6,9 @@ import { H1Animate, H5 } from "../../components/Typography";
 
 export default function PrivacyPolicy(props) {
     return (
-        <main>
+        <main >
             <Container>
-                <section className="py-14 md:py-28 text-center">
+                <section className="lg:py-28 pt-40 pb-14 text-center">
                     <H1Animate>{privacyPolicy?.title}</H1Animate>
                 </section>
                 <section className="max-w-screen-lg mx-auto !mb-24 sm:mb-10">
@@ -17,7 +17,7 @@ export default function PrivacyPolicy(props) {
                             <div key={item?.id} className="mb-6">
                                 <H5 className="mb-2">{item?.title}</H5>
                                 <p className="mb-2 text-lg">{item?.info}</p>
-                                <ul className="list-disc">
+                                <ul className="list-disc pl-4">
                                     {item?.data?.map((data, i) => {
                                         return (
                                             <li

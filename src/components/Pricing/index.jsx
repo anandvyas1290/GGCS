@@ -162,7 +162,7 @@ function Pricing() {
                         </div>
                         <PrimaryBtn
                             onClick={() => {
-                                navigate("/plans");
+                                navigate("/plans", { state: item });
                             }}
                             size="px-8 py-2"
                             bgColor="bg-card2"

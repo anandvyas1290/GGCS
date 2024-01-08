@@ -44,30 +44,30 @@ export default function NavbarContent() {
     const { showMenu } = state;
     return (
         <section
-            className={` left-0 right-0 z-[1000] ${
+            className={`left-0 right-0 z-[1000] ${
                 location?.pathname === "/"
                     ? "max-w-screen-xl mx-auto mt-1 "
                     : "fixed w-full"
             }`}
         >
             <div
-                className={`header px-4  shadow-header !bg-white 
-            ${
-                location?.pathname === "/"
-                    ? "border rounded-full border-white bg-transparent backdrop-blur"
-                    : "fixed w-full"
-            }
-            `}
+                className={`header px-4 shadow-header !bg-white 
+                ${
+                    location?.pathname === "/"
+                        ? "py-1 border rounded-full border-white bg-transparent backdrop-blur"
+                        : "fixed w-full"
+                }`}
                 ref={scrollRef}
             >
                 <div
-                    className={`relative flex justify-between items-center ${
+                    className={`relative flex justify-between items-center 
+                    ${
                         location?.pathname === "/"
                             ? "max-w-full"
                             : "max-w-screen-xl mx-auto"
                     }`}
                 >
-                    <div className="flex items-center h-[50px] md:h-[80px]">
+                    <div className="flex items-center h-[80px]">
                         <img
                             src={logo}
                             alt="ggcs"

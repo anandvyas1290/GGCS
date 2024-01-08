@@ -34,7 +34,7 @@ export default function Footer() {
     const navigate = useNavigate();
     return (
         <div className="bg-gray-100">
-            <div className="max-w-screen-md px-6 pb-20 mx-auto lg:max-w-screen-xl pt-14 sm:pt-20">
+            <div className="max-w-screen-md px-3 sm:px-6 lg:px-0 pb-20 mx-auto lg:max-w-screen-xl pt-14 sm:pt-20">
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
                     <div className="mb-3 lg:mb-0 ">
                         <div className="mb-4">
@@ -60,31 +60,29 @@ export default function Footer() {
                             </PrimaryBtn>
                         </div> */}
                     </div>
-                    <div className="">
-                        <div className="lg:pl-10">
-                            <H6 className="mb-5">Information Quick Links</H6>
-                            <div className="pl-4">
-                                <ul className="list-disc">
-                                    {menuService?.map((item, i) => (
-                                        <li
-                                            className="mb-2 text-base font-normal text-gray-500 cursor-pointer hover:text-gray-900"
-                                            key={i}
-                                            onClick={() => {
-                                                navigate(item?.link);
-                                            }}
-                                        >
-                                            {item.label === "Home" ? (
-                                                <a href="#">{item.label}</a>
-                                            ) : (
-                                                <>{item.label}</>
-                                            )}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                    <div className="lg:pl-10">
+                        <H6 className="mb-5">Information Quick Links</H6>
+                        <div className="pl-4">
+                            <ul className="list-disc">
+                                {menuService?.map((item, i) => (
+                                    <li
+                                        className="mb-2 text-base font-normal text-gray-500 cursor-pointer hover:text-gray-900"
+                                        key={i}
+                                        onClick={() => {
+                                            navigate(item?.link);
+                                        }}
+                                    >
+                                        {item.label === "Home" ? (
+                                            <a href="#">{item.label}</a>
+                                        ) : (
+                                            <>{item.label}</>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
-                    <div className="">
+                    <div>
                         <H6 className="mb-5">Services</H6>
                         <div className="pl-4">
                             <ul className="list-disc">
@@ -106,7 +104,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="">
-                        <ul className="mb-4 list-disc border-b-2 border-b-gray-300">
+                        <ul className="mb-4 sm:pl-0 pl-4 list-disc border-b-2 border-b-gray-300">
                             {GGCSPolicy?.map((item, i) => {
                                 return (
                                     <li

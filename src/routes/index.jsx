@@ -37,7 +37,7 @@ export default function Routes(props) {
                 </a>
             </div>
             <div
-                className="fixed z-50 overflow-hidden bg-gray-200 border rounded-full cursor-pointer h-14 md:bottom-28 md:right-14 bottom-10 right-2"
+                className="fixed z-50 overflow-hidden bg-gray-200 border rounded-full cursor-pointer h-14 md:bottom-12 md:right-14 bottom-10 right-2"
                 onClick={() => navigate("/upos-details")}
             >
                 <video className="w-full h-full" autoPlay muted loop>
