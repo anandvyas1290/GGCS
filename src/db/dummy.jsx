@@ -953,7 +953,7 @@ export const disclaimer = {
 };
 
 export const termsAndConditions = {
-    title: "Terms And Conditions    ",
+    title: "Terms And Conditions",
     desc: "These Terms and Conditions were Last updated on December 12, 2023.",
     list: [
         {

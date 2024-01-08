@@ -8,7 +8,7 @@ export default function Disclaimer(props) {
     return (
         <main>
             <Container>
-                <section className="py-14 md:py-28 !text-center">
+                <section className="lg:py-28 pt-40 pb-14 !text-center">
                     <H1Animate>{disclaimer?.title}</H1Animate>
                     <Desc className="max-w-screen-lg mx-auto mt-3">
                         {disclaimer?.desc}

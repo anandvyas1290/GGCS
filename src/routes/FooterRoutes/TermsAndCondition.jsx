@@ -11,7 +11,7 @@ export default function TermsAndCondition() {
                 {/* <img src={careerHero} alt="career" className='lg:h-[500px] h-96 w-full lg:pt-0 lg:pb-0 pb-10 pt-20' /> */}
             {/* </div> * /} */}
             <Container>
-                <section className="py-14 md:py-28 text-center">
+                <section className="lg:py-28 pt-40 pb-14 text-center">
                     <H1Animate>{termsAndConditions?.title}</H1Animate>
                     <Desc className="mt-3">{termsAndConditions?.desc}</Desc>
                 </section>

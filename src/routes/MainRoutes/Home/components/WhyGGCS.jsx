@@ -20,23 +20,23 @@ export default function WhyGGCS() {
                         {whyGGCSData?.desc?.map((item, i) => (
                             <div
                                 key={item?.id}
-                                className={`grid md:grid-cols-[1fr_0.7fr] grid-cols-1 items-center gap-5`}
+                                className={`grid md:grid-cols-[1fr_0.7fr] grid-cols-1 items-center sm:gap-5`}
                                 dir={item?.id % 2 ? "ltr" : "rtl"}
                             >
                                 <section className="sm:p-5 text-left">
                                     <H2
-                                        className={`!text-[38px] mb-5 font-bold text-transparent bg-clip-text ${item?.bg}`}
+                                        className={`lg:!text-[38px] mb-5 font-bold text-transparent bg-clip-text ${item?.bg}`}
                                     >
                                         {item?.label}
                                     </H2>
-                                    <Desc className="text-[22px]">
+                                    <Desc className="lg:!text-[22px]">
                                         {item?.desc}
                                     </Desc>
                                 </section>
                                 <section className="relative">
                                     <img
                                         src={item?.image}
-                                        className={`relative h-[400px] aspect-video object-contain rounded-full  border-gray-200 z-10`}
+                                        className={`relative lg:h-[400px] md:h-350px] h-[300px] aspect-video object-contain rounded-full  border-gray-200 z-10`}
                                     />
                                 </section>
                             </div>

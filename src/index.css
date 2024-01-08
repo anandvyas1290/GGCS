@@ -410,3 +410,13 @@ input {
 .swiper-3d {
     perspective: 700px !important;
 }
+
+
+/* react slick */
+
+.slick-next{
+    right: 0 !important;
+}
+.slick-prev {
+    left: 0 !important;
+}

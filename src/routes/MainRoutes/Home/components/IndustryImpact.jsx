@@ -14,13 +14,13 @@ export default function IndustryImpact(props) {
         <div className="max-w-screen-xl mx-auto mb-10 sm:px-6 lg:px-0 px-3">
             <section className="flex flex-col items-center justify-center mb-16 text-center">
                 <H1Animate>Industry Impact</H1Animate>
-                <SubHeading className="mt-4 w-[900px]">
+                <SubHeading className="mt-4 lg:w-[900px]">
                     Our skilled team delivers top-notch IT services to diverse
                     industries, tailored to their unique challenges and
                     requirements. Industries we proudly work with include.
                 </SubHeading>
             </section>
-            <section className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-8">
+            <section className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 sm:gap-8">
                 {industryImpact?.map((item) => (
                     <div
                         key={item?.id}
