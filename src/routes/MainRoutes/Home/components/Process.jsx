@@ -34,7 +34,7 @@ export default function Process(props) {
     ];
 
     return (
-        <div className="max-w-screen-xl px-3 pt-10 pb-5 mx-auto sm:px-8 lg:px-12 sm:pb-20">
+        <div className="max-w-screen-xl px-3 pt-10 pb-5 mx-auto sm:px-8 lg:px-12 sm:pb-40">
             <div className="grid md:grid-cols-2">
                 <div className="relative">
                     <img
