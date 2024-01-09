@@ -69,15 +69,14 @@ export default function Services(props) {
                             {processData?.map((item) => (
                                 <li className="mb-8" key={item?.id}>
                                     <div
-                                        className={`flex relative ${
-                                            [
+                                        className={`flex relative ${[
                                                 "justify-start",
                                                 "justify-center",
                                                 "justify-end",
                                                 "justify-center",
                                                 "justify-start",
                                             ][item?.id - 1]
-                                        }`}
+                                            }`}
                                     >
                                         <div className="mr-5">
                                             <div className="relative">
@@ -95,7 +94,7 @@ export default function Services(props) {
                                             </div>
                                         </div>
                                         <div className="w-10/12">
-                                            <H5 className="underline">
+                                            <H5>
                                                 {item?.label}
                                             </H5>
                                             <p className="text-grey4">

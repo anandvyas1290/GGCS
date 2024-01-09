@@ -18,16 +18,20 @@ export default function TermsAndCondition() {
                 <section className="max-w-screen-lg mx-auto !mb-24 sm:mb-10">
                     {termsAndConditions?.list?.map((item) => {
                         return (
-                            <div key={item?.id} className="mb-6">
-                                <H5 className="mb-2">{item?.title}</H5>
-                                <p className="text-lg text-gray-600">
-                                    {item?.info}
-                                </p>
+                            <div key={item?.id} className="mb-8">
+                                <div className="bg-[#2f3e46] rounded-tl-lg rounded-tr-lg box-border px-5 py-3">
+                                    <H5 className="text-white">{item?.title}</H5>
+                                </div>
+                                <div className="bg-gray-100 p-5 h-full rounded-bl-lg rounded-br-lg">
+                                    <p className="text-lg text-gray-600">
+                                        {item?.info}
+                                    </p>
+                                </div>
                             </div>
                         );
                     })}
                 </section>
             </Container>
-        </main>
+        </main >
     );
 }
