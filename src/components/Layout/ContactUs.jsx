@@ -3,21 +3,21 @@ import React from "react";
 import { Input } from "../UI/Input";
 import { PrimaryBtn } from "../Button";
 import { addresses } from "../../db/dummy";
-import { office } from "../../db/assets";
+import { office, contactBg } from "../../db/assets";
 import { Desc, H1Animate, H6, SubHeading } from "../Typography";
 
 function ContactUs() {
     return (
-        <section className="relative z-[1] sm:py-10 xl:px-8 md:px-6 px-3 !bg-gradient-to-b from-white to-g2 bg-white">
-            {/* <div className="hidden sm:block">
+        <section className="relative z-[1] sm:py-10 xl:px-8 md:px-6 px-3">
+            <div className="hidden sm:block">
                 <img
                     src={contactBg}
                     alt="icon"
                     className="absolute -z-[1] bottom-0 left-0 right-0 w-full"
                 />
-            </div> */}
-            <div className="max-w-screen-lg mx-auto lg:max-w-screen-xl ">
-                <div className="md:flex py-0 sm:!py-10 ">
+            </div>
+            <div className="max-w-screen-lg mx-auto lg:max-w-screen-xl">
+                <div className="md:flex py-0 sm:!py-10">
                     <div className="mx-3 md:w-1/2">
                         <div className="my-10">
                             <SubHeading className="w-fit">

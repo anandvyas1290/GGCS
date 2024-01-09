@@ -10,7 +10,6 @@ import innerShape1 from "../../../../assets/about/home/about-inner-shape-1.webp"
 import innerShape2 from "../../../../assets/about/home/about-inner-shape-2.webp";
 
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
 
 import Container from "../../../../components/Layout/Layout";
 import { H1Animate, H5, TextAnimate } from "../../../../components/Typography";
@@ -90,8 +89,7 @@ function AboutHero() {
                                 Welcome
                             </TextAnimate>
                             <H1Animate className="!text-5xl mb-3 !flex-wrap !justify-start">
-                                Working Hard to Make Digital Marketing Easy.
-                                Together
+                                Working Hard to Make Digital World Easy Together
                             </H1Animate>
                             <p className="my-3 md:my-0">
                                 Welcome to GGCS, where digital meets
@@ -110,13 +108,11 @@ function AboutHero() {
                             <H5 className="text-white">
                                 Scroll down <br /> to explore more
                             </H5>
-                            <Link>
-                                <img
-                                    src={switchIcon}
-                                    alt="switch"
-                                    className="animate-bounce mt-2"
-                                />
-                            </Link>
+                            <img
+                                src={switchIcon}
+                                alt="switch"
+                                className="mt-2 animate-bounce"
+                            />
                         </div>
                     </div>
                 </div>

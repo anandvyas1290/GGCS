@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../../assets/footer/GGCSNew.svg";
+
+import { useNavigate } from "react-router-dom";
 import { EnvelopeIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import {
     GGCSPolicy,
@@ -7,9 +8,7 @@ import {
     services,
     socialMedias,
 } from "../../db/dummy";
-import { useNavigate } from "react-router-dom";
 
-import { PrimaryBtn } from "../../components/Button";
 import { H5, H6 } from "../../components/Typography";
 
 const Input = ({ text, placeholder, className }) => {
@@ -34,7 +33,7 @@ export default function Footer() {
     const navigate = useNavigate();
     return (
         <div className="bg-gray-100">
-            <div className="max-w-screen-md px-3 sm:px-6 lg:px-0 pb-20 mx-auto lg:max-w-screen-xl pt-14 sm:pt-20">
+            <div className="max-w-screen-md px-3 pb-20 mx-auto sm:px-6 lg:px-0 lg:max-w-screen-xl pt-14 sm:pt-20">
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
                     <div className="mb-3 lg:mb-0 ">
                         <div className="mb-4">
@@ -43,12 +42,33 @@ export default function Footer() {
                             </H5>
                             {/* <img src={logo} alt="logo" className="w-1/2 h-full cursor-pointer" /> */}
                         </div>
-                        <div className="mb-5">
-                            <p className="font-normal text-gray-500 ">
+                        <div className="my-5">
+                            <div className="flex gap-8">
+                                {socialMedias?.map((item, i) => (
+                                    <div
+                                        className=""
+                                        key={i}
+                                        onClick={() =>
+                                            window.open(
+                                                item?.link,
+                                                "_blank",
+                                                "toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes"
+                                            )
+                                        }
+                                    >
+                                        <img
+                                            src={item?.icon}
+                                            alt={item?.name}
+                                            className={`w-6 cursor-pointer opacity-50 hover:opacity-100 hover:text-primary`}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                            {/* <p className="font-normal text-gray-500 ">
                                 Empower Your Business With The Digital Marketing
                                 Landscape Through Innovative Strategies and
                                 Data-Driven Insights
-                            </p>
+                            </p> */}
                         </div>
                         {/* <div className="">
                             <PrimaryBtn
@@ -104,7 +124,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="">
-                        <ul className="mb-4 sm:pl-0 pl-4 list-disc border-b-2 border-b-gray-300">
+                        <ul className="pl-4 mb-4 list-disc border-b-2 sm:pl-0 border-b-gray-300">
                             {GGCSPolicy?.map((item, i) => {
                                 return (
                                     <li
@@ -128,7 +148,7 @@ export default function Footer() {
                         <div className="mb-8">
                             <Input placeholder={"Your Email"} type={"mail"} />
                         </div>
-                        <div className="flex gap-8">
+                        {/* <div className="flex gap-8">
                             {socialMedias?.map((item, i) => (
                                 <div
                                     className=""
@@ -148,7 +168,7 @@ export default function Footer() {
                                     />
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="pt-5 text-center">
@@ -184,7 +204,7 @@ export default function Footer() {
                                 href="https://beta.globalgarner.com"
                                 target="_blank"
                             >
-                                <b className="ml-2 text-transparent bg-gradient-to-r from-g1 via-g2 to-g3 bg-clip-text">
+                                <b className="ml-2 text-transparent bg-gradient-to-r from-g1 to-g1 t-g3 bg-clip-text">
                                     Global Garner.
                                 </b>
                             </a>

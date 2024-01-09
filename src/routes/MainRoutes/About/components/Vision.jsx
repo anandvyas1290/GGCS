@@ -61,8 +61,8 @@ function Vision() {
                                     />
                                 </span> */}
                                 <H5 className="mb-2">
-                                    We are the Digital Marketers that create
-                                    your brand.
+                                    GGCS: Your Go-To Tech Team for Growing Your
+                                    Business!
                                 </H5>
                                 <Desc className="text-lg">
                                     GGCS or Global Garner Consultancy Services,
@@ -167,7 +167,7 @@ function Vision() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-wrap justify-center mb-8 sm:justify-between sm:mb-14">
+                <div className="grid justify-center grid-cols-1 mb-8 lg:grid-cols-3 sm:justify-between sm:mb-14">
                     {counterData?.map((item, i) => {
                         return (
                             <div

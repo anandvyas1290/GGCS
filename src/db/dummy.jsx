@@ -550,7 +550,7 @@ export const whyGGCSData = {
         {
             id: 1,
             label: "Data-Driven Precision",
-            desc: "Informed decisions are the cornerstone of our strategy. Our methodologies are grounded in comprehensive data analysis, ensuring that every move we make contributes significantly to your online triumph.",
+            desc: "Smart Choices Drive Our Strategy. We Use Data Analysis to Make Sure Every Step Leads to Your Online Success.",
             // bg: "bg-[#4c49ea]",
             image: dataPrecision,
             // bg: "bg-gradient-to-r from-[#43cea2] to-[#185a9d]",
@@ -559,7 +559,7 @@ export const whyGGCSData = {
         {
             id: 2,
             label: "Tailored Strategies",
-            desc: "We recognize that each business is distinct. That's why we craft customized strategies that align with your unique requirements, never settling for one-size-fits-all solutions.",
+            desc: "We know every business is different. That's why we create personalized plans that match your needs—no generic solutions here!",
             // bg: "bg-[#3ecd5e]",
             image: strategies,
             bg: "bg-gradient-to-r from-[#02aab0] to-[#00cdac]",
@@ -567,15 +567,15 @@ export const whyGGCSData = {
         {
             id: 3,
             label: "Transparent Partnership",
-            desc: "Open and honest communication defines our approach. Expect regular updates and detailed reports on your campaign's progress, fostering a transparent and trustworthy partnership.",
+            desc: "We believe in being open and honest. You'll get regular updates and detailed reports on how your campaign is doing, building a clear and trustworthy partnership",
             // bg: "bg-[#e44002]",
             image: partnership,
             bg: "bg-gradient-to-r from-[#4e54c8] to-[#8f94fb]",
         },
         {
             id: 4,
-            label: "Comprehensive Services",
-            desc: "From SEO and content marketing to social media management and paid advertising, GGCS offers a comprehensive array of services to cover all aspects of your digital footprint.",
+            label: "All-In-One Solutions for Your Needs",
+            desc: "Discover a range of services that cover everything you need. From start to finish, we've got you covered with our comprehensive offerings. Whether it's strategic planning, execution, or ongoing support, our services are designed to meet all your requirements in one place.",
             // bg: "bg-[#952aff]",
             image: ComprehensiveServices,
             bg: "bg-gradient-to-r from-[#23074d] to-[#cc5333]",
