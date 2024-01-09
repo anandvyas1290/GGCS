@@ -14,6 +14,7 @@ export default function PackageDetails(props) {
     let routeData = location?.state?.category;
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         let data = packages?.filter((item) => {
             return item?.slug === routeData;
         })[0];
@@ -32,17 +33,17 @@ export default function PackageDetails(props) {
                 backLink="/creator-packages"
             />
             <div className="max-w-screen-xl mx-auto p-10 mb-10 text-center">
-                <section className="mb-10">
-                    <H1Animate className="flex items-center justify-center gap-10 p-2 text-transparent bg-clip-text bg-gradient-to-r from-[#c33764] to-[#1d2671]">
+                <section className="flex items-center justify-center gap-10 mb-10">
+                    <H1Animate className=" p-2 text-transparent bg-clip-text bg-gradient-to-r from-[#c33764] to-[#1d2671]">
                         {data?.title}
-                        <span className="relative flex items-center justify-center gap-3 px-5 py-2 rounded-2xl text-xl text-white font-medium font-roboto bg-primary">
-                            <p className="absolute top-3s -left-5 w-0 h-0 border-t-[25px] border-t-transparent border-b-[25px] border-b-transparent border-r-[25px] border-primary" />
-                            <p className="w-4 h-4 rounded-full bg-white" />
-                            Starting from
-                            <br />
-                            ₹70,000 / year
-                        </span>
                     </H1Animate>
+                    <span className="relative flex items-center justify-center gap-3 px-5 py-2 rounded-2xl text-xl text-white font-medium font-roboto bg-primary">
+                        <p className="absolute top-3s -left-5 w-0 h-0 border-t-[25px] border-t-transparent border-b-[25px] border-b-transparent border-r-[25px] border-primary" />
+                        <p className="w-4 h-4 rounded-full bg-white" />
+                        Starting from
+                        <br />
+                        ₹70,000 / year
+                    </span>
                 </section>
                 <section className="mb-20 flex justify-center items-center">
                     <div>
