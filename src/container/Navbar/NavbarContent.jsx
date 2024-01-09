@@ -109,6 +109,7 @@ export default function NavbarContent() {
                                     <RadientBtn
                                         className="!rounded-full !py-2.5"
                                         onClick={() => navigate("/hire-us")}
+                                        hideEffect
                                     >
                                         Hire Us
                                     </RadientBtn>

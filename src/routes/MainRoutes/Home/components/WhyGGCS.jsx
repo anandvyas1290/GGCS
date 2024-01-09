@@ -10,7 +10,7 @@ export default function WhyGGCS() {
     }, []);
 
     return (
-        <div className="md:mb-20 bg-blue-50">
+        <div className="bg-gray-100 md:mb-20">
             <Container>
                 <div className="py-20">
                     <H1Animate className="text-center">
@@ -23,7 +23,7 @@ export default function WhyGGCS() {
                                 className={`grid md:grid-cols-[1fr_0.7fr] grid-cols-1 items-center sm:gap-5`}
                                 dir={item?.id % 2 ? "ltr" : "rtl"}
                             >
-                                <section className="sm:p-5 text-left">
+                                <section className="text-left sm:p-5">
                                     <H2
                                         className={`lg:!text-[38px] mb-5 font-bold text-transparent bg-clip-text ${item?.bg}`}
                                     >

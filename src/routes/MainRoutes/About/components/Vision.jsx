@@ -61,8 +61,8 @@ function Vision() {
                                     />
                                 </span> */}
                                 <H5 className="mb-2">
-                                    We are the Digital Marketers that create
-                                    your brand.
+                                    GGCS: Your Go-To Tech Team for Growing Your
+                                    Business!
                                 </H5>
                                 <Desc className="text-lg">
                                     GGCS or Global Garner Consultancy Services,
